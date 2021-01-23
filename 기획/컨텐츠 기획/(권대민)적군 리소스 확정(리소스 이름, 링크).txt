@@ -1,0 +1,70 @@
+*****************************적군 리소스
+*************과거
+
+2차세계대전 헬리콥터
+https://assetstore.unity.com/packages/3d/vehicles/air/military-helicopter-ii-9472
+
+2차세계대전 전투기
+https://assetstore.unity.com/packages/3d/vehicles/air/super-spitfire-53217 
+
+2차세계대전 탱크
+https://assetstore.unity.com/packages/3d/vehicles/land/ww2-armed-forces-demo-184465
+
+2차세계대전 병사
+https://assetstore.unity.com/packages/3d/characters/humanoids/toon-soldiers-ww2-demo-85702
+
+2차세계대전 포병
+https://assetstore.unity.com/packages/3d/characters/ww2-crew-weapon-granatwerfer-36-demo-121314
+
+2차세계대전 자동차
+https://assetstore.unity.com/packages/3d/vehicles/land/m3a1-scout-car-53149
+
+
+*************현대
+
+현대 병사
+https://assetstore.unity.com/packages/3d/characters/toon-soldiers-demo-69684
+
+버기+총
+https://assetstore.unity.com/packages/3d/vehicles/land/buggy-low-poly-military-vehicle-free-126246#content
+
+현대 탱크
+https://assetstore.unity.com/packages/3d/vehicles/msta-russian-artillery-tank-101487
+
+항공 모함
+https://assetstore.unity.com/packages/3d/vehicles/sea/simple-warships-132302
+
+현대 전투기
+https://assetstore.unity.com/packages/3d/vehicles/air/fighter-interceptor-102321
+
+
+***********미래
+
+미래 마린 느낌
+https://assetstore.unity.com/packages/3d/characters/robots/sci-fi-warrior-pbr-hp-polyart-106154
+
+미래 ㅈ밥로봇
+https://assetstore.unity.com/packages/3d/characters/robots/the-assault-mech-90395
+
+미래 탱크
+https://assetstore.unity.com/packages/3d/vehicles/land/sci-fi-military-pack-pro-rts-games-demo-3261
+
+미래 로켓 타워
+https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-anti-air-rocket-tower-8-variants-91367
+
+미래 전투기
+https://assetstore.unity.com/packages/3d/vehicles/space/hi-rez-spaceships-creator-free-sample-153363
+
+미래 배틀크루저 느낌
+https://assetstore.unity.com/packages/3d/vehicles/space/federation-corvette-f3-79860
+
+
+
+
+
+
+
+
+
+
+
