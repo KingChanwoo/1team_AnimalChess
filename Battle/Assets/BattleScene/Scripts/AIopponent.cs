@@ -89,6 +89,7 @@ public class AIopponent : MonoBehaviour
                         //get character
                         ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
 
+                        // 플레이어 패배 시, 생존 유닛 별 다른 데미지 적용/부여
                         for (int i = 0; i < enemyList.Count; i++)
                         {
                             if (gridChampionsArray[x, z].name == enemyList[i].prefab.name + "(Clone)")

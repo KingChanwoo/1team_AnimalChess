@@ -347,7 +347,7 @@ Transform:
   m_LocalRotation: {x: 0.000000021855694, y: -0.00000004371139, z: 1.0165751e-15,
     w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 1484775339037814687}
   - {fileID: 7381954047177409270}
@@ -417,6 +417,7 @@ MonoBehaviour:
   levelupEffectPrefab: {fileID: 6022893094628638925, guid: 3e052aff88b4eeb4da8c715d215dec1f,
     type: 3}
   projectileStart: {fileID: 0}
+  uIController: {fileID: 0}
   gridType: 0
   gridPositionX: 0
   gridPositionZ: 0
