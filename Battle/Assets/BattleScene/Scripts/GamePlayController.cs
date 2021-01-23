@@ -642,9 +642,7 @@ public class GamePlayController : MonoBehaviour
             //check if we start with 0 champions
             if (IsAllChampionDead())
             {
-                winBonus = 0;
-                continuedLose++;
-                continuedWin = 0;
+                
                 EndRound();
             }
            
@@ -782,9 +780,10 @@ public class GamePlayController : MonoBehaviour
 
         if (currentChampionLimit < 9)
         {
-            CheckExp();
 
             currentExp += 4;
+            CheckExp();
+            CheckExp();
             //decrase gold
             currentGold -= 4;
 

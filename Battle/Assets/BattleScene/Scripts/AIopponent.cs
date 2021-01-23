@@ -110,6 +110,19 @@ public class AIopponent : MonoBehaviour
             //player takes damage
             gamePlayController.TakeDamage(damage);
             round++;
+            if(damage == 0)
+            {
+                gamePlayController.winBonus = 1;
+                gamePlayController.continuedWin++;
+                gamePlayController.continuedLose = 0;
+            }
+            else
+            {
+                gamePlayController.winBonus = 0;
+                gamePlayController.continuedLose++;
+                gamePlayController.continuedWin = 0;
+            }
+            
 
             ResetChampions();
 
@@ -148,7 +161,7 @@ public class AIopponent : MonoBehaviour
     /// <summary>
     /// Creates and adds a new random champion to the map
     /// </summary>
-    public void AddEnemy(int n, int indexX, int indexZ)
+    public void AddEnemy(int n, int indexX, int indexZ, float powerRate)
     {
         //get an empty slot
         //int indexX;
@@ -161,7 +174,8 @@ public class AIopponent : MonoBehaviour
         //    return;
 
         Champion enemy = gameData.championsArray[n];
-
+        enemy.damage = enemy.damage * (powerRate/100);
+        enemy.health = enemy.health * (powerRate/100);
         //instantiate champion prefab
         GameObject enemyPrefab = Instantiate(enemy.prefab);
 
@@ -299,9 +313,7 @@ public class AIopponent : MonoBehaviour
 
         if (allDead)
         {
-            gamePlayController.winBonus = 1;
-            gamePlayController.continuedWin++;
-            gamePlayController.continuedLose = 0;
+            
             gamePlayController.EndRound();
         }
     }
