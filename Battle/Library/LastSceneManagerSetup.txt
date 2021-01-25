@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Main.unity
+- path: C:/Unity/Auto_Chess_Sample/Assets/asoliddev - Auto Chess/Main.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

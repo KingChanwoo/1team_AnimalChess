@@ -17,10 +17,9 @@ public class ChampionAnimation : MonoBehaviour
     void Start()
     {
         //get character model
-        characterModel = this.transform.Find("character").gameObject;
-       
+
         //get animator
-        animator = characterModel.GetComponent<Animator>();
+        animator = this.GetComponent<Animator>();
         championController = this.transform.GetComponent<ChampionController>();
     }
 
@@ -58,6 +57,16 @@ public class ChampionAnimation : MonoBehaviour
 
         //Debug.Log("OnAttackAnimationFinished");
 
+    }
+
+    public void AttackStart()
+    {
+        animator.SetBool("attackStart", true);
+    }
+
+    public void AttackEnd()
+    {
+        animator.SetBool("attackStart", false);
     }
 
     /// <summary>

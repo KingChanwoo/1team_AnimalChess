@@ -24,7 +24,9 @@ public class AttackBehaviour : StateMachineBehaviour
     {
         //Debug.Log("attack anim finished");
 
-        animator.gameObject.transform.parent.GetComponent<ChampionAnimation>().OnAttackAnimationFinished();
+        animator.gameObject.GetComponent<ChampionAnimation>().OnAttackAnimationFinished();
+        animator.gameObject.GetComponent<ChampionAnimation>().AttackStart();
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

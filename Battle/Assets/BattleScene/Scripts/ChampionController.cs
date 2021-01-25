@@ -9,6 +9,8 @@ using UnityEngine.AI;
 /// </summary>
 public class ChampionController : MonoBehaviour
 {
+    public static Animator championAnimator;
+
     public static int TEAMID_PLAYER = 0;
     public static int TEAMID_AI = 1;
 
@@ -40,6 +42,10 @@ public class ChampionController : MonoBehaviour
     [HideInInspector]
     ///current health of the champion 
     public float currentHealth = 0;
+
+    [HideInInspector]
+    ///current health of the champion 
+    public float currentShield = 0;
 
     [HideInInspector]
     public float maxMana = 0;
@@ -106,13 +112,15 @@ public class ChampionController : MonoBehaviour
         worldCanvasController = GameObject.Find("Scripts").GetComponent<WorldCanvasController>();
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         championAnimation = this.GetComponent<ChampionAnimation>();
-       
+        championAnimator = GetComponent<Animator>();
+
         //disable agent
         navMeshAgent.enabled = false;
 
         //set stats
         maxHealth = champion.health;
         currentHealth = champion.health;
+        currentShield = champion.shield;
         maxMana = champion.mana;
         currentMana = 20;
         currentDamage = champion.damage;
@@ -164,7 +172,7 @@ public class ChampionController : MonoBehaviour
             }
         }
 
-        
+
         if (isInCombat && isStuned == false)
         {
             if (target == null)
@@ -220,13 +228,13 @@ public class ChampionController : MonoBehaviour
         {
             stunTimer -= Time.deltaTime;
 
-            if(stunTimer < 0)
+            if (stunTimer < 0)
             {
                 isStuned = false;
 
                 championAnimation.IsAnimated(true);
 
-                if(target != null)
+                if (target != null)
                 {
                     //set pathfinder target
                     navMeshAgent.destination = target.transform.position;
@@ -235,7 +243,7 @@ public class ChampionController : MonoBehaviour
                 }
             }
         }
-        
+
 
     }
 
@@ -245,7 +253,7 @@ public class ChampionController : MonoBehaviour
     public bool IsDragged
     {
         get { return _isDragged; }
-        set { _isDragged = value;}
+        set { _isDragged = value; }
     }
 
     /// <summary>
@@ -259,6 +267,7 @@ public class ChampionController : MonoBehaviour
         //reset stats
         maxHealth = champion.health * lvl;
         currentHealth = champion.health * lvl;
+        currentShield = champion.shield;
         currentMana = champion.mana;
         isDead = false;
         isInCombat = false;
@@ -296,10 +305,10 @@ public class ChampionController : MonoBehaviour
         gridTargetPosition = GetWorldPosition();
     }
 
-  /// <summary>
-  /// Convert grid position to world position
-  /// </summary>
-  /// <returns></returns>
+    /// <summary>
+    /// Convert grid position to world position
+    /// </summary>
+    /// <returns></returns>
     public Vector3 GetWorldPosition()
     {
         //get world position
@@ -329,7 +338,7 @@ public class ChampionController : MonoBehaviour
         Vector3 worldPosition = GetWorldPosition();
 
         this.transform.position = worldPosition;
-        
+
         gridTargetPosition = worldPosition;
     }
 
@@ -371,9 +380,9 @@ public class ChampionController : MonoBehaviour
             maxHealth = champion.health * 2;
             currentHealth = champion.health * 2;
             currentDamage = champion.damage * 2;
-            
+
         }
-           
+
         if (lvl == 3)
         {
             newSize = 2f;
@@ -413,16 +422,16 @@ public class ChampionController : MonoBehaviour
         //find enemy
         if (teamID == TEAMID_PLAYER)
         {
-           
+
             for (int x = 0; x < Map.hexMapSizeX; x++)
             {
                 for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
                 {
-                    if(aIopponent.gridChampionsArray[x, z] != null)
+                    if (aIopponent.gridChampionsArray[x, z] != null)
                     {
                         ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
 
-                        if(championController.isDead == false)
+                        if (championController.isDead == false)
                         {
                             //calculate distance
                             float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
@@ -435,7 +444,7 @@ public class ChampionController : MonoBehaviour
                             }
                         }
 
-                       
+
                     }
                 }
             }
@@ -462,7 +471,7 @@ public class ChampionController : MonoBehaviour
                                 bestDistance = distance;
                                 closestEnemy = gamePlayController.gridChampionsArray[x, z];
                             }
-                        } 
+                        }
                     }
                 }
             }
@@ -486,7 +495,7 @@ public class ChampionController : MonoBehaviour
         {
             //set pathfinder target
             navMeshAgent.destination = target.transform.position;
-            
+
 
             navMeshAgent.isStopped = false;
         }
@@ -500,7 +509,7 @@ public class ChampionController : MonoBehaviour
         IsDragged = false;
 
         this.transform.position = gridTargetPosition;
-       
+
 
         //in combat grid
         if (gridType == Map.GRIDTYPE_HEXA_MAP)
@@ -512,10 +521,10 @@ public class ChampionController : MonoBehaviour
             TryAttackNewTarget();
 
         }
-      
+
     }
 
-   
+
     /// <summary>
     /// Start attack against enemy champion
     /// </summary>
@@ -528,7 +537,7 @@ public class ChampionController : MonoBehaviour
 
         championAnimation.DoAttack(true);
 
-       
+
     }
 
     /// <summary>
@@ -540,7 +549,7 @@ public class ChampionController : MonoBehaviour
 
         if (target != null)
         {
-         
+
             //get enemy target champion
             ChampionController targetChamoion = target.GetComponent<ChampionController>();
 
@@ -551,7 +560,7 @@ public class ChampionController : MonoBehaviour
             else if (teamID == TEAMID_AI)
                 activeBonuses = aIopponent.activeBonusList;
 
-      
+
             float d = 0;
             foreach (ChampionBonus b in activeBonuses)
             {
@@ -570,7 +579,7 @@ public class ChampionController : MonoBehaviour
 
 
             //create projectile if have one
-            if(champion.attackProjectile != null && projectileStart != null)
+            if (champion.attackProjectile != null && projectileStart != null)
             {
                 GameObject projectile = Instantiate(champion.attackProjectile);
                 projectile.transform.position = projectileStart.transform.position;
@@ -599,14 +608,22 @@ public class ChampionController : MonoBehaviour
         {
             damage = b.ApplyOnGotHit(this, damage);
         }
-       
-        currentHealth -= damage;
+
+        if (currentShield < damage)
+        {
+            currentShield = 0;
+            currentHealth -= damage - currentShield;
+        }
+        else
+        {
+            currentShield -= damage;
+        }
         //  피격 시, 마나 회복
         currentMana += hitMana;
 
-        
+
         //death
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             this.gameObject.SetActive(false);
             isDead = true;
@@ -645,7 +662,7 @@ public class ChampionController : MonoBehaviour
     }
 
 
-  
+
     /// <summary>
     /// Add effect to this champion
     /// </summary>
@@ -658,7 +675,7 @@ public class ChampionController : MonoBehaviour
         bool foundEffect = false;
         foreach (Effect e in effects)
         {
-            if(effectPrefab == e.effectPrefab)
+            if (effectPrefab == e.effectPrefab)
             {
                 e.duration = duration;
                 foundEffect = true;
@@ -666,13 +683,13 @@ public class ChampionController : MonoBehaviour
         }
 
         //not found effect
-        if(foundEffect == false)
+        if (foundEffect == false)
         {
             Effect effect = this.gameObject.AddComponent<Effect>();
             effect.Init(effectPrefab, this.gameObject, duration);
-            effects.Add(effect); 
+            effects.Add(effect);
         }
-       
+
     }
 
     /// <summary>
