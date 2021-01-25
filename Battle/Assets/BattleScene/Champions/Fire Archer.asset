@@ -20,7 +20,11 @@ MonoBehaviour:
   type1: {fileID: 11400000, guid: f3e567881c605d247b05775a39e704ed, type: 2}
   type2: {fileID: 11400000, guid: 3c4644fba6daec0469d795ae15fcc92e, type: 2}
   health: 200
+  healthRegeneration: 0
+  shield: 50
   mana: 100
   damage: 20
+  critical: 25
+  evasion: 0
   attackRange: 15
   damageToPlayer: 1

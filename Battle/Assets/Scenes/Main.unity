@@ -463,7 +463,7 @@ MonoBehaviour:
   needExp: 2
   currentChampionLimit: 1
   currentChampionCount: 0
-  currentGold: 13
+  currentGold: 10
   currentHP: 100
   timerDisplay: 0
   activeBonusList: []
