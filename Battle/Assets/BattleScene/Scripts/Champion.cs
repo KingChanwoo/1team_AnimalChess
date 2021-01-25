@@ -59,7 +59,8 @@ public class Champion : ScriptableObject
     //  플레이어 패배 시, 유닛이 살아있으면 플레이어HP에 전해줄 데미지
     public int damageToPlayer = 1;
 
-    
+
 }
+
 
 

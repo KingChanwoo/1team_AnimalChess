@@ -91,13 +91,7 @@
     <Compile Include="Assets\Mech\PostProcessing\Editor\PostProcessingModelEditor.cs" />
     <Compile Include="Assets\Mech\PostProcessing\Editor\PostProcessingMonitor.cs" />
     <Compile Include="Assets\Mech\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
-    <Compile Include="Assets\Mech\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
     <Compile Include="Assets\Mech\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
-    <Compile Include="Assets\Mech\PostProcessing\Editor\Utils\CurveEditor.cs" />
-    <Compile Include="Assets\Mech\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
-    <Compile Include="Assets\Mech\PostProcessing\Editor\Utils\EditorResources.cs" />
-    <Compile Include="Assets\Mech\PostProcessing\Editor\Utils\FxStyles.cs" />
-    <Compile Include="Assets\Mech\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
