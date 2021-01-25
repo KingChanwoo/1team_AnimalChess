@@ -58,6 +58,9 @@ public class ChampionController : MonoBehaviour
     public float currentDamage = 0;
 
     [HideInInspector]
+    public float currentDefence = 0;
+
+    [HideInInspector]
     ///The upgrade level of the champion
     public int lvl = 1;
 
@@ -78,6 +81,10 @@ public class ChampionController : MonoBehaviour
 
     [HideInInspector]
     public bool isDead = false;
+
+
+    public bool isField = false;
+
 
     private bool isInCombat = false;
     private float combatTimer = 0;
@@ -124,6 +131,7 @@ public class ChampionController : MonoBehaviour
         maxMana = champion.mana;
         currentMana = 20;
         currentDamage = champion.damage;
+        currentDefence = champion.defence;
 
 
         worldCanvasController.AddHealthBar(this.gameObject);
@@ -135,6 +143,11 @@ public class ChampionController : MonoBehaviour
     /// Update is called once per frame
     void Update()
     {
+        if (isField)
+        {
+            ApplyActiveSynergy();
+        }
+
         if (_isDragged)
         {
             //Create a ray from the Mouse click position
@@ -556,19 +569,21 @@ public class ChampionController : MonoBehaviour
             List<ChampionBonus> activeBonuses = null;
 
             if (teamID == TEAMID_PLAYER)
+            {
                 activeBonuses = gamePlayController.activeBonusList;
-            else if (teamID == TEAMID_AI)
-                activeBonuses = aIopponent.activeBonusList;
+            }
+
+            
+            
 
 
-            float d = 0;
             foreach (ChampionBonus b in activeBonuses)
             {
-                d += b.ApplyOnAttack(this, targetChamoion);
+                b.ApplyOnAttack(this, targetChamoion);
             }
 
             //deal damage
-            bool isTargetDead = targetChamoion.OnGotHit(d + currentDamage);
+            bool isTargetDead = targetChamoion.OnGotHit(champion.damage);
 
             // 타격 시, 마나 회복
             currentMana += attackMana;
@@ -601,12 +616,10 @@ public class ChampionController : MonoBehaviour
 
         if (teamID == TEAMID_PLAYER)
             activeBonuses = gamePlayController.activeBonusList;
-        else if (teamID == TEAMID_AI)
-            activeBonuses = aIopponent.activeBonusList;
 
         foreach (ChampionBonus b in activeBonuses)
         {
-            damage = b.ApplyOnGotHit(this, damage);
+            damage = ApplyOnGotHit(this, damage);
         }
 
         if (currentShield < damage)
@@ -637,6 +650,18 @@ public class ChampionController : MonoBehaviour
 
         return isDead;
     }
+    
+
+    //   데미지 공식!!!!
+    public float ApplyOnGotHit(ChampionController champion, float damage)
+    {
+        float finalDamage = 0;
+        float targetDefence = target.GetComponent<Champion>().defence;
+        finalDamage = champion.currentDamage * (1-(targetDefence / (targetDefence + 100)));
+
+
+        return finalDamage;
+    }
 
     /// <summary>
     /// Called when this champion get stuned
@@ -660,6 +685,12 @@ public class ChampionController : MonoBehaviour
     {
         currentHealth += f;
     }
+
+    public void OnGotShield(float shield1, float shield2, float shield3)
+    {
+        currentShield += maxHealth * (shield1/100);
+    }
+
 
 
 
@@ -701,4 +732,19 @@ public class ChampionController : MonoBehaviour
         effect.Remove();
     }
 
+    public void ApplyActiveSynergy()
+    {
+        ChampionController targetChamoion = target.GetComponent<ChampionController>();
+        List<ChampionBonus> activeBonuses = null;
+
+        if (teamID == TEAMID_PLAYER)
+        {
+            activeBonuses = gamePlayController.activeBonusList;
+        }
+
+        foreach (ChampionBonus b in activeBonuses)
+        {
+            b.ApplySynergy(this, targetChamoion);
+        }
+    }
 }

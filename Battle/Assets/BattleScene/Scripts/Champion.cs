@@ -44,6 +44,8 @@ public class Champion : ScriptableObject
     ///The champion character damage done on succesful attack
     public float damage = 10;
 
+    public float defence = 0;
+
     ///The champion character starting critical probability
     // 치명적인 뿔
     public float critical = 25;

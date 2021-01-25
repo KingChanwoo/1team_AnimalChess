@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ChampionBonusType {Damage, Defense, Stun, Heal};
+public enum ChampionBonusType {Damage, Defense, Stun, Heal, Shield};
 public enum BonusTarget {Self, Enemy};
 
 /// <summary>
@@ -11,8 +11,10 @@ public enum BonusTarget {Self, Enemy};
 [System.Serializable]
 public class ChampionBonus
 {
+    public GamePlayController gamePlayController;
     ///How many champions needed to get the bonus effect
     public int championCount = 0;
+
 
     ///Type of the bonus
     public ChampionBonusType championBonusType;
@@ -21,7 +23,9 @@ public class ChampionBonus
     public BonusTarget bonusTarget;
 
     ///Float value of the bonus
-    public float bonusValue = 0;
+    public float bonusValue1 = 0;
+    public float bonusValue2 = 0;
+    public float bonusValue3 = 0;
 
     ///How many secounds bonus lasts
     public float duration;
@@ -29,37 +33,46 @@ public class ChampionBonus
     ///Prefab to instantiate when bonus occours
     public GameObject effectPrefab;
 
+    void Awake()
+    {
+        gamePlayController = GameObject.Find("Scripts").GetComponent<GamePlayController>();
+    }
+
+
    /// <summary>
    /// Calculates bonuses of a champion when attacking
    /// </summary>
    /// <param name="champion"></param>
    /// <param name="targetChampion"></param>
    /// <returns></returns>
-    public float ApplyOnAttack(ChampionController champion, ChampionController targetChampion)
+    public void ApplyOnAttack(ChampionController champion, ChampionController targetChampion)
     {
         
-        float bonusDamage = 0;
-        bool addEffect = false;
-        switch (championBonusType)
-        {
-            case ChampionBonusType.Damage :
-                bonusDamage += bonusValue;
-                break;
-            case ChampionBonusType.Stun:
-                int rand = Random.Range(0, 100);
-                if (rand < bonusValue)
-                {
-                    targetChampion.OnGotStun(duration);
-                    addEffect = true;
-                }
-                break;
-            case ChampionBonusType.Heal:
-                champion.OnGotHeal(bonusValue);
-                addEffect = true;
-                break;
-            default:
-                break;
-        }
+        bool addEffect = true;
+        //  switch (championBonusType)
+        //  {
+        //      case ChampionBonusType.Damage :
+        //          finalDamage += bonusValue1;
+        //          break;
+        //      case ChampionBonusType.Stun:
+        //          int rand = Random.Range(0, 100);
+        //          if (rand < bonusValue1)
+        //          {
+        //              targetChampion.OnGotStun(duration);
+        //              addEffect = true;
+        //          }
+        //          break;
+        //      case ChampionBonusType.Heal:
+        //          champion.OnGotHeal(bonusValue1);
+        //          addEffect = true;
+        //          break;
+        //      case ChampionBonusType.Shield:
+        //          champion.OnGotShield(bonusValue1,bonusValue2);
+        //          addEffect = true;
+        //          break;
+        //      default:
+        //          break;
+        //  }
 
 
         if (addEffect)
@@ -69,9 +82,6 @@ public class ChampionBonus
             else if (bonusTarget == BonusTarget.Enemy)
                targetChampion.AddEffect(effectPrefab, duration);
         }
-      
-
-        return bonusDamage;
     }
 
     /// <summary>
@@ -80,17 +90,29 @@ public class ChampionBonus
     /// <param name="champion"></param>
     /// <param name="damage"></param>
     /// <returns></returns>
-    public float ApplyOnGotHit(ChampionController champion, float damage)
+    //  public float ApplyOnGotHit(ChampionController champion, float damage)
+    //  {
+    //      switch (championBonusType)
+    //      {        
+    //          case ChampionBonusType.Defense:
+    //              damage = ((100 - bonusValue1) / 100) * damage;
+    //              break;   
+    //          default:
+    //              break;
+    //      }
+    //  
+    //      return damage;
+    //  }
+
+    public void ApplySynergy(ChampionController champion, ChampionController targetChampion)
     {
         switch (championBonusType)
-        {        
-            case ChampionBonusType.Defense:
-                damage = ((100 - bonusValue) / 100) * damage;
-                break;   
+        {
+            case ChampionBonusType.Shield:
+                champion.OnGotShield(bonusValue1, bonusValue2, bonusValue3);
+                break;
             default:
                 break;
         }
-
-        return damage;
     }
 }

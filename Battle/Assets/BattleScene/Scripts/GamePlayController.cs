@@ -55,6 +55,7 @@ public class GamePlayController : MonoBehaviour
 
     public Dictionary<ChampionType, int> championTypeCount;
     public List<ChampionBonus> activeBonusList;
+    public List<int> activeBonusNumList;
 
     public int continuedWin = 0;
     public int continuedLose = 0;
@@ -356,9 +357,13 @@ public class GamePlayController : MonoBehaviour
                                 StoreChampionInArray(triggerinfo.gridType, triggerinfo.gridX, triggerinfo.gridZ, draggedChampion);
 
                                 if (dragStartTrigger.gridType != Map.GRIDTYPE_HEXA_MAP)
+                                {
                                     championsOnField++;
+                                    draggedChampion.GetComponent<ChampionController>().isField = true;
+                                }
+
                             }
-                        }
+                    }
                         else if (triggerinfo.gridType == Map.GRIDTYPE_OWN_INVENTORY)
                         {
                             //remove champion from dragged position
@@ -368,7 +373,11 @@ public class GamePlayController : MonoBehaviour
                             StoreChampionInArray(triggerinfo.gridType, triggerinfo.gridX, triggerinfo.gridZ, draggedChampion);
 
                             if (dragStartTrigger.gridType == Map.GRIDTYPE_HEXA_MAP)
+                            {
                                 championsOnField--;
+                                draggedChampion.GetComponent<ChampionController>().isField = false;
+                        }
+                                
                         }
 
 
@@ -382,7 +391,7 @@ public class GamePlayController : MonoBehaviour
 
 
                 CalculateBonuses();
-
+                
                 currentChampionCount = GetChampionCountOnHexGrid();
 
                 //update ui
@@ -540,6 +549,7 @@ public class GamePlayController : MonoBehaviour
         }
 
         activeBonusList = new List<ChampionBonus>();
+        activeBonusNumList = new List<int>();
 
         foreach (KeyValuePair<ChampionType, int> m in championTypeCount)
         {
@@ -549,6 +559,7 @@ public class GamePlayController : MonoBehaviour
             if (m.Value >= championBonus.championCount)
             {
                 activeBonusList.Add(championBonus);
+                activeBonusNumList.Add(m.Value);
             }
         }
 
