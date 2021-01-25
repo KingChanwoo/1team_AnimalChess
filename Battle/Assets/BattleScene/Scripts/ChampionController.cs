@@ -42,6 +42,10 @@ public class ChampionController : MonoBehaviour
     public float currentHealth = 0;
 
     [HideInInspector]
+    ///current health of the champion 
+    public float currentShield = 0;
+
+    [HideInInspector]
     public float maxMana = 0;
 
     [HideInInspector]
@@ -113,6 +117,7 @@ public class ChampionController : MonoBehaviour
         //set stats
         maxHealth = champion.health;
         currentHealth = champion.health;
+        currentShield = champion.shield;
         maxMana = champion.mana;
         currentMana = 20;
         currentDamage = champion.damage;
@@ -259,6 +264,7 @@ public class ChampionController : MonoBehaviour
         //reset stats
         maxHealth = champion.health * lvl;
         currentHealth = champion.health * lvl;
+        currentShield = champion.shield;
         currentMana = champion.mana;
         isDead = false;
         isInCombat = false;
@@ -599,8 +605,16 @@ public class ChampionController : MonoBehaviour
         {
             damage = b.ApplyOnGotHit(this, damage);
         }
-       
-        currentHealth -= damage;
+
+       if (currentShield < damage)
+        {
+            currentShield = 0;
+            currentHealth -= damage - currentShield;
+        }
+        else
+        {
+            currentShield -= damage;
+        }
         //  피격 시, 마나 회복
         currentMana += hitMana;
 

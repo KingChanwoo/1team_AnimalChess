@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
     private GameObject championGO;
     private ChampionController championController;
     public Image fillImage;
+    public Image fillImageShield;
 
     private CanvasGroup canvasGroup;
 
@@ -27,7 +28,7 @@ public class HealthBar : MonoBehaviour
         {
             this.transform.position = championGO.transform.position + new Vector3(0, 1.5f + 1.5f * championGO.transform.localScale.x, 0);
             fillImage.fillAmount = championController.currentHealth / championController.maxHealth;
-
+            fillImageShield.fillAmount = championController.currentShield / championController.maxHealth;
             if (championController.currentHealth <= 0)
                 canvasGroup.alpha = 0;
             else
