@@ -78,6 +78,8 @@ public class ChampionController : MonoBehaviour
 
     private bool isStuned = false;
     private float stunTimer = 0;
+    public float hitMana = 5;
+    public float attackMana = 10;
 
     private List<Effect> effects;
 
@@ -257,6 +259,7 @@ public class ChampionController : MonoBehaviour
         //reset stats
         maxHealth = champion.health * lvl;
         currentHealth = champion.health * lvl;
+        currentMana = champion.mana;
         isDead = false;
         isInCombat = false;
         target = null;
@@ -558,7 +561,9 @@ public class ChampionController : MonoBehaviour
             //deal damage
             bool isTargetDead = targetChamoion.OnGotHit(d + currentDamage);
 
-  
+            // 타격 시, 마나 회복
+            currentMana += attackMana;
+
             //target died from attack
             if (isTargetDead)
                 TryAttackNewTarget();
@@ -596,6 +601,8 @@ public class ChampionController : MonoBehaviour
         }
        
         currentHealth -= damage;
+        //  피격 시, 마나 회복
+        currentMana += hitMana;
 
         
         //death
