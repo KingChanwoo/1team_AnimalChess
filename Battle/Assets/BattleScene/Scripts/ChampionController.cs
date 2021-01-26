@@ -613,10 +613,14 @@ public class ChampionController : MonoBehaviour
 
 
             //deal damage
-            bool isTargetDead = targetChamoion.OnGotHit(currentDamage);
+            bool isTargetDead = targetChamoion.OnGotHit(currentDamage, this);
 
             // 타격 시, 마나 회복
             currentMana += currentAttackMana;
+            if(currentMana >= maxMana)
+            {
+
+            }
 
             //target died from attack
             if (isTargetDead)
@@ -646,40 +650,40 @@ public class ChampionController : MonoBehaviour
     /// Called when this champion takes damage
     /// </summary>
     /// <param name="damage"></param>
-    public bool OnGotHit(float damage)
+    public bool OnGotHit(float damage, ChampionController by)
     {
         Dictionary<ChampionBonus, int> activeBonuses = null;
 
-        if (teamID == TEAMID_PLAYER)
+        if (teamID == TEAMID_AI)
         {
             activeBonuses = gamePlayController.activeBonus;
         }
 
-        float finalDamage = 0;
-        if (activeBonuses == null)
-        {
-            int ranCri = Random.Range(1, 101);
-
-            if (ranCri <= currentCritical)
-            {
-                finalDamage = currentDamage * (1 - (currentDefence / (currentDefence + 100))) * 1.5f;
-            }
-            else finalDamage = currentDamage * (1 - (currentDefence / (currentDefence + 100)));
-        }
-        else
+        float finalDamage = damage;
+        if (activeBonuses != null)
         {
             foreach (KeyValuePair<ChampionBonus, int> b in activeBonuses)
             {
-                finalDamage = b.Key.ApplyOnGotHit(this, b.Value, damage);
+                finalDamage = b.Key.ApplyOnGotHit(this,by, b.Value, finalDamage);
             }
         }
-        
-        
+        else
+        {
+            int ranCri = Random.Range(1, 101);
+            if (ranCri <= currentCritical)
+            {
+                finalDamage = damage * (1 - (currentDefence / (currentDefence + 100))) * 1.5f;
+            }
+            else finalDamage = damage * (1 - (currentDefence / (currentDefence + 100)));
+        }
 
 
         int ran = Random.Range(1, 101);
 
-        if (ran <= currentEvasion) { }
+        if (ran <= currentEvasion) 
+        {
+            finalDamage = 0;
+        }
         else
         {
             if (currentShield < finalDamage)

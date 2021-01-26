@@ -129,6 +129,15 @@ public void Refresh_Click()
     {
         goldText.text = gamePlayController.currentGold.ToString();
         championCountText.text = gamePlayController.currentChampionCount.ToString() + " / " + gamePlayController.currentChampionLimit.ToString();
+        if(gamePlayController.currentChampionCount != gamePlayController.currentChampionLimit) 
+        {
+            championCountText.color = Color.red;
+        }
+        else
+        {
+            championCountText.color = Color.white;
+        }
+
         hpText.text = "HP " + gamePlayController.currentHP.ToString();
 
         levelText.text = "Lv : " + gamePlayController.currentChampionLimit.ToString();

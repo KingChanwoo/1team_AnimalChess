@@ -288,7 +288,7 @@ public class ChampionBonus
     }
     
     //   데미지 공식!!!!
-    public float ApplyOnGotHit(ChampionController champion, int num, float damage)
+    public float ApplyOnGotHit(ChampionController hit,ChampionController champion, int num, float damage)
     {
         float finalDamage = 0;
         int ran = Random.Range(1, 101);
@@ -301,9 +301,9 @@ public class ChampionBonus
                 {
                     if (ran <= champion.currentCritical)
                     {
-                        finalDamage = champion.currentDamage * 1.5f;
+                        finalDamage = damage * 1.5f;
                     }
-                    else finalDamage = champion.currentDamage;
+                    else finalDamage = damage;
                 }
                 break;
             case ChampionBonusType.Evil:
@@ -313,9 +313,9 @@ public class ChampionBonus
                     {
                         if (ran <= champion.currentCritical)
                         {
-                            finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) * 1.5f + bonusValue2;
+                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f + bonusValue2;
                         }
-                        else finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) + bonusValue2;
+                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) + bonusValue2;
                     }
                 }
                 else if(num >= championCount1)
@@ -324,14 +324,21 @@ public class ChampionBonus
                     {
                         if (ran <= champion.currentCritical)
                         {
-                            finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) * 1.5f + bonusValue1;
+                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f + bonusValue1;
                         }
-                        else finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) + bonusValue1;
+                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) + bonusValue1;
                     }
                 }
                 break;
             case ChampionBonusType.Admirer:
 
+                break;
+            default:
+                if (ran <= champion.currentCritical)
+                {
+                    finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                }
+                else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
                 break;
             
 
