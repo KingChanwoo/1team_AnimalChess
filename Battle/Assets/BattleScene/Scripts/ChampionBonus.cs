@@ -258,7 +258,7 @@ public class ChampionBonus
                 if(champion.champType1.displayName == "단단한부리")
                 {
                     champion.currentMoveSpeed = champion.champion.movementSpeed + bonusValue1; // 이속 bonusValue1
-                    champion.currentAttackSpeed = champion.champion.attackSpeed + bonusValue2; // 공속 bonusValue2
+                    champion.currentAttackSpeed = champion.champion.attackSpeed * (1+(bonusValue2/100)); // 공속 bonusValue2
                 }
                 break;
 
