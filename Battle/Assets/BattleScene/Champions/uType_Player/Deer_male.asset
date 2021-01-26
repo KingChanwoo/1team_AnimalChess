@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Deer_male
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1359080710252902, guid: e8ad581f3a696214d91fde278c6dde6d, type: 3}
+  prefab: {fileID: 3415443726647727911, guid: e8ad581f3a696214d91fde278c6dde6d, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Deer_male
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1

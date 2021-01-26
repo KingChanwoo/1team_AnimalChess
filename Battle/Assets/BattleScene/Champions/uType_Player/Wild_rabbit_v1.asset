@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Wild_rabbit_v1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1502059054957796, guid: f340cce55d555a949b6dd9878e3191d2, type: 3}
+  prefab: {fileID: 7351928121455628051, guid: f340cce55d555a949b6dd9878e3191d2, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Wild_rabbit_v1
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1

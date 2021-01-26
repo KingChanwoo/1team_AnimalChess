@@ -12,14 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Bear
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1048028720104268, guid: 3ab164258b5613d4caa3f570831d4ca7, type: 3}
+  prefab: {fileID: 7799906939888852242, guid: 3ab164258b5613d4caa3f570831d4ca7, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Bear
   cost: 1
   type1: {fileID: 11400000, guid: 33223db9cedb8c045990cb7a3b0144a3, type: 2}
   type2: {fileID: 11400000, guid: 3c4644fba6daec0469d795ae15fcc92e, type: 2}
   health: 100
+  healthRegeneration: 0
+  shield: 0
   mana: 100
   damage: 10
-  attackRange: 2
+  defence: 0
+  critical: 25
+  evasion: 0
+  attackRange: 4
   damageToPlayer: 1

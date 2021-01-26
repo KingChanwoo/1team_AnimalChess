@@ -164,7 +164,7 @@ public class ChampionController : MonoBehaviour
                 Vector3 p = new Vector3(hitPoint.x, 1.0f, hitPoint.z);
 
                 //move champion
-                this.transform.position = Vector3.Lerp(this.transform.position, p, 0.1f);
+                this.transform.position = Vector3.Lerp(this.transform.position, p, 10.1f);
             }
         }
         else

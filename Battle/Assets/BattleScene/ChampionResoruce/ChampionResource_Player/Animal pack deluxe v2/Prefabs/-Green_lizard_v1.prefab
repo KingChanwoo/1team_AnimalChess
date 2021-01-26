@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1018144792377704
+--- !u!1 &11441423346390751
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,249 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4433086791934380}
+  - component: {fileID: 7780915090976995991}
   m_Layer: 0
-  m_Name: LizardSpine13256
+  m_Name: LizardSpine276764
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4433086791934380
+--- !u!4 &7780915090976995991
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018144792377704}
-  m_LocalRotation: {x: 0.0000000088474765, y: 0.00000010405852, z: -0.0020286988,
-    w: 0.999998}
-  m_LocalPosition: {x: -0.0023406504, y: -0.00024300575, z: -5.6658134e-10}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
-  m_Children:
-  - {fileID: 4863434550002594}
-  m_Father: {fileID: 4834746891071470}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1018788979473424
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4175679005231910}
-  m_Layer: 0
-  m_Name: LizardLLegDigit32
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4175679005231910
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018788979473424}
-  m_LocalRotation: {x: -0.050855167, y: -0.059028722, z: 0.036768205, w: 0.99628186}
-  m_LocalPosition: {x: -0.0037929069, y: -4.4703483e-10, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
-  m_Children:
-  - {fileID: 4235635633599372}
-  m_Father: {fileID: 4734669215321618}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1022109136165838
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4791771569776752}
-  m_Layer: 0
-  m_Name: LizardTail8
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4791771569776752
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022109136165838}
-  m_LocalRotation: {x: -0.0000000011808045, y: -0.0000000017909464, z: -0.01289264,
-    w: 0.9999169}
-  m_LocalPosition: {x: -0.017985515, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4601058869285286}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1030851797622474
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4895481416333334}
-  m_Layer: 0
-  m_Name: LizardLLegAnkle243433
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4895481416333334
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030851797622474}
-  m_LocalRotation: {x: -0.1771811, y: 0.3405585, z: -0.76177746, w: 0.5218446}
-  m_LocalPosition: {x: -0.012182345, y: 0.0000000011920929, z: 0}
-  m_LocalScale: {x: 0.9999986, y: 0.9999986, z: 1.0000031}
-  m_Children:
-  - {fileID: 4923775982628236}
-  - {fileID: 4156244913371320}
-  - {fileID: 4734669215321618}
-  - {fileID: 4257642201399778}
-  m_Father: {fileID: 4934048162130048}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1060359891731972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4315668863564416}
-  m_Layer: 0
-  m_Name: LizardLLegDigit425766
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4315668863564416
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060359891731972}
-  m_LocalRotation: {x: 0.03393053, y: -0.16680554, z: -0.048774444, w: 0.98419803}
-  m_LocalPosition: {x: -0.002748564, y: -5.9604643e-10, z: 0}
-  m_LocalScale: {x: 1.0000002, y: 1, z: 0.99999976}
-  m_Children:
-  - {fileID: 4366895605747882}
-  m_Father: {fileID: 4257642201399778}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1075121551421150
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4366895605747882}
-  m_Layer: 0
-  m_Name: LizardLLegDigit43
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4366895605747882
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075121551421150}
-  m_LocalRotation: {x: -0.04825437, y: -0.18335043, z: 0.24724376, w: 0.9502235}
-  m_LocalPosition: {x: -0.0031260417, y: 0.0000000028312206, z: 0.0000000023841857}
-  m_LocalScale: {x: 0.99999905, y: 1.0000008, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4315668863564416}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1089744759444142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4422037354657526}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit23aw23
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4422037354657526
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089744759444142}
-  m_LocalRotation: {x: -0.015001365, y: 0.069207326, z: 0.068015136, w: 0.995168}
-  m_LocalPosition: {x: -0.0038313614, y: -8.9406965e-10, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
-  m_Children: []
-  m_Father: {fileID: 4656681155172742}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1098405805054938
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4860425343216856}
-  m_Layer: 0
-  m_Name: LizardRFrontLegCollarbone5646788
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4860425343216856
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098405805054938}
-  m_LocalRotation: {x: -0.07232531, y: -0.6693334, z: 0.13449958, w: 0.7270981}
-  m_LocalPosition: {x: -0.0040357304, y: 0.0063045365, z: -0.0009885529}
+  m_GameObject: {fileID: 11441423346390751}
+  m_LocalRotation: {x: -0.00000008387379, y: 0.0000002707652, z: -0.06793561, w: 0.9976897}
+  m_LocalPosition: {x: -0.007670833, y: 0, z: 2.842171e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4686472920204794}
-  m_Father: {fileID: 4989278834957350}
-  m_RootOrder: 2
+  - {fileID: 1264213513491566490}
+  m_Father: {fileID: 7853778711306875695}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1116409130747662
+--- !u!1 &88954097706455880
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,30 +39,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4734669215321618}
+  - component: {fileID: 6103968835253669762}
   m_Layer: 0
-  m_Name: LizardLLegDigit31
+  m_Name: LizardRRearLegDigit21123a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4734669215321618
+--- !u!4 &6103968835253669762
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116409130747662}
-  m_LocalRotation: {x: -0.007994981, y: -0.22066331, z: -0.065777205, w: 0.9730967}
-  m_LocalPosition: {x: -0.0056481967, y: 0.00008332729, z: -0.002573638}
-  m_LocalScale: {x: 0.9999998, y: 1, z: 1.0000004}
+  m_GameObject: {fileID: 88954097706455880}
+  m_LocalRotation: {x: 0.02492878, y: 0.013030753, z: -0.03425443, w: 0.99901724}
+  m_LocalPosition: {x: -0.0066441842, y: -0.00009233519, z: 0.00085345027}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
   m_Children:
-  - {fileID: 4175679005231910}
-  m_Father: {fileID: 4895481416333334}
+  - {fileID: 6108030962047427913}
+  m_Father: {fileID: 6898765712392114913}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1120809324545862
+--- !u!1 &110140543494024612
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,30 +70,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4997001117514966}
+  - component: {fileID: 8436179396525597424}
   m_Layer: 0
-  m_Name: LizardTail156223
+  m_Name: tounge11323
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4997001117514966
+--- !u!4 &8436179396525597424
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120809324545862}
-  m_LocalRotation: {x: -0.00000013591433, y: 0.00000008155719, z: 0.9995312, w: -0.030616663}
-  m_LocalPosition: {x: 0.0035794233, y: 0.0013346493, z: 0.0000000010511081}
+  m_GameObject: {fileID: 110140543494024612}
+  m_LocalRotation: {x: -3.5527137e-15, y: -2.8643754e-14, z: -1.0176306e-28, w: 1}
+  m_LocalPosition: {x: 0.0062951897, y: 0.004633025, z: 0.0000000012390023}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4870704513270276}
-  m_Father: {fileID: 4834746891071470}
-  m_RootOrder: 3
+  m_Children: []
+  m_Father: {fileID: 1983249212050061475}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1122814741797000
+--- !u!1 &298991863336766483
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,72 +100,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4074853085868320}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit12
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4074853085868320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122814741797000}
-  m_LocalRotation: {x: 0.01333733, y: -0.075217396, z: 0.06101692, w: 0.9952093}
-  m_LocalPosition: {x: -0.0024139667, y: 5.9604643e-10, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
-  m_Children:
-  - {fileID: 4961918338279990}
-  m_Father: {fileID: 4381944712300540}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1134648672537890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4989278834957350}
-  m_Layer: 0
-  m_Name: LizardRibcage67676
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4989278834957350
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134648672537890}
-  m_LocalRotation: {x: -0.000000049326854, y: -0.00000010706697, z: -0.037269704,
-    w: 0.99930525}
-  m_LocalPosition: {x: -0.007714493, y: 0.0000000011920929, z: 0}
-  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 1}
-  m_Children:
-  - {fileID: 4889790186874918}
-  - {fileID: 4023000239213500}
-  - {fileID: 4860425343216856}
-  m_Father: {fileID: 4838156631447244}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1143631468054228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4269594811683844}
+  - component: {fileID: 3904564854997594783}
   m_Layer: 0
   m_Name: LizardRFrontLegPalm276688768
   m_TagString: Untagged
@@ -393,25 +108,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4269594811683844
+--- !u!4 &3904564854997594783
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143631468054228}
+  m_GameObject: {fileID: 298991863336766483}
   m_LocalRotation: {x: 0.41217858, y: 0.041154183, z: -0.47992635, w: 0.77336013}
   m_LocalPosition: {x: -0.011984127, y: 0.0000000023841857, z: -0.0000000023841857}
   m_LocalScale: {x: 1.0000005, y: 0.9999912, z: 1.0000081}
   m_Children:
-  - {fileID: 4040979966840624}
-  - {fileID: 4344974709940398}
-  - {fileID: 4339676895551252}
-  - {fileID: 4876010199844930}
-  m_Father: {fileID: 4112382047043238}
+  - {fileID: 4427186382523749492}
+  - {fileID: 868315680163791716}
+  - {fileID: 7312083702397388732}
+  - {fileID: 7271324252723457395}
+  m_Father: {fileID: 867154938952184653}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1153159131792724
+--- !u!1 &456528198981031689
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -419,30 +134,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4870704513270276}
+  - component: {fileID: 6898765712392114913}
   m_Layer: 0
-  m_Name: LizardTail2
+  m_Name: LizardRRearLegAnkle254423
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4870704513270276
+--- !u!4 &6898765712392114913
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153159131792724}
-  m_LocalRotation: {x: -0.00000001299489, y: -0.000000017353797, z: 0.011061112, w: 0.99993885}
-  m_LocalPosition: {x: -0.0091498615, y: 0, z: -5.684342e-16}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_GameObject: {fileID: 456528198981031689}
+  m_LocalRotation: {x: 0.1771498, y: -0.34052432, z: -0.76187557, w: 0.5217344}
+  m_LocalPosition: {x: -0.012182344, y: 0.0000000011920929, z: 0}
+  m_LocalScale: {x: 1.000006, y: 1.0000039, z: 0.9999903}
   m_Children:
-  - {fileID: 4344105773012818}
-  m_Father: {fileID: 4997001117514966}
+  - {fileID: 8726578759429754173}
+  - {fileID: 2191871842833498443}
+  - {fileID: 6103968835253669762}
+  - {fileID: 9151253559447944968}
+  m_Father: {fileID: 9090923631610775643}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1165214018981710
+--- !u!1 &664942739153063238
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,223 +168,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4657056868164740}
-  m_Layer: 0
-  m_Name: LizardSpine5454577
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4657056868164740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165214018981710}
-  m_LocalRotation: {x: -0.000000008419114, y: -0.00000007162967, z: 0.04927354, w: 0.9987853}
-  m_LocalPosition: {x: -0.007716846, y: -0.0000000011920929, z: 1.1368684e-15}
-  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
-  m_Children:
-  - {fileID: 4838156631447244}
-  m_Father: {fileID: 4041059845410582}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1169895532873804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4003368003211440}
-  m_Layer: 0
-  m_Name: LizardLLegDigit22
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4003368003211440
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169895532873804}
-  m_LocalRotation: {x: -0.025161752, y: 0.0334471, z: -0.00116853, w: 0.99912304}
-  m_LocalPosition: {x: -0.003876512, y: -7.4505804e-11, z: -0.0000000023841857}
-  m_LocalScale: {x: 1.0000001, y: 1, z: 0.9999999}
-  m_Children:
-  - {fileID: 4951426705853676}
-  m_Father: {fileID: 4156244913371320}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1178357269096660
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4154518993863400}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4154518993863400
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178357269096660}
-  m_LocalRotation: {x: 0.004832145, y: 0.11026557, z: 0.16122381, w: 0.9807268}
-  m_LocalPosition: {x: -0.0021890544, y: 0, z: -0.0000000023841857}
-  m_LocalScale: {x: 0.9999997, y: 1, z: 1.0000004}
-  m_Children:
-  - {fileID: 4400101078574872}
-  m_Father: {fileID: 4165701671531216}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1196587364033860
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4777479327731218}
-  m_Layer: 0
-  m_Name: LizardLLegDigit13654645677
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4777479327731218
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196587364033860}
-  m_LocalRotation: {x: 0.054236345, y: 0.01768184, z: 0.118777215, w: 0.9912809}
-  m_LocalPosition: {x: -0.0025761223, y: -0.000000004470348, z: 0.0000000047683715}
-  m_LocalScale: {x: 1.000001, y: 0.99999964, z: 0.9999994}
-  m_Children: []
-  m_Father: {fileID: 4003122128315822}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1200645471640052
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4934048162130048}
-  m_Layer: 0
-  m_Name: LizardLLegCalf323
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4934048162130048
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200645471640052}
-  m_LocalRotation: {x: 0.05610357, y: 0.15889752, z: 0.46549082, w: 0.8688626}
-  m_LocalPosition: {x: -0.012081234, y: -0.00000004053116, z: 0.00000002026558}
-  m_LocalScale: {x: 1.0000008, y: 0.9999996, z: 0.9999998}
-  m_Children:
-  - {fileID: 4895481416333334}
-  m_Father: {fileID: 4846755734926108}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1235636938925962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4903750528945658}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit22
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4903750528945658
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235636938925962}
-  m_LocalRotation: {x: -0.08080439, y: 0.1144319, z: -0.042322263, w: 0.9892345}
-  m_LocalPosition: {x: -0.0035793018, y: 8.1956386e-10, z: 0.0000000023841857}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999976}
-  m_Children:
-  - {fileID: 4401904245083430}
-  m_Father: {fileID: 4339676895551252}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1278687492699414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4227718288632882}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit12
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4227718288632882
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278687492699414}
-  m_LocalRotation: {x: 0.04600207, y: 0.028768845, z: 0.0384948, w: 0.99778473}
-  m_LocalPosition: {x: -0.0023086404, y: 5.9604643e-10, z: 0.0000000023841857}
-  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
-  m_Children:
-  - {fileID: 4494301936815972}
-  m_Father: {fileID: 4676784699109818}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1313827728765502
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4494301936815972}
+  - component: {fileID: 5422950861031821567}
   m_Layer: 0
   m_Name: LizardLFrontLegDigit13676588
   m_TagString: Untagged
@@ -674,21 +176,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4494301936815972
+--- !u!4 &5422950861031821567
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313827728765502}
+  m_GameObject: {fileID: 664942739153063238}
   m_LocalRotation: {x: -0.0003377805, y: 0.14395924, z: 0.29987648, w: 0.9430534}
   m_LocalPosition: {x: -0.0027555155, y: 0.0000000011920929, z: 0}
   m_LocalScale: {x: 0.9999995, y: 1.0000005, z: 0.99999976}
   m_Children: []
-  m_Father: {fileID: 4227718288632882}
+  m_Father: {fileID: 1262478882150373436}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1355122573282974
+--- !u!1 &800150292355653855
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -696,30 +198,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4023000239213500}
+  - component: {fileID: 406494358807195631}
   m_Layer: 0
-  m_Name: LizardNeck18877
+  m_Name: LizardPelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4023000239213500
+--- !u!4 &406494358807195631
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355122573282974}
-  m_LocalRotation: {x: 0.000000037957214, y: -0.0000000546776, z: 0.0373768, w: 0.99930125}
-  m_LocalPosition: {x: -0.002340648, y: -0.00024300694, z: -5.6658334e-10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 800150292355653855}
+  m_LocalRotation: {x: 0.70680714, y: -0.020586772, z: -0.706807, w: 0.020586738}
+  m_LocalPosition: {x: 0.000000010446969, y: 0.038956065, z: -0.057909828}
+  m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
   m_Children:
-  - {fileID: 4259968001706506}
-  m_Father: {fileID: 4989278834957350}
-  m_RootOrder: 1
+  - {fileID: 1900035047462570812}
+  - {fileID: 4455428874704701903}
+  - {fileID: 7853778711306875695}
+  - {fileID: 7771736067296921608}
+  m_Father: {fileID: 7759255861210271949}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1369245590925914
+--- !u!1 &856063425284249954
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -727,30 +232,215 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4156244913371320}
+  - component: {fileID: 5765706324056924722}
   m_Layer: 0
-  m_Name: LizardLLegDigit21
+  m_Name: LizardLLegDigit11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4156244913371320
+--- !u!4 &5765706324056924722
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369245590925914}
-  m_LocalRotation: {x: -0.02493477, y: -0.01285825, z: -0.03425648, w: 0.99901927}
-  m_LocalPosition: {x: -0.0066441842, y: -0.00009233251, z: -0.0008534455}
+  m_GameObject: {fileID: 856063425284249954}
+  m_LocalRotation: {x: -0.058671784, y: 0.22629008, z: -0.03845121, w: 0.97153074}
+  m_LocalPosition: {x: -0.006341737, y: -0.000010934024, z: 0.0012511325}
+  m_LocalScale: {x: 1.0000005, y: 1.0000001, z: 0.9999996}
+  m_Children:
+  - {fileID: 4579796683585909344}
+  m_Father: {fileID: 8078942213849850394}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &882879218738635544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769487214283513462}
+  m_Layer: 0
+  m_Name: LizardLLegDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &769487214283513462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882879218738635544}
+  m_LocalRotation: {x: -0.025161752, y: 0.0334471, z: -0.00116853, w: 0.99912304}
+  m_LocalPosition: {x: -0.003876512, y: -7.4505804e-11, z: -0.0000000023841857}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 2815935883855867198}
+  m_Father: {fileID: 7085720762647080164}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &922274612059262943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3969208354059928459}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3969208354059928459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922274612059262943}
+  m_LocalRotation: {x: -0.012573872, y: -0.062860325, z: -0.0074284254, w: 0.9979155}
+  m_LocalPosition: {x: -0.0022350692, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
+  m_Children:
+  - {fileID: 2068258854285327230}
+  m_Father: {fileID: 1212976484647963778}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &932597530112029520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4658387218558077390}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit23aw23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4658387218558077390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932597530112029520}
+  m_LocalRotation: {x: -0.015001365, y: 0.069207326, z: 0.068015136, w: 0.995168}
+  m_LocalPosition: {x: -0.0038313614, y: -8.9406965e-10, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 6108030962047427913}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &940041662929351843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4579796683585909344}
+  m_Layer: 0
+  m_Name: LizardLLegDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4579796683585909344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940041662929351843}
+  m_LocalRotation: {x: -0.013336722, y: 0.07521846, z: 0.06101776, w: 0.9952091}
+  m_LocalPosition: {x: -0.002413969, y: -5.9604643e-10, z: 0.0000000023841857}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
+  m_Children:
+  - {fileID: 855951903421543894}
+  m_Father: {fileID: 5765706324056924722}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &944171566597742824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8752405958263340337}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8752405958263340337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944171566597742824}
+  m_LocalRotation: {x: -0.04600201, y: -0.02876872, z: 0.03849505, w: 0.99778473}
+  m_LocalPosition: {x: -0.0023086404, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+  m_Children:
+  - {fileID: 7185438338482537131}
+  m_Father: {fileID: 868315680163791716}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &995752266076066188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3068057378175143786}
+  m_Layer: 0
+  m_Name: LizardNeck3878565
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3068057378175143786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995752266076066188}
+  m_LocalRotation: {x: 0.00000002761418, y: -0.000000039850484, z: -0.02681188, w: 0.9996405}
+  m_LocalPosition: {x: -0.007663357, y: 0, z: 2.2737367e-15}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
-  - {fileID: 4003368003211440}
-  m_Father: {fileID: 4895481416333334}
-  m_RootOrder: 1
+  - {fileID: 1983249212050061475}
+  m_Father: {fileID: 3721041577773294557}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1378965793061256
+--- !u!1 &1086920151074312696
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -758,7 +448,534 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4344974709940398}
+  - component: {fileID: 1961763099422820613}
+  m_Layer: 0
+  m_Name: LizardHeadBone00223xcx
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1961763099422820613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086920151074312696}
+  m_LocalRotation: {x: -0.000000015679133, y: 0.0000000035387928, z: 0.06643051, w: 0.99779105}
+  m_LocalPosition: {x: -0.00059992314, y: 0.0020479953, z: -6.253981e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1983249212050061475}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1180002428513235606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867154938952184653}
+  m_Layer: 0
+  m_Name: LizardRFrontLegLower65633
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &867154938952184653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180002428513235606}
+  m_LocalRotation: {x: -0.19650838, y: -0.27430132, z: -0.45097762, w: 0.8262944}
+  m_LocalPosition: {x: -0.010772396, y: -0.000000030994414, z: 0.00000000834465}
+  m_LocalScale: {x: 1, y: 0.9999993, z: 1.0000006}
+  m_Children:
+  - {fileID: 3904564854997594783}
+  m_Father: {fileID: 5626817037804725205}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1185501026717647646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087828026611679995}
+  m_Layer: 0
+  m_Name: LizardLLegDigit31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087828026611679995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185501026717647646}
+  m_LocalRotation: {x: -0.007994981, y: -0.22066331, z: -0.065777205, w: 0.9730967}
+  m_LocalPosition: {x: -0.0056481967, y: 0.00008332729, z: -0.002573638}
+  m_LocalScale: {x: 0.9999998, y: 1, z: 1.0000004}
+  m_Children:
+  - {fileID: 7528102282617547341}
+  m_Father: {fileID: 8078942213849850394}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1366268931817711058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8726578759429754173}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8726578759429754173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366268931817711058}
+  m_LocalRotation: {x: 0.058666606, y: -0.22612208, z: -0.038455207, w: 0.97157}
+  m_LocalPosition: {x: -0.006341735, y: -0.000010935515, z: -0.0012511254}
+  m_LocalScale: {x: 1.0000005, y: 0.9999999, z: 0.99999964}
+  m_Children:
+  - {fileID: 658707553903077755}
+  m_Father: {fileID: 6898765712392114913}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1401797778254869552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1262478882150373436}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262478882150373436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401797778254869552}
+  m_LocalRotation: {x: 0.04600207, y: 0.028768845, z: 0.0384948, w: 0.99778473}
+  m_LocalPosition: {x: -0.0023086404, y: 5.9604643e-10, z: 0.0000000023841857}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+  m_Children:
+  - {fileID: 5422950861031821567}
+  m_Father: {fileID: 6383365653335807387}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1423062393177116520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2191871842833498443}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit3132
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2191871842833498443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423062393177116520}
+  m_LocalRotation: {x: 0.007982263, y: 0.22083136, z: -0.065772444, w: 0.973059}
+  m_LocalPosition: {x: -0.005648198, y: 0.00008332387, z: 0.002573645}
+  m_LocalScale: {x: 0.9999997, y: 0.99999976, z: 1.0000005}
+  m_Children:
+  - {fileID: 8578538691429375758}
+  m_Father: {fileID: 6898765712392114913}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1594638313137420883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7771736067296921608}
+  m_Layer: 0
+  m_Name: LizardTail156223
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7771736067296921608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594638313137420883}
+  m_LocalRotation: {x: -0.00000013591433, y: 0.00000008155719, z: 0.9995312, w: -0.030616663}
+  m_LocalPosition: {x: 0.0035794233, y: 0.0013346493, z: 0.0000000010511081}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7520984882777928108}
+  m_Father: {fileID: 406494358807195631}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1678127200355633922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8578538691429375758}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit323241
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8578538691429375758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678127200355633922}
+  m_LocalRotation: {x: 0.05085506, y: 0.05902756, z: 0.036769193, w: 0.99628186}
+  m_LocalPosition: {x: -0.0037929069, y: 2.9802322e-10, z: 0.0000000023841857}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 2779890559347962767}
+  m_Father: {fileID: 2191871842833498443}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1716205872633385905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4966918621882601737}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit431323
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4966918621882601737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716205872633385905}
+  m_LocalRotation: {x: 0.048252977, y: 0.18335074, z: 0.24724466, w: 0.95022327}
+  m_LocalPosition: {x: -0.0031260443, y: -0.0000000028312206, z: 0.0000000023841857}
+  m_LocalScale: {x: 1.0000011, y: 0.9999992, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 4994169249401760230}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1725319727554294096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7185438338482537131}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit13124
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7185438338482537131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725319727554294096}
+  m_LocalRotation: {x: 0.00033778648, y: -0.14395948, z: 0.2998764, w: 0.9430534}
+  m_LocalPosition: {x: -0.0027555083, y: -0.0000000011920929, z: 0.0000000047683715}
+  m_LocalScale: {x: 1.0000005, y: 0.99999934, z: 0.9999998}
+  m_Children: []
+  m_Father: {fileID: 8752405958263340337}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1887267869438441341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4455428874704701903}
+  m_Layer: 0
+  m_Name: LizardRRearLegThigh55344
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4455428874704701903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887267869438441341}
+  m_LocalRotation: {x: 0.70556206, y: -0.43569314, z: 0.3664271, w: 0.42200115}
+  m_LocalPosition: {x: 0.0031096695, y: 0.0025515198, z: -0.0067754304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9090923631610775643}
+  m_Father: {fileID: 406494358807195631}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1944691825363408987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7600520272179656451}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7600520272179656451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944691825363408987}
+  m_LocalRotation: {x: -0.032599624, y: 0.3649824, z: -0.09055652, w: 0.9260263}
+  m_LocalPosition: {x: -0.0013558412, y: -0.0000619854, z: 0.003534901}
+  m_LocalScale: {x: 0.9999999, y: 0.99999976, z: 1.0000005}
+  m_Children:
+  - {fileID: 2229821041953559262}
+  m_Father: {fileID: 9191778730196678201}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2047461857444841802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264213513491566490}
+  m_Layer: 0
+  m_Name: LizardSpine345453
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1264213513491566490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047461857444841802}
+  m_LocalRotation: {x: 0.000000034488785, y: 0.000000045964587, z: 0.012684469, w: 0.9999196}
+  m_LocalPosition: {x: -0.007696689, y: 0, z: 5.684342e-16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7152057697399320696}
+  m_Father: {fileID: 7780915090976995991}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2355835215552830653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2239664032507930205}
+  m_Layer: 0
+  m_Name: LizardTail7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2239664032507930205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2355835215552830653}
+  m_LocalRotation: {x: -9.593573e-10, y: -0.0000000065634627, z: -0.0098233, w: 0.9999518}
+  m_LocalPosition: {x: -0.017985506, y: 0, z: -7.105427e-17}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 5709614739684855726}
+  m_Father: {fileID: 5019783990562461546}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2359515468218415133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6108030962047427913}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit2232c
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6108030962047427913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2359515468218415133}
+  m_LocalRotation: {x: 0.025161667, y: -0.03344721, z: -0.0011684402, w: 0.99912304}
+  m_LocalPosition: {x: -0.003876512, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
+  m_Children:
+  - {fileID: 4658387218558077390}
+  m_Father: {fileID: 6103968835253669762}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2382042191599803932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983249212050061475}
+  m_Layer: 0
+  m_Name: LizardHead5656462
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1983249212050061475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2382042191599803932}
+  m_LocalRotation: {x: -0.000000035708343, y: 0.000000024589614, z: -0.035809405,
+    w: 0.99935865}
+  m_LocalPosition: {x: -0.007663364, y: 0.0000000011920929, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 4264897504709133897}
+  - {fileID: 1961763099422820613}
+  - {fileID: 8436179396525597424}
+  m_Father: {fileID: 3068057378175143786}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2422333162504403429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335889293467540810}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335889293467540810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422333162504403429}
+  m_LocalRotation: {x: 0.018878119, y: -0.034062736, z: 0.02822066, w: 0.99884284}
+  m_LocalPosition: {x: -0.0034858584, y: 0.00084547646, z: -0.00061123964}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 8249723543020233682}
+  m_Father: {fileID: 9191778730196678201}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2464384026402725436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 868315680163791716}
   m_Layer: 0
   m_Name: LizardRFrontLegDigit11
   m_TagString: Untagged
@@ -766,22 +983,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4344974709940398
+--- !u!4 &868315680163791716
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378965793061256}
+  m_GameObject: {fileID: 2464384026402725436}
   m_LocalRotation: {x: -0.010231963, y: -0.055159897, z: -0.07526757, w: 0.995584}
   m_LocalPosition: {x: -0.0036062978, y: 0.00035158588, z: -0.001955868}
   m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
   m_Children:
-  - {fileID: 4234589361202910}
-  m_Father: {fileID: 4269594811683844}
+  - {fileID: 8752405958263340337}
+  m_Father: {fileID: 3904564854997594783}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1379807541107614
+--- !u!1 &2493652041834326980
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -789,8 +1006,1093 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4032639223584532}
-  - component: {fileID: 137374130220125930}
+  - component: {fileID: 7087503227802596425}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit431231355
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7087503227802596425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493652041834326980}
+  m_LocalRotation: {x: -0.06324894, y: 0.026039548, z: 0.05109162, w: 0.9963489}
+  m_LocalPosition: {x: -0.0019861506, y: -0.000000001490116, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 0.99999976, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 6271516116930519305}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2600201923987405886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7759255861210271949}
+  - component: {fileID: 8826870784140289227}
+  - component: {fileID: 437680012466357136}
+  - component: {fileID: 353204666094320494}
+  - component: {fileID: 3355648962992663218}
+  m_Layer: 0
+  m_Name: -Green_lizard_v1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7759255861210271949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600201923987405886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 11.2685, y: 11.2685, z: 11.2685}
+  m_Children:
+  - {fileID: 4579707259580272197}
+  - {fileID: 6054927550302321957}
+  - {fileID: 3303325541564121694}
+  - {fileID: 406494358807195631}
+  - {fileID: 2219388469064145669}
+  - {fileID: 6025971735260808863}
+  - {fileID: 639300856175691783}
+  - {fileID: 1432431454513126418}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8826870784140289227
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600201923987405886}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 607759a735d33da49b1d0334bcbef534, type: 3}
+  m_Controller: {fileID: 9100000, guid: 003aa4e055e43b3468622b5a59180e4b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!195 &437680012466357136
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600201923987405886}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.2
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &353204666094320494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600201923987405886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9e2da67ec47d741b024f6f3d143972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelupEffectPrefab: {fileID: 6022893094628638925, guid: 3e052aff88b4eeb4da8c715d215dec1f,
+    type: 3}
+  projectileStart: {fileID: 0}
+  uIController: {fileID: 0}
+  gridType: 0
+  gridPositionX: 0
+  gridPositionZ: 0
+  teamID: 0
+  champion: {fileID: 0}
+  maxHealth: 0
+  currentHealth: 0
+  currentShield: 0
+  maxMana: 0
+  currentMana: 0
+  currentDamage: 0
+  currentDefence: 0
+  lvl: 1
+  isAttacking: 0
+  isDead: 0
+  isField: 0
+  hitMana: 5
+  attackMana: 10
+--- !u!114 &3355648962992663218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600201923987405886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976daa3f2bff9b34ebc28fb7a37ee12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2675875227414649914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761850808540469537}
+  m_Layer: 0
+  m_Name: LizardNeck18877
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761850808540469537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2675875227414649914}
+  m_LocalRotation: {x: 0.000000037957214, y: -0.0000000546776, z: 0.0373768, w: 0.99930125}
+  m_LocalPosition: {x: -0.002340648, y: -0.00024300694, z: -5.6658334e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3721041577773294557}
+  m_Father: {fileID: 7827645966893809933}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3000834595036590741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3303325541564121694}
+  m_Layer: 0
+  m_Name: LizardLLegPlatform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3303325541564121694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000834595036590741}
+  m_LocalRotation: {x: 0.5511249, y: -0.55112475, z: -0.44301403, w: 0.4430141}
+  m_LocalPosition: {x: -0.06429105, y: -0.000000012311785, z: -0.044387884}
+  m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
+  m_Children: []
+  m_Father: {fileID: 7759255861210271949}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3131873432952100049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8249723543020233682}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8249723543020233682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131873432952100049}
+  m_LocalRotation: {x: 0.08080446, y: -0.11443066, z: -0.042320896, w: 0.9892347}
+  m_LocalPosition: {x: -0.0035793018, y: -8.1956386e-10, z: -0.0000000023841857}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 8456456962680539335}
+  m_Father: {fileID: 335889293467540810}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3160277370703043671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7853778711306875695}
+  m_Layer: 0
+  m_Name: LizardSpine13256
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7853778711306875695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160277370703043671}
+  m_LocalRotation: {x: 0.0000000088474765, y: 0.00000010405852, z: -0.0020286988,
+    w: 0.999998}
+  m_LocalPosition: {x: -0.0023406504, y: -0.00024300575, z: -5.6658134e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 7780915090976995991}
+  m_Father: {fileID: 406494358807195631}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3305682024782462324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3052513725912992139}
+  m_Layer: 0
+  m_Name: LizardLLegDigit3369989
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3052513725912992139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3305682024782462324}
+  m_LocalRotation: {x: 0.005034027, y: -0.090749875, z: 0.17732833, w: 0.97994584}
+  m_LocalPosition: {x: -0.003836562, y: 0.000000008642673, z: -0.000000007152557}
+  m_LocalScale: {x: 0.9999994, y: 1.0000015, z: 0.9999991}
+  m_Children: []
+  m_Father: {fileID: 7528102282617547341}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3424966130567267786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3721041577773294557}
+  m_Layer: 0
+  m_Name: LizardNeck287879
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3721041577773294557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3424966130567267786}
+  m_LocalRotation: {x: -0.000000027949223, y: 0.00000007048551, z: 0.03581488, w: 0.9993585}
+  m_LocalPosition: {x: -0.0076633594, y: 0.0000000011920929, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 3068057378175143786}
+  m_Father: {fileID: 761850808540469537}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3539927527463029557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4759607992580661011}
+  m_Layer: 0
+  m_Name: LizardLFrontLegUpper66554
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4759607992580661011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3539927527463029557}
+  m_LocalRotation: {x: -0.6167298, y: 0.37394997, z: -0.051225573, w: 0.6907835}
+  m_LocalPosition: {x: -0.008664587, y: -0.000000002980232, z: -0.000000007152557}
+  m_LocalScale: {x: 0.99999976, y: 1.0000002, z: 1}
+  m_Children:
+  - {fileID: 2825611985793994003}
+  m_Father: {fileID: 6198147409726274590}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4033925469435169088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068258854285327230}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit4367989
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068258854285327230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033925469435169088}
+  m_LocalRotation: {x: 0.06324813, y: -0.026040122, z: 0.051091548, w: 0.996349}
+  m_LocalPosition: {x: -0.001986141, y: 0.0000000011920929, z: 0.0000000011920929}
+  m_LocalScale: {x: 0.9999997, y: 1.0000002, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3969208354059928459}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4038493469302481889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2981048416656074447}
+  m_Layer: 0
+  m_Name: LizardSpine61331
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2981048416656074447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4038493469302481889}
+  m_LocalRotation: {x: 0.00000003395472, y: -0.00000026409788, z: 0.012057233, w: 0.99992734}
+  m_LocalPosition: {x: -0.007721697, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7827645966893809933}
+  m_Father: {fileID: 7580442145428490457}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4074618025110981170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7085720762647080164}
+  m_Layer: 0
+  m_Name: LizardLLegDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7085720762647080164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074618025110981170}
+  m_LocalRotation: {x: -0.02493477, y: -0.01285825, z: -0.03425648, w: 0.99901927}
+  m_LocalPosition: {x: -0.0066441842, y: -0.00009233251, z: -0.0008534455}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 769487214283513462}
+  m_Father: {fileID: 8078942213849850394}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4253193391367594456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9090923631610775643}
+  m_Layer: 0
+  m_Name: LizardRRearLegCalf12cxx2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9090923631610775643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253193391367594456}
+  m_LocalRotation: {x: -0.05626492, y: -0.15896294, z: 0.46547106, w: 0.8688508}
+  m_LocalPosition: {x: -0.012081232, y: -0.00000004053116, z: -0.00000002026558}
+  m_LocalScale: {x: 1.0000023, y: 0.9999983, z: 0.9999992}
+  m_Children:
+  - {fileID: 6898765712392114913}
+  m_Father: {fileID: 4455428874704701903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4344642026560767781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5022926122097230565}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit2365643
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5022926122097230565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344642026560767781}
+  m_LocalRotation: {x: 0.18059932, y: -0.024842419, z: 0.11690715, w: 0.9762682}
+  m_LocalPosition: {x: -0.0017472791, y: 0.000000004470348, z: 0.000000002980232}
+  m_LocalScale: {x: 0.99999845, y: 1.0000007, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 7762634115315743861}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4459396577146198426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359924311987337269}
+  m_Layer: 0
+  m_Name: LizardLLegDigit41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359924311987337269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459396577146198426}
+  m_LocalRotation: {x: -0.06119076, y: -0.36465806, z: -0.008430502, w: 0.9290905}
+  m_LocalPosition: {x: -0.0029594707, y: 0.00025015487, z: -0.0031642793}
+  m_LocalScale: {x: 0.9999995, y: 1.0000001, z: 1.0000005}
+  m_Children:
+  - {fileID: 6716699708516705487}
+  m_Father: {fileID: 8078942213849850394}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4495536276159059902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212976484647963778}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1212976484647963778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495536276159059902}
+  m_LocalRotation: {x: -0.01682999, y: -0.3798732, z: 0.054831855, w: 0.92325866}
+  m_LocalPosition: {x: -0.002482624, y: 0.00080863945, z: -0.0024548483}
+  m_LocalScale: {x: 1.0000006, y: 0.9999999, z: 0.99999964}
+  m_Children:
+  - {fileID: 3969208354059928459}
+  m_Father: {fileID: 9191778730196678201}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4663550815286800323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2825611985793994003}
+  m_Layer: 0
+  m_Name: LizardLFrontLegLower343431
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2825611985793994003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663550815286800323}
+  m_LocalRotation: {x: 0.19652975, y: 0.27429226, z: -0.45099103, w: 0.82628506}
+  m_LocalPosition: {x: -0.010772399, y: -0.0000000333786, z: -0.00000000834465}
+  m_LocalScale: {x: 1.0000001, y: 1.0000006, z: 0.9999993}
+  m_Children:
+  - {fileID: 9191778730196678201}
+  m_Father: {fileID: 4759607992580661011}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4832998375993057371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7152057697399320696}
+  m_Layer: 0
+  m_Name: LizardSpine4454767
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7152057697399320696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832998375993057371}
+  m_LocalRotation: {x: 0.000000030123186, y: 0.000000023280165, z: 0.01825969, w: 0.9998333}
+  m_LocalPosition: {x: -0.007705306, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 7580442145428490457}
+  m_Father: {fileID: 1264213513491566490}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4989184642235756090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4264897504709133897}
+  m_Layer: 0
+  m_Name: LizardHeadBone001cc545
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4264897504709133897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4989184642235756090}
+  m_LocalRotation: {x: 0.000000008282922, y: -0.0000000018695057, z: -0.035093725,
+    w: 0.99938405}
+  m_LocalPosition: {x: 0.000093002316, y: 0.005787022, z: -5.1004234e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1983249212050061475}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5167566051235254646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7520984882777928108}
+  m_Layer: 0
+  m_Name: LizardTail2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7520984882777928108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167566051235254646}
+  m_LocalRotation: {x: -0.00000001299489, y: -0.000000017353797, z: 0.011061112, w: 0.99993885}
+  m_LocalPosition: {x: -0.0091498615, y: 0, z: -5.684342e-16}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 8009382592261608849}
+  m_Father: {fileID: 7771736067296921608}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5277638471842623273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5019783990562461546}
+  m_Layer: 0
+  m_Name: LizardTail6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5019783990562461546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5277638471842623273}
+  m_LocalRotation: {x: -0.000000049677883, y: 0.000000025526129, z: -0.012816448,
+    w: 0.99991786}
+  m_LocalPosition: {x: -0.017985487, y: 0.0000000011920929, z: 0}
+  m_LocalScale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 2239664032507930205}
+  m_Father: {fileID: 6984880899840037930}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5313652488968553753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658707553903077755}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658707553903077755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313652488968553753}
+  m_LocalRotation: {x: 0.01333733, y: -0.075217396, z: 0.06101692, w: 0.9952093}
+  m_LocalPosition: {x: -0.0024139667, y: 5.9604643e-10, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 6752769293536789657}
+  m_Father: {fileID: 8726578759429754173}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5422976423699883798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7528102282617547341}
+  m_Layer: 0
+  m_Name: LizardLLegDigit32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7528102282617547341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422976423699883798}
+  m_LocalRotation: {x: -0.050855167, y: -0.059028722, z: 0.036768205, w: 0.99628186}
+  m_LocalPosition: {x: -0.0037929069, y: -4.4703483e-10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 3052513725912992139}
+  m_Father: {fileID: 2087828026611679995}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5442854249411104632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6716699708516705487}
+  m_Layer: 0
+  m_Name: LizardLLegDigit425766
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6716699708516705487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442854249411104632}
+  m_LocalRotation: {x: 0.03393053, y: -0.16680554, z: -0.048774444, w: 0.98419803}
+  m_LocalPosition: {x: -0.002748564, y: -5.9604643e-10, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 0.99999976}
+  m_Children:
+  - {fileID: 8214803513113126678}
+  m_Father: {fileID: 1359924311987337269}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5476991339372251620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765673066254878624}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit038984
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765673066254878624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5476991339372251620}
+  m_LocalRotation: {x: -0.0030051898, y: -0.055079285, z: 0.2118408, w: 0.9757463}
+  m_LocalPosition: {x: -0.0026338971, y: -9.685754e-10, z: 0.0000000047683715}
+  m_LocalScale: {x: 1.0000002, y: 0.99999964, z: 0.9999999}
+  m_Children: []
+  m_Father: {fileID: 4738231087859375529}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5814057625803107645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6383365653335807387}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6383365653335807387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814057625803107645}
+  m_LocalRotation: {x: 0.010232815, y: 0.05515964, z: -0.07526772, w: 0.995584}
+  m_LocalPosition: {x: -0.0036062978, y: 0.00035159267, z: 0.001955862}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 1262478882150373436}
+  m_Father: {fileID: 9191778730196678201}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5872687551844422344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8909161413602127394}
+  m_Layer: 0
+  m_Name: LizardTail4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8909161413602127394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872687551844422344}
+  m_LocalRotation: {x: -0.000000049841702, y: 0.000000052128463, z: -0.021875443,
+    w: 0.99976075}
+  m_LocalPosition: {x: -0.017985497, y: 0.0000000011920929, z: 1.4210854e-15}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_Children:
+  - {fileID: 6984880899840037930}
+  m_Father: {fileID: 8009382592261608849}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5883715700426082562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8214803513113126678}
+  m_Layer: 0
+  m_Name: LizardLLegDigit43
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8214803513113126678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883715700426082562}
+  m_LocalRotation: {x: -0.04825437, y: -0.18335043, z: 0.24724376, w: 0.9502235}
+  m_LocalPosition: {x: -0.0031260417, y: 0.0000000028312206, z: 0.0000000023841857}
+  m_LocalScale: {x: 0.99999905, y: 1.0000008, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6716699708516705487}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5933495611976618287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6271516116930519305}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6271516116930519305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5933495611976618287}
+  m_LocalRotation: {x: 0.012574154, y: 0.062860705, z: -0.0074281553, w: 0.99791545}
+  m_LocalPosition: {x: -0.0022350692, y: 0, z: 0.0000000011920929}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 7087503227802596425}
+  m_Father: {fileID: 7271324252723457395}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5958918050903923233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6123130219000676765}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit037676
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6123130219000676765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958918050903923233}
+  m_LocalRotation: {x: 0.0030048261, y: 0.055078607, z: 0.21184075, w: 0.97574633}
+  m_LocalPosition: {x: -0.002633894, y: 7.45058e-10, z: 0.000000009536743}
+  m_LocalScale: {x: 0.9999998, y: 1.0000002, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2229821041953559262}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6042232264381922145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7312083702397388732}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7312083702397388732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6042232264381922145}
+  m_LocalRotation: {x: -0.018877288, y: 0.034062367, z: 0.028220482, w: 0.99884284}
+  m_LocalPosition: {x: -0.0034858584, y: 0.00084547803, z: 0.00061123486}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000002}
+  m_Children:
+  - {fileID: 7762634115315743861}
+  m_Father: {fileID: 3904564854997594783}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6148793571550917249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4427186382523749492}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4427186382523749492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148793571550917249}
+  m_LocalRotation: {x: 0.03260086, y: -0.3649828, z: -0.090555355, w: 0.92602617}
+  m_LocalPosition: {x: -0.0013558435, y: -0.00006199702, z: -0.0035349058}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 0.99999964}
+  m_Children:
+  - {fileID: 4738231087859375529}
+  m_Father: {fileID: 3904564854997594783}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6176942758918546541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639300856175691783}
+  - component: {fileID: 5087721188532343365}
   m_Layer: 0
   m_Name: Object001
   m_TagString: Untagged
@@ -798,27 +2100,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4032639223584532
+--- !u!4 &639300856175691783
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379807541107614}
+  m_GameObject: {fileID: 6176942758918546541}
   m_LocalRotation: {x: -0.7071068, y: 0.000000010536713, z: 0.000000010536713, w: 0.7071068}
   m_LocalPosition: {x: 7.8029555e-10, y: -7.8029555e-10, z: 0}
   m_LocalScale: {x: 0.27924278, y: 0.27924278, z: 0.27924278}
   m_Children: []
-  m_Father: {fileID: 4743866166799928}
+  m_Father: {fileID: 7759255861210271949}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &137374130220125930
+--- !u!137 &5087721188532343365
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379807541107614}
+  m_GameObject: {fileID: 6176942758918546541}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -857,98 +2159,98 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300000, guid: 607759a735d33da49b1d0334bcbef534, type: 3}
   m_Bones:
-  - {fileID: 4424427023010368}
-  - {fileID: 4767745281952716}
-  - {fileID: 4982446717216628}
-  - {fileID: 4456923615480616}
-  - {fileID: 4027015977891082}
-  - {fileID: 4259968001706506}
-  - {fileID: 4989278834957350}
-  - {fileID: 4657056868164740}
-  - {fileID: 4838156631447244}
-  - {fileID: 4041059845410582}
-  - {fileID: 4953529365153708}
-  - {fileID: 4863434550002594}
-  - {fileID: 4433086791934380}
-  - {fileID: 4834746891071470}
-  - {fileID: 4291954713792562}
-  - {fileID: 4686472920204794}
-  - {fileID: 4023000239213500}
-  - {fileID: 4860425343216856}
-  - {fileID: 4997001117514966}
-  - {fileID: 4870704513270276}
-  - {fileID: 4344105773012818}
-  - {fileID: 4701200850466686}
-  - {fileID: 4301937631632070}
-  - {fileID: 4870931956831328}
-  - {fileID: 4601058869285286}
-  - {fileID: 4791771569776752}
-  - {fileID: 4112382047043238}
-  - {fileID: 4269594811683844}
-  - {fileID: 4214951008585554}
-  - {fileID: 4989363572613180}
-  - {fileID: 4401904245083430}
-  - {fileID: 4903750528945658}
-  - {fileID: 4339676895551252}
-  - {fileID: 4050143679361122}
-  - {fileID: 4234589361202910}
-  - {fileID: 4344974709940398}
-  - {fileID: 4529293525605394}
-  - {fileID: 4913435709152328}
-  - {fileID: 4040979966840624}
-  - {fileID: 4986395835997842}
-  - {fileID: 4242621669992624}
-  - {fileID: 4876010199844930}
-  - {fileID: 4823518631213718}
-  - {fileID: 4534707540190330}
-  - {fileID: 4946016670295676}
-  - {fileID: 4752950548824612}
-  - {fileID: 4491027823123202}
-  - {fileID: 4770850465594758}
-  - {fileID: 4112928248437360}
-  - {fileID: 4381944712300540}
-  - {fileID: 4656681155172742}
-  - {fileID: 4422037354657526}
-  - {fileID: 4074853085868320}
-  - {fileID: 4961918338279990}
-  - {fileID: 4846755734926108}
-  - {fileID: 4883986209345102}
-  - {fileID: 4889790186874918}
-  - {fileID: 4030048458038376}
-  - {fileID: 4309202751884994}
-  - {fileID: 4934048162130048}
-  - {fileID: 4895481416333334}
-  - {fileID: 4219961608993544}
-  - {fileID: 4717449278932094}
-  - {fileID: 4457383970161426}
-  - {fileID: 4494301936815972}
-  - {fileID: 4227718288632882}
-  - {fileID: 4676784699109818}
-  - {fileID: 4154518993863400}
-  - {fileID: 4165701671531216}
-  - {fileID: 4400101078574872}
-  - {fileID: 4962587029810880}
-  - {fileID: 4279634404797420}
-  - {fileID: 4333126164361036}
-  - {fileID: 4366895605747882}
-  - {fileID: 4315668863564416}
-  - {fileID: 4257642201399778}
-  - {fileID: 4734669215321618}
-  - {fileID: 4235635633599372}
-  - {fileID: 4175679005231910}
-  - {fileID: 4156244913371320}
-  - {fileID: 4003368003211440}
-  - {fileID: 4923775982628236}
-  - {fileID: 4951426705853676}
-  - {fileID: 4777479327731218}
-  - {fileID: 4003122128315822}
+  - {fileID: 4264897504709133897}
+  - {fileID: 1961763099422820613}
+  - {fileID: 8436179396525597424}
+  - {fileID: 1983249212050061475}
+  - {fileID: 3068057378175143786}
+  - {fileID: 3721041577773294557}
+  - {fileID: 7827645966893809933}
+  - {fileID: 7580442145428490457}
+  - {fileID: 2981048416656074447}
+  - {fileID: 7152057697399320696}
+  - {fileID: 1264213513491566490}
+  - {fileID: 7780915090976995991}
+  - {fileID: 7853778711306875695}
+  - {fileID: 406494358807195631}
+  - {fileID: 4455428874704701903}
+  - {fileID: 5626817037804725205}
+  - {fileID: 761850808540469537}
+  - {fileID: 782179213854084944}
+  - {fileID: 7771736067296921608}
+  - {fileID: 7520984882777928108}
+  - {fileID: 8009382592261608849}
+  - {fileID: 8909161413602127394}
+  - {fileID: 6984880899840037930}
+  - {fileID: 5019783990562461546}
+  - {fileID: 2239664032507930205}
+  - {fileID: 5709614739684855726}
+  - {fileID: 867154938952184653}
+  - {fileID: 3904564854997594783}
+  - {fileID: 9090923631610775643}
+  - {fileID: 6898765712392114913}
+  - {fileID: 5022926122097230565}
+  - {fileID: 7762634115315743861}
+  - {fileID: 7312083702397388732}
+  - {fileID: 7185438338482537131}
+  - {fileID: 8752405958263340337}
+  - {fileID: 868315680163791716}
+  - {fileID: 1765673066254878624}
+  - {fileID: 4738231087859375529}
+  - {fileID: 4427186382523749492}
+  - {fileID: 7087503227802596425}
+  - {fileID: 6271516116930519305}
+  - {fileID: 7271324252723457395}
+  - {fileID: 4966918621882601737}
+  - {fileID: 4994169249401760230}
+  - {fileID: 9151253559447944968}
+  - {fileID: 2191871842833498443}
+  - {fileID: 8578538691429375758}
+  - {fileID: 2779890559347962767}
+  - {fileID: 6103968835253669762}
+  - {fileID: 8726578759429754173}
+  - {fileID: 6108030962047427913}
+  - {fileID: 4658387218558077390}
+  - {fileID: 658707553903077755}
+  - {fileID: 6752769293536789657}
+  - {fileID: 1900035047462570812}
+  - {fileID: 4759607992580661011}
+  - {fileID: 6198147409726274590}
+  - {fileID: 2825611985793994003}
+  - {fileID: 9191778730196678201}
+  - {fileID: 5134027913781206431}
+  - {fileID: 8078942213849850394}
+  - {fileID: 8456456962680539335}
+  - {fileID: 8249723543020233682}
+  - {fileID: 335889293467540810}
+  - {fileID: 5422950861031821567}
+  - {fileID: 1262478882150373436}
+  - {fileID: 6383365653335807387}
+  - {fileID: 2229821041953559262}
+  - {fileID: 7600520272179656451}
+  - {fileID: 6123130219000676765}
+  - {fileID: 2068258854285327230}
+  - {fileID: 3969208354059928459}
+  - {fileID: 1212976484647963778}
+  - {fileID: 8214803513113126678}
+  - {fileID: 6716699708516705487}
+  - {fileID: 1359924311987337269}
+  - {fileID: 2087828026611679995}
+  - {fileID: 3052513725912992139}
+  - {fileID: 7528102282617547341}
+  - {fileID: 7085720762647080164}
+  - {fileID: 769487214283513462}
+  - {fileID: 5765706324056924722}
+  - {fileID: 2815935883855867198}
+  - {fileID: 855951903421543894}
+  - {fileID: 4579796683585909344}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 4834746891071470}
+  m_RootBone: {fileID: 406494358807195631}
   m_AABB:
     m_Center: {x: 0.027706515, y: 0.006038041, z: -0.000002419576}
     m_Extent: {x: 0.11691795, y: 0.017857831, z: 0.036997624}
   m_DirtyAABB: 0
---- !u!1 &1381037494649200
+--- !u!1 &6364763706955295090
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -956,315 +2258,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4050143679361122}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit13124
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4050143679361122
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381037494649200}
-  m_LocalRotation: {x: 0.00033778648, y: -0.14395948, z: 0.2998764, w: 0.9430534}
-  m_LocalPosition: {x: -0.0027555083, y: -0.0000000011920929, z: 0.0000000047683715}
-  m_LocalScale: {x: 1.0000005, y: 0.99999934, z: 0.9999998}
-  m_Children: []
-  m_Father: {fileID: 4234589361202910}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1384909230106076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4529293525605394}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit038984
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4529293525605394
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384909230106076}
-  m_LocalRotation: {x: -0.0030051898, y: -0.055079285, z: 0.2118408, w: 0.9757463}
-  m_LocalPosition: {x: -0.0026338971, y: -9.685754e-10, z: 0.0000000047683715}
-  m_LocalScale: {x: 1.0000002, y: 0.99999964, z: 0.9999999}
-  m_Children: []
-  m_Father: {fileID: 4913435709152328}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1386402797186382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4701200850466686}
-  m_Layer: 0
-  m_Name: LizardTail4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4701200850466686
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386402797186382}
-  m_LocalRotation: {x: -0.000000049841702, y: 0.000000052128463, z: -0.021875443,
-    w: 0.99976075}
-  m_LocalPosition: {x: -0.017985497, y: 0.0000000011920929, z: 1.4210854e-15}
-  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
-  m_Children:
-  - {fileID: 4301937631632070}
-  m_Father: {fileID: 4344105773012818}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1407693807654780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4003122128315822}
-  m_Layer: 0
-  m_Name: LizardLLegDigit12
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4003122128315822
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407693807654780}
-  m_LocalRotation: {x: -0.013336722, y: 0.07521846, z: 0.06101776, w: 0.9952091}
-  m_LocalPosition: {x: -0.002413969, y: -5.9604643e-10, z: 0.0000000023841857}
-  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
-  m_Children:
-  - {fileID: 4777479327731218}
-  m_Father: {fileID: 4923775982628236}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1415664934836654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4424427023010368}
-  m_Layer: 0
-  m_Name: LizardHeadBone001cc545
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4424427023010368
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415664934836654}
-  m_LocalRotation: {x: 0.000000008282922, y: -0.0000000018695057, z: -0.035093725,
-    w: 0.99938405}
-  m_LocalPosition: {x: 0.000093002316, y: 0.005787022, z: -5.1004234e-10}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4456923615480616}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1429941973266418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4242621669992624}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit42
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4242621669992624
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429941973266418}
-  m_LocalRotation: {x: 0.012574154, y: 0.062860705, z: -0.0074281553, w: 0.99791545}
-  m_LocalPosition: {x: -0.0022350692, y: 0, z: 0.0000000011920929}
-  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
-  m_Children:
-  - {fileID: 4986395835997842}
-  m_Father: {fileID: 4876010199844930}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1438571946871844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4400101078574872}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit037676
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4400101078574872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438571946871844}
-  m_LocalRotation: {x: 0.0030048261, y: 0.055078607, z: 0.21184075, w: 0.97574633}
-  m_LocalPosition: {x: -0.002633894, y: 7.45058e-10, z: 0.000000009536743}
-  m_LocalScale: {x: 0.9999998, y: 1.0000002, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4154518993863400}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1453358082563370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4491027823123202}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit323241
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4491027823123202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453358082563370}
-  m_LocalRotation: {x: 0.05085506, y: 0.05902756, z: 0.036769193, w: 0.99628186}
-  m_LocalPosition: {x: -0.0037929069, y: 2.9802322e-10, z: 0.0000000023841857}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
-  m_Children:
-  - {fileID: 4770850465594758}
-  m_Father: {fileID: 4752950548824612}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1457410005776492
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4112928248437360}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit21123a
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4112928248437360
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457410005776492}
-  m_LocalRotation: {x: 0.02492878, y: 0.013030753, z: -0.03425443, w: 0.99901724}
-  m_LocalPosition: {x: -0.0066441842, y: -0.00009233519, z: 0.00085345027}
-  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
-  m_Children:
-  - {fileID: 4656681155172742}
-  m_Father: {fileID: 4989363572613180}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1463356540011826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4234589361202910}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit12
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4234589361202910
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463356540011826}
-  m_LocalRotation: {x: -0.04600201, y: -0.02876872, z: 0.03849505, w: 0.99778473}
-  m_LocalPosition: {x: -0.0023086404, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
-  m_Children:
-  - {fileID: 4050143679361122}
-  m_Father: {fileID: 4344974709940398}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1471237265333242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4654780252222684}
+  - component: {fileID: 6054927550302321957}
   m_Layer: 0
   m_Name: LizardLFrontLegPlatform
   m_TagString: Untagged
@@ -1272,21 +2266,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4654780252222684
+--- !u!4 &6054927550302321957
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471237265333242}
+  m_GameObject: {fileID: 6364763706955295090}
   m_LocalRotation: {x: 0.5362057, y: -0.53620565, z: -0.46095926, w: 0.46095932}
   m_LocalPosition: {x: -0.06269944, y: -0.00189416, z: 0.096239835}
   m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
   m_Children: []
-  m_Father: {fileID: 4743866166799928}
+  m_Father: {fileID: 7759255861210271949}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1483745399965376
+--- !u!1 &6551623973774432151
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1294,61 +2288,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4982446717216628}
+  - component: {fileID: 8078942213849850394}
   m_Layer: 0
-  m_Name: tounge11323
+  m_Name: LizardLLegAnkle243433
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4982446717216628
+--- !u!4 &8078942213849850394
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483745399965376}
-  m_LocalRotation: {x: -3.5527137e-15, y: -2.8643754e-14, z: -1.0176306e-28, w: 1}
-  m_LocalPosition: {x: 0.0062951897, y: 0.004633025, z: 0.0000000012390023}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4456923615480616}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1483900570576936
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4870931956831328}
-  m_Layer: 0
-  m_Name: LizardTail6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4870931956831328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483900570576936}
-  m_LocalRotation: {x: -0.000000049677883, y: 0.000000025526129, z: -0.012816448,
-    w: 0.99991786}
-  m_LocalPosition: {x: -0.017985487, y: 0.0000000011920929, z: 0}
-  m_LocalScale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+  m_GameObject: {fileID: 6551623973774432151}
+  m_LocalRotation: {x: -0.1771811, y: 0.3405585, z: -0.76177746, w: 0.5218446}
+  m_LocalPosition: {x: -0.012182345, y: 0.0000000011920929, z: 0}
+  m_LocalScale: {x: 0.9999986, y: 0.9999986, z: 1.0000031}
   m_Children:
-  - {fileID: 4601058869285286}
-  m_Father: {fileID: 4301937631632070}
+  - {fileID: 5765706324056924722}
+  - {fileID: 7085720762647080164}
+  - {fileID: 2087828026611679995}
+  - {fileID: 1359924311987337269}
+  m_Father: {fileID: 5134027913781206431}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1489118088471536
+--- !u!1 &6565446747404791259
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1356,1094 +2322,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4962587029810880}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit4367989
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4962587029810880
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489118088471536}
-  m_LocalRotation: {x: 0.06324813, y: -0.026040122, z: 0.051091548, w: 0.996349}
-  m_LocalPosition: {x: -0.001986141, y: 0.0000000011920929, z: 0.0000000011920929}
-  m_LocalScale: {x: 0.9999997, y: 1.0000002, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4279634404797420}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1507421439823742
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4989363572613180}
-  m_Layer: 0
-  m_Name: LizardRRearLegAnkle254423
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4989363572613180
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507421439823742}
-  m_LocalRotation: {x: 0.1771498, y: -0.34052432, z: -0.76187557, w: 0.5217344}
-  m_LocalPosition: {x: -0.012182344, y: 0.0000000011920929, z: 0}
-  m_LocalScale: {x: 1.000006, y: 1.0000039, z: 0.9999903}
-  m_Children:
-  - {fileID: 4381944712300540}
-  - {fileID: 4752950548824612}
-  - {fileID: 4112928248437360}
-  - {fileID: 4946016670295676}
-  m_Father: {fileID: 4214951008585554}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1517255540675258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4876010199844930}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit41
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4876010199844930
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517255540675258}
-  m_LocalRotation: {x: 0.016831264, y: 0.37987334, z: 0.054830793, w: 0.92325866}
-  m_LocalPosition: {x: -0.0024826168, y: 0.000808647, z: 0.002454846}
-  m_LocalScale: {x: 0.99999946, y: 1.0000001, z: 1.0000005}
-  m_Children:
-  - {fileID: 4242621669992624}
-  m_Father: {fileID: 4269594811683844}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1519499871649260
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4743866166799928}
-  - component: {fileID: 95745281577807448}
-  - component: {fileID: -5088821848152287475}
-  - component: {fileID: 7616828970155922070}
-  - component: {fileID: 8484697165337182513}
-  m_Layer: 0
-  m_Name: -Green_lizard_v1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4743866166799928
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519499871649260}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4603492517565844}
-  - {fileID: 4654780252222684}
-  - {fileID: 4107548798944870}
-  - {fileID: 4834746891071470}
-  - {fileID: 4722155124320170}
-  - {fileID: 4285174986292598}
-  - {fileID: 4032639223584532}
-  - {fileID: 4069051759058950}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95745281577807448
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519499871649260}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 607759a735d33da49b1d0334bcbef534, type: 3}
-  m_Controller: {fileID: 9100000, guid: 003aa4e055e43b3468622b5a59180e4b, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!195 &-5088821848152287475
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519499871649260}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &7616828970155922070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519499871649260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de9e2da67ec47d741b024f6f3d143972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelupEffectPrefab: {fileID: 6022893094628638925, guid: 3e052aff88b4eeb4da8c715d215dec1f,
-    type: 3}
-  projectileStart: {fileID: 0}
-  uIController: {fileID: 0}
-  gridType: 0
-  gridPositionX: 0
-  gridPositionZ: 0
-  teamID: 0
-  champion: {fileID: 0}
-  maxHealth: 0
-  currentHealth: 0
-  currentShield: 0
-  maxMana: 0
-  currentMana: 0
-  currentDamage: 0
-  currentDefence: 0
-  lvl: 1
-  isAttacking: 0
-  isDead: 0
-  isField: 0
-  hitMana: 5
-  attackMana: 10
---- !u!114 &8484697165337182513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519499871649260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 976daa3f2bff9b34ebc28fb7a37ee12f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1520000801264016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4846755734926108}
-  m_Layer: 0
-  m_Name: LizardLLegThigh11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4846755734926108
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520000801264016}
-  m_LocalRotation: {x: 0.70556253, y: -0.43569344, z: -0.3664296, w: -0.42199776}
-  m_LocalPosition: {x: 0.003109665, y: 0.0025515198, z: 0.0067754304}
-  m_LocalScale: {x: 1, y: 0.9999998, z: 0.9999999}
-  m_Children:
-  - {fileID: 4934048162130048}
-  m_Father: {fileID: 4834746891071470}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1524080478716750
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4951426705853676}
-  m_Layer: 0
-  m_Name: LizardLLegDigit236633
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4951426705853676
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524080478716750}
-  m_LocalRotation: {x: 0.01500171, y: -0.06920721, z: 0.06801574, w: 0.9951679}
-  m_LocalPosition: {x: -0.0038313626, y: 5.9604643e-10, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.9999998}
-  m_Children: []
-  m_Father: {fileID: 4003368003211440}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1531486203693252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4219961608993544}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit237654
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4219961608993544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531486203693252}
-  m_LocalRotation: {x: -0.18060055, y: 0.02484255, z: 0.11691049, w: 0.9762675}
-  m_LocalPosition: {x: -0.0017472743, y: -0.0000000038743018, z: 0.0000000035762786}
-  m_LocalScale: {x: 1.0000014, y: 0.9999994, z: 0.9999992}
-  m_Children: []
-  m_Father: {fileID: 4717449278932094}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1544603956040614
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4603492517565844}
-  m_Layer: 0
-  m_Name: Lizard
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4603492517565844
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544603956040614}
-  m_LocalRotation: {x: 0.50000006, y: -0.5, z: -0.4999999, w: 0.5}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
-  m_Children: []
-  m_Father: {fileID: 4743866166799928}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1549471759630078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4069051759058950}
-  m_Layer: 0
-  m_Name: Particle View 001
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4069051759058950
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549471759630078}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
-  m_Children: []
-  m_Father: {fileID: 4743866166799928}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1551124814743596
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4601058869285286}
-  m_Layer: 0
-  m_Name: LizardTail7
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4601058869285286
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551124814743596}
-  m_LocalRotation: {x: -9.593573e-10, y: -0.0000000065634627, z: -0.0098233, w: 0.9999518}
-  m_LocalPosition: {x: -0.017985506, y: 0, z: -7.105427e-17}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
-  m_Children:
-  - {fileID: 4791771569776752}
-  m_Father: {fileID: 4870931956831328}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1557149478165638
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4107548798944870}
-  m_Layer: 0
-  m_Name: LizardLLegPlatform
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4107548798944870
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557149478165638}
-  m_LocalRotation: {x: 0.5511249, y: -0.55112475, z: -0.44301403, w: 0.4430141}
-  m_LocalPosition: {x: -0.06429105, y: -0.000000012311785, z: -0.044387884}
-  m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
-  m_Children: []
-  m_Father: {fileID: 4743866166799928}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1570655595342806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4401904245083430}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit2365643
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4401904245083430
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570655595342806}
-  m_LocalRotation: {x: 0.18059932, y: -0.024842419, z: 0.11690715, w: 0.9762682}
-  m_LocalPosition: {x: -0.0017472791, y: 0.000000004470348, z: 0.000000002980232}
-  m_LocalScale: {x: 0.99999845, y: 1.0000007, z: 1.0000005}
-  m_Children: []
-  m_Father: {fileID: 4903750528945658}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1571716043499824
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4838156631447244}
-  m_Layer: 0
-  m_Name: LizardSpine61331
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4838156631447244
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571716043499824}
-  m_LocalRotation: {x: 0.00000003395472, y: -0.00000026409788, z: 0.012057233, w: 0.99992734}
-  m_LocalPosition: {x: -0.007721697, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4989278834957350}
-  m_Father: {fileID: 4657056868164740}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1578285828821104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4339676895551252}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit21
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4339676895551252
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578285828821104}
-  m_LocalRotation: {x: -0.018877288, y: 0.034062367, z: 0.028220482, w: 0.99884284}
-  m_LocalPosition: {x: -0.0034858584, y: 0.00084547803, z: 0.00061123486}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000002}
-  m_Children:
-  - {fileID: 4903750528945658}
-  m_Father: {fileID: 4269594811683844}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1581049136599120
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4770850465594758}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit33552
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4770850465594758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581049136599120}
-  m_LocalRotation: {x: -0.0050345254, y: 0.0907474, z: 0.17733024, w: 0.9799457}
-  m_LocalPosition: {x: -0.0038365617, y: -0.00000000834465, z: -0.000000011920928}
-  m_LocalScale: {x: 1.0000007, y: 0.9999987, z: 1.000001}
-  m_Children: []
-  m_Father: {fileID: 4491027823123202}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1583516917157082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4676784699109818}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4676784699109818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583516917157082}
-  m_LocalRotation: {x: 0.010232815, y: 0.05515964, z: -0.07526772, w: 0.995584}
-  m_LocalPosition: {x: -0.0036062978, y: 0.00035159267, z: 0.001955862}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
-  m_Children:
-  - {fileID: 4227718288632882}
-  m_Father: {fileID: 4309202751884994}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1584311202807378
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4027015977891082}
-  m_Layer: 0
-  m_Name: LizardNeck3878565
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4027015977891082
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584311202807378}
-  m_LocalRotation: {x: 0.00000002761418, y: -0.000000039850484, z: -0.02681188, w: 0.9996405}
-  m_LocalPosition: {x: -0.007663357, y: 0, z: 2.2737367e-15}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
-  m_Children:
-  - {fileID: 4456923615480616}
-  m_Father: {fileID: 4259968001706506}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1591141915121706
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4030048458038376}
-  m_Layer: 0
-  m_Name: LizardLFrontLegLower343431
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4030048458038376
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591141915121706}
-  m_LocalRotation: {x: 0.19652975, y: 0.27429226, z: -0.45099103, w: 0.82628506}
-  m_LocalPosition: {x: -0.010772399, y: -0.0000000333786, z: -0.00000000834465}
-  m_LocalScale: {x: 1.0000001, y: 1.0000006, z: 0.9999993}
-  m_Children:
-  - {fileID: 4309202751884994}
-  m_Father: {fileID: 4883986209345102}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1609302910519306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4717449278932094}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit22
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4717449278932094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609302910519306}
-  m_LocalRotation: {x: 0.08080446, y: -0.11443066, z: -0.042320896, w: 0.9892347}
-  m_LocalPosition: {x: -0.0035793018, y: -8.1956386e-10, z: -0.0000000023841857}
-  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1}
-  m_Children:
-  - {fileID: 4219961608993544}
-  m_Father: {fileID: 4457383970161426}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1619591388689102
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4863434550002594}
-  m_Layer: 0
-  m_Name: LizardSpine276764
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4863434550002594
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619591388689102}
-  m_LocalRotation: {x: -0.00000008387379, y: 0.0000002707652, z: -0.06793561, w: 0.9976897}
-  m_LocalPosition: {x: -0.007670833, y: 0, z: 2.842171e-16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4953529365153708}
-  m_Father: {fileID: 4433086791934380}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1637952340943198
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4961918338279990}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit1312xx
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4961918338279990
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637952340943198}
-  m_LocalRotation: {x: -0.05423625, y: -0.017681234, z: 0.11877749, w: 0.99128085}
-  m_LocalPosition: {x: -0.002576115, y: 0.0000000043958424, z: 0.0000000047683715}
-  m_LocalScale: {x: 0.9999992, y: 1.0000002, z: 1.0000006}
-  m_Children: []
-  m_Father: {fileID: 4074853085868320}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1650678746853870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4656681155172742}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit2232c
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4656681155172742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650678746853870}
-  m_LocalRotation: {x: 0.025161667, y: -0.03344721, z: -0.0011684402, w: 0.99912304}
-  m_LocalPosition: {x: -0.003876512, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
-  m_Children:
-  - {fileID: 4422037354657526}
-  m_Father: {fileID: 4112928248437360}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1657608350459738
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4534707540190330}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit42aa
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4534707540190330
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657608350459738}
-  m_LocalRotation: {x: -0.03393077, y: 0.16680557, z: -0.048774067, w: 0.98419803}
-  m_LocalPosition: {x: -0.0027485674, y: 5.9604643e-10, z: 0.0000000023841857}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000005}
-  m_Children:
-  - {fileID: 4823518631213718}
-  m_Father: {fileID: 4946016670295676}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1658099010541828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4883986209345102}
-  m_Layer: 0
-  m_Name: LizardLFrontLegUpper66554
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4883986209345102
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658099010541828}
-  m_LocalRotation: {x: -0.6167298, y: 0.37394997, z: -0.051225573, w: 0.6907835}
-  m_LocalPosition: {x: -0.008664587, y: -0.000000002980232, z: -0.000000007152557}
-  m_LocalScale: {x: 0.99999976, y: 1.0000002, z: 1}
-  m_Children:
-  - {fileID: 4030048458038376}
-  m_Father: {fileID: 4889790186874918}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1664005882812406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4301937631632070}
-  m_Layer: 0
-  m_Name: LizardTail5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4301937631632070
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664005882812406}
-  m_LocalRotation: {x: -0.000000016480127, y: -0.000000042771468, z: -0.02646758,
-    w: 0.9996497}
-  m_LocalPosition: {x: -0.01798551, y: 0, z: 2.842171e-16}
-  m_LocalScale: {x: 0.99999976, y: 0.9999999, z: 0.9999999}
-  m_Children:
-  - {fileID: 4870931956831328}
-  m_Father: {fileID: 4701200850466686}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1669727775070084
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4279634404797420}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit42
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4279634404797420
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669727775070084}
-  m_LocalRotation: {x: -0.012573872, y: -0.062860325, z: -0.0074284254, w: 0.9979155}
-  m_LocalPosition: {x: -0.0022350692, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
-  m_Children:
-  - {fileID: 4962587029810880}
-  m_Father: {fileID: 4333126164361036}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1703279382574434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4457383970161426}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit21
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4457383970161426
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703279382574434}
-  m_LocalRotation: {x: 0.018878119, y: -0.034062736, z: 0.02822066, w: 0.99884284}
-  m_LocalPosition: {x: -0.0034858584, y: 0.00084547646, z: -0.00061123964}
-  m_LocalScale: {x: 1.0000001, y: 1, z: 0.9999999}
-  m_Children:
-  - {fileID: 4717449278932094}
-  m_Father: {fileID: 4309202751884994}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1713072944681214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4986395835997842}
-  m_Layer: 0
-  m_Name: LizardRFrontLegDigit431231355
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4986395835997842
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713072944681214}
-  m_LocalRotation: {x: -0.06324894, y: 0.026039548, z: 0.05109162, w: 0.9963489}
-  m_LocalPosition: {x: -0.0019861506, y: -0.000000001490116, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 0.99999976, z: 0.99999994}
-  m_Children: []
-  m_Father: {fileID: 4242621669992624}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1715607151770624
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4309202751884994}
-  m_Layer: 0
-  m_Name: LizardLFrontLegPalm2767667
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4309202751884994
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715607151770624}
-  m_LocalRotation: {x: -0.4121823, y: -0.041161306, z: -0.4799373, w: 0.77335095}
-  m_LocalPosition: {x: -0.0119841285, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999976, y: 1.0000082, z: 0.9999922}
-  m_Children:
-  - {fileID: 4165701671531216}
-  - {fileID: 4676784699109818}
-  - {fileID: 4457383970161426}
-  - {fileID: 4333126164361036}
-  m_Father: {fileID: 4030048458038376}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1719949329345840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4344105773012818}
-  m_Layer: 0
-  m_Name: LizardTail3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4344105773012818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719949329345840}
-  m_LocalRotation: {x: 0.000000046090523, y: -0.00000010240224, z: 0.011533254, w: 0.9999335}
-  m_LocalPosition: {x: -0.017985506, y: -0.0000000011920929, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
-  m_Children:
-  - {fileID: 4701200850466686}
-  m_Father: {fileID: 4870704513270276}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1744260824119300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4112382047043238}
-  m_Layer: 0
-  m_Name: LizardRFrontLegLower65633
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4112382047043238
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744260824119300}
-  m_LocalRotation: {x: -0.19650838, y: -0.27430132, z: -0.45097762, w: 0.8262944}
-  m_LocalPosition: {x: -0.010772396, y: -0.000000030994414, z: 0.00000000834465}
-  m_LocalScale: {x: 1, y: 0.9999993, z: 1.0000006}
-  m_Children:
-  - {fileID: 4269594811683844}
-  m_Father: {fileID: 4686472920204794}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1747168071937720
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4946016670295676}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit41123
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4946016670295676
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747168071937720}
-  m_LocalRotation: {x: 0.06118728, y: 0.36481854, z: -0.008435383, w: 0.9290277}
-  m_LocalPosition: {x: -0.0029594754, y: 0.00025015205, z: 0.0031642818}
-  m_LocalScale: {x: 0.9999996, y: 0.99999994, z: 1.0000005}
-  m_Children:
-  - {fileID: 4534707540190330}
-  m_Father: {fileID: 4989363572613180}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1753918516679730
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4686472920204794}
+  - component: {fileID: 5626817037804725205}
   m_Layer: 0
   m_Name: LizardRFrontLegUpper676445
   m_TagString: Untagged
@@ -2451,22 +2330,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4686472920204794
+--- !u!4 &5626817037804725205
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753918516679730}
+  m_GameObject: {fileID: 6565446747404791259}
   m_LocalRotation: {x: 0.6167282, y: -0.3739509, z: -0.051227305, w: 0.6907842}
   m_LocalPosition: {x: -0.008664587, y: 0, z: -0.0000000047683715}
   m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 1}
   m_Children:
-  - {fileID: 4112382047043238}
-  m_Father: {fileID: 4860425343216856}
+  - {fileID: 867154938952184653}
+  m_Father: {fileID: 782179213854084944}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1768688540489802
+--- !u!1 &6577054626230610730
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2474,7 +2353,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4285174986292598}
+  - component: {fileID: 8009382592261608849}
+  m_Layer: 0
+  m_Name: LizardTail3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8009382592261608849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577054626230610730}
+  m_LocalRotation: {x: 0.000000046090523, y: -0.00000010240224, z: 0.011533254, w: 0.9999335}
+  m_LocalPosition: {x: -0.017985506, y: -0.0000000011920929, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 8909161413602127394}
+  m_Father: {fileID: 7520984882777928108}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6627471998337689242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6025971735260808863}
   m_Layer: 0
   m_Name: LizardRRearLegPlatform
   m_TagString: Untagged
@@ -2482,21 +2392,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4285174986292598
+--- !u!4 &6025971735260808863
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768688540489802}
+  m_GameObject: {fileID: 6627471998337689242}
   m_LocalRotation: {x: 0.44301417, y: -0.44301412, z: -0.5511247, w: 0.55112475}
   m_LocalPosition: {x: 0.06429107, y: -0.000000012311787, z: -0.044387866}
   m_LocalScale: {x: 2.54, y: 2.5400002, z: 2.5400002}
   m_Children: []
-  m_Father: {fileID: 4743866166799928}
+  m_Father: {fileID: 7759255861210271949}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1770002645322968
+--- !u!1 &6660615251395577376
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2504,95 +2414,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4953529365153708}
+  - component: {fileID: 4579707259580272197}
   m_Layer: 0
-  m_Name: LizardSpine345453
+  m_Name: Lizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4953529365153708
+--- !u!4 &4579707259580272197
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770002645322968}
-  m_LocalRotation: {x: 0.000000034488785, y: 0.000000045964587, z: 0.012684469, w: 0.9999196}
-  m_LocalPosition: {x: -0.007696689, y: 0, z: 5.684342e-16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4041059845410582}
-  m_Father: {fileID: 4863434550002594}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1771339173566924
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4834746891071470}
-  m_Layer: 0
-  m_Name: LizardPelvis
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4834746891071470
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771339173566924}
-  m_LocalRotation: {x: 0.70680714, y: -0.020586772, z: -0.706807, w: 0.020586738}
-  m_LocalPosition: {x: 0.000000010446969, y: 0.038956065, z: -0.057909828}
+  m_GameObject: {fileID: 6660615251395577376}
+  m_LocalRotation: {x: 0.50000006, y: -0.5, z: -0.4999999, w: 0.5}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
-  m_Children:
-  - {fileID: 4846755734926108}
-  - {fileID: 4291954713792562}
-  - {fileID: 4433086791934380}
-  - {fileID: 4997001117514966}
-  m_Father: {fileID: 4743866166799928}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1782718719122248
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4381944712300540}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4381944712300540
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782718719122248}
-  m_LocalRotation: {x: 0.058666606, y: -0.22612208, z: -0.038455207, w: 0.97157}
-  m_LocalPosition: {x: -0.006341735, y: -0.000010935515, z: -0.0012511254}
-  m_LocalScale: {x: 1.0000005, y: 0.9999999, z: 0.99999964}
-  m_Children:
-  - {fileID: 4074853085868320}
-  m_Father: {fileID: 4989363572613180}
+  m_Children: []
+  m_Father: {fileID: 7759255861210271949}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1797899418997002
+--- !u!1 &6699872220184043298
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2600,30 +2444,125 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4889790186874918}
+  - component: {fileID: 9191778730196678201}
   m_Layer: 0
-  m_Name: LizardLFrontLegCollarbone12321325
+  m_Name: LizardLFrontLegPalm2767667
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4889790186874918
+--- !u!4 &9191778730196678201
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797899418997002}
-  m_LocalRotation: {x: 0.07232694, y: 0.6693334, z: 0.13449821, w: 0.7270982}
-  m_LocalPosition: {x: -0.0040357304, y: 0.0063045365, z: 0.000988553}
+  m_GameObject: {fileID: 6699872220184043298}
+  m_LocalRotation: {x: -0.4121823, y: -0.041161306, z: -0.4799373, w: 0.77335095}
+  m_LocalPosition: {x: -0.0119841285, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999976, y: 1.0000082, z: 0.9999922}
+  m_Children:
+  - {fileID: 7600520272179656451}
+  - {fileID: 6383365653335807387}
+  - {fileID: 335889293467540810}
+  - {fileID: 1212976484647963778}
+  m_Father: {fileID: 2825611985793994003}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6961186404969766182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7762634115315743861}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7762634115315743861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6961186404969766182}
+  m_LocalRotation: {x: -0.08080439, y: 0.1144319, z: -0.042322263, w: 0.9892345}
+  m_LocalPosition: {x: -0.0035793018, y: 8.1956386e-10, z: 0.0000000023841857}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999976}
+  m_Children:
+  - {fileID: 5022926122097230565}
+  m_Father: {fileID: 7312083702397388732}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7115501576064349985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8456456962680539335}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit237654
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8456456962680539335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115501576064349985}
+  m_LocalRotation: {x: -0.18060055, y: 0.02484255, z: 0.11691049, w: 0.9762675}
+  m_LocalPosition: {x: -0.0017472743, y: -0.0000000038743018, z: 0.0000000035762786}
+  m_LocalScale: {x: 1.0000014, y: 0.9999994, z: 0.9999992}
+  m_Children: []
+  m_Father: {fileID: 8249723543020233682}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7259234726891066363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782179213854084944}
+  m_Layer: 0
+  m_Name: LizardRFrontLegCollarbone5646788
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782179213854084944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259234726891066363}
+  m_LocalRotation: {x: -0.07232531, y: -0.6693334, z: 0.13449958, w: 0.7270981}
+  m_LocalPosition: {x: -0.0040357304, y: 0.0063045365, z: -0.0009885529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4883986209345102}
-  m_Father: {fileID: 4989278834957350}
-  m_RootOrder: 0
+  - {fileID: 5626817037804725205}
+  m_Father: {fileID: 7827645966893809933}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1805759889630610
+--- !u!1 &7315283409624150190
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2631,29 +2570,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4235635633599372}
+  - component: {fileID: 4994169249401760230}
   m_Layer: 0
-  m_Name: LizardLLegDigit3369989
+  m_Name: LizardRRearLegDigit42aa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4235635633599372
+--- !u!4 &4994169249401760230
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805759889630610}
-  m_LocalRotation: {x: 0.005034027, y: -0.090749875, z: 0.17732833, w: 0.97994584}
-  m_LocalPosition: {x: -0.003836562, y: 0.000000008642673, z: -0.000000007152557}
-  m_LocalScale: {x: 0.9999994, y: 1.0000015, z: 0.9999991}
-  m_Children: []
-  m_Father: {fileID: 4175679005231910}
+  m_GameObject: {fileID: 7315283409624150190}
+  m_LocalRotation: {x: -0.03393077, y: 0.16680557, z: -0.048774067, w: 0.98419803}
+  m_LocalPosition: {x: -0.0027485674, y: 5.9604643e-10, z: 0.0000000023841857}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000005}
+  m_Children:
+  - {fileID: 4966918621882601737}
+  m_Father: {fileID: 9151253559447944968}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1814365935954736
+--- !u!1 &7345217368581767852
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2661,7 +2601,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4722155124320170}
+  - component: {fileID: 2219388469064145669}
   m_Layer: 0
   m_Name: LizardRFrontLegPlatform
   m_TagString: Untagged
@@ -2669,21 +2609,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4722155124320170
+--- !u!4 &2219388469064145669
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814365935954736}
+  m_GameObject: {fileID: 7345217368581767852}
   m_LocalRotation: {x: 0.4609594, y: -0.46095932, z: -0.5362056, w: 0.53620565}
   m_LocalPosition: {x: 0.062699415, y: -0.0018941602, z: 0.09623986}
   m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
   m_Children: []
-  m_Father: {fileID: 4743866166799928}
+  m_Father: {fileID: 7759255861210271949}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1815111972839626
+--- !u!1 &7480320859519983197
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2691,30 +2631,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4040979966840624}
+  - component: {fileID: 6752769293536789657}
   m_Layer: 0
-  m_Name: LizardRFrontLegDigit01
+  m_Name: LizardRRearLegDigit1312xx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4040979966840624
+--- !u!4 &6752769293536789657
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815111972839626}
-  m_LocalRotation: {x: 0.03260086, y: -0.3649828, z: -0.090555355, w: 0.92602617}
-  m_LocalPosition: {x: -0.0013558435, y: -0.00006199702, z: -0.0035349058}
-  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 0.99999964}
-  m_Children:
-  - {fileID: 4913435709152328}
-  m_Father: {fileID: 4269594811683844}
+  m_GameObject: {fileID: 7480320859519983197}
+  m_LocalRotation: {x: -0.05423625, y: -0.017681234, z: 0.11877749, w: 0.99128085}
+  m_LocalPosition: {x: -0.002576115, y: 0.0000000043958424, z: 0.0000000047683715}
+  m_LocalScale: {x: 0.9999992, y: 1.0000002, z: 1.0000006}
+  m_Children: []
+  m_Father: {fileID: 658707553903077755}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1815243435363396
+--- !u!1 &7588781158554845098
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2722,30 +2661,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4291954713792562}
+  - component: {fileID: 6198147409726274590}
   m_Layer: 0
-  m_Name: LizardRRearLegThigh55344
+  m_Name: LizardLFrontLegCollarbone12321325
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4291954713792562
+--- !u!4 &6198147409726274590
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815243435363396}
-  m_LocalRotation: {x: 0.70556206, y: -0.43569314, z: 0.3664271, w: 0.42200115}
-  m_LocalPosition: {x: 0.0031096695, y: 0.0025515198, z: -0.0067754304}
+  m_GameObject: {fileID: 7588781158554845098}
+  m_LocalRotation: {x: 0.07232694, y: 0.6693334, z: 0.13449821, w: 0.7270982}
+  m_LocalPosition: {x: -0.0040357304, y: 0.0063045365, z: 0.000988553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4214951008585554}
-  m_Father: {fileID: 4834746891071470}
-  m_RootOrder: 1
+  - {fileID: 4759607992580661011}
+  m_Father: {fileID: 7827645966893809933}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1824032031644682
+--- !u!1 &7689087680515750828
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2753,7 +2692,222 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4913435709152328}
+  - component: {fileID: 2815935883855867198}
+  m_Layer: 0
+  m_Name: LizardLLegDigit236633
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2815935883855867198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689087680515750828}
+  m_LocalRotation: {x: 0.01500171, y: -0.06920721, z: 0.06801574, w: 0.9951679}
+  m_LocalPosition: {x: -0.0038313626, y: 5.9604643e-10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999998}
+  m_Children: []
+  m_Father: {fileID: 769487214283513462}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7861720827375705178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5709614739684855726}
+  m_Layer: 0
+  m_Name: LizardTail8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5709614739684855726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7861720827375705178}
+  m_LocalRotation: {x: -0.0000000011808045, y: -0.0000000017909464, z: -0.01289264,
+    w: 0.9999169}
+  m_LocalPosition: {x: -0.017985515, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2239664032507930205}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7890514132562950139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900035047462570812}
+  m_Layer: 0
+  m_Name: LizardLLegThigh11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1900035047462570812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890514132562950139}
+  m_LocalRotation: {x: 0.70556253, y: -0.43569344, z: -0.3664296, w: -0.42199776}
+  m_LocalPosition: {x: 0.003109665, y: 0.0025515198, z: 0.0067754304}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 0.9999999}
+  m_Children:
+  - {fileID: 5134027913781206431}
+  m_Father: {fileID: 406494358807195631}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7969779389954421545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2229821041953559262}
+  m_Layer: 0
+  m_Name: LizardLFrontLegDigit02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2229821041953559262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969779389954421545}
+  m_LocalRotation: {x: 0.004832145, y: 0.11026557, z: 0.16122381, w: 0.9807268}
+  m_LocalPosition: {x: -0.0021890544, y: 0, z: -0.0000000023841857}
+  m_LocalScale: {x: 0.9999997, y: 1, z: 1.0000004}
+  m_Children:
+  - {fileID: 6123130219000676765}
+  m_Father: {fileID: 7600520272179656451}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7973855592640277493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7271324252723457395}
+  m_Layer: 0
+  m_Name: LizardRFrontLegDigit41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7271324252723457395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973855592640277493}
+  m_LocalRotation: {x: 0.016831264, y: 0.37987334, z: 0.054830793, w: 0.92325866}
+  m_LocalPosition: {x: -0.0024826168, y: 0.000808647, z: 0.002454846}
+  m_LocalScale: {x: 0.99999946, y: 1.0000001, z: 1.0000005}
+  m_Children:
+  - {fileID: 6271516116930519305}
+  m_Father: {fileID: 3904564854997594783}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8342257855464491145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7580442145428490457}
+  m_Layer: 0
+  m_Name: LizardSpine5454577
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7580442145428490457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342257855464491145}
+  m_LocalRotation: {x: -0.000000008419114, y: -0.00000007162967, z: 0.04927354, w: 0.9987853}
+  m_LocalPosition: {x: -0.007716846, y: -0.0000000011920929, z: 1.1368684e-15}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 2981048416656074447}
+  m_Father: {fileID: 7152057697399320696}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8388518249167515493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855951903421543894}
+  m_Layer: 0
+  m_Name: LizardLLegDigit13654645677
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &855951903421543894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8388518249167515493}
+  m_LocalRotation: {x: 0.054236345, y: 0.01768184, z: 0.118777215, w: 0.9912809}
+  m_LocalPosition: {x: -0.0025761223, y: -0.000000004470348, z: 0.0000000047683715}
+  m_LocalScale: {x: 1.000001, y: 0.99999964, z: 0.9999994}
+  m_Children: []
+  m_Father: {fileID: 4579796683585909344}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8528056585727783287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4738231087859375529}
   m_Layer: 0
   m_Name: LizardRFrontLegDigit02
   m_TagString: Untagged
@@ -2761,22 +2915,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4913435709152328
+--- !u!4 &4738231087859375529
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824032031644682}
+  m_GameObject: {fileID: 8528056585727783287}
   m_LocalRotation: {x: -0.004831926, y: -0.11026519, z: 0.16122396, w: 0.98072684}
   m_LocalPosition: {x: -0.0021890556, y: 2.9802322e-10, z: 0.0000000023841857}
   m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 0.99999964}
   m_Children:
-  - {fileID: 4529293525605394}
-  m_Father: {fileID: 4040979966840624}
+  - {fileID: 1765673066254878624}
+  m_Father: {fileID: 4427186382523749492}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1824759685699012
+--- !u!1 &8565777589349777556
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2784,60 +2938,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4767745281952716}
+  - component: {fileID: 6984880899840037930}
   m_Layer: 0
-  m_Name: LizardHeadBone00223xcx
+  m_Name: LizardTail5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4767745281952716
+--- !u!4 &6984880899840037930
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824759685699012}
-  m_LocalRotation: {x: -0.000000015679133, y: 0.0000000035387928, z: 0.06643051, w: 0.99779105}
-  m_LocalPosition: {x: -0.00059992314, y: 0.0020479953, z: -6.253981e-10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4456923615480616}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1858595516045540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4923775982628236}
-  m_Layer: 0
-  m_Name: LizardLLegDigit11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4923775982628236
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858595516045540}
-  m_LocalRotation: {x: -0.058671784, y: 0.22629008, z: -0.03845121, w: 0.97153074}
-  m_LocalPosition: {x: -0.006341737, y: -0.000010934024, z: 0.0012511325}
-  m_LocalScale: {x: 1.0000005, y: 1.0000001, z: 0.9999996}
+  m_GameObject: {fileID: 8565777589349777556}
+  m_LocalRotation: {x: -0.000000016480127, y: -0.000000042771468, z: -0.02646758,
+    w: 0.9996497}
+  m_LocalPosition: {x: -0.01798551, y: 0, z: 2.842171e-16}
+  m_LocalScale: {x: 0.99999976, y: 0.9999999, z: 0.9999999}
   m_Children:
-  - {fileID: 4003122128315822}
-  m_Father: {fileID: 4895481416333334}
+  - {fileID: 5019783990562461546}
+  m_Father: {fileID: 8909161413602127394}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1880303678931166
+--- !u!1 &8665544936541118761
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2845,60 +2970,125 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4823518631213718}
+  - component: {fileID: 5134027913781206431}
   m_Layer: 0
-  m_Name: LizardRRearLegDigit431323
+  m_Name: LizardLLegCalf323
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4823518631213718
+--- !u!4 &5134027913781206431
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880303678931166}
-  m_LocalRotation: {x: 0.048252977, y: 0.18335074, z: 0.24724466, w: 0.95022327}
-  m_LocalPosition: {x: -0.0031260443, y: -0.0000000028312206, z: 0.0000000023841857}
-  m_LocalScale: {x: 1.0000011, y: 0.9999992, z: 1.0000001}
-  m_Children: []
-  m_Father: {fileID: 4534707540190330}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1892160706057680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4333126164361036}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit41
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4333126164361036
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892160706057680}
-  m_LocalRotation: {x: -0.01682999, y: -0.3798732, z: 0.054831855, w: 0.92325866}
-  m_LocalPosition: {x: -0.002482624, y: 0.00080863945, z: -0.0024548483}
-  m_LocalScale: {x: 1.0000006, y: 0.9999999, z: 0.99999964}
+  m_GameObject: {fileID: 8665544936541118761}
+  m_LocalRotation: {x: 0.05610357, y: 0.15889752, z: 0.46549082, w: 0.8688626}
+  m_LocalPosition: {x: -0.012081234, y: -0.00000004053116, z: 0.00000002026558}
+  m_LocalScale: {x: 1.0000008, y: 0.9999996, z: 0.9999998}
   m_Children:
-  - {fileID: 4279634404797420}
-  m_Father: {fileID: 4309202751884994}
+  - {fileID: 8078942213849850394}
+  m_Father: {fileID: 1900035047462570812}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8721935166401769593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7827645966893809933}
+  m_Layer: 0
+  m_Name: LizardRibcage67676
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7827645966893809933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721935166401769593}
+  m_LocalRotation: {x: -0.000000049326854, y: -0.00000010706697, z: -0.037269704,
+    w: 0.99930525}
+  m_LocalPosition: {x: -0.007714493, y: 0.0000000011920929, z: 0}
+  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 1}
+  m_Children:
+  - {fileID: 6198147409726274590}
+  - {fileID: 761850808540469537}
+  - {fileID: 782179213854084944}
+  m_Father: {fileID: 2981048416656074447}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8806906818820139273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2779890559347962767}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit33552
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2779890559347962767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806906818820139273}
+  m_LocalRotation: {x: -0.0050345254, y: 0.0907474, z: 0.17733024, w: 0.9799457}
+  m_LocalPosition: {x: -0.0038365617, y: -0.00000000834465, z: -0.000000011920928}
+  m_LocalScale: {x: 1.0000007, y: 0.9999987, z: 1.000001}
+  m_Children: []
+  m_Father: {fileID: 8578538691429375758}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8839558497409840872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9151253559447944968}
+  m_Layer: 0
+  m_Name: LizardRRearLegDigit41123
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9151253559447944968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839558497409840872}
+  m_LocalRotation: {x: 0.06118728, y: 0.36481854, z: -0.008435383, w: 0.9290277}
+  m_LocalPosition: {x: -0.0029594754, y: 0.00025015205, z: 0.0031642818}
+  m_LocalScale: {x: 0.9999996, y: 0.99999994, z: 1.0000005}
+  m_Children:
+  - {fileID: 4994169249401760230}
+  m_Father: {fileID: 6898765712392114913}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1908556368156822
+--- !u!1 &8978666406369213090
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2906,215 +3096,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4456923615480616}
+  - component: {fileID: 1432431454513126418}
   m_Layer: 0
-  m_Name: LizardHead5656462
+  m_Name: Particle View 001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4456923615480616
+--- !u!4 &1432431454513126418
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908556368156822}
-  m_LocalRotation: {x: -0.000000035708343, y: 0.000000024589614, z: -0.035809405,
-    w: 0.99935865}
-  m_LocalPosition: {x: -0.007663364, y: 0.0000000011920929, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
-  m_Children:
-  - {fileID: 4424427023010368}
-  - {fileID: 4767745281952716}
-  - {fileID: 4982446717216628}
-  m_Father: {fileID: 4027015977891082}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1952781634283872
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4214951008585554}
-  m_Layer: 0
-  m_Name: LizardRRearLegCalf12cxx2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4214951008585554
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952781634283872}
-  m_LocalRotation: {x: -0.05626492, y: -0.15896294, z: 0.46547106, w: 0.8688508}
-  m_LocalPosition: {x: -0.012081232, y: -0.00000004053116, z: -0.00000002026558}
-  m_LocalScale: {x: 1.0000023, y: 0.9999983, z: 0.9999992}
-  m_Children:
-  - {fileID: 4989363572613180}
-  m_Father: {fileID: 4291954713792562}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1959594005895868
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4165701671531216}
-  m_Layer: 0
-  m_Name: LizardLFrontLegDigit01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4165701671531216
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959594005895868}
-  m_LocalRotation: {x: -0.032599624, y: 0.3649824, z: -0.09055652, w: 0.9260263}
-  m_LocalPosition: {x: -0.0013558412, y: -0.0000619854, z: 0.003534901}
-  m_LocalScale: {x: 0.9999999, y: 0.99999976, z: 1.0000005}
-  m_Children:
-  - {fileID: 4154518993863400}
-  m_Father: {fileID: 4309202751884994}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1968083913422492
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4259968001706506}
-  m_Layer: 0
-  m_Name: LizardNeck287879
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4259968001706506
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968083913422492}
-  m_LocalRotation: {x: -0.000000027949223, y: 0.00000007048551, z: 0.03581488, w: 0.9993585}
-  m_LocalPosition: {x: -0.0076633594, y: 0.0000000011920929, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
-  m_Children:
-  - {fileID: 4027015977891082}
-  m_Father: {fileID: 4023000239213500}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1983286278168678
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4041059845410582}
-  m_Layer: 0
-  m_Name: LizardSpine4454767
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4041059845410582
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983286278168678}
-  m_LocalRotation: {x: 0.000000030123186, y: 0.000000023280165, z: 0.01825969, w: 0.9998333}
-  m_LocalPosition: {x: -0.007705306, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
-  m_Children:
-  - {fileID: 4657056868164740}
-  m_Father: {fileID: 4953529365153708}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1987756432788190
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4257642201399778}
-  m_Layer: 0
-  m_Name: LizardLLegDigit41
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4257642201399778
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987756432788190}
-  m_LocalRotation: {x: -0.06119076, y: -0.36465806, z: -0.008430502, w: 0.9290905}
-  m_LocalPosition: {x: -0.0029594707, y: 0.00025015487, z: -0.0031642793}
-  m_LocalScale: {x: 0.9999995, y: 1.0000001, z: 1.0000005}
-  m_Children:
-  - {fileID: 4315668863564416}
-  m_Father: {fileID: 4895481416333334}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1991480826111810
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4752950548824612}
-  m_Layer: 0
-  m_Name: LizardRRearLegDigit3132
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4752950548824612
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991480826111810}
-  m_LocalRotation: {x: 0.007982263, y: 0.22083136, z: -0.065772444, w: 0.973059}
-  m_LocalPosition: {x: -0.005648198, y: 0.00008332387, z: 0.002573645}
-  m_LocalScale: {x: 0.9999997, y: 0.99999976, z: 1.0000005}
-  m_Children:
-  - {fileID: 4491027823123202}
-  m_Father: {fileID: 4989363572613180}
-  m_RootOrder: 1
+  m_GameObject: {fileID: 8978666406369213090}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
+  m_Children: []
+  m_Father: {fileID: 7759255861210271949}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

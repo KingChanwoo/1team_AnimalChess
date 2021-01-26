@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Goat
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1172695079403958, guid: feec0bb87b2350742a84cf58423fc0bb, type: 3}
+  prefab: {fileID: 7911150300222714102, guid: feec0bb87b2350742a84cf58423fc0bb, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Goat
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1
