@@ -109,12 +109,13 @@ public class AIopponent : MonoBehaviour
 
             //player takes damage
             gamePlayController.TakeDamage(damage);
-            round++;
+            
             if(damage == 0)
             {
                 gamePlayController.winBonus = 1;
                 gamePlayController.continuedWin++;
                 gamePlayController.continuedLose = 0;
+                round++;
             }
             else
             {

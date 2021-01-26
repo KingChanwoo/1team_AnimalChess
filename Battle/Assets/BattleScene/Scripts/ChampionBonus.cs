@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ChampionBonusType {Shield,Health,Critical,Regeneration,Evasion,TiedDamage,Attack,AttackMana,AttackSpeed,Summon,AtkDef,MoveSpeed};
+public enum ChampionBonusType {Shield,Health,Critical,Regeneration,Evasion,TiedDamage,Attack,AttackMana,AttackSpeed,Summon,AtkDef,MoveSpeed
+                               ,Evil,Wealth,Sin7,Admirer,Zodiacal,TenLongevity,Fecyndiry,Loyality,Death,Strength,King,Ability};
 public enum BonusTarget {Self, Enemy};
 
 /// <summary>
@@ -21,9 +22,9 @@ public class ChampionBonus
     public BonusTarget bonusTarget;
 
     ///How many champions needed to get the bonus effect
-    public int championCount1 = 0;
-    public int championCount2 = 0;
-    public int championCount3 = 0;
+    public float championCount1 = 0;
+    public float championCount2 = 0;
+    public float championCount3 = 0;
 
     ///Float value of the bonus
     public float bonusValue1 = 0;
@@ -263,8 +264,24 @@ public class ChampionBonus
 
             //  상징 시너지 : Type1
             //--------------------------------------------------------------------------------
-
-            
+            case ChampionBonusType.Sin7:
+                champion.sin7 = true;
+                if(num >= championCount3)
+                    champion.sin7Shield = bonusValue3;
+                else if(num >= championCount2)
+                    champion.sin7Shield = bonusValue2;
+                else if(num >= championCount1)
+                    champion.sin7Shield = bonusValue1;
+                break;
+            case ChampionBonusType.Wealth:
+                gamePlayController.wealth = true;
+                if (num >= championCount3)
+                    gamePlayController.wealthMoney = bonusValue3;
+                else if (num >= championCount2)
+                    gamePlayController.wealthMoney = bonusValue2;
+                else if (num >= championCount1)
+                    gamePlayController.wealthMoney = bonusValue1;
+                break;
             default:
                 break;
         }
@@ -288,14 +305,33 @@ public class ChampionBonus
                     }
                     else finalDamage = champion.currentDamage;
                 }
-                else
+                break;
+            case ChampionBonusType.Evil:
+                if(num >= championCount2)
                 {
-                    if (ran <= champion.currentCritical)
+                    if (type1 == "악의상징")
                     {
-                        finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) * 1.5f;
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) * 1.5f + bonusValue2;
+                        }
+                        else finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) + bonusValue2;
                     }
-                    else finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100)));
                 }
+                else if(num >= championCount1)
+                {
+                    if (type1 == "악의상징")
+                    {
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) * 1.5f + bonusValue1;
+                        }
+                        else finalDamage = champion.currentDamage * (1 - (champion.currentDefence / (champion.currentDefence + 100))) + bonusValue1;
+                    }
+                }
+                break;
+            case ChampionBonusType.Admirer:
+
                 break;
             
 

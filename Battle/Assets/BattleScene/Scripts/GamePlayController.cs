@@ -61,6 +61,9 @@ public class GamePlayController : MonoBehaviour
     public int continuedWin = 0;
     public int continuedLose = 0;
 
+    public bool wealth = false;
+    public float wealthMoney = 0;
+
     /// Start is called before the first frame update
     void Start()
     {
@@ -664,6 +667,7 @@ public class GamePlayController : MonoBehaviour
         }
         else if (currentGameStage == GameStage.Combat)
         {
+
             //set new game stage
             currentGameStage = GameStage.Preparation;
 
@@ -684,6 +688,10 @@ public class GamePlayController : MonoBehaviour
 
             //add gold
             currentGold += CalculateIncome();
+            if (wealth)
+            {
+                currentGold += (int)wealthMoney;
+            }
 
             currentExp += 2;
             CheckExp();
@@ -948,6 +956,26 @@ public class GamePlayController : MonoBehaviour
         if(draggedChampion != null)
         {
             currentGold += draggedChampion.GetComponent<Champion>().cost;
+        }
+    }
+
+    public void Sin7Shield(float shield)
+    {
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                //there is a champion
+                if (gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    if(championController.champType2.displayName == "7대죄악")
+                    {
+                        championController.currentShield += shield;
+                    }
+                }
+
+            }
         }
     }
 }

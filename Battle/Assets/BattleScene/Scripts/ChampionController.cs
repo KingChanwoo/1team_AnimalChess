@@ -100,6 +100,11 @@ public class ChampionController : MonoBehaviour
     private bool isStuned = false;
     private float stunTimer = 0;
 
+    public bool sin7 = false;
+    public float sin7Shield = 0;
+
+
+
     public ChampionType champType1;
     public ChampionType champType2;
 
@@ -172,7 +177,7 @@ public class ChampionController : MonoBehaviour
             if (synergyIsApply)
             {
                 ApplyActiveSynergy();
-                championAnimator.SetFloat("attackSpeed", currentAttackSpeed);
+                championAnimator.SetFloat("attackSpeed", 1/currentAttackSpeed);
                 gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
                 synergyIsApply = false;
             }
@@ -615,7 +620,13 @@ public class ChampionController : MonoBehaviour
 
             //target died from attack
             if (isTargetDead)
+            {
+                if (sin7)
+                {
+                    gamePlayController.Sin7Shield(sin7Shield);
+                }
                 TryAttackNewTarget();
+            }
 
 
             //create projectile if have one
@@ -733,6 +744,7 @@ public class ChampionController : MonoBehaviour
     {
         currentShield += maxHealth * (shield/100);
     }
+    
 
 
 
@@ -796,6 +808,11 @@ public class ChampionController : MonoBehaviour
         currentDefence = champion.defence;
 
         currentMoveSpeed = champion.movementSpeed;
+        sin7 = false;
+        sin7Shield = 0;
+        gamePlayController.wealth = false;
+        gamePlayController.wealthMoney = 0;
+
 
         Dictionary<ChampionBonus, int> activeBonuses = null;
 
