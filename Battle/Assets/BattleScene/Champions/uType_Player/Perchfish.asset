@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Perchfish
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1141414037531574, guid: 764c3affe01df0d46a7a72b6540d3092, type: 3}
+  prefab: {fileID: 1006324635007480419, guid: 764c3affe01df0d46a7a72b6540d3092, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Perchfish
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1

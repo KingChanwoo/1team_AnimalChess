@@ -1,11 +1,7 @@
 fileFormatVersion: 2
 guid: 0d3991dc17bca3f4b93a1131d73fe2fd
-labels:
-- animals
-timeCreated: 1503840258
-licenseType: Store
-NativeFormatImporter:
-  mainObjectFileID: 100100000
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

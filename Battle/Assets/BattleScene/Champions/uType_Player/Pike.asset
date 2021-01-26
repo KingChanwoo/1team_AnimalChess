@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Pike
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1843079388718624, guid: 95fc51a8c53588c44a371b2db2ccff7c, type: 3}
+  prefab: {fileID: 514415918388615185, guid: 95fc51a8c53588c44a371b2db2ccff7c, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Pike
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1

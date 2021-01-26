@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Rat
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1843147027273832, guid: 736217452362cff45b8255568c854df9, type: 3}
+  prefab: {fileID: 2402983796702099242, guid: 736217452362cff45b8255568c854df9, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Rat
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1

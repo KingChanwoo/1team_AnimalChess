@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Octopus_v1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1548543214523454, guid: 7c2dc3c08c459a54c8645a1fd51e3fed, type: 3}
+  prefab: {fileID: 7918555519248981223, guid: 55d536ab61fddf44aa0a5aa5586e90bd, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Octopus_v1
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1

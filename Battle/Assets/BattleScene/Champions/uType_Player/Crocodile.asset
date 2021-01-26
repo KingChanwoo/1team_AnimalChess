@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Crocodile
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1152602052714694, guid: 0d3991dc17bca3f4b93a1131d73fe2fd, type: 3}
+  prefab: {fileID: 2797833121935298652, guid: 0d3991dc17bca3f4b93a1131d73fe2fd, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Crocodile
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1

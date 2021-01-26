@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Pig_v1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1828100575842878, guid: 7ecfe0282102b144b8d4cdbe3a3dc2f5, type: 3}
+  prefab: {fileID: 2182913752134607163, guid: 7ecfe0282102b144b8d4cdbe3a3dc2f5, type: 3}
   attackProjectile: {fileID: 0}
   uiname: Pig_v1
   cost: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   shield: 0
   mana: 100
   damage: 10
+  defence: 0
   critical: 25
   evasion: 0
-  attackRange: 2
+  attackRange: 4
   damageToPlayer: 1
