@@ -16,15 +16,20 @@ MonoBehaviour:
   attackProjectile: {fileID: 0}
   uiname: Scorpion
   cost: 1
+  sellCost: 0
   type1: {fileID: 11400000, guid: 33223db9cedb8c045990cb7a3b0144a3, type: 2}
   type2: {fileID: 11400000, guid: 3c4644fba6daec0469d795ae15fcc92e, type: 2}
   health: 100
   healthRegeneration: 0
   shield: 0
   mana: 100
+  hitMana: 5
+  attackMana: 10
   damage: 10
+  attackSpeed: 1
   defence: 0
   critical: 25
   evasion: 0
-  attackRange: 4
+  attackRange: 6
   damageToPlayer: 1
+  movementSpeed: 3.5
