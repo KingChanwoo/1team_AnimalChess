@@ -413,7 +413,7 @@ public class AIopponent : MonoBehaviour
             ChampionBonus championBonus = m.Key.championBonus;
 
             //have enough champions to get bonus
-            if (m.Value >= championBonus.championCount)
+            if (m.Value >= championBonus.championCount1)
             {
                 activeBonusList.Add(championBonus);
             }

@@ -42,6 +42,7 @@ public class ChampionController : MonoBehaviour
     [HideInInspector]
     ///current health of the champion 
     public float currentHealth = 0;
+    public float currentHealthReg = 0;
 
     [HideInInspector]
     ///current health of the champion 
@@ -52,13 +53,20 @@ public class ChampionController : MonoBehaviour
 
     [HideInInspector]
     public float currentMana = 0;
+    public float currentHitMana = 5;
+    public float currentAttackMana = 10;
 
     [HideInInspector]
     ///Current damage of the champion deals with a attack
     public float currentDamage = 0;
+    public float currentCritical = 0;
+    public float currentEvasion = 0;
+    public float currentAttackSpeed = 1;
 
     [HideInInspector]
     public float currentDefence = 0;
+
+    public float currentMoveSpeed = 3.5f;
 
     [HideInInspector]
     ///The upgrade level of the champion
@@ -91,8 +99,9 @@ public class ChampionController : MonoBehaviour
 
     private bool isStuned = false;
     private float stunTimer = 0;
-    public float hitMana = 5;
-    public float attackMana = 10;
+
+    public ChampionType champType1;
+    public ChampionType champType2;
 
     private List<Effect> effects;
 
@@ -100,6 +109,7 @@ public class ChampionController : MonoBehaviour
     void Awake()
     {
         uIController = GameObject.Find("Scripts").GetComponent<UIController>();
+        championAnimator = gameObject.GetComponent<Animator>();
     }
 
     /// <summary>
@@ -124,28 +134,48 @@ public class ChampionController : MonoBehaviour
         //disable agent
         navMeshAgent.enabled = false;
 
+        champType1 = champion.type1;
+        champType2 = champion.type2;
         //set stats
         maxHealth = champion.health;
         currentHealth = champion.health;
+        currentHealthReg = champion.healthRegeneration;
         currentShield = champion.shield;
+
         maxMana = champion.mana;
         currentMana = 20;
+        currentHitMana = champion.hitMana;
+        currentAttackMana = champion.attackMana;
+
         currentDamage = champion.damage;
+        currentCritical = champion.critical;
+        currentEvasion = champion.evasion;
+        currentAttackSpeed = champion.attackSpeed;
+
         currentDefence = champion.defence;
 
+        currentMoveSpeed = champion.movementSpeed;
+
+        
 
         worldCanvasController.AddHealthBar(this.gameObject);
         worldCanvasController.AddManaBar(this.gameObject);
 
         effects = new List<Effect>();
     }
-
+    bool synergyIsApply = true;
     /// Update is called once per frame
     void Update()
     {
         if (isField)
         {
-            ApplyActiveSynergy();
+            if (synergyIsApply)
+            {
+                ApplyActiveSynergy();
+                championAnimator.SetFloat("attackSpeed", currentAttackSpeed);
+                gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
+                synergyIsApply = false;
+            }
         }
 
         if (_isDragged)
@@ -226,7 +256,7 @@ public class ChampionController : MonoBehaviour
                         }
                         else
                         {
-                            navMeshAgent.destination = target.transform.position;
+                            navMeshAgent.SetDestination(target.transform.position);
                         }
                     }
                 }
@@ -562,31 +592,26 @@ public class ChampionController : MonoBehaviour
 
         if (target != null)
         {
-
-            //get enemy target champion
+            //  //get enemy target champion
             ChampionController targetChamoion = target.GetComponent<ChampionController>();
+            //  
+            //  List<ChampionBonus> activeBonuses = null;
+            //  
+            //  if (teamID == TEAMID_PLAYER)
+            //  {
+            //      activeBonuses = gamePlayController.activeBonusList;
+            //  }
+            //  foreach (ChampionBonus b in activeBonuses)
+            //  {
+            //      b.ApplyOnAttack(this, targetChamoion);
+            //  }
 
-            List<ChampionBonus> activeBonuses = null;
-
-            if (teamID == TEAMID_PLAYER)
-            {
-                activeBonuses = gamePlayController.activeBonusList;
-            }
-
-            
-            
-
-
-            foreach (ChampionBonus b in activeBonuses)
-            {
-                b.ApplyOnAttack(this, targetChamoion);
-            }
 
             //deal damage
-            bool isTargetDead = targetChamoion.OnGotHit(champion.damage);
+            bool isTargetDead = targetChamoion.OnGotHit(currentDamage);
 
             // 타격 시, 마나 회복
-            currentMana += attackMana;
+            currentMana += currentAttackMana;
 
             //target died from attack
             if (isTargetDead)
@@ -612,27 +637,54 @@ public class ChampionController : MonoBehaviour
     /// <param name="damage"></param>
     public bool OnGotHit(float damage)
     {
-        List<ChampionBonus> activeBonuses = null;
+        Dictionary<ChampionBonus, int> activeBonuses = null;
 
         if (teamID == TEAMID_PLAYER)
-            activeBonuses = gamePlayController.activeBonusList;
-
-        foreach (ChampionBonus b in activeBonuses)
         {
-            damage = ApplyOnGotHit(this, damage);
+            activeBonuses = gamePlayController.activeBonus;
         }
 
-        if (currentShield < damage)
+        float finalDamage = 0;
+        if (activeBonuses == null)
         {
-            currentShield = 0;
-            currentHealth -= damage - currentShield;
+            int ranCri = Random.Range(1, 101);
+
+            if (ranCri <= currentCritical)
+            {
+                finalDamage = currentDamage * (1 - (currentDefence / (currentDefence + 100))) * 1.5f;
+            }
+            else finalDamage = currentDamage * (1 - (currentDefence / (currentDefence + 100)));
         }
         else
         {
-            currentShield -= damage;
+            foreach (KeyValuePair<ChampionBonus, int> b in activeBonuses)
+            {
+                finalDamage = b.Key.ApplyOnGotHit(this, b.Value, damage);
+            }
         }
+        
+        
+
+
+        int ran = Random.Range(1, 101);
+
+        if (ran <= currentEvasion) { }
+        else
+        {
+            if (currentShield < finalDamage)
+            {
+                currentShield = 0;
+                currentHealth -= finalDamage - currentShield;
+            }
+            else
+            {
+                currentShield -= finalDamage;
+            }
+        }
+
+
         //  피격 시, 마나 회복
-        currentMana += hitMana;
+        currentMana += currentHitMana;
 
 
         //death
@@ -646,22 +698,13 @@ public class ChampionController : MonoBehaviour
         }
 
         //add floating text
-        worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), damage);
+        worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), finalDamage);
 
         return isDead;
     }
     
 
-    //   데미지 공식!!!!
-    public float ApplyOnGotHit(ChampionController champion, float damage)
-    {
-        float finalDamage = 0;
-        float targetDefence = target.GetComponent<Champion>().defence;
-        finalDamage = champion.currentDamage * (1-(targetDefence / (targetDefence + 100)));
-
-
-        return finalDamage;
-    }
+    
 
     /// <summary>
     /// Called when this champion get stuned
@@ -686,9 +729,9 @@ public class ChampionController : MonoBehaviour
         currentHealth += f;
     }
 
-    public void OnGotShield(float shield1, float shield2, float shield3)
+    public void OnGotShield(float shield)
     {
-        currentShield += maxHealth * (shield1/100);
+        currentShield += maxHealth * (shield/100);
     }
 
 
@@ -731,20 +774,41 @@ public class ChampionController : MonoBehaviour
         effects.Remove(effect);
         effect.Remove();
     }
+    
 
     public void ApplyActiveSynergy()
     {
-        ChampionController targetChamoion = target.GetComponent<ChampionController>();
-        List<ChampionBonus> activeBonuses = null;
+        maxHealth = champion.health;
+        currentHealth = champion.health;
+        currentHealthReg = champion.healthRegeneration;
+        currentShield = champion.shield;
+
+        maxMana = champion.mana;
+        currentMana = 20;
+        currentHitMana = champion.hitMana;
+        currentAttackMana = champion.attackMana;
+
+        currentDamage = champion.damage;
+        currentCritical = champion.critical;
+        currentEvasion = champion.evasion;
+        currentAttackSpeed = champion.attackSpeed;
+
+        currentDefence = champion.defence;
+
+        currentMoveSpeed = champion.movementSpeed;
+
+        Dictionary<ChampionBonus, int> activeBonuses = null;
 
         if (teamID == TEAMID_PLAYER)
         {
-            activeBonuses = gamePlayController.activeBonusList;
+            activeBonuses = gamePlayController.activeBonus;
         }
 
-        foreach (ChampionBonus b in activeBonuses)
+        foreach (KeyValuePair<ChampionBonus, int> b in activeBonuses)
         {
-            b.ApplySynergy(this, targetChamoion);
+            b.Key.ApplySynergy(this,b.Value);
         }
     }
 }
+
+

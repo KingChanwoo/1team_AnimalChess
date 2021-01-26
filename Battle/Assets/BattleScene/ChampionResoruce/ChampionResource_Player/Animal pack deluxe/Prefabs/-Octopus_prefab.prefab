@@ -2143,7 +2143,7 @@ GameObject:
   - component: {fileID: -4556689335709375936}
   - component: {fileID: -5353984049174757626}
   m_Layer: 0
-  m_Name: Octopus_prefab
+  m_Name: -Octopus_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2250,11 +2250,15 @@ MonoBehaviour:
   maxMana: 0
   currentMana: 0
   currentDamage: 0
+  currentDefence: 0
   lvl: 1
   isAttacking: 0
   isDead: 0
+  isField: 0
   hitMana: 5
   attackMana: 10
+  champType1: {fileID: 0}
+  champType2: {fileID: 0}
 --- !u!114 &-5353984049174757626
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -190,8 +190,8 @@ Transform:
   m_GameObject: {fileID: 7914762662502293341}
   m_LocalRotation: {x: 0.000000021855694, y: -0.00000004371139, z: 1.0165751e-15,
     w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0021341, y: 0.36827, z: -0.0075629}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 7436602403562643156}
   - {fileID: 7266055124144753806}
@@ -265,7 +265,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2.7622135
-  m_BaseOffset: 1.3811067
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4539616932789257855
@@ -302,6 +302,8 @@ MonoBehaviour:
   isField: 0
   hitMana: 5
   attackMana: 10
+  champType1: {fileID: 0}
+  champType2: {fileID: 0}
 --- !u!114 &-6362909103887588130
 MonoBehaviour:
   m_ObjectHideFlags: 0

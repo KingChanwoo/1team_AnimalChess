@@ -54,6 +54,7 @@ public class GamePlayController : MonoBehaviour
     public int timerDisplay = 0;
 
     public Dictionary<ChampionType, int> championTypeCount;
+    public Dictionary<ChampionBonus, int> activeBonus;
     public List<ChampionBonus> activeBonusList;
     public List<int> activeBonusNumList;
 
@@ -148,6 +149,7 @@ public class GamePlayController : MonoBehaviour
 
         //setup chapioncontroller
         championController.Init(champion, ChampionController.TEAMID_PLAYER);
+        
 
         //set grid position
         championController.SetGridPosition(Map.GRIDTYPE_OWN_INVENTORY, emptyIndex, -1);
@@ -548,18 +550,19 @@ public class GamePlayController : MonoBehaviour
             }
         }
 
-        activeBonusList = new List<ChampionBonus>();
+        activeBonus = new Dictionary<ChampionBonus, int>();
         activeBonusNumList = new List<int>();
 
         foreach (KeyValuePair<ChampionType, int> m in championTypeCount)
         {
             ChampionBonus championBonus = m.Key.championBonus;
+            int bonusNum = m.Value;
 
             //have enough champions to get bonus
-            if (m.Value >= championBonus.championCount)
+            if (bonusNum >= championBonus.championCount1)
             {
-                activeBonusList.Add(championBonus);
-                activeBonusNumList.Add(m.Value);
+                activeBonus.Add(championBonus,bonusNum);
+                activeBonusNumList.Add(bonusNum);
             }
         }
 

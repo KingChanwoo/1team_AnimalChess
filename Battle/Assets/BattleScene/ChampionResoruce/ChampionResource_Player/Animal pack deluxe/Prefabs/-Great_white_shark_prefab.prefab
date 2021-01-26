@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 4931850751561250438}
   - component: {fileID: -5052944973902777038}
   m_Layer: 0
-  m_Name: Great_white_shark_prefab
+  m_Name: -Great_white_shark_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,7 +388,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336841924710946}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 827248078add50941a1e9977208b0825, type: 3}
+  m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ec2d92d0318d2484f8254d2b98eb35fb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -447,11 +447,15 @@ MonoBehaviour:
   maxMana: 0
   currentMana: 0
   currentDamage: 0
+  currentDefence: 0
   lvl: 1
   isAttacking: 0
   isDead: 0
+  isField: 0
   hitMana: 5
   attackMana: 10
+  champType1: {fileID: 0}
+  champType2: {fileID: 0}
 --- !u!114 &-5052944973902777038
 MonoBehaviour:
   m_ObjectHideFlags: 0
