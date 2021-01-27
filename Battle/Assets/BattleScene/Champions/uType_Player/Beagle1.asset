@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Beagle1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7418428081228689641, guid: 3060a43b886fdad458082e394e9ae680, type: 3}
+  attackProjectile: {fileID: 0}
+  uiname: "\uAC1C"
+  cost: 3
+  sellCost: 3
+  type1: {fileID: 11400000, guid: a975e4a689ce7d24dbe80e0b323638c4, type: 2}
+  type2: {fileID: 11400000, guid: 980c37303ade6c7448e209c2fac1f5da, type: 2}
+  health: 793
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 105
+  attackSpeed: 0.5
+  defence: 52
+  critical: 25
+  evasion: 10
+  attackRange: 1
+  damageToPlayer: 0
+  movementSpeed: 3.5

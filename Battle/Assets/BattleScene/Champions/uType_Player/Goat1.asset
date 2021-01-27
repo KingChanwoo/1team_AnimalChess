@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Goat1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7911150300222714102, guid: feec0bb87b2350742a84cf58423fc0bb, type: 3}
+  attackProjectile: {fileID: 0}
+  uiname: "\uC545\uB9C8\uC5FC\uC18C"
+  cost: 5
+  sellCost: 5
+  type1: {fileID: 11400000, guid: 56a2c8176d73563419201e5aa5052ec8, type: 2}
+  type2: {fileID: 11400000, guid: ac80dada9e3e24345a63b3f0544a93f4, type: 2}
+  health: 1163
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 138
+  attackSpeed: 0.8
+  defence: 90
+  critical: 25
+  evasion: 10
+  attackRange: 4
+  damageToPlayer: 0
+  movementSpeed: 3.5
