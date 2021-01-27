@@ -2264,6 +2264,8 @@ MonoBehaviour:
   isField: 0
   sin7: 0
   sin7Shield: 0
+  admirer: 0
+  admirerValue: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
 --- !u!114 &-5353984049174757626
