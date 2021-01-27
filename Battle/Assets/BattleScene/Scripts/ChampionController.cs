@@ -73,7 +73,7 @@ public class ChampionController : MonoBehaviour
     public int lvl = 1;
 
     private Map map;
-    private GamePlayController gamePlayController;
+    public GamePlayController gamePlayController;
     private AIopponent aIopponent;
     private ChampionAnimation championAnimation;
     private WorldCanvasController worldCanvasController;
@@ -90,10 +90,6 @@ public class ChampionController : MonoBehaviour
     [HideInInspector]
     public bool isDead = false;
 
-
-    public bool isField = false;
-
-
     private bool isInCombat = false;
     private float combatTimer = 0;
 
@@ -102,8 +98,24 @@ public class ChampionController : MonoBehaviour
 
     public bool sin7 = false;
     public float sin7Shield = 0;
+
     public bool admirer = false;
     public float admirerValue = 0;
+
+    public bool loyality = false;
+    public float loyalityValue1 = 0;
+    public float loyalityValue2 = 0;
+
+    public bool death = false;
+    public float deathValue1 = 0;
+    public float deathValue2 = 0;
+
+    public bool strength = false;
+    public float strengthValue1 = 0;
+    public float strengthValue2 = 0;
+
+    public bool ability = false;
+    public float abilityValue1 =0;
 
 
 
@@ -111,6 +123,10 @@ public class ChampionController : MonoBehaviour
     public ChampionType champType2;
 
     private List<Effect> effects;
+
+
+
+   
 
     /// Start is called before the first frame update
     void Awake()
@@ -170,19 +186,52 @@ public class ChampionController : MonoBehaviour
 
         effects = new List<Effect>();
     }
-    bool synergyIsApply = true;
+    public bool synergyIsApply = true;
+    public bool wealthOn = false;
+    public float wealthValue = 0;
+
+    public float timeLoyal = 1;
+    public float timeDeath = 1;
+    public float timeStrength = 1;
     /// Update is called once per frame
     void Update()
     {
-        if (isField)
+        if (wealthOn == true)
+            gamePlayController.wealth = true;
+        else gamePlayController.wealth = false;
+
+        gamePlayController.wealthMoney = wealthValue;
+        
+
+        timeLoyal += Time.deltaTime;
+        if(timeLoyal > 0 && timeLoyal < 1)
         {
-            if (synergyIsApply)
+            timeLoyal = 1;
+            if(champType2.displayName == "충성의상징")
             {
-                ApplyActiveSynergy();
-                championAnimator.SetFloat("attackSpeed", 1/currentAttackSpeed);
-                gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
-                synergyIsApply = false;
+                currentDamage /= 1 + (loyalityValue2 / 100);
             }
+        }
+
+        if (timeDeath > 0 && timeDeath < 1)
+        {
+            timeDeath = 1;
+            currentDamage /= 1 + (deathValue2 / 100);
+        }
+
+        if (timeStrength > 0 && timeStrength < 1)
+        {
+            timeStrength = 1;
+            currentAttackSpeed /= 1 + (strengthValue2 / 100);
+        }
+
+        if (synergyIsApply)
+        {
+            ApplyActiveSynergy();
+            championAnimator.SetFloat("attackSpeed", 1/currentAttackSpeed);
+            gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
+            
+            synergyIsApply = false;
         }
 
         if (_isDragged)
@@ -221,6 +270,7 @@ public class ChampionController : MonoBehaviour
                 }
             }
         }
+        
 
 
         if (isInCombat && isStuned == false)
@@ -325,6 +375,7 @@ public class ChampionController : MonoBehaviour
         isAttacking = false;
         uIController.isLock = false;
 
+
         //reset position
         SetWorldPosition();
         SetWorldRotation();
@@ -336,6 +387,8 @@ public class ChampionController : MonoBehaviour
         }
 
         effects = new List<Effect>();
+
+        synergyIsApply = true;
     }
 
     /// <summary>
@@ -624,6 +677,19 @@ public class ChampionController : MonoBehaviour
             {
                 // 스킬 구현
                 currentMana = 0;
+                if (strength)
+                {
+                    if (champType2.displayName == "힘의상징")
+                    {
+                        currentAttackSpeed *= 1 + (strengthValue2/100);
+                        timeStrength = -strengthValue1;
+                    }
+                }
+
+                if (ability)
+                {
+                    gamePlayController.Ability(abilityValue1);
+                }
             }
 
             if (admirer == true)
@@ -638,6 +704,14 @@ public class ChampionController : MonoBehaviour
             //target died from attack
             if (isTargetDead)
             {
+                if (champType2.displayName == "죽음의상징")
+                {
+                    if (death == true)
+                    {
+                        gamePlayController.Death(deathValue2);
+                    }
+                }
+
                 if (sin7)
                 {
                     gamePlayController.Sin7Shield(sin7Shield);
@@ -667,10 +741,10 @@ public class ChampionController : MonoBehaviour
     {
         Dictionary<ChampionBonus, int> activeBonuses = null;
 
-        if (teamID == TEAMID_AI)
-        {
-            activeBonuses = gamePlayController.activeBonus;
-        }
+        
+        
+        activeBonuses = gamePlayController.activeBonus;
+        
 
         float finalDamage = damage;
         if (activeBonuses != null)
@@ -718,6 +792,15 @@ public class ChampionController : MonoBehaviour
         //death
         if (currentHealth <= 0)
         {
+            if(teamID == TEAMID_PLAYER)
+            {
+                if(loyality == true)
+                {
+                    gamePlayController.Loyality(loyalityValue2);
+                }
+            }
+            
+
             this.gameObject.SetActive(false);
             isDead = true;
 
@@ -810,6 +893,7 @@ public class ChampionController : MonoBehaviour
 
     public void ApplyActiveSynergy()
     {
+        // 능력치 초기화
         maxHealth = champion.health;
         currentHealth = champion.health;
         currentHealthReg = champion.healthRegeneration;
@@ -832,18 +916,37 @@ public class ChampionController : MonoBehaviour
         sin7Shield = 0;
         gamePlayController.wealth = false;
         gamePlayController.wealthMoney = 0;
+        admirer = false;
+        admirerValue = 0;
+        loyality = false;
+        loyalityValue1 = 0;
+        loyalityValue2 = 0;
+        death = false;
+        deathValue1 = 0;
+        deathValue2 = 0;
+        timeLoyal = 1;
+        timeDeath = 1;
+        strength = false;
+        strengthValue1 = 0;
+        strengthValue2 = 0;
+        timeStrength = 1;
+        ability = false;
+        abilityValue1 = 0;
 
 
+        // 시너지 적용
         Dictionary<ChampionBonus, int> activeBonuses = null;
 
         if (teamID == TEAMID_PLAYER)
         {
             activeBonuses = gamePlayController.activeBonus;
-        }
-
-        foreach (KeyValuePair<ChampionBonus, int> b in activeBonuses)
-        {
-            b.Key.ApplySynergy(this,b.Value);
+            if(activeBonuses != null)
+            {
+                foreach (KeyValuePair<ChampionBonus, int> b in activeBonuses)
+                {
+                    b.Key.ApplySynergy(this, b.Value);
+                }
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639aac516ce9a2344bcbaf8acbe08e17, type: 3}
   m_Name: "\uC8FD\uC74C\uC758 \uC0C1\uC9D5"
   m_EditorClassIdentifier: 
-  displayName: "\uC8FD\uC74C\uC758 \uC0C1\uC9D5"
+  displayName: "\uC8FD\uC74C\uC758\uC0C1\uC9D5"
   icon: {fileID: 0}
   championBonus:
     gamePlayController: {fileID: 0}
@@ -21,8 +21,8 @@ MonoBehaviour:
     championCount1: 3
     championCount2: 0
     championCount3: 0
-    bonusValue1: 20
-    bonusValue2: 0
+    bonusValue1: 10
+    bonusValue2: 50
     bonusValue3: 0
     duration: 0
     effectPrefab: {fileID: 0}

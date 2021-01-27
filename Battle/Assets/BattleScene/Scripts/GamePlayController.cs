@@ -364,11 +364,11 @@ public class GamePlayController : MonoBehaviour
                                 if (dragStartTrigger.gridType != Map.GRIDTYPE_HEXA_MAP)
                                 {
                                     championsOnField++;
-                                    draggedChampion.GetComponent<ChampionController>().isField = true;
+                                    draggedChampion.GetComponent<ChampionController>().synergyIsApply = true;
                                 }
 
                             }
-                    }
+                        }
                         else if (triggerinfo.gridType == Map.GRIDTYPE_OWN_INVENTORY)
                         {
                             //remove champion from dragged position
@@ -380,9 +380,9 @@ public class GamePlayController : MonoBehaviour
                             if (dragStartTrigger.gridType == Map.GRIDTYPE_HEXA_MAP)
                             {
                                 championsOnField--;
-                                draggedChampion.GetComponent<ChampionController>().isField = false;
-                        }
-                                
+                                draggedChampion.GetComponent<ChampionController>().synergyIsApply = true;
+                            }
+                            
                         }
 
 
@@ -978,4 +978,58 @@ public class GamePlayController : MonoBehaviour
             }
         }
     }
+    public void Loyality(float atk)
+    {
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                //there is a champion
+                if (gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    if (championController.champType2.displayName == "충성의상징")
+                    {
+                        championController.currentDamage *= 1 + (atk / 100);
+                        championController.timeLoyal = -championController.loyalityValue1;
+                    }
+                }
+            }
+        }
+    }
+
+    public void Death(float atk)
+    {
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                //there is a champion
+                if (gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    championController.currentDamage *= 1 + (atk / 100);
+                    championController.timeDeath = -championController.deathValue1;
+                    
+                }
+            }
+        }
+    }
+
+    public void Ability(float bonus)
+    {
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                //there is a champion
+                if (gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    championController.currentMana += bonus;
+                }
+            }
+        }
+    }
+
 }
