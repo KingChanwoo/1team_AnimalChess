@@ -102,6 +102,8 @@ public class ChampionController : MonoBehaviour
 
     public bool sin7 = false;
     public float sin7Shield = 0;
+    public bool admirer = false;
+    public float admirerValue = 0;
 
 
 
@@ -615,11 +617,22 @@ public class ChampionController : MonoBehaviour
             //deal damage
             bool isTargetDead = targetChamoion.OnGotHit(currentDamage, this);
 
+
             // 타격 시, 마나 회복
             currentMana += currentAttackMana;
             if(currentMana >= maxMana)
             {
+                // 스킬 구현
+                currentMana = 0;
+            }
 
+            if (admirer == true)
+            {
+                if (champType2.displayName == "숭배자")
+                {
+                    currentHealth += (maxHealth - currentHealth) * (admirerValue / 100);
+                    if (currentHealth >= maxHealth) currentHealth = maxHealth;
+                }
             }
 
             //target died from attack
@@ -700,7 +713,7 @@ public class ChampionController : MonoBehaviour
 
         //  피격 시, 마나 회복
         currentMana += currentHitMana;
-
+        
 
         //death
         if (currentHealth <= 0)
@@ -711,6 +724,9 @@ public class ChampionController : MonoBehaviour
             aIopponent.OnChampionDeath();
             gamePlayController.OnChampionDeath();
         }
+
+        
+
 
         //add floating text
         worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), finalDamage);

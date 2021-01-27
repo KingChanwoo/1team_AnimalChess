@@ -282,6 +282,11 @@ public class ChampionBonus
                 else if (num >= championCount1)
                     gamePlayController.wealthMoney = bonusValue1;
                 break;
+            case ChampionBonusType.Admirer:
+                champion.admirer = true;
+                champion.admirerValue = bonusValue1;
+                break;
+
             default:
                 break;
         }
@@ -293,6 +298,7 @@ public class ChampionBonus
         float finalDamage = 0;
         int ran = Random.Range(1, 101);
         string type1 = champion.champType1.displayName;
+        string type2 = champion.champType2.displayName;
 
         switch (championBonusType)
         {
@@ -309,7 +315,7 @@ public class ChampionBonus
             case ChampionBonusType.Evil:
                 if(num >= championCount2)
                 {
-                    if (type1 == "악의상징")
+                    if (type2 == "악의상징")
                     {
                         if (ran <= champion.currentCritical)
                         {
@@ -320,7 +326,7 @@ public class ChampionBonus
                 }
                 else if(num >= championCount1)
                 {
-                    if (type1 == "악의상징")
+                    if (type2 == "악의상징")
                     {
                         if (ran <= champion.currentCritical)
                         {
@@ -330,9 +336,22 @@ public class ChampionBonus
                     }
                 }
                 break;
-            case ChampionBonusType.Admirer:
-
+            case ChampionBonusType.Zodiacal:
+                if(hit.champType2.displayName == "황도12궁")
+                {
+                    if(num >= championCount3)
+                    {
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f;
+                        }
+                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                        
+                    }
+                }
+                
                 break;
+            
             default:
                 if (ran <= champion.currentCritical)
                 {
