@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Octopus1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1548543214523454, guid: 55d536ab61fddf44aa0a5aa5586e90bd, type: 3}
+  prefab: {fileID: 2152795495088652563, guid: 55d536ab61fddf44aa0a5aa5586e90bd, type: 3}
   attackProjectile: {fileID: 0}
   uiname: "\uBB38\uC5B4"
   cost: 2
@@ -30,6 +30,6 @@ MonoBehaviour:
   defence: 25
   critical: 25
   evasion: 10
-  attackRange: 4
+  attackRange: 5
   damageToPlayer: 0
   movementSpeed: 3.5

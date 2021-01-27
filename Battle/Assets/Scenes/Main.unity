@@ -109,7 +109,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 33.1
     agentClimb: 0.49
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c60fc4fcdfe73e4d9552c87669bf465, type: 2}
   - {fileID: 11400000, guid: 6172b352108dbef4eb3f1aa3ba23726e, type: 2}
   - {fileID: 11400000, guid: eec4a65083cde7742b559c902840739e, type: 2}
-  - {fileID: 11400000, guid: 51e0c4f797fffe7448e11bd4eb365206, type: 2}
+  - {fileID: 11400000, guid: 4e7f275716edfc34c83315d0cfb00ed3, type: 2}
   championTypesArray:
   - {fileID: 11400000, guid: f3e567881c605d247b05775a39e704ed, type: 2}
   - {fileID: 11400000, guid: 33223db9cedb8c045990cb7a3b0144a3, type: 2}

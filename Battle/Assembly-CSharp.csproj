@@ -120,12 +120,6 @@
     <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Future\Sci-fi Tower\Scripts\SimpleMovement.cs" />
     <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Future\Sci-fi Tower\Scripts\TurretRotation.cs" />
     <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Modern\FighterInterceptor\Script\FighterSurfacesControl.cs" />
-    <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Past\G_36_Demo\Scripts\Explosion_Mortar_80mm.cs" />
-    <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Past\G_36_Demo\Scripts\MortarAction.cs" />
-    <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Past\G_36_Demo\Scripts\MortarCrewLoader.cs" />
-    <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Past\G_36_Demo\Scripts\MortarShell.cs" />
-    <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Past\G_36_Demo\Scripts\MortarSquadLeader.cs" />
-    <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Past\G_36_Demo\Scripts\Squad_Leader_Mortar.cs" />
     <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Past\WW2 Armed Forces Demo\Scripts\Scroll_Track.cs" />
     <Compile Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Player\Animal pack deluxe\Scripts\MoveCamera.cs" />
     <Compile Include="Assets\BattleScene\Scripts\AIopponent.cs" />
