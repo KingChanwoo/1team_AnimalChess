@@ -12,9 +12,6 @@ public enum BonusTarget {Self, Enemy};
 [System.Serializable]
 public class ChampionBonus
 {
-    public GamePlayController gamePlayController;
-
-
     ///Type of the bonus
     public ChampionBonusType championBonusType;
 
@@ -36,11 +33,6 @@ public class ChampionBonus
 
     ///Prefab to instantiate when bonus occours
     public GameObject effectPrefab;
-
-    void Awake()
-    {
-        gamePlayController = GameObject.Find("Scripts").GetComponent<GamePlayController>();
-    }
 
 
    /// <summary>
@@ -149,8 +141,8 @@ public class ChampionBonus
                 {
                     if (champion.champType1.displayName == "두꺼운가죽")
                     {
-                        champion.maxHealth = champion.champion.health + bonusValue2;
-                        champion.currentHealth += bonusValue2;
+                        champion.maxHealth += bonusValue2;
+                        champion.currentHealth +=+ bonusValue2;
                     }
                 }
                 else if (num >= championCount1)
@@ -210,14 +202,14 @@ public class ChampionBonus
                 {
                     if(champion.champType1.displayName == "가축")
                     {
-                        champion.currentAttackMana = champion.champion.attackMana * bonusValue2;
+                        champion.currentAttackMana *= bonusValue2;
                     }
                 }
                 else if(num >= championCount1)
                 {
                     if (champion.champType1.displayName == "가축")
                     {
-                        champion.currentAttackMana = champion.champion.attackMana * bonusValue1;
+                        champion.currentAttackMana *= bonusValue1;
                     }
                 }
                 break;
@@ -226,39 +218,39 @@ public class ChampionBonus
                 {
                     if(champion.champType1.displayName == "화려한무늬")
                     {
-                        champion.currentAttackSpeed = champion.champion.attackSpeed * (1 + (bonusValue2 / 100));
+                        champion.currentAttackSpeed *= (1 + (bonusValue2 / 100));
                     }
                 }
                 else if (num >= championCount1)
                 {
                     if (champion.champType1.displayName == "화려한무늬")
                     {
-                        champion.currentAttackSpeed = champion.champion.attackSpeed * (1+(bonusValue1 / 100));
+                        champion.currentAttackSpeed *= (1+(bonusValue1 / 100));
                     }
                 }
                 break;
             case ChampionBonusType.AtkDef:
                 if(num >= championCount3)
                 {
-                    champion.currentDamage = champion.champion.damage * (1 + (bonusValue3 / 100));
-                    champion.currentDefence = champion.champion.defence * (1 + (bonusValue3 / 100));
+                    champion.currentDamage *= (1 + (bonusValue3 / 100));
+                    champion.currentDefence *= (1 + (bonusValue3 / 100));
                 }
                 else if (num >= championCount2)
                 {
-                    champion.currentDamage = champion.champion.damage * (1 + (bonusValue2 / 100));
-                    champion.currentDefence = champion.champion.defence * (1 + (bonusValue2 / 100));
+                    champion.currentDamage *= (1 + (bonusValue2 / 100));
+                    champion.currentDefence *= (1 + (bonusValue2 / 100));
                 }
                 else if (num >= championCount1)
                 {
-                    champion.currentDamage = champion.champion.damage * (1 + (bonusValue1 / 100));
-                    champion.currentDefence = champion.champion.defence * (1 + (bonusValue1 / 100));
+                    champion.currentDamage *= (1 + (bonusValue1 / 100));
+                    champion.currentDefence *= (1 + (bonusValue1 / 100));
                 }
                 break;
             case ChampionBonusType.MoveSpeed:
                 if(champion.champType1.displayName == "단단한부리")
                 {
-                    champion.currentMoveSpeed = champion.champion.movementSpeed + bonusValue1; // 이속 bonusValue1
-                    champion.currentAttackSpeed = champion.champion.attackSpeed * (1+(bonusValue2/100)); // 공속 bonusValue2
+                    champion.currentMoveSpeed += bonusValue1; // 이속 bonusValue1
+                    champion.currentAttackSpeed *= (1+(bonusValue2/100)); // 공속 bonusValue2
                 }
                 break;
 
@@ -274,18 +266,47 @@ public class ChampionBonus
                     champion.sin7Shield = bonusValue1;
                 break;
             case ChampionBonusType.Wealth:
-                gamePlayController.wealth = true;
+                champion.wealthOn = true;
                 if (num >= championCount3)
-                    gamePlayController.wealthMoney = bonusValue3;
+                    champion.wealthValue = bonusValue3;
                 else if (num >= championCount2)
-                    gamePlayController.wealthMoney = bonusValue2;
+                    champion.wealthValue = bonusValue2;
                 else if (num >= championCount1)
-                    gamePlayController.wealthMoney = bonusValue1;
+                    champion.wealthValue = bonusValue1;
                 break;
             case ChampionBonusType.Admirer:
                 champion.admirer = true;
                 champion.admirerValue = bonusValue1;
                 break;
+            case ChampionBonusType.Loyality:
+                champion.loyality = true;
+                champion.loyalityValue1 = bonusValue1;  // 지속시간
+                champion.loyalityValue2 = bonusValue2;  // 공증가퍼센트
+                break;
+            case ChampionBonusType.Death:
+                champion.death = true;
+                champion.deathValue1 = bonusValue1;  // 지속시간
+                champion.deathValue2 = bonusValue2;  // 공증퍼센트
+                break;
+            case ChampionBonusType.Strength:
+                champion.strength = true;
+                champion.strengthValue1 = bonusValue1;  // 지속시간
+                champion.strengthValue2 = bonusValue2;  // 공속증가퍼센트
+                break;
+            case ChampionBonusType.King:
+                if(champion.champType2.displayName == "왕의상징")
+                {
+                    champion.maxHealth *= 1 + (bonusValue1 / 100);
+                    champion.currentHealth *= 1 + (bonusValue1 / 100);
+                    champion.currentDamage *= 1 + (bonusValue1 / 100);
+                    champion.currentDefence *= 1 + (bonusValue1 / 100);
+                }
+                break;
+            case ChampionBonusType.Ability:
+                champion.ability = true;
+                champion.abilityValue1 = bonusValue1;
+                break;
+
 
             default:
                 break;
@@ -300,67 +321,115 @@ public class ChampionBonus
         string type1 = champion.champType1.displayName;
         string type2 = champion.champType2.displayName;
 
-        switch (championBonusType)
+        //  공격 시너지
+        if (champion.teamID == 0)
         {
-            case ChampionBonusType.TiedDamage:
-                if (type1 == "위장")
-                {
+            switch (championBonusType)
+            {
+                case ChampionBonusType.TiedDamage:
+                    if (type1 == "위장")
+                    {
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = damage * 1.5f;
+                        }
+                        else finalDamage = damage;
+                    }
+                    break;
+                case ChampionBonusType.Evil:
+                    if (num >= championCount2)
+                    {
+                        if (type2 == "악의상징")
+                        {
+                            if (ran <= champion.currentCritical)
+                            {
+                                finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f + bonusValue2;
+                            }
+                            else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) + bonusValue2;
+                        }
+                    }
+                    else if (num >= championCount1)
+                    {
+                        if (type2 == "악의상징")
+                        {
+                            if (ran <= champion.currentCritical)
+                            {
+                                finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f + bonusValue1;
+                            }
+                            else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) + bonusValue1;
+                        }
+                    }
+                    break;
+                case ChampionBonusType.TenLongevity:
+                    if (type2 == "십장생")
+                    {
+                        hit.currentAttackSpeed = hit.champion.attackSpeed * (1 - (bonusValue1 / 100));
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                        }
+                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                    }
+                    break;
+                case ChampionBonusType.Fecyndiry:
+                    if (type2 == " 다산의상징")
+                    {
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                        }
+                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+
+                        if (ran <= bonusValue1)
+                        {
+                            finalDamage *= 2;
+                            champion.currentMana += champion.currentAttackMana;
+                        }
+                    }
+                    break;
+                default:
                     if (ran <= champion.currentCritical)
                     {
-                        finalDamage = damage * 1.5f;
+                        finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
                     }
-                    else finalDamage = damage;
-                }
-                break;
-            case ChampionBonusType.Evil:
-                if(num >= championCount2)
-                {
-                    if (type2 == "악의상징")
-                    {
-                        if (ran <= champion.currentCritical)
-                        {
-                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f + bonusValue2;
-                        }
-                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) + bonusValue2;
-                    }
-                }
-                else if(num >= championCount1)
-                {
-                    if (type2 == "악의상징")
-                    {
-                        if (ran <= champion.currentCritical)
-                        {
-                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f + bonusValue1;
-                        }
-                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) + bonusValue1;
-                    }
-                }
-                break;
-            case ChampionBonusType.Zodiacal:
-                if(hit.champType2.displayName == "황도12궁")
-                {
-                    if(num >= championCount3)
+                    else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                    break;
+
+
+            }
+        }
+
+        //  방어 시너지
+        else if (champion.teamID == 1)
+        {
+            switch (championBonusType)
+            {
+                case ChampionBonusType.Zodiacal:
+                    if (hit.champType2.displayName == "황도12궁")
                     {
                         if (ran <= champion.currentCritical)
                         {
                             finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f;
                         }
                         else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
-                        
-                    }
-                }
-                
-                break;
-            
-            default:
-                if (ran <= champion.currentCritical)
-                {
-                    finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
-                }
-                else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
-                break;
-            
 
+                        if (num >= championCount3)
+                            finalDamage *= 1 - (bonusValue3/ 100);
+                        else if (num >= championCount2)
+                            finalDamage *= 1 - (bonusValue2 / 100);
+                        else if (num >= championCount1)
+                            finalDamage *= 1 - (bonusValue1 / 100);
+                    }
+                    break;
+                
+                default:
+                    if (ran <= champion.currentCritical)
+                    {
+                        finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                    }
+                    else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                    break;
+            }
         }
         return finalDamage;
     }

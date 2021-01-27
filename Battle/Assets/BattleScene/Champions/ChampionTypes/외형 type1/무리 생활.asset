@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639aac516ce9a2344bcbaf8acbe08e17, type: 3}
   m_Name: "\uBB34\uB9AC \uC0DD\uD65C"
   m_EditorClassIdentifier: 
-  displayName: "\uBB34\uB9AC \uC0DD\uD65C"
+  displayName: "\uBB34\uB9AC\uC0DD\uD65C"
   icon: {fileID: 0}
   championBonus:
     gamePlayController: {fileID: 0}
