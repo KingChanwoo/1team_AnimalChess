@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Rat3
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2402983796702099242, guid: 166360cc7c112f747a8da58b108ad1f5, type: 3}
+  attackProjectile: {fileID: 0}
+  uiname: "\uD328\uC2A4\uD2B8\uC950"
+  cost: 0
+  sellCost: 10
+  type1: {fileID: 11400000, guid: 9f657a9bdda390044b53b552d07527a2, type: 2}
+  type2: {fileID: 11400000, guid: 955274ac053e4984382a0a7bb77f0dcd, type: 2}
+  health: 2591
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 303
+  attackSpeed: 0.7
+  defence: 202
+  critical: 25
+  evasion: 10
+  attackRange: 1
+  damageToPlayer: 0
+  movementSpeed: 3.5

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Deer_male3
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3415443726647727911, guid: 92eafbe7156f9e749bc348c8b7d19e2d, type: 3}
+  attackProjectile: {fileID: 0}
+  uiname: "\uC0AC\uC2B4"
+  cost: 0
+  sellCost: 12
+  type1: {fileID: 11400000, guid: 56a2c8176d73563419201e5aa5052ec8, type: 2}
+  type2: {fileID: 11400000, guid: 19e043a5aaaeb8641b693e0031fe3506, type: 2}
+  health: 3424
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 452
+  attackSpeed: 0.5
+  defence: 226
+  critical: 25
+  evasion: 10
+  attackRange: 1
+  damageToPlayer: 0
+  movementSpeed: 3.5
