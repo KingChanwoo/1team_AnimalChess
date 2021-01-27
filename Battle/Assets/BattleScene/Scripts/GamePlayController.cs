@@ -20,6 +20,10 @@ public class GamePlayController : MonoBehaviour
     public AIopponent aIopponent;
     public ChampionShop championShop;
 
+    public int gridT;
+    public int gridX;
+    public int gridZ;
+
     [HideInInspector]
     public GameObject[] ownChampionInventoryArray;
     [HideInInspector]
@@ -41,8 +45,9 @@ public class GamePlayController : MonoBehaviour
     public float currentExp = 0;
     public float needExp;
 
+    public GameObject Rain;
+    public GameObject Snow;
 
- 
     public int currentChampionLimit = 1;
     [HideInInspector]
     public int currentChampionCount = 0;
@@ -183,6 +188,85 @@ public class GamePlayController : MonoBehaviour
         return true;
     }
 
+    public void Weather()
+    {
+
+        if (Snow.activeSelf == true)
+        {
+            for (int i = 0; i < ownChampionInventoryArray.Length; i++)
+            {
+                if (ownChampionInventoryArray[i] != null)
+                {
+                    ChampionController championController = ownChampionInventoryArray[i].GetComponent<ChampionController>();
+                    championController.currentDamage = championController.champion.damage * 0.9f;
+                }
+            }
+        }
+
+        else if (Rain.activeSelf == true)
+        {
+            for (int i = 0; i < ownChampionInventoryArray.Length; i++)
+            {
+                if (ownChampionInventoryArray[i] != null)
+                {
+                    ChampionController championController = ownChampionInventoryArray[i].GetComponent<ChampionController>();
+                    championController.currentHealth = championController.champion.health * 0.9f;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+    public bool Compose(Champion champion)
+    {
+        //get first empty inventory slot
+        int emptyIndex = -1;
+        for (int i = 0; i < ownChampionInventoryArray.Length; i++)
+        {
+            if (ownChampionInventoryArray[i] == null)
+            {
+                emptyIndex = i;
+                break;
+            }
+        }
+
+        //return if no slot to add champion
+        if (emptyIndex == -1)
+            return false;
+
+        //instantiate champion prefab
+        GameObject championPrefab = Instantiate(champion.prefab);
+
+        //get championController
+        ChampionController championController = championPrefab.GetComponent<ChampionController>();
+
+        //setup chapioncontroller
+        championController.Init(champion, ChampionController.TEAMID_PLAYER);
+
+        //set grid position
+
+        championController.SetGridPosition(Map.GRIDTYPE_OWN_INVENTORY, emptyIndex, -1);
+
+        //set position and rotation
+        championController.SetWorldPosition();
+        championController.SetWorldRotation();
+
+
+        //store champion in inventory array
+        //StoreChampionInArray(Map.GRIDTYPE_HEXA_MAP,gridX, gridZ, championPrefab);
+        StoreChampionInArray(Map.GRIDTYPE_OWN_INVENTORY, map.ownTriggerArray[emptyIndex].gridX, -1, championPrefab);
+
+
+        //set gold on ui
+        uIController.UpdateUI();
+
+        //return true if succesful buy
+        return true;
+    }
 
     /// <summary>
     /// Check all champions if a upgrade is possible
@@ -190,84 +274,85 @@ public class GamePlayController : MonoBehaviour
     /// <param name="champion"></param>
     private void TryUpgradeChampion(Champion champion)
     {
+        int flag = 0;
         //check for champion upgrade
         List<ChampionController> championList_lvl_1 = new List<ChampionController>();
-        List<ChampionController> championList_lvl_2 = new List<ChampionController>();
 
-        for (int i = 0; i < ownChampionInventoryArray.Length; i++)
+        if(champion.grade < 2)
         {
-            //there is a champion
-            if (ownChampionInventoryArray[i] != null)
-            {
-                //get character
-                ChampionController championController = ownChampionInventoryArray[i].GetComponent<ChampionController>();
-
-                //check if is the same type of champion that we are buying
-                if (championController.champion == champion)
-                {
-                    if (championController.lvl == 1)
-                        championList_lvl_1.Add(championController);
-                    else if (championController.lvl == 2)
-                        championList_lvl_2.Add(championController);
-                }
-            }
-
-        }
-
-        for (int x = 0; x < Map.hexMapSizeX; x++)
-        {
-            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            for (int i = 0; i < ownChampionInventoryArray.Length; i++)
             {
                 //there is a champion
-                if (gridChampionsArray[x, z] != null)
+                if (ownChampionInventoryArray[i] != null)
                 {
                     //get character
-                    ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    ChampionController championController = ownChampionInventoryArray[i].GetComponent<ChampionController>();
 
                     //check if is the same type of champion that we are buying
                     if (championController.champion == champion)
                     {
-                        if (championController.lvl == 1)
-                            championList_lvl_1.Add(championController);
-                        else if (championController.lvl == 2)
-                            championList_lvl_2.Add(championController);
+                        championList_lvl_1.Add(championController);
                     }
                 }
+            }
 
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    //there is a champion
+                    if (gridChampionsArray[x, z] != null)
+                    {
+                        //get character
+                        ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        //check if is the same type of champion that we are buying
+                        if (championController.champion == champion)
+                        {
+                            championList_lvl_1.Add(championController);
+                        }
+                    }
+
+                }
             }
         }
+        
 
         //if we have 3 we upgrade a champion and delete rest
         if (championList_lvl_1.Count > 2)
         {
-            //upgrade
-            championList_lvl_1[2].UpgradeLevel();
+            flag = 1;
+            championList_lvl_1[0].UpgradeLevel();
 
-            //remove from array
+            gridT = championList_lvl_1[2].gridType;
+            gridX = championList_lvl_1[2].gridPositionX;
+            gridZ = championList_lvl_1[2].gridPositionZ;
+
             RemoveChampionFromArray(championList_lvl_1[0].gridType, championList_lvl_1[0].gridPositionX, championList_lvl_1[0].gridPositionZ);
             RemoveChampionFromArray(championList_lvl_1[1].gridType, championList_lvl_1[1].gridPositionX, championList_lvl_1[1].gridPositionZ);
+            RemoveChampionFromArray(championList_lvl_1[2].gridType, championList_lvl_1[2].gridPositionX, championList_lvl_1[2].gridPositionZ);
 
             //destroy gameobjects
             Destroy(championList_lvl_1[0].gameObject);
             Destroy(championList_lvl_1[1].gameObject);
+            Destroy(championList_lvl_1[2].gameObject);
 
-            //we upgrade to lvl 3
-            if (championList_lvl_2.Count > 1)
+            for (int i = 0; i < gameData.championsArray.Length; i++)
             {
-                //upgrade
-                championList_lvl_1[2].UpgradeLevel();
+                if (champion == gameData.championsArray[i])
+                {
+                    champion = gameData.championsArray[i + 1];
 
-                //remove from array
-                RemoveChampionFromArray(championList_lvl_2[0].gridType, championList_lvl_2[0].gridPositionX, championList_lvl_2[0].gridPositionZ);
-                RemoveChampionFromArray(championList_lvl_2[1].gridType, championList_lvl_2[1].gridPositionX, championList_lvl_2[1].gridPositionZ);
-
-                //destroy gameobjects
-                Destroy(championList_lvl_2[0].gameObject);
-                Destroy(championList_lvl_2[1].gameObject);
+                    Compose(champion);
+                    break;
+                }
+            }
+            if (flag == 1)
+            {
+                flag = 0;
+                TryUpgradeChampion(champion);
             }
         }
-
-
 
         currentChampionCount = GetChampionCountOnHexGrid();
 
@@ -298,6 +383,11 @@ public class GamePlayController : MonoBehaviour
             
             if(championGO != null)
             {
+                uIController.ViewUnitInfo(championGO.GetComponent<ChampionController>().champion.uiname,
+                    championGO.GetComponent<ChampionController>().maxHealth.ToString(),
+                    championGO.GetComponent<ChampionController>().currentDamage.ToString()
+                    );
+
                 //show indicators
                 map.ShowIndicators();
 
@@ -317,8 +407,9 @@ public class GamePlayController : MonoBehaviour
     /// </summary>
     public void StopDrag()
     {
-        
+
         //hide indicators
+        uIController.CloseUnitInfo();
         map.HideIndicators();
 
         int championsOnField = GetChampionCountOnHexGrid();
@@ -712,7 +803,24 @@ public class GamePlayController : MonoBehaviour
                 uIController.ShowLossScreen();
              
             }
-            
+            int wn = Random.Range(0, 101);
+            if (wn < 90)
+            {
+                wn = Random.Range(0, 101);
+                if (wn < 50)
+                {
+                    Rain.SetActive(false);
+                    Snow.SetActive(true);
+                    Weather();
+                }
+                else
+                {
+                    Snow.SetActive(false);
+                    Rain.SetActive(true);
+                    Weather();
+                }
+            }
+
         }
     }
 

@@ -15,6 +15,7 @@ MonoBehaviour:
   prefab: {fileID: 2970875761600946258, guid: 361eeb962b774b64a9c942fc5e0f3373, type: 3}
   attackProjectile: {fileID: 0}
   uiname: "\uBC15\uC950"
+  grade: 1
   cost: 1
   sellCost: 1
   type1: {fileID: 11400000, guid: 9f657a9bdda390044b53b552d07527a2, type: 2}
