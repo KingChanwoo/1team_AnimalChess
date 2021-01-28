@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
+    GamePlayController gamePlayController;
+    GameData gameData;
+
     public void SkillFire(int ID, ChampionController attacker, ChampionController target)
     {
         switch (ID)
@@ -43,6 +46,22 @@ public class Skill : MonoBehaviour
             case 17:
                 break;
             case 18:
+                if(attacker.lvl == 1)
+                {
+                    gamePlayController.Summon(gameData.championsArray[142]);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    gamePlayController.Summon(gameData.championsArray[142]);
+                    gamePlayController.Summon(gameData.championsArray[142]);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    gamePlayController.Summon(gameData.championsArray[142]);
+                    gamePlayController.Summon(gameData.championsArray[142]);
+                    gamePlayController.Summon(gameData.championsArray[142]);
+                }
+
                 break;
             case 19:
                 break;
@@ -51,10 +70,41 @@ public class Skill : MonoBehaviour
             case 21:
                 break;
             case 22:
+                if(attacker.lvl == 1)
+                {
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[24]);
+                }
                 break;
             case 23:
                 break;
             case 24:
+                if (attacker.lvl == 1)
+                {
+                    gamePlayController.Summon(gameData.championsArray[143]);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    gamePlayController.Summon(gameData.championsArray[144]);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    gamePlayController.Summon(gameData.championsArray[145]);
+                }
                 break;
             case 25:
                 break;
@@ -105,7 +155,8 @@ public class Skill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gamePlayController = GameObject.Find("Scripts").GetComponent<GamePlayController>();
+        gameData = GameObject.Find("Scripts").GetComponent<GameData>();
     }
 
     // Update is called once per frame
@@ -113,4 +164,8 @@ public class Skill : MonoBehaviour
     {
         
     }
+
+
+
+    
 }

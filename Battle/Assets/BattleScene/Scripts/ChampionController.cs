@@ -70,7 +70,7 @@ public class ChampionController : MonoBehaviour
 
     [HideInInspector]
     ///The upgrade level of the champion
-    public int lvl = 1;
+    public int lvl;
 
     public int skillID;
 
@@ -162,6 +162,7 @@ public class ChampionController : MonoBehaviour
         //disable agent
         navMeshAgent.enabled = false;
 
+        lvl = champion.level;
         skillID = champion.skillID;
 
         champType1 = champion.type1;
@@ -203,6 +204,15 @@ public class ChampionController : MonoBehaviour
     /// Update is called once per frame
     void Update()
     {
+        if(GameObject.FindGameObjectWithTag("propeller") != null)
+        {
+            for(int i = 0; i < GameObject.FindGameObjectsWithTag("propeller").Length; i++)
+            {
+                GameObject.FindGameObjectsWithTag("propeller")[i].transform.rotation *= Quaternion.Euler(new Vector3(0, 30, 0));
+            }
+        }
+
+
         if (wealthOn == true)
             gamePlayController.wealth = true;
         else gamePlayController.wealth = false;
@@ -235,7 +245,7 @@ public class ChampionController : MonoBehaviour
         if (synergyIsApply)
         {
             ApplyActiveSynergy();
-            championAnimator.SetFloat("attackSpeed",championAnimator.GetFloat("attackSpeed") * currentAttackSpeed);
+            championAnimator.SetFloat("attackSpeed",(championAnimator.GetFloat("attackSpeed") * currentAttackSpeed)+0.4f);
             gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
             
             synergyIsApply = false;

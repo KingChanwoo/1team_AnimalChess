@@ -15,28 +15,29 @@ public class Stage1 : MonoBehaviour
             // 아래 형식 복사해서 값만 바꿔서 사용
             // 원하는 유닛 수 만큼 복사해서 사용
             // 본래 능력치의 몇 %로 구현할 것인지 입력하여 사용(100% = 100)
-            aiOpponent.AddEnemy(136, 1, 2,100);
-            aiOpponent.AddEnemy(126, 5, 2,100);
+            // 123~ 141
+            aiOpponent.AddEnemy(133, 1, 2,100);
+            aiOpponent.AddEnemy(133, 5, 2,100);
         }
         else if (r == 2)
         {
-            aiOpponent.AddEnemy(43, 1, 2,100);
-            aiOpponent.AddEnemy(43, 5, 2,100);
-            aiOpponent.AddEnemy(42, 3, 1,100);
+            aiOpponent.AddEnemy(125, 1, 2,100);
+            aiOpponent.AddEnemy(125, 5, 2,100);
+            aiOpponent.AddEnemy(125, 3, 1,100);
         }
         else if (r == 3)
         {
-            aiOpponent.AddEnemy(42, 1, 2, 100);
-            aiOpponent.AddEnemy(42, 5, 2, 100);
-            aiOpponent.AddEnemy(42, 3, 1, 100);
+            aiOpponent.AddEnemy(125, 1, 2, 100);
+            aiOpponent.AddEnemy(125, 5, 2, 100);
+            aiOpponent.AddEnemy(125, 3, 1, 100);
         }
         else if (r == 4)
         {
-            aiOpponent.AddEnemy(42, 1, 2, 100);
-            aiOpponent.AddEnemy(42, 5, 2, 100);
-            aiOpponent.AddEnemy(42, 3, 1, 100);
-            aiOpponent.AddEnemy(43, 2, 0, 100);
-            aiOpponent.AddEnemy(43, 4, 0, 100);
+            aiOpponent.AddEnemy(125, 1, 2, 100);
+            aiOpponent.AddEnemy(125, 5, 2, 100);
+            aiOpponent.AddEnemy(125, 3, 1, 100);
+            aiOpponent.AddEnemy(127, 2, 0, 100);
+            aiOpponent.AddEnemy(127, 4, 0, 100);
         }
         else if (r == 5)
         {
