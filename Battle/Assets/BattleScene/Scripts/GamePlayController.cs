@@ -225,7 +225,6 @@ public class GamePlayController : MonoBehaviour
     {
 
         int flag = 0;
-        Debug.Log("소환 발동 했냐?");
 
         for (int x = 0; x < Map.hexMapSizeX; x++)
         {
@@ -254,9 +253,11 @@ public class GamePlayController : MonoBehaviour
                     championController.SetWorldPosition();
                     championController.SetWorldRotation();
                     StoreChampionInArray(Map.GRIDTYPE_HEXA_MAP, x, z, championPrefab);
+
+                    championController.OnCombatStart();
                     flag = 1;
-                    ChampionController championController2 = gridChampionsArray[x, z].GetComponent<ChampionController>();
-                    summonlist.Add(championController2);
+                    //  ChampionController championController2 = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    summonlist.Add(championController);
                     break;
                 }
             }
@@ -271,8 +272,8 @@ public class GamePlayController : MonoBehaviour
     {
         for (int i = 0; i < summonlist.Count; i++)
         {
-            Debug.Log("소환유닛 삭제되냐???");
             RemoveChampionFromArray(Map.GRIDTYPE_HEXA_MAP, summonlist[i].gridPositionX, summonlist[i].gridPositionZ);
+            if(summonlist != null)
             Destroy(summonlist[i].gameObject);
         }
 
@@ -964,8 +965,6 @@ public class GamePlayController : MonoBehaviour
         //return if we dont have enough gold
         if (currentGold < 4)
             return;
-
-        Summon(gameData.championsArray[24]);
 
         if (currentChampionLimit < 9)
         {

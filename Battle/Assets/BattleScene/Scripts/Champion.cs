@@ -14,6 +14,8 @@ public class Champion : ScriptableObject
     ///Projectile prefab to create when champion is attacking
     public GameObject attackProjectile;
 
+    public int level;
+    public int skillID;
     ///The champion name displayed on the UI frames
     public string uiname;
     public int grade;

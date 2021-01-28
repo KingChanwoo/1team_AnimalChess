@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7418428081228689641, guid: 35f52f5dbf871e741b3f82499d0ece04, type: 3}
   attackProjectile: {fileID: 0}
+  level: 3
+  skillID: 24
   uiname: "\uAC1C"
+  grade: 0
   cost: 0
   sellCost: 10
   type1: {fileID: 11400000, guid: a975e4a689ce7d24dbe80e0b323638c4, type: 2}

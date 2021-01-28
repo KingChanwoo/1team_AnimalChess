@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 27158427}
   - component: {fileID: 27158429}
   - component: {fileID: 27158430}
+  - component: {fileID: 27158431}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -461,7 +462,7 @@ MonoBehaviour:
   oponentChampionInventoryArray: []
   currentGameStage: 0
   PreparationStageDuration: 60
-  CombatStageDuration: 10
+  CombatStageDuration: 60
   baseGoldIncome: 5
   winBonus: 0
   currentExp: 0
@@ -740,6 +741,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3704840a181f8eb47a9319644452979f, type: 2}
   - {fileID: 11400000, guid: de96fddfa9080e04ca16ce0c7b76ef2a, type: 2}
   - {fileID: 11400000, guid: 4e7f275716edfc34c83315d0cfb00ed3, type: 2}
+  - {fileID: 11400000, guid: 9fb2b7fca4b34944fbd445da78a805e0, type: 2}
+  - {fileID: 11400000, guid: f827f5ad6eed7b14fae72544bf9d99fb, type: 2}
+  - {fileID: 11400000, guid: 736c5d129cd9040408da090b8e9965bd, type: 2}
+  - {fileID: 11400000, guid: aefb0a5ce4d6b714f8302a8bfe3c5aee, type: 2}
   championTypesArray:
   - {fileID: 11400000, guid: f3e567881c605d247b05775a39e704ed, type: 2}
   - {fileID: 11400000, guid: 33223db9cedb8c045990cb7a3b0144a3, type: 2}
@@ -779,6 +784,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiOpponent: {fileID: 27158427}
+--- !u!114 &27158431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27158420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2709408fb4f09164c8a47e9df50073cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &29586260
 GameObject:
   m_ObjectHideFlags: 0

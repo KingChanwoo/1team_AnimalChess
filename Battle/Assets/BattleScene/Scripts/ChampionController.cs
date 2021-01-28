@@ -70,13 +70,17 @@ public class ChampionController : MonoBehaviour
 
     [HideInInspector]
     ///The upgrade level of the champion
-    public int lvl = 1;
+    public int lvl;
+
+    public int skillID;
 
     private Map map;
     public GamePlayController gamePlayController;
     private AIopponent aIopponent;
     private ChampionAnimation championAnimation;
     private WorldCanvasController worldCanvasController;
+
+    public Skill skillScript;
 
     private NavMeshAgent navMeshAgent;
 
@@ -133,6 +137,7 @@ public class ChampionController : MonoBehaviour
     {
         uIController = GameObject.Find("Scripts").GetComponent<UIController>();
         championAnimator = gameObject.GetComponent<Animator>();
+        skillScript = GameObject.Find("Scripts").GetComponent<Skill>();
     }
 
     /// <summary>
@@ -156,6 +161,9 @@ public class ChampionController : MonoBehaviour
 
         //disable agent
         navMeshAgent.enabled = false;
+
+        lvl = champion.level;
+        skillID = champion.skillID;
 
         champType1 = champion.type1;
         champType2 = champion.type2;
@@ -196,6 +204,15 @@ public class ChampionController : MonoBehaviour
     /// Update is called once per frame
     void Update()
     {
+        if(GameObject.FindGameObjectWithTag("propeller") != null)
+        {
+            for(int i = 0; i < GameObject.FindGameObjectsWithTag("propeller").Length; i++)
+            {
+                GameObject.FindGameObjectsWithTag("propeller")[i].transform.rotation *= Quaternion.Euler(new Vector3(0, 30, 0));
+            }
+        }
+
+
         if (wealthOn == true)
             gamePlayController.wealth = true;
         else gamePlayController.wealth = false;
@@ -228,7 +245,7 @@ public class ChampionController : MonoBehaviour
         if (synergyIsApply)
         {
             ApplyActiveSynergy();
-            championAnimator.SetFloat("attackSpeed",championAnimator.GetFloat("attackSpeed") * currentAttackSpeed);
+            championAnimator.SetFloat("attackSpeed",(championAnimator.GetFloat("attackSpeed") * currentAttackSpeed)+0.4f);
             gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
             
             synergyIsApply = false;
@@ -291,7 +308,7 @@ public class ChampionController : MonoBehaviour
             if (target != null)
             {
                 //rotate towards target
-                this.transform.LookAt(target.transform);
+                this.transform.LookAt(target.transform,Vector3.up);
 
                 if (target.GetComponent<ChampionController>().isDead == true) //target champion is alive
                 {
@@ -458,9 +475,9 @@ public class ChampionController : MonoBehaviour
         }
         else if (teamID == 1)
         {
-            rotation = new Vector3(0, 0, 0);
+            rotation = new Vector3(0, 20, 0);
         }
-        this.transform.rotation *= Quaternion.Euler(rotation);
+        this.transform.rotation = Quaternion.Euler(rotation);
     }
 
     /// <summary>
@@ -645,19 +662,27 @@ public class ChampionController : MonoBehaviour
             if(currentMana >= maxMana)
             {
                 // 스킬 구현
-                currentMana = 0;
-                if (strength)
+                if (target != null)
                 {
-                    if (champType2.displayName == "힘의상징")
+                    skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
+                    currentMana = 0;
+                    if (strength)
                     {
-                        currentAttackSpeed *= 1 + (strengthValue2/100);
-                        timeStrength = -strengthValue1;
+                        if (champType2.displayName == "힘의상징")
+                        {
+                            currentAttackSpeed *= 1 + (strengthValue2 / 100);
+                            timeStrength = -strengthValue1;
+                        }
+                    }
+
+                    if (ability)
+                    {
+                        gamePlayController.Ability(abilityValue1);
                     }
                 }
-
-                if (ability)
+                else
                 {
-                    gamePlayController.Ability(abilityValue1);
+                    currentMana = maxMana;
                 }
             }
 
