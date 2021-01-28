@@ -24,6 +24,9 @@ public class UIController : MonoBehaviour
     public Text hpText;
     public Text expText;
     public Text levelText;
+    public Text unitnameText;
+    public Text unitHpText;
+    public Text unitattackText;
 
     public GameObject shop;
     public GameObject restartButton;
@@ -33,6 +36,7 @@ public class UIController : MonoBehaviour
     public GameObject bonusUIPrefab;
     public Image expgage;
 
+    public GameObject UnitInfo;
     /// <summary>
     /// Called when a chamipon panel clicked on shop UI
     /// </summary>
@@ -120,6 +124,20 @@ public void Refresh_Click()
         type2.GetComponent<Text>().text = champion.type2.displayName;
         icon1.GetComponent<Image>().sprite = champion.type1.icon;
         icon2.GetComponent<Image>().sprite = champion.type2.icon;
+    }
+
+    public void ViewUnitInfo(string name, string hp, string damage)
+    {
+        UnitInfo.SetActive(true);
+
+        unitnameText.text = name;
+        unitHpText.text = hp;
+        unitattackText.text = damage;
+    }
+
+    public void CloseUnitInfo()
+    {
+        UnitInfo.SetActive(false);
     }
 
     /// <summary>

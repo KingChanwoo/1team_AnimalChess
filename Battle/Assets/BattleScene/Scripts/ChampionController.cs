@@ -468,37 +468,7 @@ public class ChampionController : MonoBehaviour
     /// </summary>
     public void UpgradeLevel()
     {
-        //incrase lvl
-        lvl++;
-
-        float newSize = 1;
-        maxHealth = champion.health;
-        currentHealth = champion.health;
-
-
-        if (lvl == 2)
-        {
-            newSize = 1.5f;
-            maxHealth = champion.health * 2;
-            currentHealth = champion.health * 2;
-            currentDamage = champion.damage * 2;
-
-        }
-
-        if (lvl == 3)
-        {
-            newSize = 2f;
-            maxHealth = champion.health * 3;
-            currentHealth = champion.health * 3;
-            currentDamage = champion.damage * 3;
-        }
-
-
-
-        //set size
-        this.transform.localScale = new Vector3(newSize, newSize, newSize);
-
-        //instantiate level up effect
+       
         GameObject levelupEffect = Instantiate(levelupEffectPrefab);
 
         //set position
