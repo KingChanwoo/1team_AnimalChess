@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 9.88, y: 0.04, z: 0.16106081}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -40,7 +40,7 @@ Transform:
   - {fileID: 458410}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &9547984
 Animator:
   serializedVersion: 3
@@ -118,15 +118,32 @@ MonoBehaviour:
   currentDefence: 0
   currentMoveSpeed: 3.5
   lvl: 1
+  gamePlayController: {fileID: 0}
   isAttacking: 0
   isDead: 0
-  isField: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0
   admirerValue: 0
+  loyality: 0
+  loyalityValue1: 0
+  loyalityValue2: 0
+  death: 0
+  deathValue1: 0
+  deathValue2: 0
+  strength: 0
+  strengthValue1: 0
+  strengthValue2: 0
+  ability: 0
+  abilityValue1: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
+  synergyIsApply: 1
+  wealthOn: 0
+  wealthValue: 0
+  timeLoyal: 1
+  timeDeath: 1
+  timeStrength: 1
 --- !u!114 &733624206636918830
 MonoBehaviour:
   m_ObjectHideFlags: 0

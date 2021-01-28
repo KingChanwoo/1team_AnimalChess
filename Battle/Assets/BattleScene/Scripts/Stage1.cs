@@ -15,8 +15,8 @@ public class Stage1 : MonoBehaviour
             // 아래 형식 복사해서 값만 바꿔서 사용
             // 원하는 유닛 수 만큼 복사해서 사용
             // 본래 능력치의 몇 %로 구현할 것인지 입력하여 사용(100% = 100)
-            aiOpponent.AddEnemy(43, 1, 2,100);
-            aiOpponent.AddEnemy(43, 5, 2,100);
+            aiOpponent.AddEnemy(136, 1, 2,100);
+            aiOpponent.AddEnemy(126, 5, 2,100);
         }
         else if (r == 2)
         {

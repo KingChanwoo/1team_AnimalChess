@@ -228,7 +228,7 @@ public class ChampionController : MonoBehaviour
         if (synergyIsApply)
         {
             ApplyActiveSynergy();
-            championAnimator.SetFloat("attackSpeed", 1/currentAttackSpeed);
+            championAnimator.SetFloat("attackSpeed",championAnimator.GetFloat("attackSpeed") * currentAttackSpeed);
             gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
             
             synergyIsApply = false;
@@ -291,7 +291,7 @@ public class ChampionController : MonoBehaviour
             if (target != null)
             {
                 //rotate towards target
-                this.transform.LookAt(target.transform, Vector3.up);
+                this.transform.LookAt(target.transform);
 
                 if (target.GetComponent<ChampionController>().isDead == true) //target champion is alive
                 {
@@ -458,10 +458,9 @@ public class ChampionController : MonoBehaviour
         }
         else if (teamID == 1)
         {
-            rotation = new Vector3(0, 20, 0);
+            rotation = new Vector3(0, 0, 0);
         }
-
-        this.transform.rotation = Quaternion.Euler(rotation);
+        this.transform.rotation *= Quaternion.Euler(rotation);
     }
 
     /// <summary>
