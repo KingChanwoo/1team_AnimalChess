@@ -16,11 +16,13 @@ MonoBehaviour:
   icon: {fileID: 0}
   championBonus:
     gamePlayController: {fileID: 0}
-    championCount: 1
     championBonusType: 0
     bonusTarget: 0
-    bonusValue1: 0
-    bonusValue2: 0
+    championCount1: 1
+    championCount2: 2
+    championCount3: 0
+    bonusValue1: 30
+    bonusValue2: 70
     bonusValue3: 0
     duration: 0
     effectPrefab: {fileID: 0}
