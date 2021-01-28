@@ -308,7 +308,7 @@ public class ChampionController : MonoBehaviour
             if (target != null)
             {
                 //rotate towards target
-                this.transform.LookAt(target.transform);
+                this.transform.LookAt(target.transform,Vector3.up);
 
                 if (target.GetComponent<ChampionController>().isDead == true) //target champion is alive
                 {
@@ -475,9 +475,9 @@ public class ChampionController : MonoBehaviour
         }
         else if (teamID == 1)
         {
-            rotation = new Vector3(0, 0, 0);
+            rotation = new Vector3(0, 20, 0);
         }
-        this.transform.rotation *= Quaternion.Euler(rotation);
+        this.transform.rotation = Quaternion.Euler(rotation);
     }
 
     /// <summary>

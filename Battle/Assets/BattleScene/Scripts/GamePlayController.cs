@@ -256,8 +256,8 @@ public class GamePlayController : MonoBehaviour
 
                     championController.OnCombatStart();
                     flag = 1;
-                    ChampionController championController2 = gridChampionsArray[x, z].GetComponent<ChampionController>();
-                    summonlist.Add(championController2);
+                    //  ChampionController championController2 = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    summonlist.Add(championController);
                     break;
                 }
             }
@@ -273,6 +273,7 @@ public class GamePlayController : MonoBehaviour
         for (int i = 0; i < summonlist.Count; i++)
         {
             RemoveChampionFromArray(Map.GRIDTYPE_HEXA_MAP, summonlist[i].gridPositionX, summonlist[i].gridPositionZ);
+            if(summonlist != null)
             Destroy(summonlist[i].gameObject);
         }
 
