@@ -72,11 +72,15 @@ public class ChampionController : MonoBehaviour
     ///The upgrade level of the champion
     public int lvl = 1;
 
+    public int skillID;
+
     private Map map;
     public GamePlayController gamePlayController;
     private AIopponent aIopponent;
     private ChampionAnimation championAnimation;
     private WorldCanvasController worldCanvasController;
+
+    public Skill skillScript;
 
     private NavMeshAgent navMeshAgent;
 
@@ -133,6 +137,7 @@ public class ChampionController : MonoBehaviour
     {
         uIController = GameObject.Find("Scripts").GetComponent<UIController>();
         championAnimator = gameObject.GetComponent<Animator>();
+        skillScript = GameObject.Find("Scripts").GetComponent<Skill>();
     }
 
     /// <summary>
@@ -156,6 +161,8 @@ public class ChampionController : MonoBehaviour
 
         //disable agent
         navMeshAgent.enabled = false;
+
+        skillID = champion.skillID;
 
         champType1 = champion.type1;
         champType2 = champion.type2;
@@ -645,19 +652,27 @@ public class ChampionController : MonoBehaviour
             if(currentMana >= maxMana)
             {
                 // 스킬 구현
-                currentMana = 0;
-                if (strength)
+                if (target != null)
                 {
-                    if (champType2.displayName == "힘의상징")
+                    skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
+                    currentMana = 0;
+                    if (strength)
                     {
-                        currentAttackSpeed *= 1 + (strengthValue2/100);
-                        timeStrength = -strengthValue1;
+                        if (champType2.displayName == "힘의상징")
+                        {
+                            currentAttackSpeed *= 1 + (strengthValue2 / 100);
+                            timeStrength = -strengthValue1;
+                        }
+                    }
+
+                    if (ability)
+                    {
+                        gamePlayController.Ability(abilityValue1);
                     }
                 }
-
-                if (ability)
+                else
                 {
-                    gamePlayController.Ability(abilityValue1);
+                    currentMana = maxMana;
                 }
             }
 

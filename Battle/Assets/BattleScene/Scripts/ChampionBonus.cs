@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ChampionBonusType {Shield,Health,Critical,Regeneration,Evasion,TiedDamage,Attack,AttackMana,AttackSpeed,Summon,AtkDef,MoveSpeed
-                               ,Evil,Wealth,Sin7,Admirer,Zodiacal,TenLongevity,Fecyndiry,Loyality,Death,Strength,King,Ability};
+                               ,Evil,Wealth,Sin7,Admirer,Zodiacal,TenLongevity,Fecyndiry,Loyality,Death,Strength,King,Ability,Sommoned};
 public enum BonusTarget {Self, Enemy};
 
 /// <summary>
