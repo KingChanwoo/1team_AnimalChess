@@ -33,6 +33,6 @@ MonoBehaviour:
   defence: 162
   critical: 25
   evasion: 10
-  attackRange: 5
+  attackRange: 17
   damageToPlayer: 0
   movementSpeed: 3.5

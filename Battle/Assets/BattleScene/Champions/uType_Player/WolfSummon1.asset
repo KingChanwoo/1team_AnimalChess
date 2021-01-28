@@ -22,7 +22,7 @@ MonoBehaviour:
   sellCost: 0
   type1: {fileID: 11400000, guid: 0a894a8f337b21f40babc40d0662a5b5, type: 2}
   type2: {fileID: 11400000, guid: 0a894a8f337b21f40babc40d0662a5b5, type: 2}
-  health: 317
+  health: 362
   healthRegeneration: 0
   shield: 0
   mana: 0
