@@ -14,6 +14,7 @@ public class GamePlayController : MonoBehaviour
     EventSystem eventSystem;
 
     List<ChampionController> summonlist = new List<ChampionController>();
+    public List<ChampionController> skillrangeenemylist = new List<ChampionController>();
     public int gridT;
     public int gridX;
     public int gridZ;

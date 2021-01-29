@@ -497,6 +497,80 @@ public class ChampionController : MonoBehaviour
 
 
     }
+    public void OctopusSkill(float time)
+    {
+        RaycastHit[] hit;
+        float skillrange = 7;
+        hit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
+        for (int i = 0; i < hit.Length; i++)
+        {
+            if (hit[i].collider.gameObject.tag == "Enemy")
+            {
+                GameObject gameObject = hit[i].collider.gameObject;
+                Debug.Log("누가 맞았나" + hit[i].collider.gameObject.name);
+                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
+                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
+            }
+        }
+    }
+    public void GoatSkill(float damege)
+    {
+        RaycastHit[] hit;
+        float skillrange = 20;
+        hit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
+        for (int i = 0; i < hit.Length; i++)
+        {
+            if (hit[i].collider.gameObject.tag == "Enemy")
+            {
+                GameObject gameObject = hit[i].collider.gameObject;
+                Debug.Log("누가 맞았나" + hit[i].collider.gameObject.name);
+                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
+                gameObject.GetComponent<ChampionController>().currentHealth -= damege;
+                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
+            }
+        }
+    }
+
+    public void FindTargetList()
+    {
+        float skillrange = 5;
+        //find enemy
+        if (teamID == TEAMID_PLAYER)
+        {
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                Debug.Log("거리 :" + distance + "/ 타겟 :" + championController);
+                                gamePlayController.skillrangeenemylist.Add(championController);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < gamePlayController.skillrangeenemylist.Count; i++)
+        {
+            Debug.Log("범위 스킬 대상" + gamePlayController.skillrangeenemylist[i]);
+            Debug.Log(gamePlayController.skillrangeenemylist[i].currentHealth);
+            gamePlayController.skillrangeenemylist[i].currentHealth -= 100;
+            Debug.Log(gamePlayController.skillrangeenemylist[i].currentHealth);
+        }
+        gamePlayController.skillrangeenemylist.Clear();
+    }
 
     private GameObject target;
     /// <summary>
@@ -507,11 +581,9 @@ public class ChampionController : MonoBehaviour
     {
         GameObject closestEnemy = null;
         float bestDistance = 1000;
-
         //find enemy
         if (teamID == TEAMID_PLAYER)
         {
-
             for (int x = 0; x < Map.hexMapSizeX; x++)
             {
                 for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
@@ -532,8 +604,6 @@ public class ChampionController : MonoBehaviour
                                 closestEnemy = aIopponent.gridChampionsArray[x, z];
                             }
                         }
-
-
                     }
                 }
             }
@@ -664,6 +734,7 @@ public class ChampionController : MonoBehaviour
                 // 스킬 구현
                 if (target != null)
                 {
+                    
                     skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
                     currentMana = 0;
                     if (strength)

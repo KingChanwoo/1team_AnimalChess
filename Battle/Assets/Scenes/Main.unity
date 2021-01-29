@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a9c9b3f8c466d4495e73cb5c7b72b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillrangeenemylist: []
   gridT: 0
   gridX: 0
   gridZ: 0
@@ -469,7 +470,7 @@ MonoBehaviour:
   needExp: 2
   currentChampionLimit: 1
   currentChampionCount: 0
-  currentGold: 30
+  currentGold: 100
   currentHP: 100
   timerDisplay: 0
   activeBonusList: []
@@ -478,6 +479,8 @@ MonoBehaviour:
   continuedLose: 0
   wealth: 0
   wealthMoney: 0
+  summonSynergy: 0
+  summonSynergyValue: 0
   draggedChampion: {fileID: 0}
   enableSell: 0
 --- !u!114 &27158424
@@ -1407,11 +1410,11 @@ RectTransform:
   m_Father: {fileID: 129059052}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 719.4, y: -435}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -54, y: 3}
   m_SizeDelta: {x: 70, y: 70}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &92938048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31002,7 +31005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 80, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936263348

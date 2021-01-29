@@ -5,6 +5,7 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     GamePlayController gamePlayController;
+    
     GameData gameData;
     
     public void SkillFire(int ID, ChampionController attacker, ChampionController target)
@@ -139,6 +140,21 @@ public class Skill : MonoBehaviour
             case 40:
                 break;
             case 41:
+                float damege = attacker.currentDamage;
+                if (attacker.lvl == 1)
+                {                 
+                    attacker.GoatSkill(damege);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    damege *= 2.5f;
+                    attacker.GoatSkill(damege);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    damege *= 10;
+                    attacker.GoatSkill(damege);
+                }
                 break;
             case 42:
                 break;
