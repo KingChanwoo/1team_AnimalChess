@@ -48,18 +48,18 @@ public class Skill : MonoBehaviour
             case 18:
                 if(attacker.lvl == 1)
                 {
-                    gamePlayController.Summon(gameData.championsArray[142]);
+                    gamePlayController.Summon(gameData.championsArray[146]);
                 }
                 else if (attacker.lvl == 2)
                 {
-                    gamePlayController.Summon(gameData.championsArray[142]);
-                    gamePlayController.Summon(gameData.championsArray[142]);
+                    gamePlayController.Summon(gameData.championsArray[147]);
+                    gamePlayController.Summon(gameData.championsArray[147]);
                 }
                 else if (attacker.lvl == 3)
                 {
-                    gamePlayController.Summon(gameData.championsArray[142]);
-                    gamePlayController.Summon(gameData.championsArray[142]);
-                    gamePlayController.Summon(gameData.championsArray[142]);
+                    gamePlayController.Summon(gameData.championsArray[148]);
+                    gamePlayController.Summon(gameData.championsArray[148]);
+                    gamePlayController.Summon(gameData.championsArray[148]);
                 }
 
                 break;
@@ -72,22 +72,22 @@ public class Skill : MonoBehaviour
             case 22:
                 if(attacker.lvl == 1)
                 {
-                    gamePlayController.Summon(gameData.championsArray[24]);
-                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[143]);
+                    gamePlayController.Summon(gameData.championsArray[143]);
                 }
                 else if (attacker.lvl == 2)
                 {
-                    gamePlayController.Summon(gameData.championsArray[24]);
-                    gamePlayController.Summon(gameData.championsArray[24]);
-                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[144]);
+                    gamePlayController.Summon(gameData.championsArray[144]);
+                    gamePlayController.Summon(gameData.championsArray[144]);
                 }
                 else if (attacker.lvl == 3)
                 {
-                    gamePlayController.Summon(gameData.championsArray[24]);
-                    gamePlayController.Summon(gameData.championsArray[24]);
-                    gamePlayController.Summon(gameData.championsArray[24]);
-                    gamePlayController.Summon(gameData.championsArray[24]);
-                    gamePlayController.Summon(gameData.championsArray[24]);
+                    gamePlayController.Summon(gameData.championsArray[145]);
+                    gamePlayController.Summon(gameData.championsArray[145]);
+                    gamePlayController.Summon(gameData.championsArray[145]);
+                    gamePlayController.Summon(gameData.championsArray[145]);
+                    gamePlayController.Summon(gameData.championsArray[145]);
                 }
                 break;
             case 23:
@@ -95,15 +95,15 @@ public class Skill : MonoBehaviour
             case 24:
                 if (attacker.lvl == 1)
                 {
-                    gamePlayController.Summon(gameData.championsArray[143]);
+                    gamePlayController.Summon(gameData.championsArray[149]);
                 }
                 else if (attacker.lvl == 2)
                 {
-                    gamePlayController.Summon(gameData.championsArray[144]);
+                    gamePlayController.Summon(gameData.championsArray[150]);
                 }
                 else if (attacker.lvl == 3)
                 {
-                    gamePlayController.Summon(gameData.championsArray[145]);
+                    gamePlayController.Summon(gameData.championsArray[151]);
                 }
                 break;
             case 25:

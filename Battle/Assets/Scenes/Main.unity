@@ -514,6 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   championShop: {fileID: 27158426}
   gamePlayController: {fileID: 27158423}
+  aiOpponent: {fileID: 27158427}
   championsFrameArray:
   - {fileID: 801922932}
   - {fileID: 333877862}
@@ -539,7 +540,7 @@ MonoBehaviour:
   unitattackText: {fileID: 828683988}
   shop: {fileID: 547204852}
   restartButton: {fileID: 2078110825}
-  placementText: {fileID: 2006051611}
+  placementText: {fileID: 1239469296}
   gold: {fileID: 1822699225}
   bonusContainer: {fileID: 493390162}
   bonusUIPrefab: {fileID: 8226663827659477093, guid: fb00ff74348fe3e42adf5bb47f5421ce,

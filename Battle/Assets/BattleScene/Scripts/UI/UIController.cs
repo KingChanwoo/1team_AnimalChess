@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
 {
     public ChampionShop championShop;
     public GamePlayController gamePlayController;
+    public AIopponent aiOpponent;
 
     public GameObject[] championsFrameArray;
     public GameObject[] bonusPanels;
@@ -145,7 +146,9 @@ public void Refresh_Click()
     /// </summary>
     public void UpdateUI()
     {
+
         goldText.text = gamePlayController.currentGold.ToString();
+        placementText.GetComponent<Text>().text = "Round " + aiOpponent.round.ToString();
         championCountText.text = gamePlayController.currentChampionCount.ToString() + " / " + gamePlayController.currentChampionLimit.ToString();
         if(gamePlayController.currentChampionCount != gamePlayController.currentChampionLimit) 
         {
