@@ -37,6 +37,22 @@ public class Skill : MonoBehaviour
             case 12:
                 break;
             case 13:
+                float time = 1;
+                if (attacker.lvl == 1)
+                {
+                    time *= 2;
+                    attacker.OctopusSkill(time);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    time *= 4;
+                    attacker.OctopusSkill(time);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    time *= 6;
+                    attacker.OctopusSkill(time);
+                }
                 break;
             case 14:
                 break;

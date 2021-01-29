@@ -17,7 +17,7 @@ public class Stage1 : MonoBehaviour
             // 본래 능력치의 몇 %로 구현할 것인지 입력하여 사용(100% = 100)
             // 123~ 141
             aiOpponent.AddEnemy(125, 1, 2,100);
-            aiOpponent.AddEnemy(125, 5, 2,100);
+           // aiOpponent.AddEnemy(125, 5, 2,100);
         }
         else if (r == 2)
         {

@@ -499,31 +499,31 @@ public class ChampionController : MonoBehaviour
     }
     public void OctopusSkill(float time)
     {
-        RaycastHit[] hit;
+        RaycastHit[] OctopusSkillhit;
         float skillrange = 7;
-        hit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
-        for (int i = 0; i < hit.Length; i++)
+        OctopusSkillhit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
+        for (int i = 0; i < OctopusSkillhit.Length; i++)
         {
-            if (hit[i].collider.gameObject.tag == "Enemy")
+            if (OctopusSkillhit[i].collider.gameObject.tag == "Enemy")
             {
-                GameObject gameObject = hit[i].collider.gameObject;
-                Debug.Log("누가 맞았나" + hit[i].collider.gameObject.name);
-                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
-                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
+                GameObject gameObject = OctopusSkillhit[i].collider.gameObject;
+                Debug.Log("누가 맞았나" + gameObject.name);
+                gameObject.GetComponent<ChampionController>().currentDamage = 0;
             }
         }
+
     }
     public void GoatSkill(float damege)
     {
-        RaycastHit[] hit;
+        RaycastHit[] GoatSkillhit;
         float skillrange = 20;
-        hit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
-        for (int i = 0; i < hit.Length; i++)
+        GoatSkillhit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
+        for (int i = 0; i < GoatSkillhit.Length; i++)
         {
-            if (hit[i].collider.gameObject.tag == "Enemy")
+            if (GoatSkillhit[i].collider.gameObject.tag == "Enemy")
             {
-                GameObject gameObject = hit[i].collider.gameObject;
-                Debug.Log("누가 맞았나" + hit[i].collider.gameObject.name);
+                GameObject gameObject = GoatSkillhit[i].collider.gameObject;
+                Debug.Log("누가 맞았나" + GoatSkillhit[i].collider.gameObject.name);
                 Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
                 gameObject.GetComponent<ChampionController>().currentHealth -= damege;
                 Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
