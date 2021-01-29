@@ -229,6 +229,12 @@ public class ChampionBonus
                     }
                 }
                 break;
+            case ChampionBonusType.Summon:
+                champion.gamePlayController.summonSynergy = true;
+                champion.gamePlayController.summonSynergyValue = bonusValue1;
+
+                
+                break;
             case ChampionBonusType.AtkDef:
                 if(num >= championCount3)
                 {

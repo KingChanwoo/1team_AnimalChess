@@ -6,7 +6,7 @@ public class Skill : MonoBehaviour
 {
     GamePlayController gamePlayController;
     GameData gameData;
-
+    
     public void SkillFire(int ID, ChampionController attacker, ChampionController target)
     {
         switch (ID)
