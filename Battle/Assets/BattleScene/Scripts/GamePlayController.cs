@@ -14,6 +14,7 @@ public class GamePlayController : MonoBehaviour
     EventSystem eventSystem;
 
     List<ChampionController> summonlist = new List<ChampionController>();
+    public List<ChampionController> skillrangeenemylist = new List<ChampionController>();
     public int gridT;
     public int gridX;
     public int gridZ;
@@ -72,6 +73,9 @@ public class GamePlayController : MonoBehaviour
 
     public bool wealth = false;
     public float wealthMoney = 0;
+
+    public bool summonSynergy = false;
+    public float summonSynergyValue = 0;
 
     /// Start is called before the first frame update
     void Start()
@@ -244,7 +248,13 @@ public class GamePlayController : MonoBehaviour
                     //gridChampionsArray[x, z] = championController2.gameObject;
                     //setup chapioncontroller
                     championController.Init(champion, ChampionController.TEAMID_PLAYER);
-
+                    if (summonSynergy)
+                    {
+                        championController.currentDamage *= (summonSynergyValue);
+                        championController.maxHealth *= (summonSynergyValue);
+                        championController.currentHealth *= (summonSynergyValue);
+                        championController.currentDefence *= (summonSynergyValue);
+                    }
 
                     //set grid position
                     championController.SetGridPosition(Map.GRIDTYPE_HEXA_MAP, x, z);
@@ -816,6 +826,7 @@ public class GamePlayController : MonoBehaviour
         }
         else if (currentGameStage == GameStage.Combat)
         {
+
             //소환수 제거
             RemoveSummon(gameData.championsArray[24]);
             //set new game stage

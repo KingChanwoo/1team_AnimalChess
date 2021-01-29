@@ -15,7 +15,6 @@ MonoBehaviour:
   displayName: "\uBB34\uB9AC\uC0DD\uD65C"
   icon: {fileID: 0}
   championBonus:
-    gamePlayController: {fileID: 0}
     championBonusType: 9
     bonusTarget: 0
     championCount1: 3
