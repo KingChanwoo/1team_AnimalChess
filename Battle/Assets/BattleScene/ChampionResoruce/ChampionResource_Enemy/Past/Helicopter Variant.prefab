@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9e2da67ec47d741b024f6f3d143972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propeller: {fileID: 0}
   levelupEffectPrefab: {fileID: 6022893094628638925, guid: 3e052aff88b4eeb4da8c715d215dec1f,
     type: 3}
   projectileStart: {fileID: 0}
@@ -173,7 +172,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: e731a1ac8914e2548ae80adaba4759b1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f4edb870ed0890a4694f728a07b517a8, type: 2}
+      objectReference: {fileID: 9100000, guid: 93a73b0966817f74e8bacbaf43bc817f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e731a1ac8914e2548ae80adaba4759b1, type: 3}
 --- !u!1 &5705178461602867670 stripped

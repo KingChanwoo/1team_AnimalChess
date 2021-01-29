@@ -291,19 +291,47 @@ MonoBehaviour:
   champion: {fileID: 0}
   maxHealth: 0
   currentHealth: 0
+  currentHealthReg: 0
   currentShield: 0
   maxMana: 0
   currentMana: 0
+  currentHitMana: 5
+  currentAttackMana: 10
   currentDamage: 0
+  currentCritical: 0
+  currentEvasion: 0
+  currentAttackSpeed: 1
   currentDefence: 0
+  currentMoveSpeed: 3.5
   lvl: 1
+  skillID: 0
+  gamePlayController: {fileID: 0}
+  skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
-  isField: 0
-  hitMana: 5
-  attackMana: 10
+  sin7: 0
+  sin7Shield: 0
+  admirer: 0
+  admirerValue: 0
+  loyality: 0
+  loyalityValue1: 0
+  loyalityValue2: 0
+  death: 0
+  deathValue1: 0
+  deathValue2: 0
+  strength: 0
+  strengthValue1: 0
+  strengthValue2: 0
+  ability: 0
+  abilityValue1: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
+  synergyIsApply: 1
+  wealthOn: 0
+  wealthValue: 0
+  timeLoyal: 1
+  timeDeath: 1
+  timeStrength: 1
 --- !u!114 &-6362909103887588130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,8 +353,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7914762662502293341}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7ae7e949241b4e74ea6a2612760de57e, type: 3}
-  m_Controller: {fileID: 9100000, guid: b2813ef6557f9b649bdc0fd3067e5543, type: 2}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8fb3895a6ba3cc94980138ae2b75da52, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

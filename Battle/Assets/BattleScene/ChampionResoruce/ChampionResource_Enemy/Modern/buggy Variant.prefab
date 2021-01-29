@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 2234661288888066434}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b2813ef6557f9b649bdc0fd3067e5543, type: 2}
+  m_Controller: {fileID: 9100000, guid: 26666c0013c43e74991017b104c0e2c6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -55,7 +55,9 @@ MonoBehaviour:
   currentDefence: 0
   currentMoveSpeed: 3.5
   lvl: 1
+  skillID: 0
   gamePlayController: {fileID: 0}
+  skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
   sin7: 0
