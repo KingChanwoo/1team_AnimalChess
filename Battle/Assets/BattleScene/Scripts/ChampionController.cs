@@ -78,7 +78,7 @@ public class ChampionController : MonoBehaviour
     public GamePlayController gamePlayController;
     private AIopponent aIopponent;
     private ChampionAnimation championAnimation;
-    private WorldCanvasController worldCanvasController;
+    public WorldCanvasController worldCanvasController;
 
     public Skill skillScript;
 
@@ -392,6 +392,16 @@ public class ChampionController : MonoBehaviour
         isAttacking = false;
         uIController.isLock = false;
 
+        skillScript.skill3buffOn = false;
+        skillScript.skill5buffOn = false;
+        skillScript.skill7buffOn = false;
+        skillScript.skill8buffOn = false;
+        skillScript.skill11buffOn = false;
+        skillScript.skill14buffOn = false;
+        skillScript.skill16buffOn = false;
+        skillScript.skill21buffOn = false;
+        skillScript.skill25buffOn = false;
+
 
         //reset position
         SetWorldPosition();
@@ -511,7 +521,6 @@ public class ChampionController : MonoBehaviour
                 gameObject.GetComponent<ChampionController>().currentDamage = 0;
             }
         }
-
     }
     public void GoatSkill(float damege)
     {

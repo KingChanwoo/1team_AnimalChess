@@ -470,7 +470,7 @@ MonoBehaviour:
   needExp: 2
   currentChampionLimit: 1
   currentChampionCount: 0
-  currentGold: 100
+  currentGold: 300
   currentHP: 100
   timerDisplay: 0
   activeBonusList: []
@@ -806,6 +806,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2709408fb4f09164c8a47e9df50073cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
+  skill3buffOn: 0
+  skill5buffOn: 0
+  skill7buffOn: 0
+  skill8buffOn: 0
+  skill11buffOn: 0
+  skill14buffOn: 0
+  skill16buffOn: 0
+  skill21buffOn: 0
+  skill25buffOn: 0
 --- !u!1 &29586260
 GameObject:
   m_ObjectHideFlags: 0
