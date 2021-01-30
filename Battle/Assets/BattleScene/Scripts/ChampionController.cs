@@ -97,8 +97,16 @@ public class ChampionController : MonoBehaviour
     private bool isInCombat = false;
     private float combatTimer = 0;
 
-    private bool isStuned = false;
-    private float stunTimer = 0;
+    public bool isStuned = false;
+    public float stunTimer = 0;
+
+    public bool isBoarskill = false;
+
+    public bool isCrocodileStack = false;
+    public float crocodileStack = 0;
+    private float crocodilesec = 0;
+    private float crocodileTimer = 0;
+    private float crocodileBleedingDamage = 0;
 
     public bool isRatDead = false;
     public bool isRatSkillOn = false;
@@ -394,6 +402,26 @@ public class ChampionController : MonoBehaviour
                 }
             }
         }
+
+        if (isBoarskill)
+        {
+            currentMana = maxMana;
+            isBoarskill = false;
+        }
+
+        if (isCrocodileStack)
+        {
+            crocodileTimer += Time.deltaTime;
+            if (crocodileTimer > crocodilesec)
+            {
+                float bleedingDamage = crocodileBleedingDamage * crocodileStack;
+                currentHealth -= bleedingDamage;
+                worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), bleedingDamage, Color.red);
+                crocodilesec++;
+            }
+        }
+
+
         if (isComodoStack)
         {
             comodoStackTimer += Time.deltaTime;
@@ -1092,6 +1120,52 @@ public class ChampionController : MonoBehaviour
 
             //deal damage
             bool isTargetDead = targetChamoion.OnGotHit(currentDamage, this);
+
+            if (champion.uiname == "악어")
+            {
+                Debug.Log("공격횟수");
+                int ranBleeding = Random.Range(1, 101);
+                if (ranBleeding > 50)
+                {
+                    targetChamoion.isCrocodileStack = true;
+                    targetChamoion.crocodileStack++;
+                    Debug.Log("출혈스택");
+                    targetChamoion.crocodileBleedingDamage = currentDamage * 0.1f;
+                    if (lvl == 1 && targetChamoion.crocodileStack >= 10)
+                    {
+                        Debug.Log("처형");
+                        targetChamoion.currentHealth = 0;
+
+                        currentHealth += maxHealth * 0.5f;
+                        if (currentHealth > maxHealth)
+                        {
+                            currentHealth = maxHealth;
+                        }
+                        DoAttack();
+                    }
+                    else if (lvl == 2 && targetChamoion.crocodileStack >= 8)
+                    {
+                        targetChamoion.currentHealth = 0;
+                        currentHealth += maxHealth * 0.5f;
+                        if (currentHealth > maxHealth)
+                        {
+                            currentHealth = maxHealth;
+                        }
+                        DoAttack();
+                    }
+                    else if (lvl == 3 && targetChamoion.crocodileStack >= 5)
+                    {
+                        targetChamoion.currentHealth = 0;
+                        currentHealth += maxHealth * 0.5f;
+                        if (currentHealth > maxHealth)
+                        {
+                            currentHealth = maxHealth;
+                        }
+                        DoAttack();
+                    }
+                }
+            }
+
 
             if (champion.uiname == "코모도왕도마뱀")
             {

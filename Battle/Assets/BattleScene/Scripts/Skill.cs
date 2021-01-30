@@ -87,11 +87,29 @@ public class Skill : MonoBehaviour
 
     public void SkillFire(int ID, ChampionController attacker, ChampionController target)
     {
+        float heal;
+        float damage;
         switch (ID)
         {
             case 1:
+                attacker.currentHealth += attacker.maxHealth * 0.2f;
                 break;
             case 2:
+                if (attacker.lvl == 1)
+                {
+                    target.isStuned = true;
+                    target.stunTimer = 1;
+                }
+                else if (attacker.lvl == 2)
+                {
+                    target.isStuned = true;
+                    target.stunTimer = 2;
+                }
+                else if (attacker.lvl == 3)
+                {
+                    target.isStuned = true;
+                    target.stunTimer = 3; ;
+                }
                 break;
             case 3:
                 for (int x = 0; x < Map.hexMapSizeX; x++)
@@ -121,6 +139,31 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 4:
+                if (attacker.lvl == 1)
+                {
+                    damage = attacker.currentDamage * 1.5f;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 2;
+                }
+                else if (attacker.lvl == 2)
+                {
+
+                    damage = attacker.currentDamage * 2;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 3;
+                }
+                else if (attacker.lvl == 3)
+                {
+                    damage = attacker.currentDamage * 3;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 4;
+                }
                 break;
             case 5:
                 for (int x = 0; x < Map.hexMapSizeX; x++)
@@ -150,6 +193,24 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 6:
+                if (attacker.lvl == 1)
+                {
+                    damage = attacker.currentDamage * 2;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    damage = attacker.currentDamage * 2.5f;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    damage = attacker.currentDamage * 4;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                }
                 break;
             case 7:
                 for (int x = 0; x < Map.hexMapSizeX; x++)
@@ -196,6 +257,24 @@ public class Skill : MonoBehaviour
                 else if (attacker.lvl == 3) attacker.currentShield += 1500;
                 break;
             case 10:
+                if (attacker.lvl == 1)
+                {
+                    damage = attacker.currentDamage * 2;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    damage = attacker.currentDamage * 2.5f;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    damage = attacker.currentDamage * 3;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                }
                 break;
             case 11:
                 if (skill11buffOn == false)
@@ -302,6 +381,21 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 17:
+                if (attacker.lvl == 1)
+                {
+                    heal = attacker.currentDamage;
+                    attacker.SheepSkill(heal);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    heal = attacker.currentDamage * 1.5f;
+                    attacker.SheepSkill(heal);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    heal = attacker.currentDamage * 3;
+                    attacker.SheepSkill(heal);
+                }
                 break;
             case 18:
                 if(attacker.lvl == 1)
@@ -322,6 +416,30 @@ public class Skill : MonoBehaviour
 
                 break;
             case 19:
+                if (attacker.lvl == 1)
+                {
+                    damage = attacker.currentDamage * 1.5f;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 2;
+                }
+                else if (attacker.lvl == 2)
+                {
+                    damage = attacker.currentDamage * 2;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 2;
+                }
+                else if (attacker.lvl == 3)
+                {
+                    damage = attacker.currentDamage * 3;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 2;
+                }
                 break;
             case 20:
                 if (attacker.lvl == 1) attacker.currentShield += attacker.maxHealth * 0.1f;
@@ -504,6 +622,30 @@ public class Skill : MonoBehaviour
                 duration28 = this.time + 3; // 지속시간
                 break;
             case 29:
+                if (attacker.lvl == 1)
+                {
+                    damage = attacker.currentDamage * 2;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 5;
+                }
+                else if (attacker.lvl == 2)
+                {
+                    damage = attacker.currentDamage * 3;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 5;
+                }
+                else if (attacker.lvl == 3)
+                {
+                    damage = attacker.currentDamage * 5;
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 5;
+                }
                 break;
             case 30:
                 if (attacker.isRatDead == true && attacker.isRatSkillOn == true)
@@ -585,6 +727,7 @@ public class Skill : MonoBehaviour
             case 35:
                 break;
             case 36:
+                // 패시브로 대체
                 break;
             case 37:
                 attacker.currentShield = 0;
@@ -597,6 +740,43 @@ public class Skill : MonoBehaviour
                 // 쉴드데미지 영역은 ChampionController 863cs~
                 break;
             case 38:
+                if (attacker.lvl == 1)
+                {
+                    damage = attacker.currentDamage * 2f;
+                    if (target.currentHealth < damage)
+                    {
+                        attacker.isBoarskill = true;
+                    }
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 3;
+
+                }
+                else if (attacker.lvl == 2)
+                {
+                    damage = attacker.currentDamage * 4f;
+                    if (target.currentHealth < damage)
+                    {
+                        attacker.isBoarskill = true;
+                    }
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 3;
+                }
+                else if (attacker.lvl == 3)
+                {
+                    damage = attacker.currentDamage * 8;
+                    if (target.currentHealth < damage)
+                    {
+                        attacker.isBoarskill = true;
+                    }
+                    target.currentHealth -= damage;
+                    worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                    target.isStuned = true;
+                    target.stunTimer = 3;
+                }
                 break;
             case 39:
                 for (int x = 0; x < Map.hexMapSizeX; x++)
