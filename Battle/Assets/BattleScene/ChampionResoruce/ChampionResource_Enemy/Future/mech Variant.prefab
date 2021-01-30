@@ -9,7 +9,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 6403450923742295478}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.28
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -70,15 +70,34 @@ MonoBehaviour:
   currentDefence: 0
   currentMoveSpeed: 3.5
   lvl: 1
+  skillID: 0
+  gamePlayController: {fileID: 0}
+  skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
-  isField: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0
   admirerValue: 0
+  loyality: 0
+  loyalityValue1: 0
+  loyalityValue2: 0
+  death: 0
+  deathValue1: 0
+  deathValue2: 0
+  strength: 0
+  strengthValue1: 0
+  strengthValue2: 0
+  ability: 0
+  abilityValue1: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
+  synergyIsApply: 1
+  wealthOn: 0
+  wealthValue: 0
+  timeLoyal: 1
+  timeDeath: 1
+  timeStrength: 1
 --- !u!1001 &6403450923742393208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,6 +112,18 @@ PrefabInstance:
     - target: {fileID: 400044, guid: fec746e46c2fd354fa0bc92720075dbd, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400044, guid: fec746e46c2fd354fa0bc92720075dbd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.60602
+      objectReference: {fileID: 0}
+    - target: {fileID: 400044, guid: fec746e46c2fd354fa0bc92720075dbd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.60602
+      objectReference: {fileID: 0}
+    - target: {fileID: 400044, guid: fec746e46c2fd354fa0bc92720075dbd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.60602
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: fec746e46c2fd354fa0bc92720075dbd, type: 3}
       propertyPath: m_LocalPosition.x

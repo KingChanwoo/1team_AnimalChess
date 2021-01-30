@@ -11,9 +11,9 @@ Material:
   m_Shader: {fileID: 4800000, guid: b1fac95321091764e8f70867c2a349fd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 5000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -40,7 +40,7 @@ Material:
     - _AtmospherePow: 3.1607144
     - _SunsetIntensity: 0.7464286
     m_Colors:
-    - _AtmosphereColor: {r: 0.15325737, g: 0.34365615, b: 0.7924528, a: 1}
+    - _AtmosphereColor: {r: 0.6313726, g: 0.7411765, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _LightDir: {r: -1, g: 0, b: 0, a: 1}
     - _SkyColor: {r: 0.08235294, g: 0.18431373, b: 0.3529412, a: 1}

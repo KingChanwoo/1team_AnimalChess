@@ -470,7 +470,7 @@ MonoBehaviour:
   needExp: 2
   currentChampionLimit: 1
   currentChampionCount: 0
-  currentGold: 300
+  currentGold: 100
   currentHP: 100
   timerDisplay: 0
   activeBonusList: []
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   championsArray:
-  - {fileID: 11400000, guid: 43ec67f56a7f6244c9abfb57dc22d3e7, type: 2}
+  - {fileID: 11400000, guid: 1d311a8a737fac3428ec6082bdfe246e, type: 2}
   - {fileID: 11400000, guid: 86967e52968670243a10dc72a0047fcc, type: 2}
   - {fileID: 11400000, guid: 66edd6cbdfeaf5343a90cb3861ad9c9e, type: 2}
   - {fileID: 11400000, guid: 0ebe3822c38e6cf4ba073140a01f7b97, type: 2}
@@ -728,7 +728,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c250b5444b6065a48a3272fbe36698e5, type: 2}
   - {fileID: 11400000, guid: 7df50672a40a1e34d8a8249f9b89b1bd, type: 2}
   - {fileID: 11400000, guid: 8155e3418eae2b44ca5aa0d65575efed, type: 2}
-  - {fileID: 11400000, guid: 1f9f17e7a2e5efd4992d60344c57a103, type: 2}
+  - {fileID: 11400000, guid: 5df4205070192b7458b5cf7c0ee15cdf, type: 2}
   - {fileID: 11400000, guid: 3b572a2ff86f914438e9e114c57768e1, type: 2}
   - {fileID: 11400000, guid: eec4a65083cde7742b559c902840739e, type: 2}
   - {fileID: 11400000, guid: 3704840a181f8eb47a9319644452979f, type: 2}
@@ -806,16 +806,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2709408fb4f09164c8a47e9df50073cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0
-  skill3buffOn: 0
-  skill5buffOn: 0
-  skill7buffOn: 0
-  skill8buffOn: 0
-  skill11buffOn: 0
-  skill14buffOn: 0
-  skill16buffOn: 0
-  skill21buffOn: 0
-  skill25buffOn: 0
 --- !u!1 &29586260
 GameObject:
   m_ObjectHideFlags: 0

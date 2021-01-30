@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: MordernBuggy
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2234661288888066434, guid: 41a6f676b901e2a43902412929f3e6d3, type: 3}
+  prefab: {fileID: 1503725105927807852, guid: 77b39c5d28d16f84e96f4061b79fd099, type: 3}
   attackProjectile: {fileID: 0}
   level: 0
   skillID: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
   hitMana: 5
   attackMana: 10
   damage: 132
-  attackSpeed: 0.6
+  attackSpeed: 1
   defence: 138
   critical: 25
   evasion: 10
