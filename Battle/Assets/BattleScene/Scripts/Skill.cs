@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//  버프 디버프 전투중인 챔피언 검출부터 다시하기. 시발.
 public class Skill : MonoBehaviour
 {
     GamePlayController gamePlayController;
@@ -49,6 +51,37 @@ public class Skill : MonoBehaviour
     float duration25 = -1;
     public bool skill25buffOn = false;
     ChampionController skill25Attacker;
+
+    float duration26 = -1;
+    public bool skill26buffOn = false;
+    ChampionController skill26Attacker;
+
+    float duration27 = -1;
+    public bool skill27buffOn = false;
+    ChampionController skill27Attacker;
+
+    float duration28 = -1;
+    public bool skill28buffOn = false;
+    ChampionController skill28Attacker;
+
+    float duration31 = -1;
+    public bool skill31buffOn = false;
+    ChampionController skill31Attacker;
+
+    float duration32 = -1;
+    public bool skill32buffOn = false;
+    ChampionController skill32Attacker;
+
+    float duration33 = -1;
+    public bool skill33buffOn = false;
+    ChampionController skill33Attacker;
+
+    public bool skill37Active = false;
+    public float shield = 0;
+
+    float duration39 = -1;
+    public bool skill39buffOn = false;
+    ChampionController skill39Attacker;
 
 
 
@@ -202,7 +235,7 @@ public class Skill : MonoBehaviour
                 }
                 else target.currentShield -= damage;
 
-                worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage);
+                worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 3, 0), damage, Color.red);
 
                 if (skill14buffOn == false)
                 {
@@ -228,11 +261,11 @@ public class Skill : MonoBehaviour
                                 if (champion.teamID == 0)
                                 {
                                     if (attacker.lvl == 1)
-                                        champion.currentDefence += champion.currentAttackSpeed * (120 / 100);
+                                        champion.currentAttackSpeed *= (120 / 100);
                                     else if (attacker.lvl == 2)
-                                        champion.currentDefence += champion.currentAttackSpeed * (130 / 100);
+                                        champion.currentAttackSpeed *= (130 / 100);
                                     else if (attacker.lvl == 3)
-                                        champion.currentDefence += champion.currentAttackSpeed * (150 / 100);
+                                        champion.currentAttackSpeed *= (150 / 100);
                                     skill16buffOn = true;
                                 }
                             }
@@ -357,40 +390,137 @@ public class Skill : MonoBehaviour
                         if (combatChampionsArray[x, z] != null)
                         {
                             ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill21Attacker = attacker;
-                            if (skill21buffOn == false)
+                            skill25Attacker = attacker;
+                            if (skill25buffOn == false)
                             {
                                 if (champion.teamID == 0)
                                 {
                                     if (attacker.lvl == 1)
-                                        champion.currentAttackSpeed *= (150 / 100);
+                                        champion.currentDamage *= (110 / 100);
                                     else if (attacker.lvl == 2)
-                                        champion.currentAttackSpeed *= (175 / 100);
+                                        champion.currentDamage *= (120 / 100);
                                     else if (attacker.lvl == 3)
-                                        champion.currentAttackSpeed *= (200 / 100);
-                                    skill21buffOn = true;
+                                        champion.currentDamage *= (130 / 100);
+                                    skill25buffOn = true;
                                 }
                             }
-                            duration21 = this.time + 10; // 지속시간                 
+                            duration25 = this.time + 20; // 지속시간                 
                         }
                     }
                 }
                 break;
             case 26:
+                skill26Attacker = attacker;
+                if (skill26buffOn == false)
+                {
+                    if (attacker.lvl == 1)
+                    {
+                        attacker.currentDamage *= (130 / 100);
+                        attacker.currentAttackSpeed *= (130 / 100);
+                    }
+                    else if (attacker.lvl == 2)
+                    {
+                        attacker.currentDamage *= (150 / 100);
+                        attacker.currentAttackSpeed *= (150 / 100);
+                    }
+                    else if (attacker.lvl == 3)
+                    {
+                        attacker.currentDamage *= (170 / 100);
+                        attacker.currentAttackSpeed *= (170 / 100);
+                    }
+                    skill26buffOn = true;
+                }
+                duration26 = this.time + 10; // 지속시간  
                 break;
             case 27:
+                for (int x = 0; x < Map.hexMapSizeX; x++)
+                {
+                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    {
+                        if (combatChampionsArray[x, z] != null)
+                        {
+                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
+                            skill27Attacker = attacker;
+                            if (skill27buffOn == false)
+                            {
+                                if (champion.teamID == 0)
+                                {
+                                    if (attacker.lvl == 1)
+                                        champion.currentDefence += 50;
+                                    else if (attacker.lvl == 2)
+                                        champion.currentDefence += 100;
+                                    else if (attacker.lvl == 3)
+                                        champion.currentDefence += 150;
+                                    skill27buffOn = true;
+                                }
+                            }
+                            duration27 = this.time + 10; // 지속시간                 
+                        }
+                    }
+                }
                 break;
             case 28:
+                skill28Attacker = attacker;
+                if(attacker.lvl == 1)
+                    attacker.currentHealth += attacker.maxHealth * (10 / 100);
+                else if (attacker.lvl == 2)
+                    attacker.currentHealth += attacker.maxHealth * (20 / 100);
+                else if (attacker.lvl == 3)
+                    attacker.currentHealth += attacker.maxHealth * (35 / 100);
+                if (attacker.currentHealth >= attacker.maxHealth)
+                    attacker.currentHealth = attacker.maxHealth;
+                if(skill28buffOn == false)
+                {
+                    attacker.currentAttackSpeed *= 200 / 100;
+                    skill28buffOn = true;
+                }
+                duration28 = this.time + 3; // 지속시간
                 break;
             case 29:
                 break;
             case 30:
                 break;
             case 31:
+                skill31Attacker = attacker;
+                if (skill31buffOn == false)
+                {
+                    if (attacker.lvl == 1)
+                        attacker.currentDamage *= (200 / 100);
+                    else if (attacker.lvl == 2)
+                        attacker.currentDamage *= (300 / 100);
+                    else if (attacker.lvl == 3)
+                        attacker.currentDamage *= (400 / 100);
+                    skill31buffOn = true;
+                }
+                duration31 = this.time + 5; // 지속시간
                 break;
             case 32:
+                skill32Attacker = attacker;
+                if (skill32buffOn == false)
+                {
+                    attacker.currentCritical = 100;
+                    if (attacker.lvl == 1)
+                        attacker.currentAttackSpeed *= 200/100;
+                    else if (attacker.lvl == 2)
+                        attacker.currentAttackSpeed *= 250/100;
+                    else if (attacker.lvl == 3)
+                        attacker.currentAttackSpeed *= 300/100;
+                    skill32buffOn = true;
+                }
+                duration32 = this.time + 10; // 지속시간
                 break;
             case 33:
+                if (attacker.lvl == 1) target.OnGotStun(2);
+                else if (attacker.lvl == 2) target.OnGotStun(3);
+                else if (attacker.lvl == 3) target.OnGotStun(5);
+
+                skill33Attacker = attacker;
+                if (skill33buffOn == false)
+                {
+                    attacker.currentAttackSpeed *= 400 / 100;
+                    skill33buffOn = true;
+                }
+                duration33 = this.time + 3; // 지속시간
                 break;
             case 34:
                 break;
@@ -399,10 +529,43 @@ public class Skill : MonoBehaviour
             case 36:
                 break;
             case 37:
+                attacker.currentShield = 0;
+                shield = attacker.snailStack * (attacker.maxHealth * (10 / 100));
+                attacker.currentShield += shield;
+                if(skill37Active == false)
+                {
+                    skill37Active = true;
+                }
+                // 쉴드데미지 영역은 ChampionController 863cs~
                 break;
             case 38:
                 break;
             case 39:
+                for (int x = 0; x < Map.hexMapSizeX; x++)
+                {
+                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    {
+                        if (combatChampionsArray[x, z] != null)
+                        {
+                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
+                            skill39Attacker = attacker;
+                            if (skill39buffOn == false)
+                            {
+                                if (champion.teamID == 0)
+                                {
+                                    if (attacker.lvl == 1)
+                                        champion.currentDamage *= 110/100;
+                                    else if (attacker.lvl == 2)
+                                        champion.currentDamage *= 120/100;
+                                    else if (attacker.lvl == 3)
+                                        champion.currentDamage *= 140/100;
+                                    skill39buffOn = true;
+                                }
+                            }
+                            duration39 = this.time + 5; // 지속시간                 
+                        }
+                    }
+                }
                 break;
             case 40:
                 break;
@@ -590,11 +753,11 @@ public class Skill : MonoBehaviour
                         {
                             ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
                             if (skill16Attacker.lvl == 1)
-                                champion.currentDefence -= champion.currentDamage * (100 / 120);
+                                champion.currentAttackSpeed *= (100 / 120);
                             else if (skill16Attacker.lvl == 2)
-                                champion.currentDefence -= champion.currentDamage * (100 / 130);
+                                champion.currentAttackSpeed *= (100 / 130);
                             else if (skill16Attacker.lvl == 3)
-                                champion.currentDefence -= champion.currentDamage * (100 / 150);
+                                champion.currentAttackSpeed *= (100 / 150);
                             skill16buffOn = false;
                             skill16Attacker = null;
                             duration16 = -1;
@@ -617,14 +780,183 @@ public class Skill : MonoBehaviour
                         {
                             ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
                             if (skill21Attacker.lvl == 1)
-                                champion.currentDefence -= champion.currentAttackSpeed * (100 / 150);
+                                champion.currentAttackSpeed *= (100 / 150);
                             else if (skill21Attacker.lvl == 2)
-                                champion.currentDefence -= champion.currentAttackSpeed * (100 / 175);
+                                champion.currentAttackSpeed *= (100 / 175);
                             else if (skill21Attacker.lvl == 3)
-                                champion.currentDefence -= champion.currentAttackSpeed * (100 / 200);
+                                champion.currentAttackSpeed *= (100 / 200);
                             skill21buffOn = false;
                             skill21Attacker = null;
                             duration21 = -1;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 스킬25('희생' 버프 Off)
+        if (time >= duration25)
+        {
+            if (skill25buffOn)
+            {
+                for (int x = 0; x < Map.hexMapSizeX; x++)
+                {
+                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                    {
+                        if (combatChampionsArray[x, z] != null)
+                        {
+                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
+                            if (skill25Attacker.lvl == 1)
+                                champion.currentDamage *= (100 / 110);
+                            else if (skill25Attacker.lvl == 2)
+                                champion.currentDamage *= (100 / 120);
+                            else if (skill25Attacker.lvl == 3)
+                                champion.currentDamage *= (100 / 130);
+                            skill25buffOn = false;
+                            skill25Attacker = null;
+                            duration25 = -1;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 스킬26('굶주림' 버프 Off)
+        if (time >= duration26)
+        {
+            if (skill26buffOn)
+            {
+                for (int x = 0; x < Map.hexMapSizeX; x++)
+                {
+                    if (skill26Attacker.lvl == 1)
+                    {
+                        skill26Attacker.currentDamage *= (100 / 130);
+                        skill26Attacker.currentAttackSpeed *= (100 / 130);
+                    }
+                    else if (skill26Attacker.lvl == 2)
+                    {
+                        skill26Attacker.currentDamage *= (100 / 150);
+                        skill26Attacker.currentAttackSpeed *= (100 / 150);
+                    }
+                    else if (skill26Attacker.lvl == 3)
+                    {
+                        skill26Attacker.currentDamage *= (100 / 170);
+                        skill26Attacker.currentAttackSpeed *= (100 / 170);
+                    }
+                    skill26buffOn = false;
+                    skill26Attacker = null;
+                    duration26 = -1;
+                }
+            }
+        }
+
+        //  스킬27('게거품' 버프 off)
+        if (time >= duration27)
+        {
+            if (skill27buffOn)
+            {
+                for (int x = 0; x < Map.hexMapSizeX; x++)
+                {
+                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                    {
+                        if (combatChampionsArray[x, z] != null)
+                        {
+                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
+                            if (skill27Attacker.lvl == 1)
+                                champion.currentDefence -= 50;
+                            else if (skill27Attacker.lvl == 2)
+                                champion.currentDefence -= 100;
+                            else if (skill27Attacker.lvl == 3)
+                                champion.currentDefence -= 150;
+                            skill27buffOn = false;
+                            skill27Attacker = null;
+                            duration27 = -1;
+                        }
+                    }
+                }
+            }
+        }
+
+        //  스킬28('탈피' 버프 off)
+        if (time >= duration28)
+        {
+            if (skill28buffOn)
+            {
+                skill28Attacker.currentAttackSpeed *= 100 / 200;
+                skill28buffOn = false;
+                skill28Attacker = null;
+                duration28 = -1;
+            }
+        }
+
+        //  스킬31('왕의분노' 버프 off)
+        if (time >= duration31)
+        {
+            if (skill31buffOn)
+            {
+                if (skill31Attacker.lvl == 1)
+                    skill31Attacker.currentDamage *= 100/200;
+                else if (skill31Attacker.lvl == 2)
+                    skill31Attacker.currentDamage *= 100/300;
+                else if (skill31Attacker.lvl == 3)
+                    skill31Attacker.currentDamage *= 100/400;
+                skill31buffOn = false;
+                skill31Attacker = null;
+                duration28 = -1;
+            }
+        }
+
+        //  스킬32('치명적인뿔' 버프 off)
+        if (time >= duration32)
+        {
+            if (skill32buffOn)
+            {
+                skill32Attacker.currentCritical = 25;
+                if (skill32Attacker.lvl == 1)
+                    skill32Attacker.currentAttackSpeed *= 100 / 200;
+                else if (skill32Attacker.lvl == 2)
+                    skill32Attacker.currentAttackSpeed *= 100 / 250;
+                else if (skill32Attacker.lvl == 3)
+                    skill32Attacker.currentAttackSpeed *= 100 / 300;
+                skill32buffOn = false;
+                skill32Attacker = null;
+                duration32 = -1;
+            }
+        }
+
+        //  스킬33('저리비켜' 버프 off)
+        if (time >= duration33)
+        {
+            if (skill33buffOn)
+            {
+                skill33Attacker.currentAttackSpeed *= 100 / 400;
+                skill33buffOn = false;
+                skill33Attacker = null;
+                duration33 = -1;
+            }
+        }
+
+        //  스킬39('폭식' 버프 off)
+        if (time >= duration39)
+        {
+            if (skill39buffOn)
+            {
+                for (int x = 0; x < Map.hexMapSizeX; x++)
+                {
+                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                    {
+                        if (combatChampionsArray[x, z] != null)
+                        {
+                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
+                            if (skill39Attacker.lvl == 1)
+                                champion.currentDamage *= 100/110;
+                            else if (skill39Attacker.lvl == 2)
+                                champion.currentDamage *= 100/120;
+                            else if (skill39Attacker.lvl == 3)
+                                champion.currentDamage *= 100/140;
+                            skill39buffOn = false;
+                            skill39Attacker = null;
+                            duration39 = -1;
                         }
                     }
                 }

@@ -121,6 +121,8 @@ public class ChampionController : MonoBehaviour
     public bool ability = false;
     public float abilityValue1 =0;
 
+    public float snailStack = 0;
+
 
 
     public ChampionType champType1;
@@ -401,6 +403,14 @@ public class ChampionController : MonoBehaviour
         skillScript.skill16buffOn = false;
         skillScript.skill21buffOn = false;
         skillScript.skill25buffOn = false;
+        skillScript.skill26buffOn = false;
+        skillScript.skill27buffOn = false;
+        skillScript.skill28buffOn = false;
+        skillScript.skill31buffOn = false;
+        skillScript.skill32buffOn = false;
+        skillScript.skill33buffOn = false;
+        skillScript.skill37Active = false;
+        skillScript.skill39buffOn = false;
 
 
         //reset position
@@ -731,11 +741,21 @@ public class ChampionController : MonoBehaviour
             //      b.ApplyOnAttack(this, targetChamoion);
             //  }
 
+            if(champion.uiname == "상어")
+            {
+                Debug.Log("상어");
+                if (this.lvl == 1) SharkSkill(targetChamoion, 20);
+                else if (this.lvl == 2) SharkSkill(targetChamoion, 30);
+                else if (this.lvl == 3) SharkSkill(targetChamoion, 40);
+            }
 
             //deal damage
             bool isTargetDead = targetChamoion.OnGotHit(currentDamage, this);
 
-
+            if(champion.uiname == "달팽이")
+            {
+                snailStack++;
+            }
             // 타격 시, 마나 회복
             currentMana += currentAttackMana;
             if(currentMana >= maxMana)
@@ -847,10 +867,27 @@ public class ChampionController : MonoBehaviour
         }
         else
         {
-            if (currentShield < finalDamage)
+            if(currentShield == 0)
+            {
+                currentHealth -= finalDamage;
+            }
+            else if (currentShield < finalDamage)
             {
                 currentShield = 0;
                 currentHealth -= finalDamage - currentShield;
+                if (champion.uiname == "달팽이")
+                {
+                    if(skillScript.skill37Active == true)
+                    {
+                        if (this.lvl == 1)
+                            SnailSkill(10,6);
+                        else if (this.lvl == 2)
+                            SnailSkill(20,6);
+                        else if (this.lvl == 3)
+                            SnailSkill(100,6);
+                        skillScript.skill37Active = false;
+                    }
+                }
             }
             else
             {
@@ -886,12 +923,46 @@ public class ChampionController : MonoBehaviour
 
 
         //add floating text
-        worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), finalDamage);
+        worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), finalDamage,Color.white);
 
         return isDead;
     }
     
+    public void SnailSkill(float rate, float range)
+    {
+        RaycastHit[] rayHits = Physics.SphereCastAll(this.transform.position, range, Vector3.up, 0);
+        foreach(RaycastHit hitEnemy in rayHits)
+        {
+            ChampionController hitEnemyController = hitEnemy.transform.GetComponent<ChampionController>();
+            if(hitEnemyController.teamID == 1)
+            {
+                float damage = skillScript.shield * (rate/100);
+                if (hitEnemyController.currentShield == 0)
+                {
+                    hitEnemyController.currentHealth -= damage;
+                }
+                else if (hitEnemyController.currentShield < damage)
+                {
+                    hitEnemyController.currentShield = 0;
+                    hitEnemyController.currentHealth -= damage - hitEnemyController.currentShield;
+                }
+                else
+                {
+                    hitEnemyController.currentShield -= damage;
+                }
+                worldCanvasController.AddDamageText(hitEnemyController.transform.position + new Vector3(0, 3, 0), damage,Color.red);
+            }
+        }
+    }
 
+    public void SharkSkill(ChampionController target,float rate)
+    {
+        if (target.currentHealth <= target.maxHealth * (rate / 100))
+        {
+            target.currentHealth = 0;
+
+        }
+    }
     
 
     /// <summary>
@@ -903,7 +974,7 @@ public class ChampionController : MonoBehaviour
         isStuned = true;
         stunTimer = duration;
 
-        championAnimation.IsAnimated(false);
+        //  championAnimation.IsAnimated(false);
 
         navMeshAgent.isStopped = true;
     }
