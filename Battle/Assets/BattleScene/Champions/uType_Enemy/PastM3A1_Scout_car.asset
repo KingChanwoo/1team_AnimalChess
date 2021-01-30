@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: PastM3A1_Scout_car
   m_EditorClassIdentifier: 
-  prefab: {fileID: 102866, guid: d34c0c87e5bdee64282f001c576625c3, type: 3}
+  prefab: {fileID: 768075096036894406, guid: 8b56cda61f915d441bb538ede6edec4e, type: 3}
   attackProjectile: {fileID: 0}
   level: 0
   skillID: 0
