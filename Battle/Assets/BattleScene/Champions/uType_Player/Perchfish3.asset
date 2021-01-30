@@ -29,7 +29,7 @@ MonoBehaviour:
   hitMana: 5
   attackMana: 10
   damage: 158
-  attackSpeed: 0.9
+  attackSpeed: 1
   defence: 79
   critical: 25
   evasion: 10

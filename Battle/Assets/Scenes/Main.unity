@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   championsArray:
-  - {fileID: 11400000, guid: f249b71a36c3a904cb94f67d48c54a6f, type: 2}
+  - {fileID: 11400000, guid: 1d311a8a737fac3428ec6082bdfe246e, type: 2}
   - {fileID: 11400000, guid: 86967e52968670243a10dc72a0047fcc, type: 2}
   - {fileID: 11400000, guid: 66edd6cbdfeaf5343a90cb3861ad9c9e, type: 2}
   - {fileID: 11400000, guid: 0ebe3822c38e6cf4ba073140a01f7b97, type: 2}
