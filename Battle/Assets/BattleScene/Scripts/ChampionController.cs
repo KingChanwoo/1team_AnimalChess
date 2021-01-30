@@ -100,6 +100,43 @@ public class ChampionController : MonoBehaviour
     private bool isStuned = false;
     private float stunTimer = 0;
 
+    public bool isRatDead = false;
+    public bool isRatSkillOn = false;
+    private bool isRatSkill = false;
+    private float RatSkillTimer = 0;
+
+    public bool isSalamanderDead = false;
+    public bool isSalamanderSkillOn = false;
+    private bool isSalamanderSkill = false;
+    private float SalamanderSkillTimer = 0;
+    private int salamanderskillCount = 0;
+    private float salamanderPoisonDamage = 0;
+    private float salamandersec = 0;
+
+    private bool isComodoStack = false;
+    private float comodoStack = 0;
+    private float comodoStackLevel = 0;
+    private float comodoPoisonDamage = 0;
+    private float comodoStackTimer = 0;
+    private float comodosec = 0;
+
+    private bool isScorpionSkill = false;
+    private float ScorpionSkillTimer = 0;
+    private float scorpionPoisonDamage = 0;
+    private float scorpionsec = 0;
+
+    private bool isSilence = false;
+    private float silenceTimer = 0;
+
+    private bool isOctopusSkill = false;
+    private float OctopusSkillTimer = 0;
+
+    private bool isGoatskillChanneling = false;
+    private float goatskillChannelingTimer = 0;
+    private int goatskillCount = 0;
+
+
+
     public bool sin7 = false;
     public float sin7Shield = 0;
 
@@ -346,20 +383,166 @@ public class ChampionController : MonoBehaviour
         if (isStuned)
         {
             stunTimer -= Time.deltaTime;
-
             if (stunTimer < 0)
             {
                 isStuned = false;
-
-                championAnimation.IsAnimated(true);
-
                 if (target != null)
                 {
                     //set pathfinder target
                     navMeshAgent.destination = target.transform.position;
-
                     navMeshAgent.isStopped = false;
                 }
+            }
+        }
+        if (isComodoStack)
+        {
+            comodoStackTimer += Time.deltaTime;
+            if (this.comodoStackLevel == 1)
+            {
+                comodoPoisonDamage = this.maxHealth * 0.02f * comodoStack;
+            }
+            else if (this.comodoStackLevel == 2)
+            {
+                comodoPoisonDamage = this.maxHealth * 0.04f * comodoStack;
+            }
+            else if (this.comodoStackLevel == 3)
+            {
+                comodoPoisonDamage = this.maxHealth * 0.08f * comodoStack;
+            }
+            if (2 > comodosec)
+            {
+                if (comodoStackTimer > comodosec)
+                {
+                    currentHealth -= comodoPoisonDamage;
+                    worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), comodoPoisonDamage, Color.red);
+                    comodosec++;
+                }
+            }
+            else
+            {
+                isComodoStack = false;
+                comodosec = 0;
+                comodoStackTimer = 0;
+            }
+
+        }
+
+        if (isRatSkill)
+        {
+            RatSkillTimer -= Time.deltaTime;
+            if (RatSkillTimer < 0)
+            {
+                /*
+                if(보스유닛이라면)
+                최대 체력의 50% 피해
+                */
+                Debug.Log("체력 1 됨");
+                currentHealth = 1;
+                isRatSkill = false;
+            }
+        }
+
+        if (isSalamanderSkill)
+        {
+            SalamanderSkillTimer += Time.deltaTime;
+
+            if (salamanderskillCount > salamandersec)
+            {
+                if (SalamanderSkillTimer > salamandersec)
+                {
+                    currentHealth -= salamanderPoisonDamage;
+                    worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), salamanderPoisonDamage, Color.red);
+                    salamandersec++;
+                }
+            }
+            else
+            {
+                isSalamanderSkill = false;
+                salamandersec = 0;
+                SalamanderSkillTimer = 0;
+            }
+
+        }
+
+        if (isScorpionSkill)
+        {
+            ScorpionSkillTimer += Time.deltaTime;
+
+            if (3 >= scorpionsec)
+            {
+                if (ScorpionSkillTimer > scorpionsec)
+                {
+                    currentHealth -= scorpionPoisonDamage;
+                    worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), scorpionPoisonDamage, Color.red);
+                    scorpionsec++;
+                }
+            }
+            else
+            {
+                isScorpionSkill = false;
+                scorpionsec = 1;
+                ScorpionSkillTimer = 0;
+            }
+        }
+
+
+        if (isSilence)
+        {
+            silenceTimer -= Time.deltaTime;
+            if (silenceTimer < 0)
+            {
+                isSilence = false;
+            }
+        }
+
+
+        if (isOctopusSkill)
+        {
+            OctopusSkillTimer -= Time.deltaTime;
+            if (OctopusSkillTimer < 0)
+            {
+                currentDamage = champion.damage;
+                isOctopusSkill = false;
+            }
+        }
+
+
+
+        if (isGoatskillChanneling)
+        {
+            goatskillChannelingTimer -= Time.deltaTime;
+            Debug.Log(goatskillCount + "= 스킬시전 횟수");
+            if (goatskillChannelingTimer < 4.9 && goatskillCount == 0)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+            else if (goatskillChannelingTimer < 3.9 && goatskillCount == 1)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+            else if (goatskillChannelingTimer < 2.9 && goatskillCount == 2)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+            else if (goatskillChannelingTimer < 1.9 && goatskillCount == 3)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+            else if (goatskillChannelingTimer < 0.9 && goatskillCount == 4)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+
+            if (goatskillCount == 5)
+            {
+                Debug.Log("염소스킬끝");
+                isGoatskillChanneling = false;
+                DoAttack();
             }
         }
 
@@ -517,42 +700,78 @@ public class ChampionController : MonoBehaviour
 
 
     }
-    public void OctopusSkill(float time)
+    public void SalamanderSkill(float time)
     {
-        RaycastHit[] OctopusSkillhit;
-        float skillrange = 7;
-        OctopusSkillhit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
-        for (int i = 0; i < OctopusSkillhit.Length; i++)
+        float skillrange = 5;
+        //find enemy
+        Debug.Log("살라맨더 스킬 시작");
+        if (teamID == TEAMID_PLAYER)
         {
-            if (OctopusSkillhit[i].collider.gameObject.tag == "Enemy")
+            for (int x = 0; x < Map.hexMapSizeX; x++)
             {
-                GameObject gameObject = OctopusSkillhit[i].collider.gameObject;
-                Debug.Log("누가 맞았나" + gameObject.name);
-                gameObject.GetComponent<ChampionController>().currentDamage = 0;
-            }
-        }
-    }
-    public void GoatSkill(float damege)
-    {
-        RaycastHit[] GoatSkillhit;
-        float skillrange = 20;
-        GoatSkillhit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
-        for (int i = 0; i < GoatSkillhit.Length; i++)
-        {
-            if (GoatSkillhit[i].collider.gameObject.tag == "Enemy")
-            {
-                GameObject gameObject = GoatSkillhit[i].collider.gameObject;
-                Debug.Log("누가 맞았나" + GoatSkillhit[i].collider.gameObject.name);
-                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
-                gameObject.GetComponent<ChampionController>().currentHealth -= damege;
-                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                championController.isSalamanderSkill = true;
+                                championController.salamanderskillCount = (int)time;
+                                championController.salamanderPoisonDamage = 2000;
+                                Debug.Log("대상 : " + championController);
+
+                            }
+                        }
+
+                    }
+                }
             }
         }
     }
 
-    public void FindTargetList()
+
+    public void RatSkill(float range)
     {
-        float skillrange = 5;
+        float skillrange = range;
+        //find enemy
+        if (teamID == TEAMID_PLAYER)
+        {
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                championController.isRatSkill = true;
+                                championController.RatSkillTimer = 15;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    public void ComodoSkill(float range)
+    {
+        float skillrange = range;
         //find enemy
         if (teamID == TEAMID_PLAYER)
         {
@@ -573,22 +792,144 @@ public class ChampionController : MonoBehaviour
                             if (distance < skillrange)
                             {
                                 Debug.Log("거리 :" + distance + "/ 타겟 :" + championController);
-                                gamePlayController.skillrangeenemylist.Add(championController);
+                                championController.isStuned = true;
+                                championController.stunTimer = 3;
+                                championController.isComodoStack = true;
+                                championController.comodoStack = 10;
+                                championController.comodoStackLevel = this.lvl;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
-        for (int i = 0; i < gamePlayController.skillrangeenemylist.Count; i++)
+
+    public void ScorpionSkill(float damage)
+    {
+        float skillrange = 6;
+        //find enemy
+        if (teamID == TEAMID_PLAYER)
         {
-            Debug.Log("범위 스킬 대상" + gamePlayController.skillrangeenemylist[i]);
-            Debug.Log(gamePlayController.skillrangeenemylist[i].currentHealth);
-            gamePlayController.skillrangeenemylist[i].currentHealth -= 100;
-            Debug.Log(gamePlayController.skillrangeenemylist[i].currentHealth);
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                Debug.Log("거리 :" + distance + "/ 타겟 :" + championController);
+                                championController.currentHealth -= this.currentDamage * damage;
+                                worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), this.currentDamage * damage, Color.red);
+                                championController.isScorpionSkill = true;
+                                championController.scorpionPoisonDamage = this.currentDamage * 0.5f;
+                            }
+                        }
+                    }
+                }
+            }
         }
-        gamePlayController.skillrangeenemylist.Clear();
+    }
+
+    public void OctopusSkill(float time)
+    {
+        RaycastHit[] OctopusSkillhit;
+        float skillrange = 7;
+        OctopusSkillTimer = time;
+        OctopusSkillhit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
+        for (int i = 0; i < OctopusSkillhit.Length; i++)
+        {
+            if (OctopusSkillhit[i].collider.gameObject.tag == "Enemy")
+            {
+                GameObject gameObject = OctopusSkillhit[i].collider.gameObject;
+                Debug.Log("넌 실명 당했다");
+                gameObject.GetComponent<ChampionController>().isOctopusSkill = true;
+                gameObject.GetComponent<ChampionController>().currentDamage = 0;
+            }
+        }
+    }
+
+    public void GoatskillOn()
+    {
+        isGoatskillChanneling = true;
+        isStuned = true;
+        stunTimer = 5;
+        goatskillChannelingTimer = 5;
+        goatskillCount = 0;
+        navMeshAgent.isStopped = true;
+    }
+    public void GoatSkill()
+    {
+        RaycastHit[] GoatSkillhit;
+        float skillrange = 20;
+        float damage = 0;
+        if (this.lvl == 1)
+        {
+            damage = this.currentDamage;
+        }
+        if (this.lvl == 2)
+        {
+            damage = this.currentDamage * 1f;
+        }
+        if (this.lvl == 3)
+        {
+            damage = this.currentDamage * 10;
+        }
+        GoatSkillhit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
+        for (int i = 0; i < GoatSkillhit.Length; i++)
+        {
+            if (GoatSkillhit[i].collider.gameObject.tag == "Enemy")
+            {
+                GameObject gameObject = GoatSkillhit[i].collider.gameObject;
+                gameObject.GetComponent<ChampionController>().currentHealth -= damage;
+                worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                Debug.Log(damage);
+                Debug.Log(gameObject);
+            }
+        }
+    }
+
+    public void SilenceSkill(float time)
+    {
+        silenceTimer = time;
+        float skillrange = 12;
+        //find enemy
+        if (teamID == TEAMID_PLAYER)
+        {
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                Debug.Log("거리 :" + distance + "/ 타겟 :" + championController);
+                                championController.isSilence = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private GameObject target;
@@ -752,7 +1093,17 @@ public class ChampionController : MonoBehaviour
             //deal damage
             bool isTargetDead = targetChamoion.OnGotHit(currentDamage, this);
 
-            if(champion.uiname == "달팽이")
+            if (champion.uiname == "코모도왕도마뱀")
+            {
+                targetChamoion.isComodoStack = true;
+                targetChamoion.comodoStackLevel = this.lvl;
+                if (targetChamoion.comodoStack < 10)
+                {
+                    targetChamoion.comodoStack++;
+                }
+            }
+
+            if (champion.uiname == "달팽이")
             {
                 snailStack++;
             }
@@ -903,7 +1254,19 @@ public class ChampionController : MonoBehaviour
         //death
         if (currentHealth <= 0)
         {
-            if(teamID == TEAMID_PLAYER)
+            if(isSalamanderSkillOn == true)
+            {
+                isSalamanderDead = true;
+                skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
+
+            }
+            if (isRatSkillOn == true)
+            {
+                isRatDead = true;
+                skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
+
+            }
+            if (teamID == TEAMID_PLAYER)
             {
                 if(loyality == true)
                 {

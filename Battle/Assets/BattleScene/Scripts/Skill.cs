@@ -205,23 +205,31 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 12:
-                break;
-            case 13:
-                float time = 1;
                 if (attacker.lvl == 1)
                 {
-                    time *= 2;
-                    attacker.OctopusSkill(time);
+                    attacker.SilenceSkill(2);
                 }
                 else if (attacker.lvl == 2)
                 {
-                    time *= 4;
-                    attacker.OctopusSkill(time);
+                    attacker.SilenceSkill(4);
                 }
                 else if (attacker.lvl == 3)
                 {
-                    time *= 6;
-                    attacker.OctopusSkill(time);
+                    attacker.SilenceSkill(5);
+                }
+                break;
+            case 13:
+                if (attacker.lvl == 1)
+                {
+                    attacker.OctopusSkill(2);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    attacker.OctopusSkill(4);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    attacker.OctopusSkill(6);
                 }
                 break;
             case 14:
@@ -246,6 +254,25 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 15:
+                if (attacker.isSalamanderDead == true && attacker.isSalamanderSkillOn == true)
+                {
+                    if (attacker.lvl == 1)
+                    {
+                        attacker.SalamanderSkill(2);
+                    }
+                    else if (attacker.lvl == 2)
+                    {
+                        attacker.SalamanderSkill(4);
+                    }
+                    else if (attacker.lvl == 3)
+                    {
+                        attacker.SalamanderSkill(7);
+                    }
+                }
+                else
+                {
+                    attacker.isSalamanderSkillOn = true;
+                }
                 break;
             case 16:
                 for (int x = 0; x < Map.hexMapSizeX; x++)
@@ -479,6 +506,25 @@ public class Skill : MonoBehaviour
             case 29:
                 break;
             case 30:
+                if (attacker.isRatDead == true && attacker.isRatSkillOn == true)
+                {
+                    if (attacker.lvl == 1)
+                    {
+                        attacker.RatSkill(5);
+                    }
+                    else if (attacker.lvl == 2)
+                    {
+                        attacker.RatSkill(8);
+                    }
+                    else if (attacker.lvl == 3)
+                    {
+                        attacker.RatSkill(12);
+                    }
+                }
+                else
+                {
+                    attacker.isRatSkillOn = true;
+                }
                 break;
             case 31:
                 skill31Attacker = attacker;
@@ -523,6 +569,18 @@ public class Skill : MonoBehaviour
                 duration33 = this.time + 3; // 지속시간
                 break;
             case 34:
+                if (attacker.lvl == 1)
+                {
+                    attacker.ScorpionSkill(2);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    attacker.ScorpionSkill(4);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    attacker.ScorpionSkill(8);
+                }
                 break;
             case 35:
                 break;
@@ -568,23 +626,21 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 40:
-                break;
-            case 41:
-                float damege = attacker.currentDamage;
                 if (attacker.lvl == 1)
-                {                 
-                    attacker.GoatSkill(damege);
+                {
+                    attacker.ComodoSkill(5);
                 }
                 else if (attacker.lvl == 2)
                 {
-                    damege *= 2.5f;
-                    attacker.GoatSkill(damege);
+                    attacker.ComodoSkill(8);
                 }
                 else if (attacker.lvl == 3)
                 {
-                    damege *= 10;
-                    attacker.GoatSkill(damege);
+                    attacker.ComodoSkill(10);
                 }
+                break;
+            case 41:
+                attacker.GoatskillOn();
                 break;
             case 42:
                 break;
