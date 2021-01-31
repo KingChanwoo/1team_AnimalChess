@@ -142,9 +142,10 @@ GameObject:
   - component: {fileID: -4312088547084366971}
   - component: {fileID: -7516412454972691748}
   - component: {fileID: -3326373592706426074}
+  - component: {fileID: 3198686350416914493}
   m_Layer: 0
   m_Name: Corvette
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,9 +268,19 @@ MonoBehaviour:
   lvl: 1
   skillID: 0
   gamePlayController: {fileID: 0}
+  worldCanvasController: {fileID: 0}
   skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
+  isStuned: 0
+  stunTimer: 0
+  isBoarskill: 0
+  isCrocodileStack: 0
+  crocodileStack: 0
+  isRatDead: 0
+  isRatSkillOn: 0
+  isSalamanderDead: 0
+  isSalamanderSkillOn: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0
@@ -285,6 +296,7 @@ MonoBehaviour:
   strengthValue2: 0
   ability: 0
   abilityValue1: 0
+  snailStack: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
   synergyIsApply: 1
@@ -346,6 +358,19 @@ NavMeshAgent:
   m_BaseOffset: 1.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &3198686350416914493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307028158353980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.35, y: 9.6, z: 39}
+  m_Center: {x: 0, y: 4.1, z: 0}
 --- !u!1 &1345887407032708
 GameObject:
   m_ObjectHideFlags: 0

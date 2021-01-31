@@ -174,9 +174,10 @@ GameObject:
   - component: {fileID: 4539616932789257855}
   - component: {fileID: -6362909103887588130}
   - component: {fileID: -3270700878077820491}
+  - component: {fileID: 8627668160979104544}
   m_Layer: 0
   m_Name: Hotchkiss_H35
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,9 +307,19 @@ MonoBehaviour:
   lvl: 1
   skillID: 0
   gamePlayController: {fileID: 0}
+  worldCanvasController: {fileID: 0}
   skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
+  isStuned: 0
+  stunTimer: 0
+  isBoarskill: 0
+  isCrocodileStack: 0
+  crocodileStack: 0
+  isRatDead: 0
+  isRatSkillOn: 0
+  isSalamanderDead: 0
+  isSalamanderSkillOn: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0
@@ -324,6 +335,7 @@ MonoBehaviour:
   strengthValue2: 0
   ability: 0
   abilityValue1: 0
+  snailStack: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
   synergyIsApply: 1
@@ -363,6 +375,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &8627668160979104544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914762662502293341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9, y: 2, z: 4.2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &8936435784752807761
 GameObject:
   m_ObjectHideFlags: 0
