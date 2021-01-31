@@ -78,7 +78,7 @@ public class ChampionController : MonoBehaviour
     public GamePlayController gamePlayController;
     private AIopponent aIopponent;
     private ChampionAnimation championAnimation;
-    private WorldCanvasController worldCanvasController;
+    public WorldCanvasController worldCanvasController;
 
     public Skill skillScript;
 
@@ -97,8 +97,53 @@ public class ChampionController : MonoBehaviour
     private bool isInCombat = false;
     private float combatTimer = 0;
 
-    private bool isStuned = false;
-    private float stunTimer = 0;
+    public bool isStuned = false;
+    public float stunTimer = 0;
+
+    public bool isBoarskill = false;
+
+    public bool isCrocodileStack = false;
+    public float crocodileStack = 0;
+    private float crocodilesec = 0;
+    private float crocodileTimer = 0;
+    private float crocodileBleedingDamage = 0;
+
+    public bool isRatDead = false;
+    public bool isRatSkillOn = false;
+    private bool isRatSkill = false;
+    private float RatSkillTimer = 0;
+
+    public bool isSalamanderDead = false;
+    public bool isSalamanderSkillOn = false;
+    private bool isSalamanderSkill = false;
+    private float SalamanderSkillTimer = 0;
+    private int salamanderskillCount = 0;
+    private float salamanderPoisonDamage = 0;
+    private float salamandersec = 0;
+
+    private bool isComodoStack = false;
+    private float comodoStack = 0;
+    private float comodoStackLevel = 0;
+    private float comodoPoisonDamage = 0;
+    private float comodoStackTimer = 0;
+    private float comodosec = 0;
+
+    private bool isScorpionSkill = false;
+    private float ScorpionSkillTimer = 0;
+    private float scorpionPoisonDamage = 0;
+    private float scorpionsec = 0;
+
+    private bool isSilence = false;
+    private float silenceTimer = 0;
+
+    private bool isOctopusSkill = false;
+    private float OctopusSkillTimer = 0;
+
+    private bool isGoatskillChanneling = false;
+    private float goatskillChannelingTimer = 0;
+    private int goatskillCount = 0;
+
+
 
     public bool sin7 = false;
     public float sin7Shield = 0;
@@ -120,6 +165,8 @@ public class ChampionController : MonoBehaviour
 
     public bool ability = false;
     public float abilityValue1 =0;
+
+    public float snailStack = 0;
 
 
 
@@ -344,20 +391,186 @@ public class ChampionController : MonoBehaviour
         if (isStuned)
         {
             stunTimer -= Time.deltaTime;
-
             if (stunTimer < 0)
             {
                 isStuned = false;
-
-                championAnimation.IsAnimated(true);
-
                 if (target != null)
                 {
                     //set pathfinder target
                     navMeshAgent.destination = target.transform.position;
-
                     navMeshAgent.isStopped = false;
                 }
+            }
+        }
+
+        if (isBoarskill)
+        {
+            currentMana = maxMana;
+            isBoarskill = false;
+        }
+
+        if (isCrocodileStack)
+        {
+            crocodileTimer += Time.deltaTime;
+            if (crocodileTimer > crocodilesec)
+            {
+                float bleedingDamage = crocodileBleedingDamage * crocodileStack;
+                currentHealth -= bleedingDamage;
+                worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), bleedingDamage, Color.red);
+                crocodilesec++;
+            }
+        }
+
+
+        if (isComodoStack)
+        {
+            comodoStackTimer += Time.deltaTime;
+            if (this.comodoStackLevel == 1)
+            {
+                comodoPoisonDamage = this.maxHealth * 0.02f * comodoStack;
+            }
+            else if (this.comodoStackLevel == 2)
+            {
+                comodoPoisonDamage = this.maxHealth * 0.04f * comodoStack;
+            }
+            else if (this.comodoStackLevel == 3)
+            {
+                comodoPoisonDamage = this.maxHealth * 0.08f * comodoStack;
+            }
+            if (2 > comodosec)
+            {
+                if (comodoStackTimer > comodosec)
+                {
+                    currentHealth -= comodoPoisonDamage;
+                    worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), comodoPoisonDamage, Color.red);
+                    comodosec++;
+                }
+            }
+            else
+            {
+                isComodoStack = false;
+                comodosec = 0;
+                comodoStackTimer = 0;
+            }
+
+        }
+
+        if (isRatSkill)
+        {
+            RatSkillTimer -= Time.deltaTime;
+            if (RatSkillTimer < 0)
+            {
+                /*
+                if(보스유닛이라면)
+                최대 체력의 50% 피해
+                */
+                Debug.Log("체력 1 됨");
+                currentHealth = 1;
+                isRatSkill = false;
+            }
+        }
+
+        if (isSalamanderSkill)
+        {
+            SalamanderSkillTimer += Time.deltaTime;
+
+            if (salamanderskillCount > salamandersec)
+            {
+                if (SalamanderSkillTimer > salamandersec)
+                {
+                    currentHealth -= salamanderPoisonDamage;
+                    worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), salamanderPoisonDamage, Color.red);
+                    salamandersec++;
+                }
+            }
+            else
+            {
+                isSalamanderSkill = false;
+                salamandersec = 0;
+                SalamanderSkillTimer = 0;
+            }
+
+        }
+
+        if (isScorpionSkill)
+        {
+            ScorpionSkillTimer += Time.deltaTime;
+
+            if (3 >= scorpionsec)
+            {
+                if (ScorpionSkillTimer > scorpionsec)
+                {
+                    currentHealth -= scorpionPoisonDamage;
+                    worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), scorpionPoisonDamage, Color.red);
+                    scorpionsec++;
+                }
+            }
+            else
+            {
+                isScorpionSkill = false;
+                scorpionsec = 1;
+                ScorpionSkillTimer = 0;
+            }
+        }
+
+
+        if (isSilence)
+        {
+            silenceTimer -= Time.deltaTime;
+            if (silenceTimer < 0)
+            {
+                isSilence = false;
+            }
+        }
+
+
+        if (isOctopusSkill)
+        {
+            OctopusSkillTimer -= Time.deltaTime;
+            if (OctopusSkillTimer < 0)
+            {
+                currentDamage = champion.damage;
+                isOctopusSkill = false;
+            }
+        }
+
+
+
+        if (isGoatskillChanneling)
+        {
+            goatskillChannelingTimer -= Time.deltaTime;
+            Debug.Log(goatskillCount + "= 스킬시전 횟수");
+            if (goatskillChannelingTimer < 4.9 && goatskillCount == 0)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+            else if (goatskillChannelingTimer < 3.9 && goatskillCount == 1)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+            else if (goatskillChannelingTimer < 2.9 && goatskillCount == 2)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+            else if (goatskillChannelingTimer < 1.9 && goatskillCount == 3)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+            else if (goatskillChannelingTimer < 0.9 && goatskillCount == 4)
+            {
+                goatskillCount++;
+                GoatSkill();
+            }
+
+            if (goatskillCount == 5)
+            {
+                Debug.Log("염소스킬끝");
+                isGoatskillChanneling = false;
+                DoAttack();
             }
         }
 
@@ -391,6 +604,24 @@ public class ChampionController : MonoBehaviour
         target = null;
         isAttacking = false;
         uIController.isLock = false;
+
+        skillScript.skill3buffOn = false;
+        skillScript.skill5buffOn = false;
+        skillScript.skill7buffOn = false;
+        skillScript.skill8buffOn = false;
+        skillScript.skill11buffOn = false;
+        skillScript.skill14buffOn = false;
+        skillScript.skill16buffOn = false;
+        skillScript.skill21buffOn = false;
+        skillScript.skill25buffOn = false;
+        skillScript.skill26buffOn = false;
+        skillScript.skill27buffOn = false;
+        skillScript.skill28buffOn = false;
+        skillScript.skill31buffOn = false;
+        skillScript.skill32buffOn = false;
+        skillScript.skill33buffOn = false;
+        skillScript.skill37Active = false;
+        skillScript.skill39buffOn = false;
 
 
         //reset position
@@ -493,47 +724,99 @@ public class ChampionController : MonoBehaviour
 
         //destroy effect after finished
         Destroy(levelupEffect, 1.0f);
-
-
-
     }
-    public void OctopusSkill(float time)
+
+    public void SheepSkill(float damage)
     {
-        RaycastHit[] hit;
-        float skillrange = 7;
-        hit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
-        for (int i = 0; i < hit.Length; i++)
+        for (int x = 0; x < Map.hexMapSizeX; x++)
         {
-            if (hit[i].collider.gameObject.tag == "Enemy")
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
             {
-                GameObject gameObject = hit[i].collider.gameObject;
-                Debug.Log("누가 맞았나" + hit[i].collider.gameObject.name);
-                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
-                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
-            }
-        }
-    }
-    public void GoatSkill(float damege)
-    {
-        RaycastHit[] hit;
-        float skillrange = 20;
-        hit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
-        for (int i = 0; i < hit.Length; i++)
-        {
-            if (hit[i].collider.gameObject.tag == "Enemy")
-            {
-                GameObject gameObject = hit[i].collider.gameObject;
-                Debug.Log("누가 맞았나" + hit[i].collider.gameObject.name);
-                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
-                gameObject.GetComponent<ChampionController>().currentHealth -= damege;
-                Debug.Log(gameObject.GetComponent<ChampionController>().currentHealth);
+                if (gamePlayController.gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    championController.currentHealth += damage;
+                    if (championController.currentHealth > championController.maxHealth)
+                    {
+                        championController.currentHealth = championController.maxHealth;
+                    }
+                }
             }
         }
     }
 
-    public void FindTargetList()
+    public void SalamanderSkill(float time)
     {
         float skillrange = 5;
+        //find enemy
+        Debug.Log("살라맨더 스킬 시작");
+        if (teamID == TEAMID_PLAYER)
+        {
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                championController.isSalamanderSkill = true;
+                                championController.salamanderskillCount = (int)time;
+                                championController.salamanderPoisonDamage = 2000;
+                                Debug.Log("대상 : " + championController);
+
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    public void RatSkill(float range)
+    {
+        float skillrange = range;
+        //find enemy
+        if (teamID == TEAMID_PLAYER)
+        {
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                championController.isRatSkill = true;
+                                championController.RatSkillTimer = 15;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    public void ComodoSkill(float range)
+    {
+        float skillrange = range;
         //find enemy
         if (teamID == TEAMID_PLAYER)
         {
@@ -554,22 +837,144 @@ public class ChampionController : MonoBehaviour
                             if (distance < skillrange)
                             {
                                 Debug.Log("거리 :" + distance + "/ 타겟 :" + championController);
-                                gamePlayController.skillrangeenemylist.Add(championController);
+                                championController.isStuned = true;
+                                championController.stunTimer = 3;
+                                championController.isComodoStack = true;
+                                championController.comodoStack = 10;
+                                championController.comodoStackLevel = this.lvl;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
-        for (int i = 0; i < gamePlayController.skillrangeenemylist.Count; i++)
+
+    public void ScorpionSkill(float damage)
+    {
+        float skillrange = 6;
+        //find enemy
+        if (teamID == TEAMID_PLAYER)
         {
-            Debug.Log("범위 스킬 대상" + gamePlayController.skillrangeenemylist[i]);
-            Debug.Log(gamePlayController.skillrangeenemylist[i].currentHealth);
-            gamePlayController.skillrangeenemylist[i].currentHealth -= 100;
-            Debug.Log(gamePlayController.skillrangeenemylist[i].currentHealth);
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                Debug.Log("거리 :" + distance + "/ 타겟 :" + championController);
+                                championController.currentHealth -= this.currentDamage * damage;
+                                worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), this.currentDamage * damage, Color.red);
+                                championController.isScorpionSkill = true;
+                                championController.scorpionPoisonDamage = this.currentDamage * 0.5f;
+                            }
+                        }
+                    }
+                }
+            }
         }
-        gamePlayController.skillrangeenemylist.Clear();
+    }
+
+    public void OctopusSkill(float time)
+    {
+        RaycastHit[] OctopusSkillhit;
+        float skillrange = 7;
+        OctopusSkillTimer = time;
+        OctopusSkillhit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
+        for (int i = 0; i < OctopusSkillhit.Length; i++)
+        {
+            if (OctopusSkillhit[i].collider.gameObject.tag == "Enemy")
+            {
+                GameObject gameObject = OctopusSkillhit[i].collider.gameObject;
+                Debug.Log("넌 실명 당했다");
+                gameObject.GetComponent<ChampionController>().isOctopusSkill = true;
+                gameObject.GetComponent<ChampionController>().currentDamage = 0;
+            }
+        }
+    }
+
+    public void GoatskillOn()
+    {
+        isGoatskillChanneling = true;
+        isStuned = true;
+        stunTimer = 5;
+        goatskillChannelingTimer = 5;
+        goatskillCount = 0;
+        navMeshAgent.isStopped = true;
+    }
+    public void GoatSkill()
+    {
+        RaycastHit[] GoatSkillhit;
+        float skillrange = 20;
+        float damage = 0;
+        if (this.lvl == 1)
+        {
+            damage = this.currentDamage;
+        }
+        if (this.lvl == 2)
+        {
+            damage = this.currentDamage * 1f;
+        }
+        if (this.lvl == 3)
+        {
+            damage = this.currentDamage * 10;
+        }
+        GoatSkillhit = Physics.RaycastAll(transform.position, transform.forward, skillrange);
+        for (int i = 0; i < GoatSkillhit.Length; i++)
+        {
+            if (GoatSkillhit[i].collider.gameObject.tag == "Enemy")
+            {
+                GameObject gameObject = GoatSkillhit[i].collider.gameObject;
+                gameObject.GetComponent<ChampionController>().currentHealth -= damage;
+                worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                Debug.Log(damage);
+                Debug.Log(gameObject);
+            }
+        }
+    }
+
+    public void SilenceSkill(float time)
+    {
+        silenceTimer = time;
+        float skillrange = 12;
+        //find enemy
+        if (teamID == TEAMID_PLAYER)
+        {
+            for (int x = 0; x < Map.hexMapSizeX; x++)
+            {
+                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                {
+                    if (aIopponent.gridChampionsArray[x, z] != null)
+                    {
+                        ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                        if (championController.isDead == false)
+                        {
+                            //calculate distance
+                            float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+
+                            //if new this champion is closer then best distance
+                            if (distance < skillrange)
+                            {
+                                Debug.Log("거리 :" + distance + "/ 타겟 :" + championController);
+                                championController.isSilence = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private GameObject target;
@@ -722,11 +1127,77 @@ public class ChampionController : MonoBehaviour
             //      b.ApplyOnAttack(this, targetChamoion);
             //  }
 
+            if(champion.uiname == "상어")
+            {
+                Debug.Log("상어");
+                if (this.lvl == 1) SharkSkill(targetChamoion, 20);
+                else if (this.lvl == 2) SharkSkill(targetChamoion, 30);
+                else if (this.lvl == 3) SharkSkill(targetChamoion, 40);
+            }
 
             //deal damage
             bool isTargetDead = targetChamoion.OnGotHit(currentDamage, this);
 
+            if (champion.uiname == "악어")
+            {
+                Debug.Log("공격횟수");
+                int ranBleeding = Random.Range(1, 101);
+                if (ranBleeding > 50)
+                {
+                    targetChamoion.isCrocodileStack = true;
+                    targetChamoion.crocodileStack++;
+                    Debug.Log("출혈스택");
+                    targetChamoion.crocodileBleedingDamage = currentDamage * 0.1f;
+                    if (lvl == 1 && targetChamoion.crocodileStack >= 10)
+                    {
+                        Debug.Log("처형");
+                        targetChamoion.currentHealth = 0;
 
+                        currentHealth += maxHealth * 0.5f;
+                        if (currentHealth > maxHealth)
+                        {
+                            currentHealth = maxHealth;
+                        }
+                        DoAttack();
+                    }
+                    else if (lvl == 2 && targetChamoion.crocodileStack >= 8)
+                    {
+                        targetChamoion.currentHealth = 0;
+                        currentHealth += maxHealth * 0.5f;
+                        if (currentHealth > maxHealth)
+                        {
+                            currentHealth = maxHealth;
+                        }
+                        DoAttack();
+                    }
+                    else if (lvl == 3 && targetChamoion.crocodileStack >= 5)
+                    {
+                        targetChamoion.currentHealth = 0;
+                        currentHealth += maxHealth * 0.5f;
+                        if (currentHealth > maxHealth)
+                        {
+                            currentHealth = maxHealth;
+                        }
+                        DoAttack();
+                    }
+                }
+            }
+
+
+            if (champion.uiname == "코모도왕도마뱀")
+            {
+                targetChamoion.isComodoStack = true;
+                targetChamoion.comodoStackLevel = this.lvl;
+                if (targetChamoion.comodoStack < 10)
+                {
+                    targetChamoion.comodoStack++;
+                }
+            }
+
+            if (champion.uiname == "달팽이")
+            {
+                snailStack++;
+            }
             // 타격 시, 마나 회복
             currentMana += currentAttackMana;
             if(currentMana >= maxMana)
@@ -838,10 +1309,27 @@ public class ChampionController : MonoBehaviour
         }
         else
         {
-            if (currentShield < finalDamage)
+            if(currentShield == 0)
+            {
+                currentHealth -= finalDamage;
+            }
+            else if (currentShield < finalDamage)
             {
                 currentShield = 0;
                 currentHealth -= finalDamage - currentShield;
+                if (champion.uiname == "달팽이")
+                {
+                    if(skillScript.skill37Active == true)
+                    {
+                        if (this.lvl == 1)
+                            SnailSkill(10,6);
+                        else if (this.lvl == 2)
+                            SnailSkill(20,6);
+                        else if (this.lvl == 3)
+                            SnailSkill(100,6);
+                        skillScript.skill37Active = false;
+                    }
+                }
             }
             else
             {
@@ -857,7 +1345,19 @@ public class ChampionController : MonoBehaviour
         //death
         if (currentHealth <= 0)
         {
-            if(teamID == TEAMID_PLAYER)
+            if(isSalamanderSkillOn == true)
+            {
+                isSalamanderDead = true;
+                skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
+
+            }
+            if (isRatSkillOn == true)
+            {
+                isRatDead = true;
+                skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
+
+            }
+            if (teamID == TEAMID_PLAYER)
             {
                 if(loyality == true)
                 {
@@ -877,12 +1377,46 @@ public class ChampionController : MonoBehaviour
 
 
         //add floating text
-        worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), finalDamage);
+        worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), finalDamage,Color.white);
 
         return isDead;
     }
     
+    public void SnailSkill(float rate, float range)
+    {
+        RaycastHit[] rayHits = Physics.SphereCastAll(this.transform.position, range, Vector3.up, 0);
+        foreach(RaycastHit hitEnemy in rayHits)
+        {
+            ChampionController hitEnemyController = hitEnemy.transform.GetComponent<ChampionController>();
+            if(hitEnemyController.teamID == 1)
+            {
+                float damage = skillScript.shield * (rate/100);
+                if (hitEnemyController.currentShield == 0)
+                {
+                    hitEnemyController.currentHealth -= damage;
+                }
+                else if (hitEnemyController.currentShield < damage)
+                {
+                    hitEnemyController.currentShield = 0;
+                    hitEnemyController.currentHealth -= damage - hitEnemyController.currentShield;
+                }
+                else
+                {
+                    hitEnemyController.currentShield -= damage;
+                }
+                worldCanvasController.AddDamageText(hitEnemyController.transform.position + new Vector3(0, 3, 0), damage,Color.red);
+            }
+        }
+    }
 
+    public void SharkSkill(ChampionController target,float rate)
+    {
+        if (target.currentHealth <= target.maxHealth * (rate / 100))
+        {
+            target.currentHealth = 0;
+
+        }
+    }
     
 
     /// <summary>
@@ -894,7 +1428,7 @@ public class ChampionController : MonoBehaviour
         isStuned = true;
         stunTimer = duration;
 
-        championAnimation.IsAnimated(false);
+        //  championAnimation.IsAnimated(false);
 
         navMeshAgent.isStopped = true;
     }

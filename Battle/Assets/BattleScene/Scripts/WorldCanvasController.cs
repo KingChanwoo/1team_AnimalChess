@@ -17,12 +17,12 @@ public class WorldCanvasController : MonoBehaviour
     /// </summary>
     /// <param name="position"></param>
     /// <param name="v"></param>
-    public void AddDamageText(Vector3 position, float v)
+    public void AddDamageText(Vector3 position, float v,Color color)
     {
         GameObject go = Instantiate(floatingTextPrefab);
         go.transform.SetParent(worldCanvas.transform);
        
-        go.GetComponent<FloatingText>().Init(position, v);
+        go.GetComponent<FloatingText>().Init(position, v,color);
     }
 
     /// <summary>
