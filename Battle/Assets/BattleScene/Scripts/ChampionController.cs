@@ -724,10 +724,27 @@ public class ChampionController : MonoBehaviour
 
         //destroy effect after finished
         Destroy(levelupEffect, 1.0f);
-
-
-
     }
+
+    public void SheepSkill(float damage)
+    {
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                if (gamePlayController.gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    championController.currentHealth += damage;
+                    if (championController.currentHealth > championController.maxHealth)
+                    {
+                        championController.currentHealth = championController.maxHealth;
+                    }
+                }
+            }
+        }
+    }
+
     public void SalamanderSkill(float time)
     {
         float skillrange = 5;

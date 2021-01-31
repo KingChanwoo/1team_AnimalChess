@@ -314,7 +314,7 @@ public class Skill : MonoBehaviour
             case 14:
                 skill14Attacker = attacker;
                 skill14Target = target;
-                float damage = attacker.currentDamage * (150 / 100);
+                damage = attacker.currentDamage * (150 / 100);
                 if (target.currentShield < damage)
                 {
                     target.currentShield = 0;
