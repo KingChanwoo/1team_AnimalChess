@@ -168,7 +168,8 @@ public void Refresh_Click()
 
 
         //hide bonusus UI
-        foreach (GameObject go in bonusPanels) {
+        foreach (GameObject go in bonusPanels) 
+        {
             go.SetActive(false);
         }
 
@@ -185,8 +186,54 @@ public void Refresh_Click()
                 bonusUI.transform.SetParent(bonusContainer.transform);
                 bonusUI.transform.Find("icon").GetComponent<Image>().sprite = m.Key.icon;
                 bonusUI.transform.Find("name").GetComponent<Text>().text = m.Key.displayName;
-                bonusUI.transform.Find("count").GetComponent<Text>().text = m.Value.ToString() + " / " + m.Key.championBonus.championCount1.ToString();
-
+                if (m.Key.championBonus.championCount2 == 0)
+                {
+                    bonusUI.transform.Find("count").GetComponent<Text>().text = m.Value.ToString() + " / " + m.Key.championBonus.championCount1.ToString();
+                    bonusUI.transform.Find("count").GetComponent<Text>().color = Color.white;
+                    if (m.Value >= m.Key.championBonus.championCount1)
+                        bonusUI.transform.Find("count").GetComponent<Text>().color = Color.yellow;
+                }
+                else if (m.Key.championBonus.championCount3 == 0)
+                {
+                    if (m.Value <= m.Key.championBonus.championCount1)
+                    {
+                        bonusUI.transform.Find("count").GetComponent<Text>().text = m.Value.ToString() + " / " + m.Key.championBonus.championCount1.ToString();
+                        bonusUI.transform.Find("count").GetComponent<Text>().color = Color.white;
+                        if (m.Value == m.Key.championBonus.championCount1)
+                            bonusUI.transform.Find("count").GetComponent<Text>().color = Color.yellow;
+                    }
+                    else
+                    {
+                        bonusUI.transform.Find("count").GetComponent<Text>().text = m.Value.ToString() + " / " + m.Key.championBonus.championCount2.ToString();
+                        bonusUI.transform.Find("count").GetComponent<Text>().color = Color.white;
+                        if (m.Value == m.Key.championBonus.championCount2)
+                            bonusUI.transform.Find("count").GetComponent<Text>().color = Color.yellow;
+                    }
+                }
+                else
+                {
+                    if (m.Value <= m.Key.championBonus.championCount1)
+                    {
+                        bonusUI.transform.Find("count").GetComponent<Text>().text = m.Value.ToString() + " / " + m.Key.championBonus.championCount1.ToString();
+                        bonusUI.transform.Find("count").GetComponent<Text>().color = Color.white;
+                        if (m.Value == m.Key.championBonus.championCount1)
+                            bonusUI.transform.Find("count").GetComponent<Text>().color = Color.yellow;
+                    }
+                    else if (m.Value <= m.Key.championBonus.championCount2)
+                    {
+                        bonusUI.transform.Find("count").GetComponent<Text>().text = m.Value.ToString() + " / " + m.Key.championBonus.championCount2.ToString();
+                        bonusUI.transform.Find("count").GetComponent<Text>().color = Color.white;
+                        if (m.Value == m.Key.championBonus.championCount2)
+                            bonusUI.transform.Find("count").GetComponent<Text>().color = Color.yellow;
+                    }
+                    else if (m.Value <= m.Key.championBonus.championCount3)
+                    {
+                        bonusUI.transform.Find("count").GetComponent<Text>().text = m.Value.ToString() + " / " + m.Key.championBonus.championCount3.ToString();
+                        bonusUI.transform.Find("count").GetComponent<Text>().color = Color.white;
+                        if (m.Value == m.Key.championBonus.championCount3)
+                            bonusUI.transform.Find("count").GetComponent<Text>().color = Color.yellow;
+                    }
+                }
                 bonusUI.SetActive(true);
 
                 i++;   

@@ -21,7 +21,8 @@ public class AIopponent : MonoBehaviour
     public Dictionary<ChampionType, int> championTypeCount;
     public List<ChampionBonus> activeBonusList;
 
-    public List<Champion> enemyList; 
+    public List<Champion> enemyList;
+    public List<ChampionController> enemyArray;
     ///The damage that player takes when losing a round
     public int damageToPlayer = 0;
     public int round = 1;
@@ -127,7 +128,7 @@ public class AIopponent : MonoBehaviour
 
             ResetChampions();
 
-
+            enemyArray.Clear();
             stage1.Round(round);
           //  AddRandomChampion();
         }
@@ -197,6 +198,7 @@ public class AIopponent : MonoBehaviour
         championController.SetWorldRotation();
 
         enemyList.Add(enemy);
+        enemyArray.Add(championController);
 
         //  //check for champion upgrade
         //  List<ChampionController> championList_lvl_1 = new List<ChampionController>();

@@ -7,10 +7,15 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     GamePlayController gamePlayController;
+    AIopponent aiOpponent;
     GameData gameData;
     WorldCanvasController worldCanvasController;
 
     public GameObject[,] combatChampionsArray;
+    public List<ChampionController> entireChampion;
+    public List<ChampionController> enemyChampion;
+    public List<ChampionController> playerChampion;
+
 
     public float time = 0;
 
@@ -87,6 +92,11 @@ public class Skill : MonoBehaviour
 
     public void SkillFire(int ID, ChampionController attacker, ChampionController target)
     {
+        enemyChampion = aiOpponent.enemyArray;
+        playerChampion = gamePlayController.championArray;
+
+
+
         float heal;
         float damage;
         switch (ID)
@@ -112,30 +122,21 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 3:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for(int i =0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    ChampionController champion = playerChampion[i];
+                    skill3Attacker = attacker;
+                    if (skill3buffOn == false)
                     {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill3Attacker = attacker;
-                            if (skill3buffOn == false)
-                            {
-                                if (champion.teamID == 0)
-                                {
-                                    if (attacker.lvl == 1)
-                                        champion.currentDefence += 20;
-                                    else if (attacker.lvl == 2)
-                                        champion.currentDefence += 40;
-                                    else if (attacker.lvl == 3)
-                                        champion.currentDefence += 80;
-                                    skill3buffOn = true;
-                                }
-                            }
-                            duration3 = this.time + 10; // 지속시간                 
-                        }
+                        if (attacker.lvl == 1)
+                            champion.currentDefence += 20;
+                        else if (attacker.lvl == 2)
+                            champion.currentDefence += 40;
+                        else if (attacker.lvl == 3)
+                            champion.currentDefence += 80;
+                        skill3buffOn = true;
                     }
+                    duration3 = this.time + 10; // 지속시간    
                 }
                 break;
             case 4:
@@ -166,30 +167,21 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 5:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    ChampionController champion = playerChampion[i];
+                    skill5Attacker = attacker;
+                    if (skill5buffOn == false)
                     {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill5Attacker = attacker;
-                            if (skill5buffOn == false)
-                            {
-                                if (champion.teamID == 0)
-                                {
-                                    if (attacker.lvl == 1)
-                                        champion.currentDefence += 50;
-                                    else if (attacker.lvl == 2)
-                                        champion.currentDefence += 80;
-                                    else if (attacker.lvl == 3)
-                                        champion.currentDefence += 130;
-                                    skill5buffOn = true;
-                                }
-                            }
-                            duration5 = this.time + 60; // 지속시간
-                        }
+                        if (attacker.lvl == 1)
+                            champion.currentDefence += 50;
+                        else if (attacker.lvl == 2)
+                            champion.currentDefence += 80;
+                        else if (attacker.lvl == 3)
+                            champion.currentDefence += 130;
+                        skill5buffOn = true;
                     }
+                    duration5 = this.time + 60; // 지속시간   
                 }
                 break;
             case 6:
@@ -213,30 +205,21 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 7:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    ChampionController champion = playerChampion[i];
+                    skill7Attacker = attacker;
+                    if (skill7buffOn == false)
                     {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill7Attacker = attacker;
-                            if (skill7buffOn == false)
-                            {
-                                if (champion.teamID == 0)
-                                {
-                                    if (attacker.lvl == 1)
-                                        champion.currentDefence += champion.currentDamage * (20 / 100);
-                                    else if (attacker.lvl == 2)
-                                        champion.currentDefence += champion.currentDamage * (30 / 100);
-                                    else if (attacker.lvl == 3)
-                                        champion.currentDefence += champion.currentDamage * (40 / 100);
-                                    skill7buffOn = true;
-                                }
-                            }
-                            duration7 = this.time + 20; // 지속시간                 
-                        }
+                        if (attacker.lvl == 1)
+                            champion.currentDefence += champion.currentDamage * (20 / 100);
+                        else if (attacker.lvl == 2)
+                            champion.currentDefence += champion.currentDamage * (30 / 100);
+                        else if (attacker.lvl == 3)
+                            champion.currentDefence += champion.currentDamage * (40 / 100);
+                        skill7buffOn = true;
                     }
+                    duration7 = this.time + 20; // 지속시간   
                 }
                 break;
             case 8:
@@ -354,30 +337,22 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 16:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    ChampionController champion = playerChampion[i];
+                    skill16Attacker = attacker;
+                    if (skill16buffOn == false)
                     {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill16Attacker = attacker;
-                            if (skill16buffOn == false)
-                            {
-                                if (champion.teamID == 0)
-                                {
-                                    if (attacker.lvl == 1)
-                                        champion.currentAttackSpeed *= (120 / 100);
-                                    else if (attacker.lvl == 2)
-                                        champion.currentAttackSpeed *= (130 / 100);
-                                    else if (attacker.lvl == 3)
-                                        champion.currentAttackSpeed *= (150 / 100);
-                                    skill16buffOn = true;
-                                }
-                            }
-                            duration16 = this.time + 10; // 지속시간                 
-                        }
+                        if (attacker.lvl == 1)
+                            champion.currentAttackSpeed *= (120 / 100);
+                        else if (attacker.lvl == 2)
+                            champion.currentAttackSpeed *= (130 / 100);
+                        else if (attacker.lvl == 3)
+                            champion.currentAttackSpeed *= (150 / 100);
+                        skill16buffOn = true;
+                        
                     }
+                    duration16 = this.time + 10; // 지속시간  
                 }
                 break;
             case 17:
@@ -447,30 +422,21 @@ public class Skill : MonoBehaviour
                 else if (attacker.lvl == 3) attacker.currentShield += attacker.maxHealth * 0.4f;
                 break;
             case 21:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    ChampionController champion = playerChampion[i];
+                    skill21Attacker = attacker;
+                    if (skill21buffOn == false)
                     {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill21Attacker = attacker;
-                            if (skill21buffOn == false)
-                            {
-                                if(champion.teamID == 0)
-                                {
-                                    if (attacker.lvl == 1)
-                                        champion.currentAttackSpeed *= (150 / 100);
-                                    else if (attacker.lvl == 2)
-                                        champion.currentAttackSpeed *= (175 / 100);
-                                    else if (attacker.lvl == 3)
-                                        champion.currentAttackSpeed *= (200 / 100);
-                                    skill21buffOn = true;
-                                }
-                            }
-                            duration21 = this.time + 5; // 지속시간                 
-                        }
+                        if (attacker.lvl == 1)
+                            champion.currentAttackSpeed *= (150 / 100);
+                        else if (attacker.lvl == 2)
+                            champion.currentAttackSpeed *= (175 / 100);
+                        else if (attacker.lvl == 3)
+                            champion.currentAttackSpeed *= (200 / 100);
+                        skill21buffOn = true;
                     }
+                    duration21 = this.time + 5; // 지속시간  
                 }
                 break;
             case 22:
@@ -495,21 +461,12 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 23:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < enemyChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
-                    {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (champion.teamID == 1) 
-                            {
-                                if (attacker.lvl == 1) champion.currentDamage *= 97 / 100;
-                                else if (attacker.lvl == 2) champion.currentDamage *= 95 / 100;
-                                else if (attacker.lvl == 3) champion.currentDamage *= 98 / 100;
-                            }
-                        }
-                    }
+                    ChampionController champion = enemyChampion[i];
+                    if (attacker.lvl == 1) champion.currentDamage *= 97 / 100;
+                    else if (attacker.lvl == 2) champion.currentDamage *= 95 / 100;
+                    else if (attacker.lvl == 3) champion.currentDamage *= 92 / 100;
                 }
                 break;
             case 24:
@@ -528,30 +485,21 @@ public class Skill : MonoBehaviour
                 break;
             case 25:
                 attacker.currentHealth *= 50 / 100;
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    ChampionController champion = playerChampion[i];
+                    skill25Attacker = attacker;
+                    if (skill25buffOn == false)
                     {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill25Attacker = attacker;
-                            if (skill25buffOn == false)
-                            {
-                                if (champion.teamID == 0)
-                                {
-                                    if (attacker.lvl == 1)
-                                        champion.currentDamage *= (110 / 100);
-                                    else if (attacker.lvl == 2)
-                                        champion.currentDamage *= (120 / 100);
-                                    else if (attacker.lvl == 3)
-                                        champion.currentDamage *= (130 / 100);
-                                    skill25buffOn = true;
-                                }
-                            }
-                            duration25 = this.time + 20; // 지속시간                 
-                        }
+                        if (attacker.lvl == 1)
+                            champion.currentDamage *= (110 / 100);
+                        else if (attacker.lvl == 2)
+                            champion.currentDamage *= (120 / 100);
+                        else if (attacker.lvl == 3)
+                            champion.currentDamage *= (130 / 100);
+                        skill25buffOn = true;
                     }
+                    duration25 = this.time + 20; // 지속시간 
                 }
                 break;
             case 26:
@@ -578,30 +526,21 @@ public class Skill : MonoBehaviour
                 duration26 = this.time + 10; // 지속시간  
                 break;
             case 27:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    ChampionController champion = playerChampion[i];
+                    skill27Attacker = attacker;
+                    if (skill27buffOn == false)
                     {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill27Attacker = attacker;
-                            if (skill27buffOn == false)
-                            {
-                                if (champion.teamID == 0)
-                                {
-                                    if (attacker.lvl == 1)
-                                        champion.currentDefence += 50;
-                                    else if (attacker.lvl == 2)
-                                        champion.currentDefence += 100;
-                                    else if (attacker.lvl == 3)
-                                        champion.currentDefence += 150;
-                                    skill27buffOn = true;
-                                }
-                            }
-                            duration27 = this.time + 10; // 지속시간                 
-                        }
+                        if (attacker.lvl == 1)
+                            champion.currentDefence += 50;
+                        else if (attacker.lvl == 2)
+                            champion.currentDefence += 100;
+                        else if (attacker.lvl == 3)
+                            champion.currentDefence += 150;
+                        skill27buffOn = true;
                     }
+                    duration27 = this.time + 10; // 지속시간 
                 }
                 break;
             case 28:
@@ -779,30 +718,21 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 39:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ; z++)
+                    ChampionController champion = playerChampion[i];
+                    skill39Attacker = attacker;
+                    if (skill39buffOn == false)
                     {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            skill39Attacker = attacker;
-                            if (skill39buffOn == false)
-                            {
-                                if (champion.teamID == 0)
-                                {
-                                    if (attacker.lvl == 1)
-                                        champion.currentDamage *= 110/100;
-                                    else if (attacker.lvl == 2)
-                                        champion.currentDamage *= 120/100;
-                                    else if (attacker.lvl == 3)
-                                        champion.currentDamage *= 140/100;
-                                    skill39buffOn = true;
-                                }
-                            }
-                            duration39 = this.time + 5; // 지속시간                 
-                        }
+                        if (attacker.lvl == 1)
+                            champion.currentDamage *= 110 / 100;
+                        else if (attacker.lvl == 2)
+                            champion.currentDamage *= 120 / 100;
+                        else if (attacker.lvl == 3)
+                            champion.currentDamage *= 140 / 100;
+                        skill39buffOn = true;
                     }
+                    duration39 = this.time + 5; // 지속시간
                 }
                 break;
             case 40:
@@ -838,8 +768,11 @@ public class Skill : MonoBehaviour
     void Start()
     {
         gamePlayController = GameObject.Find("Scripts").GetComponent<GamePlayController>();
+        aiOpponent = GameObject.Find("Scripts").GetComponent<AIopponent>();
         gameData = GameObject.Find("Scripts").GetComponent<GameData>();
         worldCanvasController = GameObject.Find("Scripts").GetComponent<WorldCanvasController>();
+
+        
     }
 
     // Update is called once per frame
@@ -853,25 +786,18 @@ public class Skill : MonoBehaviour
         {
             if (skill3buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        //there is a champion
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (skill3Attacker.lvl == 1)
-                                champion.currentDefence -= 20;
-                            else if (skill3Attacker.lvl == 2)
-                                champion.currentDefence -= 40;
-                            else if (skill3Attacker.lvl == 3)
-                                champion.currentDefence -= 80;
-                            skill3buffOn = false;
-                            skill3Attacker = null;
-                            duration3 = -1;
-                        }
-                    }
+                    ChampionController champion = playerChampion[i];
+                    if (skill3Attacker.lvl == 1)
+                        champion.currentDefence -= 20;
+                    else if (skill3Attacker.lvl == 2)
+                        champion.currentDefence -= 40;
+                    else if (skill3Attacker.lvl == 3)
+                        champion.currentDefence -= 80;
+                    skill3buffOn = false;
+                    skill3Attacker = null;
+                    duration3 = -1;
                 }
             }
         }
@@ -881,25 +807,18 @@ public class Skill : MonoBehaviour
         {
             if (skill5buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        //there is a champion
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (skill5Attacker.lvl == 1)
-                                champion.currentDefence -= 50;
-                            else if (skill5Attacker.lvl == 2)
-                                champion.currentDefence -= 80;
-                            else if (skill5Attacker.lvl == 3)
-                                champion.currentDefence -= 130;
-                            skill5buffOn = false;
-                            skill5Attacker = null;
-                            duration5 = -1;
-                        }
-                    }
+                    ChampionController champion = playerChampion[i];
+                    if (skill5Attacker.lvl == 1)
+                        champion.currentDefence -= 50;
+                    else if (skill5Attacker.lvl == 2)
+                        champion.currentDefence -= 80;
+                    else if (skill5Attacker.lvl == 3)
+                        champion.currentDefence -= 130;
+                    skill5buffOn = false;
+                    skill5Attacker = null;
+                    duration5 = -1;
                 }
             }
         }
@@ -909,25 +828,18 @@ public class Skill : MonoBehaviour
         {
             if (skill7buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        //there is a champion
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (skill7Attacker.lvl == 1)
-                                champion.currentDefence -= champion.currentDamage * (20 / 100);
-                            else if (skill7Attacker.lvl == 2)
-                                champion.currentDefence -= champion.currentDamage * (30 / 100);
-                            else if (skill7Attacker.lvl == 3)
-                                champion.currentDefence -= champion.currentDamage * (40 / 100);
-                            skill7buffOn = false;
-                            skill7Attacker = null;
-                            duration7 = -1;
-                        }
-                    }
+                    ChampionController champion = playerChampion[i];
+                    if (skill7Attacker.lvl == 1)
+                        champion.currentDefence -= champion.currentDamage * (20 / 100);
+                    else if (skill7Attacker.lvl == 2)
+                        champion.currentDefence -= champion.currentDamage * (30 / 100);
+                    else if (skill7Attacker.lvl == 3)
+                        champion.currentDefence -= champion.currentDamage * (40 / 100);
+                    skill7buffOn = false;
+                    skill7Attacker = null;
+                    duration7 = -1;
                 }
             }
         }
@@ -981,24 +893,18 @@ public class Skill : MonoBehaviour
         {
             if (skill16buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (skill16Attacker.lvl == 1)
-                                champion.currentAttackSpeed *= (100 / 120);
-                            else if (skill16Attacker.lvl == 2)
-                                champion.currentAttackSpeed *= (100 / 130);
-                            else if (skill16Attacker.lvl == 3)
-                                champion.currentAttackSpeed *= (100 / 150);
-                            skill16buffOn = false;
-                            skill16Attacker = null;
-                            duration16 = -1;
-                        }
-                    }
+                    ChampionController champion = playerChampion[i];
+                    if (skill16Attacker.lvl == 1)
+                        champion.currentAttackSpeed *= (100 / 120);
+                    else if (skill16Attacker.lvl == 2)
+                        champion.currentAttackSpeed *= (100 / 130);
+                    else if (skill16Attacker.lvl == 3)
+                        champion.currentAttackSpeed *= (100 / 150);
+                    skill16buffOn = false;
+                    skill16Attacker = null;
+                    duration16 = -1;
                 }
             }
         }
@@ -1008,24 +914,18 @@ public class Skill : MonoBehaviour
         {
             if (skill21buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (skill21Attacker.lvl == 1)
-                                champion.currentAttackSpeed *= (100 / 150);
-                            else if (skill21Attacker.lvl == 2)
-                                champion.currentAttackSpeed *= (100 / 175);
-                            else if (skill21Attacker.lvl == 3)
-                                champion.currentAttackSpeed *= (100 / 200);
-                            skill21buffOn = false;
-                            skill21Attacker = null;
-                            duration21 = -1;
-                        }
-                    }
+                    ChampionController champion = playerChampion[i];
+                    if (skill21Attacker.lvl == 1)
+                        champion.currentAttackSpeed *= (100 / 150);
+                    else if (skill21Attacker.lvl == 2)
+                        champion.currentAttackSpeed *= (100 / 175);
+                    else if (skill21Attacker.lvl == 3)
+                        champion.currentAttackSpeed *= (100 / 200);
+                    skill21buffOn = false;
+                    skill21Attacker = null;
+                    duration21 = -1;
                 }
             }
         }
@@ -1035,24 +935,18 @@ public class Skill : MonoBehaviour
         {
             if (skill25buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (skill25Attacker.lvl == 1)
-                                champion.currentDamage *= (100 / 110);
-                            else if (skill25Attacker.lvl == 2)
-                                champion.currentDamage *= (100 / 120);
-                            else if (skill25Attacker.lvl == 3)
-                                champion.currentDamage *= (100 / 130);
-                            skill25buffOn = false;
-                            skill25Attacker = null;
-                            duration25 = -1;
-                        }
-                    }
+                    ChampionController champion = playerChampion[i];
+                    if (skill25Attacker.lvl == 1)
+                        champion.currentDamage *= (100 / 110);
+                    else if (skill25Attacker.lvl == 2)
+                        champion.currentDamage *= (100 / 120);
+                    else if (skill25Attacker.lvl == 3)
+                        champion.currentDamage *= (100 / 130);
+                    skill25buffOn = false;
+                    skill25Attacker = null;
+                    duration25 = -1;
                 }
             }
         }
@@ -1062,27 +956,26 @@ public class Skill : MonoBehaviour
         {
             if (skill26buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                
+                if (skill26Attacker.lvl == 1)
                 {
-                    if (skill26Attacker.lvl == 1)
-                    {
-                        skill26Attacker.currentDamage *= (100 / 130);
-                        skill26Attacker.currentAttackSpeed *= (100 / 130);
-                    }
-                    else if (skill26Attacker.lvl == 2)
-                    {
-                        skill26Attacker.currentDamage *= (100 / 150);
-                        skill26Attacker.currentAttackSpeed *= (100 / 150);
-                    }
-                    else if (skill26Attacker.lvl == 3)
-                    {
-                        skill26Attacker.currentDamage *= (100 / 170);
-                        skill26Attacker.currentAttackSpeed *= (100 / 170);
-                    }
-                    skill26buffOn = false;
-                    skill26Attacker = null;
-                    duration26 = -1;
+                    skill26Attacker.currentDamage *= (100 / 130);
+                    skill26Attacker.currentAttackSpeed *= (100 / 130);
                 }
+                else if (skill26Attacker.lvl == 2)
+                {
+                    skill26Attacker.currentDamage *= (100 / 150);
+                    skill26Attacker.currentAttackSpeed *= (100 / 150);
+                }
+                else if (skill26Attacker.lvl == 3)
+                {
+                    skill26Attacker.currentDamage *= (100 / 170);
+                    skill26Attacker.currentAttackSpeed *= (100 / 170);
+                }
+                skill26buffOn = false;
+                skill26Attacker = null;
+                duration26 = -1;
+                
             }
         }
 
@@ -1091,24 +984,18 @@ public class Skill : MonoBehaviour
         {
             if (skill27buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (skill27Attacker.lvl == 1)
-                                champion.currentDefence -= 50;
-                            else if (skill27Attacker.lvl == 2)
-                                champion.currentDefence -= 100;
-                            else if (skill27Attacker.lvl == 3)
-                                champion.currentDefence -= 150;
-                            skill27buffOn = false;
-                            skill27Attacker = null;
-                            duration27 = -1;
-                        }
-                    }
+                    ChampionController champion = playerChampion[i];
+                    if (skill27Attacker.lvl == 1)
+                        champion.currentDefence -= 50;
+                    else if (skill27Attacker.lvl == 2)
+                        champion.currentDefence -= 100;
+                    else if (skill27Attacker.lvl == 3)
+                        champion.currentDefence -= 150;
+                    skill27buffOn = false;
+                    skill27Attacker = null;
+                    duration27 = -1;
                 }
             }
         }
@@ -1177,24 +1064,18 @@ public class Skill : MonoBehaviour
         {
             if (skill39buffOn)
             {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
+                for (int i = 0; i < playerChampion.Count; i++)
                 {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (combatChampionsArray[x, z] != null)
-                        {
-                            ChampionController champion = combatChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (skill39Attacker.lvl == 1)
-                                champion.currentDamage *= 100/110;
-                            else if (skill39Attacker.lvl == 2)
-                                champion.currentDamage *= 100/120;
-                            else if (skill39Attacker.lvl == 3)
-                                champion.currentDamage *= 100/140;
-                            skill39buffOn = false;
-                            skill39Attacker = null;
-                            duration39 = -1;
-                        }
-                    }
+                    ChampionController champion = playerChampion[i];
+                    if (skill39Attacker.lvl == 1)
+                        champion.currentDamage *= 100 / 110;
+                    else if (skill39Attacker.lvl == 2)
+                        champion.currentDamage *= 100 / 120;
+                    else if (skill39Attacker.lvl == 3)
+                        champion.currentDamage *= 100 / 140;
+                    skill39buffOn = false;
+                    skill39Attacker = null;
+                    duration39 = -1;
                 }
             }
         }

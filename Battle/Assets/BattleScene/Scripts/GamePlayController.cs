@@ -36,6 +36,7 @@ public class GamePlayController : MonoBehaviour
     public GameObject[] oponentChampionInventoryArray;
     [HideInInspector]
     public GameObject[,] gridChampionsArray;
+    public List <ChampionController> championArray;
 
     public GameStage currentGameStage;
     private float timer = 0;
@@ -268,7 +269,6 @@ public class GamePlayController : MonoBehaviour
                     flag = 1;
                     //  ChampionController championController2 = gridChampionsArray[x, z].GetComponent<ChampionController>();
                     summonlist.Add(championController);
-                    break;
                 }
             }
             if (flag == 1)
@@ -278,7 +278,7 @@ public class GamePlayController : MonoBehaviour
         }
     }
 
-    public void RemoveSummon(Champion champion)
+    public void RemoveSummon()
     {
         for (int i = 0; i < summonlist.Count; i++)
         {
@@ -655,6 +655,7 @@ public class GamePlayController : MonoBehaviour
                 if (gridChampionsArray[x, z] != null)
                 {
                     count++;
+                    championArray.Add(gridChampionsArray[x, z].GetComponent<ChampionController>());
                 }
             }
         }
@@ -828,7 +829,7 @@ public class GamePlayController : MonoBehaviour
         {
 
             //소환수 제거
-            RemoveSummon(gameData.championsArray[24]);
+            RemoveSummon();
             //set new game stage
             currentGameStage = GameStage.Preparation;
 
