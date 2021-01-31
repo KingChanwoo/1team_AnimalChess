@@ -365,9 +365,10 @@ GameObject:
   - component: {fileID: -2452276043678036324}
   - component: {fileID: 8052129769282099968}
   - component: {fileID: 4819331005037368817}
+  - component: {fileID: 3375960626726308841}
   m_Layer: 0
   m_Name: Destroyer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,9 +491,19 @@ MonoBehaviour:
   lvl: 1
   skillID: 0
   gamePlayController: {fileID: 0}
+  worldCanvasController: {fileID: 0}
   skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
+  isStuned: 0
+  stunTimer: 0
+  isBoarskill: 0
+  isCrocodileStack: 0
+  crocodileStack: 0
+  isRatDead: 0
+  isRatSkillOn: 0
+  isSalamanderDead: 0
+  isSalamanderSkillOn: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0
@@ -508,6 +519,7 @@ MonoBehaviour:
   strengthValue2: 0
   ability: 0
   abilityValue1: 0
+  snailStack: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
   synergyIsApply: 1
@@ -569,6 +581,19 @@ NavMeshAgent:
   m_BaseOffset: 5.26
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &3375960626726308841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171684472522874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.5, y: 30, z: 110}
+  m_Center: {x: 0, y: 7, z: 5}
 --- !u!1 &1220600251093792
 GameObject:
   m_ObjectHideFlags: 0
