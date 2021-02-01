@@ -20,6 +20,11 @@ public class ChampionController : MonoBehaviour
 
     public UIController uIController;
 
+    public GameObject AttackEffectPrefab;
+    public GameObject SkillEffectPrefab;
+    public GameObject SkillEffectPrefab2;
+
+
     [HideInInspector]
     public int gridType = 0;
     [HideInInspector]
@@ -236,9 +241,9 @@ public class ChampionController : MonoBehaviour
         currentMoveSpeed = champion.movementSpeed;
 
         
-
         worldCanvasController.AddHealthBar(this.gameObject);
-        worldCanvasController.AddManaBar(this.gameObject);
+         worldCanvasController.AddManaBar(this.gameObject);
+     
 
         effects = new List<Effect>();
     }
@@ -712,6 +717,43 @@ public class ChampionController : MonoBehaviour
         this.transform.rotation = Quaternion.Euler(rotation);
     }
 
+    public void AttackEffect()
+    {
+        GameObject Attackeffect = Instantiate(AttackEffectPrefab);
+
+        //set position
+        Attackeffect.transform.position = target.transform.position;
+
+        //destroy effect after finished
+        Destroy(Attackeffect, 2.0f);
+    }
+
+
+    public void SkillEffect(GameObject T, Vector3 dir, float time)
+    {
+        Debug.Log("스킬발동");
+        GameObject SkillEffect = Instantiate(SkillEffectPrefab);
+
+        //set position
+        SkillEffect.transform.position = T.transform.position;
+        SkillEffect.transform.forward = dir;
+
+        //destroy effect after finished
+        Destroy(SkillEffect, time);
+    }
+    public void SkillEffect2(GameObject T, Vector3 dir, float time)
+    {
+        Debug.Log("스킬발동");
+        GameObject SkillEffect = Instantiate(SkillEffectPrefab2);
+
+        //set position
+        SkillEffect.transform.position = T.transform.position;
+        SkillEffect.transform.forward = dir;
+
+        //destroy effect after finished
+        Destroy(SkillEffect, time);
+    }
+
     /// <summary>
     /// Upgrade champion lvl
     /// </summary>
@@ -1153,17 +1195,19 @@ public class ChampionController : MonoBehaviour
                     {
                         Debug.Log("처형");
                         targetChamoion.currentHealth = 0;
-
+                        SkillEffect(target.gameObject, target.transform.forward, 1f);
                         currentHealth += maxHealth * 0.5f;
                         if (currentHealth > maxHealth)
                         {
                             currentHealth = maxHealth;
                         }
                         DoAttack();
+                       
                     }
                     else if (lvl == 2 && targetChamoion.crocodileStack >= 8)
                     {
                         targetChamoion.currentHealth = 0;
+                        SkillEffect(target.gameObject, target.transform.forward, 1f);
                         currentHealth += maxHealth * 0.5f;
                         if (currentHealth > maxHealth)
                         {
@@ -1174,6 +1218,7 @@ public class ChampionController : MonoBehaviour
                     else if (lvl == 3 && targetChamoion.crocodileStack >= 5)
                     {
                         targetChamoion.currentHealth = 0;
+                        SkillEffect(target.gameObject, target.transform.forward, 1f);
                         currentHealth += maxHealth * 0.5f;
                         if (currentHealth > maxHealth)
                         {
@@ -1197,6 +1242,7 @@ public class ChampionController : MonoBehaviour
 
             if (champion.uiname == "달팽이")
             {
+                Debug.Log("쌓이냐?");
                 snailStack++;
             }
             // 타격 시, 마나 회복
@@ -1323,7 +1369,7 @@ public class ChampionController : MonoBehaviour
                     if(skillScript.skill37Active == true)
                     {
                         if (this.lvl == 1)
-                            SnailSkill(10,6);
+                            SnailSkill(10,8);
                         else if (this.lvl == 2)
                             SnailSkill(20,6);
                         else if (this.lvl == 3)
@@ -1385,27 +1431,43 @@ public class ChampionController : MonoBehaviour
     
     public void SnailSkill(float rate, float range)
     {
-        RaycastHit[] rayHits = Physics.SphereCastAll(this.transform.position, range, Vector3.up, 0);
-        foreach(RaycastHit hitEnemy in rayHits)
+        //SkillEffect(this.gameObject, this.transform.forward, 1f);
+        for (int x = 0; x < Map.hexMapSizeX; x++)
         {
-            ChampionController hitEnemyController = hitEnemy.transform.GetComponent<ChampionController>();
-            if(hitEnemyController.teamID == 1)
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
             {
-                float damage = skillScript.shield * (rate/100);
-                if (hitEnemyController.currentShield == 0)
+                if (aIopponent.gridChampionsArray[x, z] != null)
                 {
-                    hitEnemyController.currentHealth -= damage;
+                    ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                    if (championController.isDead == false)
+                    {
+                        //calculate distance
+                        float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+                        //if new this champion is closer then best distance
+                        if (distance < range)
+                        {
+                            float damage = skillScript.shield * (rate / 100);
+                            Debug.Log(damage);
+                            if (championController.currentShield == 0)
+                            {
+                                championController.currentHealth -= damage;
+                            }
+                            else if (championController.currentShield < damage)
+                            {
+                                championController.currentShield = 0;
+                                championController.currentHealth -= damage - championController.currentShield;
+                            }
+                            else
+                            {
+                                championController.currentShield -= damage;
+                            }
+                            worldCanvasController.AddDamageText(championController.transform.position + new Vector3(0, 2, 0), damage, Color.red);
+                            snailStack = 0;
+                        }
+                    }
+
                 }
-                else if (hitEnemyController.currentShield < damage)
-                {
-                    hitEnemyController.currentShield = 0;
-                    hitEnemyController.currentHealth -= damage - hitEnemyController.currentShield;
-                }
-                else
-                {
-                    hitEnemyController.currentShield -= damage;
-                }
-                worldCanvasController.AddDamageText(hitEnemyController.transform.position + new Vector3(0, 3, 0), damage,Color.red);
             }
         }
     }

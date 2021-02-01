@@ -975,7 +975,7 @@ public class GamePlayController : MonoBehaviour
         if (currentChampionLimit < 9)
         {
 
-            currentExp += 4;
+            currentExp += 40;
             CheckExp();
             CheckExp();
             //decrase gold

@@ -356,6 +356,8 @@ GameObject:
   - component: {fileID: 6983246822107038631}
   - component: {fileID: 4931850751561250438}
   - component: {fileID: -5052944973902777038}
+  - component: {fileID: 3869074467581539971}
+  - component: {fileID: -5365311725525763064}
   m_Layer: 0
   m_Name: Shark2
   m_TagString: Untagged
@@ -456,9 +458,21 @@ MonoBehaviour:
   currentDefence: 0
   currentMoveSpeed: 3.5
   lvl: 1
+  skillID: 0
   gamePlayController: {fileID: 0}
+  worldCanvasController: {fileID: 0}
+  skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
+  isStuned: 0
+  stunTimer: 0
+  isBoarskill: 0
+  isCrocodileStack: 0
+  crocodileStack: 0
+  isRatDead: 0
+  isRatSkillOn: 0
+  isSalamanderDead: 0
+  isSalamanderSkillOn: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0
@@ -474,6 +488,7 @@ MonoBehaviour:
   strengthValue2: 0
   ability: 0
   abilityValue1: 0
+  snailStack: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
   synergyIsApply: 1
@@ -494,6 +509,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976daa3f2bff9b34ebc28fb7a37ee12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3869074467581539971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336841924710946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18152aa242b94147952ce14c44e4f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-5365311725525763064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336841924710946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1379767940808454
 GameObject:
   m_ObjectHideFlags: 0
