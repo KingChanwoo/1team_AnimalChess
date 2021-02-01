@@ -176,7 +176,7 @@ public class ChampionController : MonoBehaviour
     private List<Effect> effects;
 
 
-
+    float atkSpeedAnimator;
    
 
     /// Start is called before the first frame update
@@ -185,6 +185,7 @@ public class ChampionController : MonoBehaviour
         uIController = GameObject.Find("Scripts").GetComponent<UIController>();
         championAnimator = gameObject.GetComponent<Animator>();
         skillScript = GameObject.Find("Scripts").GetComponent<Skill>();
+        atkSpeedAnimator = championAnimator.GetFloat("attackSpeed");
     }
 
     /// <summary>
@@ -292,7 +293,7 @@ public class ChampionController : MonoBehaviour
         if (synergyIsApply)
         {
             ApplyActiveSynergy();
-            championAnimator.SetFloat("attackSpeed",(championAnimator.GetFloat("attackSpeed") * currentAttackSpeed)+0.4f);
+            championAnimator.SetFloat("attackSpeed",(atkSpeedAnimator * currentAttackSpeed)+0.3f);
             gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
             
             synergyIsApply = false;
