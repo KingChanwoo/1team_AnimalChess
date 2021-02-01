@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: LonghornCattle1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8979137087452587352, guid: 5d8b36d14f0c61149920244e8a681311, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 1
+  skillID: 5
+  uiname: "\uD669\uC18C"
+  grade: 0
+  cost: 1
+  sellCost: 1
+  type1: {fileID: 11400000, guid: c8ea43bbe4f797944bf2a85ff856477c, type: 2}
+  type2: {fileID: 11400000, guid: ac80dada9e3e24345a63b3f0544a93f4, type: 2}
+  health: 468
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 51
+  attackSpeed: 1
+  defence: 62
+  critical: 25
+  evasion: 10
+  attackRange: 5
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uC6CC\uB0AD\uC18C\uB9AC"
+  skillExplain: "\uB9C8\uB098\uAC00 \uAC00\uB4DD\uCC28\uBA74 \uBC29\uC5B4\uB825\uC774
+    \uB77C\uC6B4\uB4DC\uC5D0\uC11C \uC601\uAD6C\uC801\uC73C\uB85C  [50] \uC0C1\uC2B9\uD569\uB2C8\uB2E4.                           
+    [50/ 80 / 130]"

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Tiger2
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8387990932233182341, guid: ebd12bc9a6a988e4dbc8dbf41d6baef6, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 2
+  skillID: 0
+  uiname: "\uD638\uB791\uC774"
+  grade: 0
+  cost: 0
+  sellCost: 5
+  type1: {fileID: 11400000, guid: e4bdc6418f192174d92812008e2cd841, type: 2}
+  type2: {fileID: 11400000, guid: a6c141766482e5f4d9456146e9de984f, type: 2}
+  health: 1408
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 184
+  attackSpeed: 1
+  defence: 101
+  critical: 25
+  evasion: 10
+  attackRange: 5
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uAD76\uC8FC\uB9BC"
+  skillExplain: "\uB9C8\uB098\uAC00 \uAC00\uB4DD\uCC28\uBA74 10\uCD08 \uB3D9\uC548
+    \uACF5\uACA9\uB825, \uACF5\uACA9\uC18D\uB3C4\uAC00 [50%]\uB9CC\uD07C \uC99D\uAC00\uD569\uB2C8\uB2E4.(\uC911\uCCA9
+    \uC548\uB428.)                           [30% / 50% / 70%]"

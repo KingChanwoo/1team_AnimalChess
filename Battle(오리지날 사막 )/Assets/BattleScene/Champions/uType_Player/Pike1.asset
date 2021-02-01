@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Pike1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 514415918388615185, guid: 95fc51a8c53588c44a371b2db2ccff7c, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 1
+  skillID: 0
+  uiname: "\uAC15\uAF2C\uCE58\uACE0\uAE30"
+  grade: 0
+  cost: 3
+  sellCost: 3
+  type1: {fileID: 11400000, guid: 41d36ce76f6acc448ac30739d4854f9f, type: 2}
+  type2: {fileID: 11400000, guid: 955274ac053e4984382a0a7bb77f0dcd, type: 2}
+  health: 624
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 69
+  attackSpeed: 1
+  defence: 82
+  critical: 25
+  evasion: 10
+  attackRange: 7
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uD76C\uC0DD"
+  skillExplain: "\uD76C\uC0DD\uD558\uC5EC \uCD5C\uB300\uCCB4\uB825 50%\uB97C \uC0AC\uC6A9\uD558\uACE0,
+    \uBAA8\uB4E0 \uC544\uAD70\uC5D0\uAC8C [20%]\uC758 \uACF5\uACA9\uB825\uC99D\uAC00
+    \uBC84\uD504\uB97C \uBD80\uC5EC\uD569\uB2C8\uB2E4.                                 
+    [20% / 40% / 70%]"

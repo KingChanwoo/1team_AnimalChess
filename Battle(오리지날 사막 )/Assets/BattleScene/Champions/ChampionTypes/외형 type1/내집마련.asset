@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639aac516ce9a2344bcbaf8acbe08e17, type: 3}
+  m_Name: "\uB0B4\uC9D1\uB9C8\uB828"
+  m_EditorClassIdentifier: 
+  displayName: "\uB0B4\uC9D1\uB9C8\uB828"
+  icon: {fileID: 0}
+  championBonus:
+    gamePlayController: {fileID: 0}
+    championBonusType: 10
+    bonusTarget: 0
+    championCount1: 1
+    championCount2: 2
+    championCount3: 3
+    bonusValue1: 10
+    bonusValue2: 20
+    bonusValue3: 45
+    duration: 0
+    effectPrefab: {fileID: 0}

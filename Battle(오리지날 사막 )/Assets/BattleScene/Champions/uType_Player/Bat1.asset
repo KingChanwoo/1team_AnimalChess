@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Bat1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2970875761600946258, guid: 361eeb962b774b64a9c942fc5e0f3373, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 1
+  skillID: 4
+  uiname: "\uBC15\uC950"
+  grade: 0
+  cost: 1
+  sellCost: 1
+  type1: {fileID: 11400000, guid: 9f657a9bdda390044b53b552d07527a2, type: 2}
+  type2: {fileID: 11400000, guid: fe69009953aaa16499f1ccba05a0a127, type: 2}
+  health: 388
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 46
+  attackSpeed: 1
+  defence: 33
+  critical: 25
+  evasion: 10
+  attackRange: 17
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uCD08\uC74C\uD30C"
+  skillExplain: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uC758 [150%] \uC758 \uB370\uBBF8\uC9C0\uB97C
+    \uC8FC\uB294 \uCD08\uC74C\uD30C \uACF5\uACA9\uC744 \uC801 \uD558\uB098\uC5D0\uAC8C
+    \uB0A0\uB824 30%\uD655\uB960\uB85C \uC801\uC5D0\uAC8C <2>\uCD08 \uC2A4\uD134\uB97C
+    \uBD80\uC5EC\uD569\uB2C8\uB2E4.                                  [150% / 200%
+    / 300%]                  <2\uCD08 / 3\uCD08 / 4\uCD08>"

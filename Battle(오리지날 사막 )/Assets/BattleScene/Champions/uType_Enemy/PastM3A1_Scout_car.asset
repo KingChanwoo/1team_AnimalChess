@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: PastM3A1_Scout_car
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 768075096036894406, guid: 8b56cda61f915d441bb538ede6edec4e, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 0
+  skillID: 0
+  uiname: Scout_car
+  grade: 0
+  cost: 0
+  sellCost: 0
+  type1: {fileID: 11400000, guid: e918e0afc01f45d40b7d41fe639c064e, type: 2}
+  type2: {fileID: 11400000, guid: e918e0afc01f45d40b7d41fe639c064e, type: 2}
+  health: 10000000
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 200
+  attackSpeed: 1
+  defence: 68
+  critical: 25
+  evasion: 10
+  attackRange: 5
+  damageToPlayer: 3
+  movementSpeed: 3.5
+  skillName: 
+  skillExplain: 

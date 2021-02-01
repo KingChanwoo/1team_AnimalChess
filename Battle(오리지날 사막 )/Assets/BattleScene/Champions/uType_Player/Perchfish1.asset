@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Perchfish1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1006324635007480419, guid: 764c3affe01df0d46a7a72b6540d3092, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 1
+  skillID: 0
+  uiname: "\uC789\uC5B4"
+  grade: 0
+  cost: 1
+  sellCost: 1
+  type1: {fileID: 11400000, guid: e4bdc6418f192174d92812008e2cd841, type: 2}
+  type2: {fileID: 11400000, guid: 676a77af4bf318945ac2801b343c76a7, type: 2}
+  health: 469
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 49
+  attackSpeed: 1
+  defence: 24
+  critical: 25
+  evasion: 10
+  attackRange: 10
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uAC70\uD488\uBAA9\uC695"
+  skillExplain: "\uC8FC\uBCC0 10\uBC94\uC704\uC758 \uBAA8\uB4E0 \uC801\uC5D0\uAC8C
+    5\uCD08\uAC04 \uCE68\uBB35\uD6A8\uACFC\uB97C \uBD80\uC5EC\uD569\uB2C8\uB2E4."

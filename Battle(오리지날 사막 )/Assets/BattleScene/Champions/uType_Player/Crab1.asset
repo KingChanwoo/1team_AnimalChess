@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Crab1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4848850584981402108, guid: e598542626d67f44ea76207905a3c61f, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 1
+  skillID: 0
+  uiname: "\uAC8C"
+  grade: 0
+  cost: 3
+  sellCost: 3
+  type1: {fileID: 11400000, guid: 34fc425c5904d4145b64e205de87e4ee, type: 2}
+  type2: {fileID: 11400000, guid: ac80dada9e3e24345a63b3f0544a93f4, type: 2}
+  health: 702
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 77
+  attackSpeed: 1
+  defence: 93
+  critical: 25
+  evasion: 10
+  attackRange: 5
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uAC8C\uAC70\uD488"
+  skillExplain: "10\uCD08\uAC04 \uBC29\uC5B4\uB825\uC744 [50]\uB9CC\uD07C \uC0C1\uC2B9\uC2DC\uCF1C\uC90D\uB2C8\uB2E4.                           
+    [50 / 100 / 150]"

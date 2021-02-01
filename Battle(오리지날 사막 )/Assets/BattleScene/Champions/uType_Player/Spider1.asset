@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Spider1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3647364132715462774, guid: 1e7507433af49cc48a8e672cd79125f6, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 1
+  skillID: 2
+  uiname: "\uAC70\uBBF8"
+  grade: 0
+  cost: 1
+  sellCost: 1
+  type1: {fileID: 11400000, guid: 0fa41c2688a4d63409846c8337f538a9, type: 2}
+  type2: {fileID: 11400000, guid: 3095d82e48548034bbb210204ac18228, type: 2}
+  health: 390
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 47
+  attackSpeed: 1
+  defence: 14
+  critical: 25
+  evasion: 10
+  attackRange: 17
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uAC70\uBBF8\uC904!"
+  skillExplain: "\uACF5\uACA9 \uB300\uC0C1\uC5D0\uAC8C \uAC70\uBBF8\uC904\uC744 \uB0A0\uB824
+    [1]\uCD08\uAC04 \uAE30\uC808\uC2DC\uD0B5\uB2C8\uB2E4.                                
+    [1 / 2 / 3]"

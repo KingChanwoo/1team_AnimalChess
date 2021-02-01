@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Shark3
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1336841924710946, guid: 3cb0fed0847b8be4fa0a16d33f08c15c, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 3
+  skillID: 39
+  uiname: "\uC0C1\uC5B4"
+  grade: 0
+  cost: 0
+  sellCost: 14
+  type1: {fileID: 11400000, guid: abdf48e3b95939741ab5c31470e5c3d0, type: 2}
+  type2: {fileID: 11400000, guid: fe69009953aaa16499f1ccba05a0a127, type: 2}
+  health: 5136
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 677
+  attackSpeed: 1
+  defence: 399
+  critical: 25
+  evasion: 10
+  attackRange: 5
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uD3ED\uC2DD"
+  skillExplain: "\uC0C1\uC5B4\uC758 \uACF5\uACA9 \uB300\uC0C1\uC758 \uCCB4\uB825\uC774
+    [40%]\uC774\uD558\uBA74 \uC989\uC0AC\uD558\uACE0, \uB9C8\uB098\uAC00 \uAC00\uB4DD\uCC28\uBA74,
+    \uBAA8\uB4E0 \uC544\uAD70\uC758 \uACF5\uACA9\uB825\uC774 5\uCD08\uB3D9\uC548 
+    <50%>\uB9CC\uD07C \uC0C1\uC2B9\uD569\uB2C8\uB2E4.                    [20% / 30%
+    / 40%]                  <20% / 30% / 50%> "

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
+  m_Name: Boxturtle2
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 9189109618604829686, guid: 4243e286f6a99f14fb21128b03ebba46, type: 3}
+  attackProjectile: {fileID: 0}
+  level: 2
+  skillID: 9
+  uiname: "\uAC70\uBD81\uC774"
+  grade: 0
+  cost: 0
+  sellCost: 3
+  type1: {fileID: 11400000, guid: 0fa41c2688a4d63409846c8337f538a9, type: 2}
+  type2: {fileID: 11400000, guid: 19e043a5aaaeb8641b693e0031fe3506, type: 2}
+  health: 814
+  healthRegeneration: 0
+  shield: 0
+  mana: 100
+  hitMana: 5
+  attackMana: 10
+  damage: 91
+  attackSpeed: 1
+  defence: 116
+  critical: 25
+  evasion: 10
+  attackRange: 5
+  damageToPlayer: 0
+  movementSpeed: 3.5
+  skillName: "\uB4F1\uC880\uC8FC\uBB3C\uB7EC"
+  skillExplain: "\uBC29\uC5B4\uB9C9[800] \uC5BB\uACE0, \uD0C0\uAC9F\uC744 1\uCD08\uB3D9\uC548
+    \uAE30\uC808\uC2DC\uD0B5\uB2C8\uB2E4.                       [400 / 800 / 1500]"
