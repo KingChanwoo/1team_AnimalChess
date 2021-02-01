@@ -305,8 +305,8 @@ public void Refresh_Click()
         SetTimerTextActive(false);
         shop.SetActive(false);
         gold.SetActive(false);
-        
 
+        PlayerPrefs.SetInt("round", aiOpponent.round-1);
         restartButton.SetActive(true);
     }
 
@@ -359,7 +359,8 @@ public void Refresh_Click()
 
     public void Yes()
     {
-        SceneManager.LoadScene("LobbyScene");
+        PlayerPrefs.SetInt("round", aiOpponent.round - 1);
+        SceneManager.LoadScene("StageRewardScene");
     }
 
     public void No()

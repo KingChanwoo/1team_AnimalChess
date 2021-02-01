@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UnitScene.unity
     guid: e80100dcc9b689044a4c34dff3eafb16
+  - enabled: 1
+    path: Assets/Scenes/StageRewardScene.unity
+    guid: 410eca7db7fc00048bb0e40c2ac7bf25
   m_configObjects: {}
