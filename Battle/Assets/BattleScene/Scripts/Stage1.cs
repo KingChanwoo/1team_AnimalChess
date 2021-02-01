@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Stage1 : MonoBehaviour
 {
     public AIopponent aiOpponent;
+    public UIController uiController;
+    public Text resultText;
+
 
 
     public void Round(int r)
@@ -123,9 +127,26 @@ public class Stage1 : MonoBehaviour
         {
 
         }
-        else if (r == 26)
+        else if (r == 27)
         {
 
+        }
+        else if (r == 28)
+        {
+
+        }
+        else if (r == 29)
+        {
+
+        }
+        else if (r == 30)
+        {
+
+        }
+        else if (r == 31)
+        {
+            resultText.text = "승리";
+            uiController.ResultScreen();
         }
     }
     

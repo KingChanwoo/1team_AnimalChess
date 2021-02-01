@@ -48,6 +48,7 @@ public class UIController : MonoBehaviour
     public Text bgmValue;
     public Text seValue;
 
+
     /// <summary>
     /// Called when a chamipon panel clicked on shop UI
     /// </summary>
@@ -105,9 +106,10 @@ public void Refresh_Click()
     /// <summary>
     /// Called when restart button clicked on UI
     /// </summary>
-    public void Restart_Click()
+    public void GoResultScene()
     {
-        gamePlayController.RestartGame();
+        // 세이브해야할 곳 ( 라운드, HP )
+        SceneManager.LoadScene("StageRewardScene");
     }
 
     /// <summary>
@@ -298,7 +300,7 @@ public void Refresh_Click()
     /// <summary>
     /// displays loss screen when game ended
     /// </summary>
-    public void ShowLossScreen()
+    public void ResultScreen()
     {
         SetTimerTextActive(false);
         shop.SetActive(false);

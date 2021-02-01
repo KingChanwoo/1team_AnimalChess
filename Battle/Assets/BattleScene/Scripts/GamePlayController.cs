@@ -38,6 +38,9 @@ public class GamePlayController : MonoBehaviour
     public GameObject[,] gridChampionsArray;
     public List <ChampionController> championArray;
 
+    public Text resultText;
+
+
     public GameStage currentGameStage;
     private float timer = 0;
 
@@ -865,7 +868,8 @@ public class GamePlayController : MonoBehaviour
             if (currentHP <= 0)
             {
                 currentGameStage = GameStage.Loss;
-                uIController.ShowLossScreen();
+                resultText.text = "패배";
+                uIController.ResultScreen();
              
             }
 
