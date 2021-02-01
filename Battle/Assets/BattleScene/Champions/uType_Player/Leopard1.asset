@@ -36,3 +36,7 @@ MonoBehaviour:
   attackRange: 5
   damageToPlayer: 0
   movementSpeed: 3.5
+  skillName: "\uC655\uC758 \uBD84\uB178"
+  skillExplain: "\uC790\uC2E0\uC758 \uACF5\uACA9\uB825\uC774 5\uCD08\uB3D9\uC548
+    [100%]\uB9CC\uD07C \uC0C1\uC2B9\uB429\uB2C8\uB2E4.                       [100%
+    / 200% / 300%]"
