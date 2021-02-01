@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 6113051366282994038}
   m_Layer: 0
   m_Name: Chicken3
-  m_TagString: Untagged
+  m_TagString: champion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1167,13 +1167,45 @@ MonoBehaviour:
   currentDefence: 0
   currentMoveSpeed: 3.5
   lvl: 1
+  skillID: 0
+  gamePlayController: {fileID: 0}
+  worldCanvasController: {fileID: 0}
+  skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
-  isField: 0
+  isStuned: 0
+  stunTimer: 0
+  isBoarskill: 0
+  isCrocodileStack: 0
+  crocodileStack: 0
+  isRatDead: 0
+  isRatSkillOn: 0
+  isSalamanderDead: 0
+  isSalamanderSkillOn: 0
   sin7: 0
   sin7Shield: 0
+  admirer: 0
+  admirerValue: 0
+  loyality: 0
+  loyalityValue1: 0
+  loyalityValue2: 0
+  death: 0
+  deathValue1: 0
+  deathValue2: 0
+  strength: 0
+  strengthValue1: 0
+  strengthValue2: 0
+  ability: 0
+  abilityValue1: 0
+  snailStack: 0
   champType1: {fileID: 0}
   champType2: {fileID: 0}
+  synergyIsApply: 1
+  wealthOn: 0
+  wealthValue: 0
+  timeLoyal: 1
+  timeDeath: 1
+  timeStrength: 1
 --- !u!114 &6113051366282994038
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -452,11 +452,6 @@ public class GamePlayController : MonoBehaviour
             
             if(championGO != null)
             {
-                uIController.ViewUnitInfo(championGO.GetComponent<ChampionController>().champion.uiname,
-                   championGO.GetComponent<ChampionController>().currentHealth.ToString(),
-                   championGO.GetComponent<ChampionController>().currentDamage.ToString()
-                   );
-
                 //show indicators
                 map.ShowIndicators();
 
@@ -476,7 +471,6 @@ public class GamePlayController : MonoBehaviour
     /// </summary>
     public void StopDrag()
     {
-        uIController.CloseUnitInfo();
         //hide indicators
         map.HideIndicators();
 

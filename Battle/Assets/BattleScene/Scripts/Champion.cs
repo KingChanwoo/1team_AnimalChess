@@ -70,6 +70,9 @@ public class Champion : ScriptableObject
     public int damageToPlayer = 1;
 
     public float movementSpeed = 3.5f;
+
+    public string skillName;
+    public string skillExplain;
 }
 
 

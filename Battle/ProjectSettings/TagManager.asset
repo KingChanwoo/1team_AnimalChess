@@ -6,6 +6,7 @@ TagManager:
   tags:
   - propeller
   - Enemy
+  - champion
   layers:
   - Default
   - TransparentFX

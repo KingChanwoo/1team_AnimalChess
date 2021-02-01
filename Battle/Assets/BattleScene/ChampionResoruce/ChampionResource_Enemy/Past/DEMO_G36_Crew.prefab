@@ -461,9 +461,10 @@ GameObject:
   - component: {fileID: -7920677833473269039}
   - component: {fileID: -7933558195674823728}
   - component: {fileID: 944326867092436265}
+  - component: {fileID: 1420219025365680363}
   m_Layer: 0
   m_Name: DEMO_G36_Crew
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,7 +500,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1103104320912626}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.2
   m_Speed: 0
   m_Acceleration: 8
   avoidancePriority: 50
@@ -535,17 +536,58 @@ MonoBehaviour:
   champion: {fileID: 0}
   maxHealth: 0
   currentHealth: 0
+  currentHealthReg: 0
   currentShield: 0
   maxMana: 0
   currentMana: 0
+  currentHitMana: 5
+  currentAttackMana: 10
   currentDamage: 0
+  currentCritical: 0
+  currentEvasion: 0
+  currentAttackSpeed: 1
   currentDefence: 0
+  currentMoveSpeed: 3.5
   lvl: 1
+  skillID: 0
+  gamePlayController: {fileID: 0}
+  worldCanvasController: {fileID: 0}
+  skillScript: {fileID: 0}
   isAttacking: 0
   isDead: 0
-  isField: 0
-  hitMana: 5
-  attackMana: 10
+  isStuned: 0
+  stunTimer: 0
+  isBoarskill: 0
+  isCrocodileStack: 0
+  crocodileStack: 0
+  isRatDead: 0
+  isRatSkillOn: 0
+  isSalamanderDead: 0
+  isSalamanderSkillOn: 0
+  sin7: 0
+  sin7Shield: 0
+  admirer: 0
+  admirerValue: 0
+  loyality: 0
+  loyalityValue1: 0
+  loyalityValue2: 0
+  death: 0
+  deathValue1: 0
+  deathValue2: 0
+  strength: 0
+  strengthValue1: 0
+  strengthValue2: 0
+  ability: 0
+  abilityValue1: 0
+  snailStack: 0
+  champType1: {fileID: 0}
+  champType2: {fileID: 0}
+  synergyIsApply: 1
+  wealthOn: 0
+  wealthValue: 0
+  timeLoyal: 1
+  timeDeath: 1
+  timeStrength: 1
 --- !u!114 &-7933558195674823728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,6 +619,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1420219025365680363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103104320912626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3745198, y: 2.3975797, z: 2.4410415}
+  m_Center: {x: -0.07062197, y: 0.69878983, z: -0.07618022}
 --- !u!1 &1114689520379462
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170784212639672}
   m_LocalRotation: {x: -0, y: 0.15298584, z: -0, w: 0.9882284}
-  m_LocalPosition: {x: 1.4309998, y: 0.093, z: -0.8310013}
+  m_LocalPosition: {x: 0.44, y: 0.093, z: -0.52}
   m_LocalScale: {x: 9, y: 9, z: 9}
   m_Children: []
   m_Father: {fileID: 4791696334447358}
@@ -1234,7 +1289,6 @@ GameObject:
   - component: {fileID: 4777786785766298}
   - component: {fileID: 95294379578695940}
   - component: {fileID: 205202080290848558}
-  - component: {fileID: 114317279181794512}
   m_Layer: 0
   m_Name: G36_Loader
   m_TagString: Untagged
@@ -1250,7 +1304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260699820266948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1459961, y: 0.005, z: 0.062000275}
+  m_LocalPosition: {x: 0.74, y: 0.005, z: 0.062000275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4320756458509068}
@@ -1316,20 +1370,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 137065995921539410}
   m_Enabled: 1
---- !u!114 &114317279181794512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260699820266948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2bfb3190d8c9df44bf298b97ff22a0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myMortar: {fileID: 114591251670168296}
-  flipIdle: 0
 --- !u!1 &1275037921733314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,7 +2989,6 @@ GameObject:
   - component: {fileID: 4068873985436408}
   - component: {fileID: 205059766396544400}
   - component: {fileID: 82114807893162660}
-  - component: {fileID: 114591251670168296}
   m_Layer: 0
   m_Name: Granatwerfer_36
   m_TagString: Untagged
@@ -2965,7 +3004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611184894237974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.009170532, y: 0.040999997, z: 0.4770012}
+  m_LocalPosition: {x: -0.43, y: 0.040999997, z: 0.4770012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4090353876758506}
@@ -3104,27 +3143,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114591251670168296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611184894237974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e8cdd34e829734894645cc8de3ba19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunFx:
-  - {fileID: 198983805602570620}
-  fireSound: {fileID: 8300000, guid: b064a7caf298c364d9caf3026a41dbde, type: 3}
-  mortarPrefab: {fileID: 54725639411849298, guid: 0cef32a091899a245b26f162c723f6cd,
-    type: 3}
-  mortarBarrelEnd: {fileID: 4451532021199440}
-  shellVelocity: 18000
-  azmuthSlop: 10
-  velocitySlop: 2000
 --- !u!1 &1623491558287756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3136,7 +3154,6 @@ GameObject:
   - component: {fileID: 4905438186622874}
   - component: {fileID: 95538108630162682}
   - component: {fileID: 205746648762854970}
-  - component: {fileID: 114448757451087952}
   m_Layer: 0
   m_Name: G36_SquadLeader
   m_TagString: Untagged
@@ -3218,23 +3235,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 137110217072213324}
   m_Enabled: 1
---- !u!114 &114448757451087952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623491558287756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a657fe0caf2bf2c4aa4feb29871fa714, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLoader:
-  - {fileID: 114317279181794512}
-  fireChance3outof5: 1.2
-  salvoCount: 5
-  roundsFired: 0
 --- !u!1 &1641728692432726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8700,7 +8700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893049926375586}
   m_LocalRotation: {x: -0.50000036, y: 0.49999964, z: 0.4999996, w: 0.5000004}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.34, y: 0, z: -0}
   m_LocalScale: {x: 2.5399997, y: 2.5399997, z: 2.54}
   m_Children:
   - {fileID: 4483161929935342}

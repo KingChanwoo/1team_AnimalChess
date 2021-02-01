@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5440286790827170937}
   - component: {fileID: 8940223345014468869}
   - component: {fileID: 4298444910426044976}
+  - component: {fileID: 4305829536346355014}
   m_Layer: 0
   m_Name: Panzer_VI_E
   m_TagString: Enemy
@@ -303,11 +304,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2191251992303597032}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2478216, y: 1.8515778, z: 4.171629}
+  m_Center: {x: 0.05071275, y: 0.97578883, z: -0.09989768}
+--- !u!65 &4305829536346355014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191251992303597032}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.8, y: 2.9, z: 6.5}
-  m_Center: {x: 0, y: 1.5, z: -0.2}
+  m_Size: {x: 3.7513633, y: 1.9225135, z: 6.3558555}
+  m_Center: {x: 0.000001013279, y: 1.0426204, z: -0.18787003}
 --- !u!1 &2316823819499745733
 GameObject:
   m_ObjectHideFlags: 0

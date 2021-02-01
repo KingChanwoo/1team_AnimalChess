@@ -12,6 +12,23 @@ public class InputController : MonoBehaviour
     public GamePlayController gamePlayController;
     public GameObject hitObject;
 
+    public GameObject championInfo;
+    public Text nameText;
+    public Text levelText;
+    public Text synergyText;
+    public Text skillText;
+    public Text skillNameText;
+    public Text skillExplianText;
+    public Text hpText;
+    public Text mpText;
+    public Text atkText;
+    public Text defText;
+    public Text atkSpeedText;
+    public Text criticalText;
+    public Text moveSpeedText;
+    public Text evasionText;
+    public Text sellCostnText;
+
     //map script
     public Map map;
 
@@ -94,5 +111,30 @@ public class InputController : MonoBehaviour
 
         //store mouse position
         mousePosition = Input.mousePosition;
+    }
+    
+    public void ChampionInfoOn(GameObject champion)
+    {
+        championInfo.SetActive(true);
+        ChampionController champ = champion.GetComponent<ChampionController>();
+        nameText.text = champ.champion.uiname;
+        levelText.text = champ.lvl + "성";
+        synergyText.text = champ.champType1.displayName + "\n" + champ.champType2.displayName;
+        skillNameText.text = champ.champion.skillName;
+        skillExplianText.text = champ.champion.skillExplain;
+        hpText.text = "체력 : " + champ.currentHealth + "/" + champ.maxHealth;
+        mpText.text = "마나 : " + champ.currentMana + "/" + champ.maxMana;
+        atkText.text = "공격력 : " + champ.currentDamage;
+        defText.text = "방어력 : " + champ.currentDefence;
+        atkSpeedText.text = "공격속도 : " + champ.currentAttackSpeed;
+        criticalText.text = "치명률 : " + champ.currentCritical;
+        moveSpeedText.text = "이동속도 : " + champ.currentMoveSpeed;
+        evasionText.text = "회피율 : " + champ.currentEvasion;
+        sellCostnText.text = "판매가격 : " + champ.champion.sellCost + "G";
+    }
+
+    public void ChampionInfoOff()
+    {
+        championInfo.SetActive(false);
     }
 }
