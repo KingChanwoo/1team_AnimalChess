@@ -90,6 +90,7 @@
     <Compile Include="Assets\BattleScene\Scripts\Map.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Projectile.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Skill.cs" />
+    <Compile Include="Assets\BattleScene\Scripts\Sound.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Stage1.cs" />
     <Compile Include="Assets\BattleScene\Scripts\TriggerInfo.cs" />
     <Compile Include="Assets\BattleScene\Scripts\UI\UIController.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Assets\Resource\Water\Water\Scripts\WaterTile.cs" />
     <Compile Include="Assets\Scripts\Intro\IntroSceneManager.cs" />
     <Compile Include="Assets\Scripts\Lobby\LobbySceneManager.cs" />
+    <Compile Include="Assets\Scripts\Lobby\StageReward.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ChangeSizeColor.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\DelayActive.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\LookAtTarget.cs" />
@@ -133,6 +135,7 @@
     <None Include="Assets\Hovl Studio\AAA Projectiles Vol 2\Prefabs\Readme.txt" />
     <None Include="Assets\Hovl Studio\Sword slash VFX\Demo scene\HDRP and URP.txt" />
     <None Include="Assets\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_Decal.shader" />
+    <None Include="Assets\EarthRendering Free\Earth.shader" />
     <None Include="Assets\Hovl Studio\AAA Projectiles Vol 2\Demo scene\Readme.txt" />
     <None Include="Assets\BattleScene\ChampionResoruce\ChampionResource_Enemy\Past\Super Spitfire\readme.txt" />
     <None Include="Assets\Hovl Studio\AAA Projectiles Vol 2\Shaders\Lit_CenterGlow.shader" />

@@ -10,11 +10,14 @@ public class Skill : MonoBehaviour
     AIopponent aiOpponent;
     GameData gameData;
     WorldCanvasController worldCanvasController;
+    Sound sound;
 
     public GameObject[,] combatChampionsArray;
     public List<ChampionController> entireChampion;
     public List<ChampionController> enemyChampion;
     public List<ChampionController> playerChampion;
+
+    
 
 
     public float time = 0;
@@ -771,6 +774,7 @@ public class Skill : MonoBehaviour
         aiOpponent = GameObject.Find("Scripts").GetComponent<AIopponent>();
         gameData = GameObject.Find("Scripts").GetComponent<GameData>();
         worldCanvasController = GameObject.Find("Scripts").GetComponent<WorldCanvasController>();
+        sound = GameObject.Find("Scripts").GetComponent<Sound>();
 
         
     }

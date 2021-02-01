@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -15,7 +16,7 @@ public class UIController : MonoBehaviour
 
     public GameObject[] championsFrameArray;
     public GameObject[] bonusPanels;
-
+    public Sound sound;
 
     public Button ready;
 
@@ -37,10 +38,26 @@ public class UIController : MonoBehaviour
     public GameObject bonusUIPrefab;
     public Image expgage;
 
+    public GameObject optionPannel;
+    public GameObject goLobbyPannel;
+
     public GameObject UnitInfo;
+
+    public Slider bgmVol;
+    public Slider seVol;
+    public Text bgmValue;
+    public Text seValue;
+
     /// <summary>
     /// Called when a chamipon panel clicked on shop UI
     /// </summary>
+    /// 
+
+    private void Update()
+    {
+        VolumeSetting();
+
+    }
     public void OnChampionClicked()
     {
         //get clicked champion ui name
@@ -54,6 +71,20 @@ public class UIController : MonoBehaviour
         championShop.OnChampionFrameClicked(championFrameIndex);
     }
     
+    void VolumeSetting()
+    {
+        bgmValue.text = bgmVol.value.ToString();
+        seValue.text = seVol.value.ToString();
+        for(int i =0; i < sound.bgm.Count; i++)
+        {
+            sound.bgm[i].volume = bgmVol.value / 100;
+        }
+        for (int i = 0; i < sound.skillSE.Count; i++)
+        {
+            sound.skillSE[i].volume = seVol.value / 100;
+        }
+        
+    }
 
 /// <summary>
 /// Called when refresh button clicked on shop UI
@@ -146,6 +177,10 @@ public void Refresh_Click()
     /// </summary>
     public void UpdateUI()
     {
+
+
+
+
 
         goldText.text = gamePlayController.currentGold.ToString();
         placementText.GetComponent<Text>().text = "Round " + aiOpponent.round.ToString();
@@ -304,5 +339,35 @@ public void Refresh_Click()
             isLock = false;
         }
     }
+
+    public void OptionPannel()
+    {
+        optionPannel.SetActive(true);
+    }
+
+    public void CloseOption()
+    {
+        optionPannel.SetActive(false);
+    }
+
+    public void GoLobbyPannel()
+    {
+        goLobbyPannel.SetActive(true);
+    }
+
+    public void Yes()
+    {
+        SceneManager.LoadScene("LobbyScene");
+    }
+
+    public void No()
+    {
+        goLobbyPannel.SetActive(false);
+    }
+
+
+
+
+
 
 }
