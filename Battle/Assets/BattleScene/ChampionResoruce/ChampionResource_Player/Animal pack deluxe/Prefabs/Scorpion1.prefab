@@ -1363,6 +1363,11 @@ MonoBehaviour:
     type: 3}
   projectileStart: {fileID: 0}
   uIController: {fileID: 0}
+  AttackEffectPrefab: {fileID: 1315893380199791130, guid: 9d63f248b7b5e4f4ba8590048132c7f5,
+    type: 3}
+  SkillEffectPrefab: {fileID: 2254921731912797091, guid: 8d1038f692c3acb43983a2f8b0b70a76,
+    type: 3}
+  SkillEffectPrefab2: {fileID: 0}
   gridType: 0
   gridPositionX: 0
   gridPositionZ: 0

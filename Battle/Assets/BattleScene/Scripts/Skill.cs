@@ -106,6 +106,7 @@ public class Skill : MonoBehaviour
         {
             case 1:
                 attacker.currentHealth += attacker.maxHealth * 0.2f;
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 3);
                 break;
             case 2:
                 if (attacker.lvl == 1)
@@ -123,6 +124,7 @@ public class Skill : MonoBehaviour
                     target.isStuned = true;
                     target.stunTimer = 3; ;
                 }
+                attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
             case 3:
                 for(int i =0; i < playerChampion.Count; i++)
@@ -141,6 +143,7 @@ public class Skill : MonoBehaviour
                     }
                     duration3 = this.time + 10; // 지속시간    
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 4:
                 if (attacker.lvl == 1)
@@ -168,6 +171,7 @@ public class Skill : MonoBehaviour
                     target.isStuned = true;
                     target.stunTimer = 4;
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 5:
                 for (int i = 0; i < playerChampion.Count; i++)
@@ -186,6 +190,7 @@ public class Skill : MonoBehaviour
                     }
                     duration5 = this.time + 60; // 지속시간   
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 6:
                 if (attacker.lvl == 1)
@@ -206,6 +211,7 @@ public class Skill : MonoBehaviour
                     target.currentHealth -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 7:
                 for (int i = 0; i < playerChampion.Count; i++)
@@ -224,6 +230,7 @@ public class Skill : MonoBehaviour
                     }
                     duration7 = this.time + 20; // 지속시간   
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 8:
                 if (skill8buffOn == false)
@@ -236,11 +243,13 @@ public class Skill : MonoBehaviour
                     skill8buffOn = true;
                     duration8 = this.time + 10; // 지속시간
                 }
+                attacker.SkillEffect(target.gameObject, attacker.transform.forward, 2);
                 break;
             case 9:
                 if (attacker.lvl == 1) attacker.currentShield += 400;
                 else if (attacker.lvl == 2) attacker.currentShield += 800;
                 else if (attacker.lvl == 3) attacker.currentShield += 1500;
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 10:
                 if (attacker.lvl == 1)
@@ -261,6 +270,7 @@ public class Skill : MonoBehaviour
                     target.currentHealth -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
                 }
+                attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
             case 11:
                 if (skill11buffOn == false)
@@ -268,6 +278,7 @@ public class Skill : MonoBehaviour
                     attacker.currentAttackSpeed *= 300 / 100;
                     duration11 = this.time + 5; // 지속시간
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 12:
                 if (attacker.lvl == 1)
@@ -282,6 +293,7 @@ public class Skill : MonoBehaviour
                 {
                     attacker.SilenceSkill(5);
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 13:
                 if (attacker.lvl == 1)
@@ -296,6 +308,8 @@ public class Skill : MonoBehaviour
                 {
                     attacker.OctopusSkill(6);
                 }
+                Vector3 dir = attacker.transform.forward - target.transform.position;
+                attacker.SkillEffect(attacker.gameObject, dir, 2);
                 break;
             case 14:
                 skill14Attacker = attacker;
@@ -317,6 +331,7 @@ public class Skill : MonoBehaviour
                     else if (attacker.lvl == 3) target.currentDefence *= 0.7f;
                     duration14 = this.time + 10; // 지속시간
                 }
+                attacker.SkillEffect(target.gameObject, target.transform.forward, 1);
                 break;
             case 15:
                 if (attacker.isSalamanderDead == true && attacker.isSalamanderSkillOn == true)
@@ -338,6 +353,7 @@ public class Skill : MonoBehaviour
                 {
                     attacker.isSalamanderSkillOn = true;
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 16:
                 for (int i = 0; i < playerChampion.Count; i++)
@@ -357,6 +373,7 @@ public class Skill : MonoBehaviour
                     }
                     duration16 = this.time + 10; // 지속시간  
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 17:
                 if (attacker.lvl == 1)
@@ -374,6 +391,7 @@ public class Skill : MonoBehaviour
                     heal = attacker.currentDamage * 3;
                     attacker.SheepSkill(heal);
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 18:
                 if(attacker.lvl == 1)
@@ -391,7 +409,7 @@ public class Skill : MonoBehaviour
                     gamePlayController.Summon(gameData.championsArray[148]);
                     gamePlayController.Summon(gameData.championsArray[148]);
                 }
-
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 19:
                 if (attacker.lvl == 1)
@@ -418,11 +436,13 @@ public class Skill : MonoBehaviour
                     target.isStuned = true;
                     target.stunTimer = 2;
                 }
+                attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
             case 20:
                 if (attacker.lvl == 1) attacker.currentShield += attacker.maxHealth * 0.1f;
                 else if (attacker.lvl == 2) attacker.currentShield += attacker.maxHealth * 0.2f;
                 else if (attacker.lvl == 3) attacker.currentShield += attacker.maxHealth * 0.4f;
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 21:
                 for (int i = 0; i < playerChampion.Count; i++)
@@ -441,6 +461,7 @@ public class Skill : MonoBehaviour
                     }
                     duration21 = this.time + 5; // 지속시간  
                 }
+                attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
             case 22:
                 if(attacker.lvl == 1)
@@ -462,6 +483,7 @@ public class Skill : MonoBehaviour
                     gamePlayController.Summon(gameData.championsArray[145]);
                     gamePlayController.Summon(gameData.championsArray[145]);
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 23:
                 for (int i = 0; i < enemyChampion.Count; i++)
@@ -471,6 +493,7 @@ public class Skill : MonoBehaviour
                     else if (attacker.lvl == 2) champion.currentDamage *= 95 / 100;
                     else if (attacker.lvl == 3) champion.currentDamage *= 92 / 100;
                 }
+                attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
             case 24:
                 if (attacker.lvl == 1)

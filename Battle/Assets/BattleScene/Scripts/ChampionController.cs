@@ -729,7 +729,7 @@ public class ChampionController : MonoBehaviour
     }
 
 
-    public void SkillEffect(GameObject T, Vector3 dir, float time)
+    public void SkillEffect(GameObject T, Vector3 dir, float skilltime)
     {
         Debug.Log("스킬발동");
         GameObject SkillEffect = Instantiate(SkillEffectPrefab);
@@ -739,7 +739,7 @@ public class ChampionController : MonoBehaviour
         SkillEffect.transform.forward = dir;
 
         //destroy effect after finished
-        Destroy(SkillEffect, time);
+        Destroy(SkillEffect, skilltime);
     }
     public void SkillEffect2(GameObject T, Vector3 dir, float time)
     {
@@ -1143,6 +1143,8 @@ public class ChampionController : MonoBehaviour
         navMeshAgent.isStopped = true;
 
         championAnimation.DoAttack(true);
+
+        AttackEffect();
 
 
     }
