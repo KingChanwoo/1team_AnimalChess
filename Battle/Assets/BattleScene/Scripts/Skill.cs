@@ -670,12 +670,16 @@ public class Skill : MonoBehaviour
                 break;
             case 37:
                 attacker.currentShield = 0;
-                shield = attacker.snailStack * (attacker.maxHealth * (10 / 100));
+                shield = attacker.snailStack * (attacker.maxHealth * 0.05f);
+                Debug.Log(shield);
+                Debug.Log(attacker.snailStack);
                 attacker.currentShield += shield;
                 if(skill37Active == false)
                 {
+                    Debug.Log("쉴드 떳냐? " + attacker.currentShield);
                     skill37Active = true;
                 }
+                
                 // 쉴드데미지 영역은 ChampionController 863cs~
                 break;
             case 38:
@@ -716,6 +720,8 @@ public class Skill : MonoBehaviour
                     target.isStuned = true;
                     target.stunTimer = 3;
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 0.5f);
+                attacker.SkillEffect2(target.gameObject, attacker.transform.forward, 1.5f);
                 break;
             case 39:
                 for (int i = 0; i < playerChampion.Count; i++)
@@ -734,6 +740,7 @@ public class Skill : MonoBehaviour
                     }
                     duration39 = this.time + 5; // 지속시간
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
                 break;
             case 40:
                 if (attacker.lvl == 1)
@@ -748,9 +755,11 @@ public class Skill : MonoBehaviour
                 {
                     attacker.ComodoSkill(10);
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
                 break;
             case 41:
                 attacker.GoatskillOn();
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 5);
                 break;
             case 42:
                 break;

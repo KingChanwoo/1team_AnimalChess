@@ -34,8 +34,11 @@ public class WorldCanvasController : MonoBehaviour
     {
         GameObject go = Instantiate(healthBarPrefab);
         go.transform.SetParent(worldCanvas.transform);
+        
 
         go.GetComponent<HealthBar>().Init(championGO);
+
+        
     }
 
     public void AddManaBar(GameObject championGO)
@@ -44,5 +47,6 @@ public class WorldCanvasController : MonoBehaviour
         go.transform.SetParent(worldCanvas.transform);
 
         go.GetComponent<ManaBar>().Init(championGO);
+        
     }
 }

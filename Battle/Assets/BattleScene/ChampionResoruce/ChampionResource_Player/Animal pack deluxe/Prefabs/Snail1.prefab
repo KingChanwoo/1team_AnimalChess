@@ -354,7 +354,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 0.00001
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -374,6 +374,11 @@ MonoBehaviour:
     type: 3}
   projectileStart: {fileID: 0}
   uIController: {fileID: 0}
+  AttackEffectPrefab: {fileID: 6793810777503179991, guid: f4652def75bd8814c8b653d5160a59c5,
+    type: 3}
+  SkillEffectPrefab: {fileID: 6524268369511497819, guid: 5e12999d3aceba34b8c27141605cd447,
+    type: 3}
+  SkillEffectPrefab2: {fileID: 0}
   gridType: 0
   gridPositionX: 0
   gridPositionZ: 0

@@ -23,7 +23,7 @@ public class ManaBar : MonoBehaviour
     {
         if (championGO != null)
         {
-            this.transform.position = championGO.transform.position + new Vector3(0, 1.3f + 1.5f * championGO.transform.localScale.x, 0);
+            this.transform.position = championGO.transform.position + new Vector3(0, 4.8f, 0);
             fillImage.fillAmount = championController.currentMana / championController.maxMana;
 
             if (championController.currentHealth <= 0)

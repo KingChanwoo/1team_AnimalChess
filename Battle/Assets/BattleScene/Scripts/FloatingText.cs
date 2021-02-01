@@ -16,7 +16,7 @@ public class FloatingText : MonoBehaviour
     public float speed = 3;
 
     ///How long the text is visible
-    public float fadeOutTime = 1f;
+    public float fadeOutTime = 2f;
 
     /// Start is called before the first frame update
     void Start()
