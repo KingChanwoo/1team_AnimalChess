@@ -634,7 +634,7 @@ public class GamePlayController : MonoBehaviour
                 if (gridChampionsArray[x, z] != null)
                 {
                     count++;
-                    championArray.Add(gridChampionsArray[x, z].GetComponent<ChampionController>());
+                    
                 }
             }
         }
@@ -822,7 +822,7 @@ public class GamePlayController : MonoBehaviour
                     {
                         //get character
                         ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
-
+                        championArray.Add(championController);
                         //start combat
                         championController.OnCombatStart();
                     }
@@ -847,6 +847,7 @@ public class GamePlayController : MonoBehaviour
             RemoveSummon();
             //set new game stage
             currentGameStage = GameStage.Preparation;
+            championArray.Clear();
 
             uIController.ready.gameObject.SetActive(true);
 

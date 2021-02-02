@@ -25,6 +25,7 @@ public class LobbySceneManager : MonoBehaviour
     {
         nameSet = PlayerPrefs.GetInt("nameSet");
         nameSet = 0;
+
     }
     // Start is called before the first frame update
     void Start()
@@ -32,9 +33,9 @@ public class LobbySceneManager : MonoBehaviour
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
         level.text = "" + playerInfo.playerLevel;
         dnaValue.text = "" + playerInfo.currentDNA;
-        playerName.text = PlayerPrefs.GetString("playerName");
 
         if (nameSet == 0) nameSetting.SetActive(true);
+        playerName.text = PlayerPrefs.GetString("playerName");
     }
 
     // Update is called once per frame
@@ -47,9 +48,9 @@ public class LobbySceneManager : MonoBehaviour
     {
         nameSet = 1;
         PlayerPrefs.SetInt("nameSet", nameSet);
+        PlayerPrefs.SetString("playerName", playerName.text);
         nameSetting.SetActive(false);
 
-        PlayerPrefs.SetString("playerName", playerName.text);
     }
 
 
