@@ -91,7 +91,8 @@ public class Skill : MonoBehaviour
     public bool skill39buffOn = false;
     ChampionController skill39Attacker;
 
-
+    float heal;
+    float damage;
 
     public void SkillFire(int ID, ChampionController attacker, ChampionController target)
     {
@@ -100,8 +101,7 @@ public class Skill : MonoBehaviour
 
 
 
-        float heal;
-        float damage;
+      
         switch (ID)
         {
             case 1:
@@ -766,16 +766,25 @@ public class Skill : MonoBehaviour
                     if (skill39buffOn == false)
                     {
                         if (attacker.lvl == 1)
-                            champion.currentDamage *= 110 / 100;
-                        else if (attacker.lvl == 2)
-                            champion.currentDamage *= 120 / 100;
-                        else if (attacker.lvl == 3)
-                            champion.currentDamage *= 140 / 100;
+                        {
+                            damage = champion.currentDamage * 0.2f;
+                            champion.currentDamage += damage;
+                        }
+                        if (attacker.lvl == 2)
+                        {
+                            damage = champion.currentDamage * 0.3f;
+                            champion.currentDamage += damage;
+                        }
+                        if (attacker.lvl == 3)
+                        {
+                            damage = champion.currentDamage * 0.5f;
+                            champion.currentDamage += damage;
+                        }
+
                         skill39buffOn = true;
                     }
                     duration39 = this.time + 5; // 지속시간
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
+                }             
                 break;
             case 40:
                 if (attacker.lvl == 1)
@@ -1112,12 +1121,7 @@ public class Skill : MonoBehaviour
                 for (int i = 0; i < playerChampion.Count; i++)
                 {
                     ChampionController champion = playerChampion[i];
-                    if (skill39Attacker.lvl == 1)
-                        champion.currentDamage *= 100 / 110;
-                    else if (skill39Attacker.lvl == 2)
-                        champion.currentDamage *= 100 / 120;
-                    else if (skill39Attacker.lvl == 3)
-                        champion.currentDamage *= 100 / 140;
+                    champion.currentDamage -= damage;
                     skill39buffOn = false;
                     skill39Attacker = null;
                     duration39 = -1;
