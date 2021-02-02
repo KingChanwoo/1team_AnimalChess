@@ -20,8 +20,11 @@ public class GamePlayController : MonoBehaviour
     public int gridZ;
 
     public GameObject Rain;
+    public bool isRain;
+    public bool isSnow;
     public GameObject Snow;
-
+    public float weather = 0;
+    public float weathercheck = 0;
 
     public Map map;
     public InputController inputController;
@@ -132,6 +135,7 @@ public class GamePlayController : MonoBehaviour
                 OnGameStageComplate();
             }
         }
+
     }
 
 
@@ -200,34 +204,7 @@ public class GamePlayController : MonoBehaviour
         return true;
     }
 
-    public void Weather()
-    {
-
-        if (Snow.activeSelf == true)
-        {
-            for (int i = 0; i < ownChampionInventoryArray.Length; i++)
-            {
-                if (ownChampionInventoryArray[i] != null)
-                {
-                    ChampionController championController = ownChampionInventoryArray[i].GetComponent<ChampionController>();
-                    championController.currentDamage = championController.champion.damage * 0.9f;
-                }
-            }
-        }
-
-        else if (Rain.activeSelf == true)
-        {
-            for (int i = 0; i < ownChampionInventoryArray.Length; i++)
-            {
-                if (ownChampionInventoryArray[i] != null)
-                {
-                    ChampionController championController = ownChampionInventoryArray[i].GetComponent<ChampionController>();
-                    championController.currentHealth = championController.champion.health * 0.9f;
-                }
-            }
-        }
-
-    }
+   
 
     public void Summon(Champion champion)
     {
@@ -769,6 +746,42 @@ public class GamePlayController : MonoBehaviour
             //set new game stage
             currentGameStage = GameStage.Combat;
 
+
+            if (isSnow)
+            {
+                for (int x = 0; x < Map.hexMapSizeX; x++)
+                {
+                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                    {
+                        if (gridChampionsArray[x, z] != null)
+                        {
+                            ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                            championController.currentDamage = championController.currentDamage * 0.9f;
+                        }
+                    }
+                }
+            }
+
+            if (isRain)
+            {
+                for (int x = 0; x < Map.hexMapSizeX; x++)
+                {
+                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                    {
+                        if (gridChampionsArray[x, z] != null)
+                        {
+                            ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                            championController.currentHealth = championController.currentHealth * 0.9f;
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+
             //show indicators
             map.HideIndicators();
 
@@ -881,18 +894,22 @@ public class GamePlayController : MonoBehaviour
             int wn = Random.Range(0, 101);
             if (wn < 90)
             {
+                weathercheck++;
                 wn = Random.Range(0, 101);
                 if (wn < 50)
                 {
+
                     Rain.SetActive(false);
                     Snow.SetActive(true);
-                    Weather();
+                    isRain = false;
+                    isSnow = true;
                 }
                 else
                 {
                     Snow.SetActive(false);
                     Rain.SetActive(true);
-                    Weather();
+                    isSnow = false;
+                    isRain = true;
                 }
             }
 

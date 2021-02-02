@@ -387,11 +387,12 @@ public class ChampionController : MonoBehaviour
                         }
                     }
                 }
-
-
             }
-
         }
+
+        
+       
+
 
         //check for stuned effect
         if (isStuned)

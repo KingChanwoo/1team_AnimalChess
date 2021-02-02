@@ -28,7 +28,7 @@ MonoBehaviour:
   mana: 100
   hitMana: 5
   attackMana: 10
-  damage: 0
+  damage: 200
   attackSpeed: 1
   defence: 68
   critical: 25
