@@ -793,6 +793,7 @@ public class ChampionController : MonoBehaviour
         float skillrange = 5;
         //find enemy
         Debug.Log("살라맨더 스킬 시작");
+       SkillEffect(this.gameObject, this.transform.forward, 2);
         if (teamID == TEAMID_PLAYER)
         {
             for (int x = 0; x < Map.hexMapSizeX; x++)
@@ -829,6 +830,7 @@ public class ChampionController : MonoBehaviour
     {
         float skillrange = range;
         //find enemy
+        SkillEffect(this.gameObject, this.transform.forward, 2);
         if (teamID == TEAMID_PLAYER)
         {
             for (int x = 0; x < Map.hexMapSizeX; x++)
@@ -898,6 +900,7 @@ public class ChampionController : MonoBehaviour
     {
         float skillrange = 6;
         //find enemy
+        SkillEffect(this.gameObject, this.transform.forward, 2);
         if (teamID == TEAMID_PLAYER)
         {
             for (int x = 0; x < Map.hexMapSizeX; x++)

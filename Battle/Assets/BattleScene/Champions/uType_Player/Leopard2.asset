@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Leopard2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2936097523703370898, guid: cd13edb9cde0aa547b829d803e8e2025, type: 3}
+  prefab: {fileID: 2936097523703370898, guid: 36d086c5ad490fa4e88e7f0a3d13b8b9, type: 3}
   attackProjectile: {fileID: 0}
   level: 2
-  skillID: 0
+  skillID: 31
   uiname: "\uD45C\uBC94"
   grade: 0
   cost: 0

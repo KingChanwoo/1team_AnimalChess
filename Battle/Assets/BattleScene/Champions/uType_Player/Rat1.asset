@@ -15,7 +15,7 @@ MonoBehaviour:
   prefab: {fileID: 2402983796702099242, guid: 736217452362cff45b8255568c854df9, type: 3}
   attackProjectile: {fileID: 0}
   level: 1
-  skillID: 0
+  skillID: 30
   uiname: "\uD328\uC2A4\uD2B8\uC950"
   grade: 0
   cost: 3

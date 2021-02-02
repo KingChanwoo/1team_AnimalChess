@@ -236,6 +236,10 @@ public class GamePlayController : MonoBehaviour
 
         for (int x = 0; x < Map.hexMapSizeX; x++)
         {
+            if (flag == 1)
+            {
+                break;
+            }
             for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
             {
                 //there is a champion
@@ -272,12 +276,13 @@ public class GamePlayController : MonoBehaviour
                     flag = 1;
                     //  ChampionController championController2 = gridChampionsArray[x, z].GetComponent<ChampionController>();
                     summonlist.Add(championController);
+                    if (flag == 1)
+                    {
+                        break;
+                    }
                 }
             }
-            if (flag == 1)
-            {
-                break;
-            }
+         
         }
     }
 

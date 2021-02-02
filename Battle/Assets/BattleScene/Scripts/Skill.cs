@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//  버프 디버프 전투중인 챔피언 검출부터 다시하기. 시발.
+//  버프 디버프 전투중인 챔피언 검출부터 다시하기.
 public class Skill : MonoBehaviour
 {
     GamePlayController gamePlayController;
@@ -353,7 +353,7 @@ public class Skill : MonoBehaviour
                 {
                     attacker.isSalamanderSkillOn = true;
                 }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
+                
                 break;
             case 16:
                 for (int i = 0; i < playerChampion.Count; i++)
@@ -508,6 +508,7 @@ public class Skill : MonoBehaviour
                 {
                     gamePlayController.Summon(gameData.championsArray[151]);
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 25:
                 attacker.currentHealth *= 50 / 100;
@@ -527,6 +528,7 @@ public class Skill : MonoBehaviour
                     }
                     duration25 = this.time + 20; // 지속시간 
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 26:
                 skill26Attacker = attacker;
@@ -550,6 +552,7 @@ public class Skill : MonoBehaviour
                     skill26buffOn = true;
                 }
                 duration26 = this.time + 10; // 지속시간  
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 27:
                 for (int i = 0; i < playerChampion.Count; i++)
@@ -568,6 +571,7 @@ public class Skill : MonoBehaviour
                     }
                     duration27 = this.time + 10; // 지속시간 
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 28:
                 skill28Attacker = attacker;
@@ -585,6 +589,7 @@ public class Skill : MonoBehaviour
                     skill28buffOn = true;
                 }
                 duration28 = this.time + 3; // 지속시간
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 29:
                 if (attacker.lvl == 1)
@@ -611,6 +616,7 @@ public class Skill : MonoBehaviour
                     target.isStuned = true;
                     target.stunTimer = 5;
                 }
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 30:
                 if (attacker.isRatDead == true && attacker.isRatSkillOn == true)
@@ -646,6 +652,7 @@ public class Skill : MonoBehaviour
                     skill31buffOn = true;
                 }
                 duration31 = this.time + 5; // 지속시간
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 32:
                 skill32Attacker = attacker;
@@ -661,6 +668,7 @@ public class Skill : MonoBehaviour
                     skill32buffOn = true;
                 }
                 duration32 = this.time + 10; // 지속시간
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 33:
                 if (attacker.lvl == 1) target.OnGotStun(2);
@@ -674,6 +682,7 @@ public class Skill : MonoBehaviour
                     skill33buffOn = true;
                 }
                 duration33 = this.time + 3; // 지속시간
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 34:
                 if (attacker.lvl == 1)
@@ -687,7 +696,7 @@ public class Skill : MonoBehaviour
                 else if (attacker.lvl == 3)
                 {
                     attacker.ScorpionSkill(8);
-                }
+                }               
                 break;
             case 35:
                 break;
