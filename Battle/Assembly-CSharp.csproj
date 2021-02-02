@@ -94,8 +94,8 @@
     <Compile Include="Assets\BattleScene\Scripts\Stage1.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Stage2.cs" />
     <Compile Include="Assets\BattleScene\Scripts\TriggerInfo.cs" />
+    <Compile Include="Assets\BattleScene\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\BattleScene\Scripts\WorldCanvasController.cs" />
-    <Compile Include="Assets\BattleScene\Textures\UI\UIController.cs" />
     <Compile Include="Assets\Hovl Studio\AAA Projectiles Vol 2\Demo scene\DemoShooting.cs" />
     <Compile Include="Assets\Hovl Studio\AAA Projectiles Vol 2\Scripts\AutoDestroyPS.cs" />
     <Compile Include="Assets\Hovl Studio\AAA Projectiles Vol 2\Scripts\ProjectileMover.cs" />

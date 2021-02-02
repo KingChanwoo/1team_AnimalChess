@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Creates and stores champions available, XP and LVL purchase
@@ -13,7 +14,6 @@ public class ChampionShop : MonoBehaviour
 
     ///Array to store available champions to purchase
     private Champion[] availableChampionArray;
-
 
     /// Start is called before the first frame update
     void Start()
@@ -54,8 +54,9 @@ public class ChampionShop : MonoBehaviour
             //get a random champion
             Champion champion = GetRandomChampionInfo();
 
+            if( champion.cost == 1 )
             //store champion in array
-            availableChampionArray[i] = champion;
+            availableChampionArray[i] = champion;//zz
 
             //load champion to ui
             uIController.LoadShopItem(champion, i);

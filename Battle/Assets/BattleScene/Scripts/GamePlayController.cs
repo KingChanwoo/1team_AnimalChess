@@ -71,6 +71,7 @@ public class GamePlayController : MonoBehaviour
     public int timerDisplay = 0;
 
     public Dictionary<ChampionType, int> championTypeCount;
+    public Dictionary<Champion, int> championKindCount;
     public Dictionary<ChampionBonus, int> activeBonus;
     public List<ChampionBonus> activeBonusList;
     public List<int> activeBonusNumList;
@@ -441,7 +442,7 @@ public class GamePlayController : MonoBehaviour
                 map.ShowIndicators();
 
                 draggedChampion = championGO;
-
+                draggedChampion.GetComponent<BoxCollider>().enabled = false;
                 //isDragging = true;
 
                 championGO.GetComponent<ChampionController>().IsDragged = true;
@@ -460,10 +461,11 @@ public class GamePlayController : MonoBehaviour
         map.HideIndicators();
 
         int championsOnField = GetChampionCountOnHexGrid();
-
+        
 
         if (draggedChampion != null)
         {
+            draggedChampion.GetComponent<BoxCollider>().enabled = true;
             //set dragged
             draggedChampion.GetComponent<ChampionController>().IsDragged = false;
 
@@ -647,8 +649,8 @@ public class GamePlayController : MonoBehaviour
     /// </summary>
     private void CalculateBonuses()
     {
-        //init dictionary
-        championTypeCount = new Dictionary<ChampionType, int>();
+
+        championKindCount = new Dictionary<Champion, int>();
 
         for (int x = 0; x < Map.hexMapSizeX; x++)
         {
@@ -660,35 +662,54 @@ public class GamePlayController : MonoBehaviour
                     //get champion
                     Champion c = gridChampionsArray[x, z].GetComponent<ChampionController>().champion;
 
-                    if (championTypeCount.ContainsKey(c.type1))
+                    if (championKindCount.ContainsKey(c))
                     {
                         int cCount = 0;
-                        championTypeCount.TryGetValue(c.type1, out cCount);
+                        championKindCount.TryGetValue(c, out cCount);
 
                         cCount++;
 
-                        championTypeCount[c.type1] = cCount;
+                        championKindCount[c] = cCount;
                     }
                     else
                     {
-                        championTypeCount.Add(c.type1, 1);
+                        championKindCount.Add(c, 1);
                     }
-
-                    if (championTypeCount.ContainsKey(c.type2))
-                    {
-                        int cCount = 0;
-                        championTypeCount.TryGetValue(c.type2, out cCount);
-
-                        cCount++;
-
-                        championTypeCount[c.type2] = cCount;
-                    }
-                    else
-                    {
-                        championTypeCount.Add(c.type2, 1);
-                    }
-
                 }
+            }
+        }
+
+        //init dictionary----------------------------------------------------
+        championTypeCount = new Dictionary<ChampionType, int>();
+
+        foreach(Champion c in championKindCount.Keys)
+        {
+            if (championTypeCount.ContainsKey(c.type1))
+            {
+                int cCount = 0;
+                championTypeCount.TryGetValue(c.type1, out cCount);
+
+                cCount++;
+
+                championTypeCount[c.type1] = cCount;
+            }
+            else
+            {
+                championTypeCount.Add(c.type1, 1);
+            }
+
+            if (championTypeCount.ContainsKey(c.type2))
+            {
+                int cCount = 0;
+                championTypeCount.TryGetValue(c.type2, out cCount);
+
+                cCount++;
+
+                championTypeCount[c.type2] = cCount;
+            }
+            else
+            {
+                championTypeCount.Add(c.type2, 1);
             }
         }
 
