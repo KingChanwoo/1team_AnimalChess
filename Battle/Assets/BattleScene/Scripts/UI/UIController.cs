@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     public ChampionShop championShop;
     public GamePlayController gamePlayController;
     public AIopponent aiOpponent;
+    public int stage;
 
     public GameObject[] championsFrameArray;
     public GameObject[] bonusPanels;
@@ -306,6 +307,7 @@ public class UIController : MonoBehaviour
         shop.SetActive(false);
         gold.SetActive(false);
 
+        PlayerPrefs.SetInt("stageNum", stage);
         PlayerPrefs.SetInt("round", aiOpponent.round - 1);
         restartButton.SetActive(true);
     }

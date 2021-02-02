@@ -10,8 +10,6 @@ public class Stage1 : MonoBehaviour
     public UIController uiController;
     public Text resultText;
 
-
-
     public void Round(int r)
     {
         if (r == 1)

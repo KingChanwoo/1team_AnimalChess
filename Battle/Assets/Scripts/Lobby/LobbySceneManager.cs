@@ -87,6 +87,11 @@ public class LobbySceneManager : MonoBehaviour
 
     public void Stage1()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Stage1");
+    }
+
+    public void Stage2()
+    {
+        SceneManager.LoadScene("Stage2");
     }
 }
