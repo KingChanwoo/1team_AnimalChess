@@ -1471,6 +1471,7 @@ public class ChampionController : MonoBehaviour
                             snailStack = 0;
                         }
                     }
+
                 }
             }
         }
@@ -1481,7 +1482,7 @@ public class ChampionController : MonoBehaviour
         if (target.currentHealth <= target.maxHealth * (rate / 100))
         {
             target.currentHealth = 0;
-            SkillEffect(this.gameObject, this.transform.forward, 1f);
+
         }
     }
     

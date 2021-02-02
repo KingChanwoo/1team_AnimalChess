@@ -1035,7 +1035,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4848850584981402108}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -334000983
   m_Radius: 0.25
   m_Speed: 3.5
   m_Acceleration: 8
@@ -1067,8 +1067,7 @@ MonoBehaviour:
   uIController: {fileID: 0}
   AttackEffectPrefab: {fileID: 3408018356700558250, guid: f96327753fdd8ca40b40b148dd78d0c1,
     type: 3}
-  SkillEffectPrefab: {fileID: 2902405244950335806, guid: 9320c9890febc5a4e925fed9ca2ef83c,
-    type: 3}
+  SkillEffectPrefab: {fileID: 0}
   SkillEffectPrefab2: {fileID: 0}
   gridType: 0
   gridPositionX: 0
