@@ -15,16 +15,49 @@ public class StageReward : MonoBehaviour
     public int dnaValue;
     public int expValue;
 
+    int playStage;
     int clearRound;
+    int lastHP;
 
     private void Awake()
     {
+        playStage = PlayerPrefs.GetInt("stageNum");
         clearRound = PlayerPrefs.GetInt("round");
 
     }
 
     // Start is called before the first frame update
     void Start()
+    {
+        ResultCalculate();
+        if(clearRound == 30)
+        {
+            if (playStage == 1)
+                lastHP = PlayerPrefs.GetInt("s1PlayerHP");
+            else if (playStage == 2)
+                lastHP = PlayerPrefs.GetInt("s2PlayerHP");
+        }
+
+       
+    }
+
+    // Update is called once per frame
+    float alpha = 0;
+    void Update()
+    {
+
+    }
+
+    public void PassScene()
+    {
+        PlayerPrefs.SetInt("rewardEXP", expValue);
+        PlayerPrefs.SetInt("rewardDNA", dnaValue);
+
+        PlayerPrefs.DeleteKey("round");
+        SceneManager.LoadScene("LobbyScene");
+    }
+
+    void ResultCalculate()
     {
         if (clearRound == 30)
         {
@@ -58,22 +91,5 @@ public class StageReward : MonoBehaviour
             exp.text = "" + expValue;
             dna.text = "" + dnaValue;
         }
-
-    }
-
-    // Update is called once per frame
-    float alpha = 0;
-    void Update()
-    {
-
-    }
-
-    public void PassScene()
-    {
-        PlayerPrefs.SetInt("rewardEXP", expValue);
-        PlayerPrefs.SetInt("rewardDNA", dnaValue);
-
-        PlayerPrefs.DeleteKey("round");
-        SceneManager.LoadScene("LobbyScene");
     }
 }
