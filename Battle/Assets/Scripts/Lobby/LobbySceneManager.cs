@@ -7,19 +7,49 @@ using UnityEngine.SceneManagement;
 
 public class LobbySceneManager : MonoBehaviour
 {
-    public GameObject optionPanel;
+    public Text playerName;
+
+    public PlayerInfo playerInfo;
     EventSystem eventSystem;
 
+    public Text level;
+    public Text dnaValue;
+
+    public GameObject nameSetting;
+
+
+
+    int nameSet = 0;
+
+    private void Awake()
+    {
+        nameSet = PlayerPrefs.GetInt("nameSet");
+        nameSet = 0;
+    }
     // Start is called before the first frame update
     void Start()
     {
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        level.text = "" + playerInfo.playerLevel;
+        dnaValue.text = "" + playerInfo.currentDNA;
+        playerName.text = PlayerPrefs.GetString("playerName");
+
+        if (nameSet == 0) nameSetting.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void NameSet()
+    {
+        nameSet = 1;
+        PlayerPrefs.SetInt("nameSet", nameSet);
+        nameSetting.SetActive(false);
+
+        PlayerPrefs.SetString("playerName", playerName.text);
     }
 
 
@@ -58,16 +88,5 @@ public class LobbySceneManager : MonoBehaviour
     public void Stage1()
     {
         SceneManager.LoadScene("Main");
-    }
-
-    //---------------------------------------------------------------
-    //  패널 팝업 함수
-    public void Option()
-    {
-        optionPanel.SetActive(true);
-    }
-    public void OptionClose()
-    {
-        optionPanel.SetActive(false);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Stage1 : MonoBehaviour
 {
+    public GamePlayController gamePlayController;
     public AIopponent aiOpponent;
     public UIController uiController;
     public Text resultText;
@@ -146,6 +147,7 @@ public class Stage1 : MonoBehaviour
         else if (r == 31)
         {
             resultText.text = "승리";
+            PlayerPrefs.SetInt("s1PlayerHP", gamePlayController.currentHP);
             uiController.ResultScreen();
         }
     }

@@ -71,12 +71,12 @@ public class UIController : MonoBehaviour
         //message shop from click
         championShop.OnChampionFrameClicked(championFrameIndex);
     }
-    
+
     void VolumeSetting()
     {
         bgmValue.text = bgmVol.value.ToString();
         seValue.text = seVol.value.ToString();
-        for(int i =0; i < sound.bgm.Count; i++)
+        for (int i = 0; i < sound.bgm.Count; i++)
         {
             sound.bgm[i].volume = bgmVol.value / 100;
         }
@@ -84,15 +84,15 @@ public class UIController : MonoBehaviour
         {
             sound.skillSE[i].volume = seVol.value / 100;
         }
-        
+
     }
 
-/// <summary>
-/// Called when refresh button clicked on shop UI
-/// </summary>
-public void Refresh_Click()
+    /// <summary>
+    /// Called when refresh button clicked on shop UI
+    /// </summary>
+    public void Refresh_Click()
     {
-        championShop.RefreshShop(false);   
+        championShop.RefreshShop(false);
     }
 
     /// <summary>
@@ -187,7 +187,7 @@ public void Refresh_Click()
         goldText.text = gamePlayController.currentGold.ToString();
         placementText.GetComponent<Text>().text = "Round " + aiOpponent.round.ToString();
         championCountText.text = gamePlayController.currentChampionCount.ToString() + " / " + gamePlayController.currentChampionLimit.ToString();
-        if(gamePlayController.currentChampionCount != gamePlayController.currentChampionLimit) 
+        if (gamePlayController.currentChampionCount != gamePlayController.currentChampionLimit)
         {
             championCountText.color = Color.red;
         }
@@ -201,11 +201,11 @@ public void Refresh_Click()
         levelText.text = "Lv : " + gamePlayController.currentChampionLimit.ToString();
         expText.text = gamePlayController.currentExp.ToString() + " / " + gamePlayController.needExp.ToString();
 
-         expgage.fillAmount = gamePlayController.currentExp / gamePlayController.needExp;
+        expgage.fillAmount = gamePlayController.currentExp / gamePlayController.needExp;
 
 
         //hide bonusus UI
-        foreach (GameObject go in bonusPanels) 
+        foreach (GameObject go in bonusPanels)
         {
             go.SetActive(false);
         }
@@ -273,7 +273,7 @@ public void Refresh_Click()
                 }
                 bonusUI.SetActive(true);
 
-                i++;   
+                i++;
             }
         }
     }
@@ -305,8 +305,8 @@ public void Refresh_Click()
         SetTimerTextActive(false);
         shop.SetActive(false);
         gold.SetActive(false);
-        
 
+        PlayerPrefs.SetInt("round", aiOpponent.round - 1);
         restartButton.SetActive(true);
     }
 
@@ -328,7 +328,7 @@ public void Refresh_Click()
     public bool isLock = false;
     public void ShopLock()
     {
-        if(open.activeSelf == true)
+        if (open.activeSelf == true)
         {
             close.SetActive(true);
             open.SetActive(false);
@@ -359,7 +359,8 @@ public void Refresh_Click()
 
     public void Yes()
     {
-        SceneManager.LoadScene("LobbyScene");
+        PlayerPrefs.SetInt("round", aiOpponent.round - 1);
+        SceneManager.LoadScene("StageRewardScene");
     }
 
     public void No()
