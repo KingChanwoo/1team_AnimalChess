@@ -20,6 +20,7 @@ public class ChampionController : MonoBehaviour
 
     public UIController uIController;
 
+
     public GameObject AttackEffectPrefab;
     public GameObject SkillEffectPrefab;
     public GameObject SkillEffectPrefab2;
@@ -105,6 +106,9 @@ public class ChampionController : MonoBehaviour
     public bool isStuned = false;
     public float stunTimer = 0;
 
+
+
+
     public bool isBoarskill = false;
 
     public bool isCrocodileStack = false;
@@ -138,8 +142,8 @@ public class ChampionController : MonoBehaviour
     private float scorpionPoisonDamage = 0;
     private float scorpionsec = 0;
 
-    private bool isSilence = false;
-    private float silenceTimer = 0;
+    public bool isSilence = false;
+    public float silenceTimer = 0;
 
     private bool isOctopusSkill = false;
     private float OctopusSkillTimer = 0;
@@ -169,7 +173,7 @@ public class ChampionController : MonoBehaviour
     public float strengthValue2 = 0;
 
     public bool ability = false;
-    public float abilityValue1 =0;
+    public float abilityValue1 = 0;
 
     public float snailStack = 0;
 
@@ -182,7 +186,7 @@ public class ChampionController : MonoBehaviour
 
 
     float atkSpeedAnimator;
-   
+
 
     /// Start is called before the first frame update
     void Awake()
@@ -240,10 +244,10 @@ public class ChampionController : MonoBehaviour
 
         currentMoveSpeed = champion.movementSpeed;
 
-        
+
         worldCanvasController.AddHealthBar(this.gameObject);
-         worldCanvasController.AddManaBar(this.gameObject);
-     
+        worldCanvasController.AddManaBar(this.gameObject);
+
 
         effects = new List<Effect>();
     }
@@ -257,9 +261,9 @@ public class ChampionController : MonoBehaviour
     /// Update is called once per frame
     void Update()
     {
-        if(GameObject.FindGameObjectWithTag("propeller") != null)
+        if (GameObject.FindGameObjectWithTag("propeller") != null)
         {
-            for(int i = 0; i < GameObject.FindGameObjectsWithTag("propeller").Length; i++)
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("propeller").Length; i++)
             {
                 GameObject.FindGameObjectsWithTag("propeller")[i].transform.rotation *= Quaternion.Euler(new Vector3(0, 30, 0));
             }
@@ -271,13 +275,13 @@ public class ChampionController : MonoBehaviour
         else gamePlayController.wealth = false;
 
         gamePlayController.wealthMoney = wealthValue;
-        
+
 
         timeLoyal += Time.deltaTime;
-        if(timeLoyal > 0 && timeLoyal < 1)
+        if (timeLoyal > 0 && timeLoyal < 1)
         {
             timeLoyal = 1;
-            if(champType2.displayName == "충성의상징")
+            if (champType2.displayName == "충성의상징")
             {
                 currentDamage /= 1 + (loyalityValue2 / 100);
             }
@@ -298,9 +302,9 @@ public class ChampionController : MonoBehaviour
         if (synergyIsApply)
         {
             ApplyActiveSynergy();
-            championAnimator.SetFloat("attackSpeed",(atkSpeedAnimator * currentAttackSpeed)+0.3f);
+            championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed) + 0.3f);
             gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
-            
+
             synergyIsApply = false;
         }
 
@@ -340,7 +344,7 @@ public class ChampionController : MonoBehaviour
                 }
             }
         }
-        
+
 
 
         if (isInCombat && isStuned == false)
@@ -361,7 +365,7 @@ public class ChampionController : MonoBehaviour
             if (target != null)
             {
                 //rotate towards target
-                this.transform.LookAt(target.transform,Vector3.up);
+                this.transform.LookAt(target.transform, Vector3.up);
 
                 if (target.GetComponent<ChampionController>().isDead == true) //target champion is alive
                 {
@@ -390,8 +394,8 @@ public class ChampionController : MonoBehaviour
             }
         }
 
-        
-       
+
+
 
 
         //check for stuned effect
@@ -760,7 +764,7 @@ public class ChampionController : MonoBehaviour
     /// </summary>
     public void UpgradeLevel()
     {
-       
+
         GameObject levelupEffect = Instantiate(levelupEffectPrefab);
 
         //set position
@@ -769,6 +773,9 @@ public class ChampionController : MonoBehaviour
         //destroy effect after finished
         Destroy(levelupEffect, 1.0f);
     }
+
+
+
 
     public void SheepSkill(float damage)
     {
@@ -794,7 +801,7 @@ public class ChampionController : MonoBehaviour
         float skillrange = 5;
         //find enemy
         Debug.Log("살라맨더 스킬 시작");
-       SkillEffect(this.gameObject, this.transform.forward, 2);
+        SkillEffect(this.gameObject, this.transform.forward, 2);
         if (teamID == TEAMID_PLAYER)
         {
             for (int x = 0; x < Map.hexMapSizeX; x++)
@@ -1176,7 +1183,7 @@ public class ChampionController : MonoBehaviour
             //      b.ApplyOnAttack(this, targetChamoion);
             //  }
 
-            if(champion.uiname == "상어")
+            if (champion.uiname == "상어")
             {
                 Debug.Log("상어");
                 if (this.lvl == 1) SharkSkill(targetChamoion, 20);
@@ -1208,7 +1215,7 @@ public class ChampionController : MonoBehaviour
                             currentHealth = maxHealth;
                         }
                         DoAttack();
-                       
+
                     }
                     else if (lvl == 2 && targetChamoion.crocodileStack >= 8)
                     {
@@ -1253,12 +1260,12 @@ public class ChampionController : MonoBehaviour
             }
             // 타격 시, 마나 회복
             currentMana += currentAttackMana;
-            if(currentMana >= maxMana)
+            if (currentMana >= maxMana)
             {
                 // 스킬 구현
                 if (target != null)
                 {
-                    
+
                     skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
                     currentMana = 0;
                     if (strength)
@@ -1330,17 +1337,17 @@ public class ChampionController : MonoBehaviour
     {
         Dictionary<ChampionBonus, int> activeBonuses = null;
 
-        
-        
+
+
         activeBonuses = gamePlayController.activeBonus;
-        
+
 
         float finalDamage = damage;
         if (activeBonuses != null)
         {
             foreach (KeyValuePair<ChampionBonus, int> b in activeBonuses)
             {
-                finalDamage = b.Key.ApplyOnGotHit(this,by, b.Value, finalDamage);
+                finalDamage = b.Key.ApplyOnGotHit(this, by, b.Value, finalDamage);
             }
         }
         else
@@ -1356,13 +1363,13 @@ public class ChampionController : MonoBehaviour
 
         int ran = Random.Range(1, 101);
 
-        if (ran <= currentEvasion) 
+        if (ran <= currentEvasion)
         {
             finalDamage = 0;
         }
         else
         {
-            if(currentShield == 0)
+            if (currentShield == 0)
             {
                 currentHealth -= finalDamage;
             }
@@ -1372,14 +1379,14 @@ public class ChampionController : MonoBehaviour
                 currentHealth -= finalDamage - currentShield;
                 if (champion.uiname == "달팽이")
                 {
-                    if(skillScript.skill37Active == true)
+                    if (skillScript.skill37Active == true)
                     {
                         if (this.lvl == 1)
-                            SnailSkill(10,8);
+                            SnailSkill(10, 8);
                         else if (this.lvl == 2)
-                            SnailSkill(20,6);
+                            SnailSkill(20, 6);
                         else if (this.lvl == 3)
-                            SnailSkill(100,6);
+                            SnailSkill(100, 6);
                         skillScript.skill37Active = false;
                     }
                 }
@@ -1393,12 +1400,12 @@ public class ChampionController : MonoBehaviour
 
         //  피격 시, 마나 회복
         currentMana += currentHitMana;
-        
+
 
         //death
         if (currentHealth <= 0)
         {
-            if(isSalamanderSkillOn == true)
+            if (isSalamanderSkillOn == true)
             {
                 isSalamanderDead = true;
                 skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
@@ -1412,12 +1419,12 @@ public class ChampionController : MonoBehaviour
             }
             if (teamID == TEAMID_PLAYER)
             {
-                if(loyality == true)
+                if (loyality == true)
                 {
                     gamePlayController.Loyality(loyalityValue2);
                 }
             }
-            
+
 
             this.gameObject.SetActive(false);
             isDead = true;
@@ -1426,15 +1433,15 @@ public class ChampionController : MonoBehaviour
             gamePlayController.OnChampionDeath();
         }
 
-        
+
 
 
         //add floating text
-        worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), finalDamage,Color.white);
+        worldCanvasController.AddDamageText(this.transform.position + new Vector3(0, 2.5f, 0), finalDamage, Color.white);
 
         return isDead;
     }
-    
+
     public void SnailSkill(float rate, float range)
     {
         //SkillEffect(this.gameObject, this.transform.forward, 1f);
@@ -1478,7 +1485,7 @@ public class ChampionController : MonoBehaviour
         }
     }
 
-    public void SharkSkill(ChampionController target,float rate)
+    public void SharkSkill(ChampionController target, float rate)
     {
         if (target.currentHealth <= target.maxHealth * (rate / 100))
         {
@@ -1486,7 +1493,7 @@ public class ChampionController : MonoBehaviour
             SkillEffect(this.gameObject, this.transform.forward, 1f);
         }
     }
-    
+
 
     /// <summary>
     /// Called when this champion get stuned
@@ -1513,9 +1520,9 @@ public class ChampionController : MonoBehaviour
 
     public void OnGotShield(float shield)
     {
-        currentShield += maxHealth * (shield/100);
+        currentShield += maxHealth * (shield / 100);
     }
-    
+
 
 
 
@@ -1557,7 +1564,7 @@ public class ChampionController : MonoBehaviour
         effects.Remove(effect);
         effect.Remove();
     }
-    
+
 
     public void ApplyActiveSynergy()
     {
@@ -1608,7 +1615,7 @@ public class ChampionController : MonoBehaviour
         if (teamID == TEAMID_PLAYER)
         {
             activeBonuses = gamePlayController.activeBonus;
-            if(activeBonuses != null)
+            if (activeBonuses != null)
             {
                 foreach (KeyValuePair<ChampionBonus, int> b in activeBonuses)
                 {
