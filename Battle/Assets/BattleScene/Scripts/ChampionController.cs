@@ -106,7 +106,9 @@ public class ChampionController : MonoBehaviour
     public bool isStuned = false;
     public float stunTimer = 0;
 
-
+    private bool isEnemy61skillChanneling = false;
+    private float enemy61skillChannelingTimer = 0;
+    private int enemy61skillCount = 0;
 
 
     public bool isBoarskill = false;
@@ -585,6 +587,49 @@ public class ChampionController : MonoBehaviour
             }
         }
 
+        if (isEnemy61skillChanneling)
+        {
+            enemy61skillChannelingTimer -= Time.deltaTime;
+            Debug.Log(enemy61skillCount + "= 스킬시전 횟수");
+            if (enemy61skillChannelingTimer < 5.9 && enemy61skillCount == 0)
+            {
+                enemy61skillCount++;
+                Enemy61Skill();
+            }
+            else if (enemy61skillChannelingTimer < 4.9 && enemy61skillCount == 1)
+            {
+                enemy61skillCount++;
+                Enemy61Skill();
+            }
+            else if (enemy61skillChannelingTimer < 3.9 && enemy61skillCount == 2)
+            {
+                enemy61skillCount++;
+                Enemy61Skill();
+            }
+            else if (enemy61skillChannelingTimer < 2.9 && enemy61skillCount == 3)
+            {
+                enemy61skillCount++;
+                Enemy61Skill();
+            }
+            else if (enemy61skillChannelingTimer < 1.9 && enemy61skillCount == 4)
+            {
+                enemy61skillCount++;
+                Enemy61Skill();
+            }
+            else if (enemy61skillChannelingTimer < 0.9 && enemy61skillCount == 5)
+            {
+                enemy61skillCount++;
+                Enemy61Skill();
+            }
+
+            if (enemy61skillCount == 6)
+            {
+                Debug.Log("61스킬끝");
+                isEnemy61skillChanneling = false;
+                DoAttack();
+            }
+        }
+
 
     }
 
@@ -957,6 +1002,44 @@ public class ChampionController : MonoBehaviour
             }
         }
     }
+
+    public void Enemy61SkillOn()
+    {
+        isEnemy61skillChanneling = true;
+        isStuned = true;
+        stunTimer = 6;
+        enemy61skillChannelingTimer = 6;
+        enemy61skillCount = 0;
+        navMeshAgent.isStopped = true;
+    }
+
+
+    public void Enemy61Skill()
+    {
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                if (gamePlayController.gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    if (championController.isDead == false)
+                    {
+                        float damage;
+                        damage = currentDamage * 0.5f;
+                        championController.currentHealth -= damage;
+                        int manaBurn = Random.Range(1, 101);
+                        if (manaBurn < 30)
+                        {
+                            championController.currentMana -= 20;
+                        }
+                        worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), this.currentDamage * damage, Color.red);
+                    }
+                }
+            }
+        }
+    }
+
 
     public void GoatskillOn()
     {

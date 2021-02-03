@@ -1039,7 +1039,8 @@ public class Skill : MonoBehaviour
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
                 break;
             case 61:
-                // 변경 요망
+                attacker.Enemy61SkillOn();
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 6);
                 break;
 
         }
