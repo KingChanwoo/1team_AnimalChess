@@ -15,9 +15,8 @@ MonoBehaviour:
   prefab: {fileID: 768075096036894406, guid: 8b56cda61f915d441bb538ede6edec4e, type: 3}
   attackProjectile: {fileID: 0}
   level: 0
-  skillID: 0
+  skillID: 44
   uiname: Scout_car
-  grade: 0
   cost: 0
   sellCost: 0
   type1: {fileID: 11400000, guid: e918e0afc01f45d40b7d41fe639c064e, type: 2}

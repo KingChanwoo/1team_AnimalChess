@@ -18,7 +18,6 @@ public class Champion : ScriptableObject
     public int skillID;
     ///The champion name displayed on the UI frames
     public string uiname;
-    public int grade;
     ///The buy gold cost of the champion from the shop
     public int cost;
     public int sellCost;

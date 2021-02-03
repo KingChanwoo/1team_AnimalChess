@@ -226,9 +226,6 @@ public class GamePlayController : MonoBehaviour
                 {
                     GameObject championPrefab = Instantiate(champion.prefab);
 
-
-
-
                     //get championController
                     ChampionController championController = championPrefab.GetComponent<ChampionController>();
 
@@ -265,6 +262,34 @@ public class GamePlayController : MonoBehaviour
         }
     }
 
+    public void EnemySummon(Champion champion)
+    {        
+        GameObject championPrefab = Instantiate(champion.prefab);
+
+        //get championController
+        ChampionController championController = championPrefab.GetComponent<ChampionController>();
+
+        //gridChampionsArray[x, z] = championController2.gameObject;
+        //setup chapioncontroller
+        championController.Init(champion, ChampionController.TEAMID_AI);
+
+        //set grid position
+        championController.SetGridPosition(Map.GRIDTYPE_HEXA_MAP, 0, 7);
+
+        //set position and rotation
+        championController.SetWorldPosition();
+        championController.SetWorldRotation();
+        //StoreChampionInArray(Map.GRIDTYPE_HEXA_MAP, x, z, championPrefab);
+
+        championController.OnCombatStart();
+        //aIopponent.enemyList.Add(champion);
+        //aIopponent.enemyArray.Add(championController);
+       
+        //  ChampionController championController2 = gridChampionsArray[x, z].GetComponent<ChampionController>();
+        summonlist.Add(championController);
+   
+    }
+
     public void RemoveSummon()
     {
         for (int i = 0; i < summonlist.Count; i++)
@@ -273,7 +298,6 @@ public class GamePlayController : MonoBehaviour
             if (summonlist != null)
                 Destroy(summonlist[i].gameObject);
         }
-
     }
 
     public bool Compose(Champion champion)
@@ -334,7 +358,7 @@ public class GamePlayController : MonoBehaviour
         //check for champion upgrade
         List<ChampionController> championList_lvl_1 = new List<ChampionController>();
 
-        if (champion.grade < 2)
+        if (champion.level <= 2)
         {
             for (int i = 0; i < ownChampionInventoryArray.Length; i++)
             {
@@ -804,11 +828,6 @@ public class GamePlayController : MonoBehaviour
                     }
                 }
             }
-
-
-
-
-
 
             //show indicators
             map.HideIndicators();

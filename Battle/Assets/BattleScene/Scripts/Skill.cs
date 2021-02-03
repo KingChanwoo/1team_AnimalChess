@@ -849,8 +849,14 @@ public class Skill : MonoBehaviour
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
                 break;
             case 44:
+                /*
+                Debug.Log("돌격병 소환");
                 target.currentHealth -= attacker.currentDamage * 3f;
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
+                worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
+                gamePlayController.EnemySummon(gameData.championsArray[123]);
+                gamePlayController.EnemySummon(gameData.championsArray[123]);
+                */
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2f);
                 break;
             case 45:
                 // 소환 스킬
