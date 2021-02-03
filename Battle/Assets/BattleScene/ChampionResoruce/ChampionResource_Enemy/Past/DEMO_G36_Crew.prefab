@@ -529,6 +529,11 @@ MonoBehaviour:
     type: 3}
   projectileStart: {fileID: 0}
   uIController: {fileID: 0}
+  AttackEffectPrefab: {fileID: 2346602388542133329, guid: 120cf4538ecdd7141a9a006ece9c9fdb,
+    type: 3}
+  SkillEffectPrefab: {fileID: 2656636803106555025, guid: 4868819ed0bcec14bac5fa4c36e53c88,
+    type: 3}
+  SkillEffectPrefab2: {fileID: 0}
   gridType: 0
   gridPositionX: 0
   gridPositionZ: 0
@@ -564,6 +569,8 @@ MonoBehaviour:
   isRatSkillOn: 0
   isSalamanderDead: 0
   isSalamanderSkillOn: 0
+  isSilence: 0
+  silenceTimer: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0
