@@ -17,7 +17,7 @@ public class Skill : MonoBehaviour
     public List<ChampionController> enemyChampion;
     public List<ChampionController> playerChampion;
 
-
+    
 
 
     public float time = 0;
@@ -91,38 +91,8 @@ public class Skill : MonoBehaviour
     public bool skill39buffOn = false;
     ChampionController skill39Attacker;
 
-    float duration43 = -1;
-    public bool skill43buffOn = false;
-    ChampionController skill43Attacker;
-
-    float duration47 = -1;
-    public bool skill47buffOn = false;
-    ChampionController skill47Attacker;
-
-    float duration52 = -1;
-    public bool skill52buffOn = false;
-    ChampionController skill52Attacker;
-
-    float duration54 = -1;
-    public bool skill54buffOn = false;
-
-    float duration55 = -1;
-    public bool skill55buffOn = false;
-
-    float duration58 = -1;
-    public bool skill58buffOn = false;
-    ChampionController skill58Attacker;
-
-    float duration59 = -1;
-    public bool skill59buffOn = false;
-    ChampionController skill59Attacker;
-
     float heal;
     float damage;
-    float evasion;
-    float attackspeed;
-    float buff;
-    float deBuff;
 
     public void SkillFire(int ID, ChampionController attacker, ChampionController target)
     {
@@ -131,6 +101,7 @@ public class Skill : MonoBehaviour
 
 
 
+      
         switch (ID)
         {
             case 1:
@@ -156,7 +127,7 @@ public class Skill : MonoBehaviour
                 attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
             case 3:
-                for (int i = 0; i < playerChampion.Count; i++)
+                for(int i =0; i < playerChampion.Count; i++)
                 {
                     ChampionController champion = playerChampion[i];
                     skill3Attacker = attacker;
@@ -382,7 +353,7 @@ public class Skill : MonoBehaviour
                 {
                     attacker.isSalamanderSkillOn = true;
                 }
-
+                
                 break;
             case 16:
                 for (int i = 0; i < playerChampion.Count; i++)
@@ -398,7 +369,7 @@ public class Skill : MonoBehaviour
                         else if (attacker.lvl == 3)
                             champion.currentAttackSpeed *= (150 / 100);
                         skill16buffOn = true;
-
+                        
                     }
                     duration16 = this.time + 10; // 지속시간  
                 }
@@ -423,7 +394,7 @@ public class Skill : MonoBehaviour
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 18:
-                if (attacker.lvl == 1)
+                if(attacker.lvl == 1)
                 {
                     gamePlayController.Summon(gameData.championsArray[146]);
                 }
@@ -493,7 +464,7 @@ public class Skill : MonoBehaviour
                 attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
             case 22:
-                if (attacker.lvl == 1)
+                if(attacker.lvl == 1)
                 {
                     gamePlayController.Summon(gameData.championsArray[143]);
                     gamePlayController.Summon(gameData.championsArray[143]);
@@ -604,7 +575,7 @@ public class Skill : MonoBehaviour
                 break;
             case 28:
                 skill28Attacker = attacker;
-                if (attacker.lvl == 1)
+                if(attacker.lvl == 1)
                     attacker.currentHealth += attacker.maxHealth * (10 / 100);
                 else if (attacker.lvl == 2)
                     attacker.currentHealth += attacker.maxHealth * (20 / 100);
@@ -612,7 +583,7 @@ public class Skill : MonoBehaviour
                     attacker.currentHealth += attacker.maxHealth * (35 / 100);
                 if (attacker.currentHealth >= attacker.maxHealth)
                     attacker.currentHealth = attacker.maxHealth;
-                if (skill28buffOn == false)
+                if(skill28buffOn == false)
                 {
                     attacker.currentAttackSpeed *= 200 / 100;
                     skill28buffOn = true;
@@ -689,11 +660,11 @@ public class Skill : MonoBehaviour
                 {
                     attacker.currentCritical = 100;
                     if (attacker.lvl == 1)
-                        attacker.currentAttackSpeed *= 200 / 100;
+                        attacker.currentAttackSpeed *= 200/100;
                     else if (attacker.lvl == 2)
-                        attacker.currentAttackSpeed *= 250 / 100;
+                        attacker.currentAttackSpeed *= 250/100;
                     else if (attacker.lvl == 3)
-                        attacker.currentAttackSpeed *= 300 / 100;
+                        attacker.currentAttackSpeed *= 300/100;
                     skill32buffOn = true;
                 }
                 duration32 = this.time + 10; // 지속시간
@@ -725,7 +696,7 @@ public class Skill : MonoBehaviour
                 else if (attacker.lvl == 3)
                 {
                     attacker.ScorpionSkill(8);
-                }
+                }               
                 break;
             case 35:
                 break;
@@ -738,12 +709,12 @@ public class Skill : MonoBehaviour
                 Debug.Log(shield);
                 Debug.Log(attacker.snailStack);
                 attacker.currentShield += shield;
-                if (skill37Active == false)
+                if(skill37Active == false)
                 {
                     Debug.Log("쉴드 떳냐? " + attacker.currentShield);
                     skill37Active = true;
                 }
-
+                
                 // 쉴드데미지 영역은 ChampionController 863cs~
                 break;
             case 38:
@@ -813,7 +784,7 @@ public class Skill : MonoBehaviour
                         skill39buffOn = true;
                     }
                     duration39 = this.time + 5; // 지속시간
-                }
+                }             
                 break;
             case 40:
                 if (attacker.lvl == 1)
@@ -835,213 +806,7 @@ public class Skill : MonoBehaviour
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 5);
                 break;
             case 42:
-                // 스킬업음
                 break;
-            case 43:
-                if (skill43buffOn == false)
-                {
-                    skill43Attacker = attacker;
-                    attackspeed = attacker.currentAttackSpeed;
-                    attacker.currentAttackSpeed += attackspeed;
-                    skill43buffOn = true;
-                    duration43 = this.time + 3;
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
-                break;
-            case 44:
-                target.currentHealth -= attacker.currentDamage * 3f;
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
-                break;
-            case 45:
-                // 소환 스킬
-                break;
-            case 46:
-                attacker.currentShield = 500;
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
-                break;
-            case 47:
-                if (skill47buffOn == false)
-                {
-                    skill47Attacker = attacker;
-                    evasion = attacker.currentEvasion * 0.4f;
-                    attacker.currentEvasion += evasion;
-                    skill47buffOn = true;
-                    duration47 = this.time + 5;
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
-                break;
-            case 48:
-                // 패시브 스킬
-                break;
-            case 49:
-                // 스킬 없음
-                break;
-            case 50:
-                damage = attacker.currentDamage * 3f;
-                for (int x = 0; x < Map.hexMapSizeX; x++)
-                {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (gamePlayController.gridChampionsArray[x, z] != null)
-                        {
-                            ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
-                            championController.currentHealth -= damage;
-                            championController.isStuned = true;
-                            championController.stunTimer = 1;
-                        }
-                    }
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
-                break;
-            case 51:
-                // 소환 스킬
-                break;
-            case 52:
-                if (skill52buffOn == false)
-                {
-                    skill52Attacker = attacker;
-                    evasion = attacker.currentEvasion;
-                    attacker.currentEvasion = 70;
-                }
-                damage = attacker.currentDamage * 2f;
-                for (int x = 0; x < Map.hexMapSizeX; x++)
-                {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (gamePlayController.gridChampionsArray[x, z] != null)
-                        {
-                            ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
-                            championController.currentHealth -= damage;
-                            championController.isStuned = true;
-                            championController.stunTimer = 2;
-                        }
-                    }
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
-                break;
-            case 53:
-                for (int x = 0; x < Map.hexMapSizeX; x++)
-                {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (gamePlayController.gridChampionsArray[x, z] != null)
-                        {
-                            ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (championController.isDead == false)
-                            {
-                                //calculate distance
-                                float distance = Vector3.Distance(this.transform.position, aiOpponent.gridChampionsArray[x, z].transform.position);
-                                //if new this champion is closer then best distance
-                                if (distance < 9)
-                                {
-                                    championController.isSilence = true;
-                                    championController.silenceTimer = 3;
-                                }
-                            }
-                        }
-                    }
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
-                break;
-            case 54:
-                if (skill54buffOn == false)
-                {
-                    for (int i = 0; i < aiOpponent.enemyArray.Count; i++)
-                    {
-                        ChampionController championController = aiOpponent.enemyArray[i].GetComponent<ChampionController>();
-                        buff = championController.currentDefence * 0.3f;
-                        championController.currentDefence += buff;
-                    }
-                    duration54 = this.time + 10;
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
-                break;
-            case 55:
-                if (skill55buffOn == false)
-                {
-                    for (int x = 0; x < Map.hexMapSizeX; x++)
-                    {
-                        for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                        {
-                            if (gamePlayController.gridChampionsArray[x, z] != null)
-                            {
-                                ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
-                                deBuff = championController.currentDamage * 0.3f;
-                                championController.currentDamage -= deBuff;
-                            }
-                        }
-                    }
-                    for (int i = 0; i < aiOpponent.enemyArray.Count; i++)
-                    {
-                        ChampionController championController = aiOpponent.enemyArray[i].GetComponent<ChampionController>();
-                        buff = championController.currentDefence * 0.5f;
-                        championController.currentDefence += buff;
-                    }
-                    duration55 = this.time + 10;
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
-                break;
-            case 56:
-                // 스킬없음
-                break;
-            case 57:
-                buff = target.currentMana;
-                target.currentMana = 0;
-                attacker.currentShield += buff * 6;
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
-                break;
-            case 58:
-                if (skill58buffOn == false)
-                {
-                    skill58Attacker = attacker;
-                    evasion = attacker.currentEvasion;
-                    attacker.currentEvasion = 90;
-                    duration58 = this.time + 5;
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
-                break;
-            case 59:
-                if (skill59buffOn == false)
-                {
-                    skill59Attacker = attacker;
-                    damage = attacker.currentDamage;
-                    attackspeed = attacker.currentAttackSpeed;
-                    attacker.currentDamage += damage;
-                    attacker.currentAttackSpeed += attackspeed;
-                    duration59 = this.time + 10;
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
-                break;
-            case 60:
-                damage = attacker.currentDamage * 3f;
-                for (int x = 0; x < Map.hexMapSizeX; x++)
-                {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (gamePlayController.gridChampionsArray[x, z] != null)
-                        {
-                            ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
-                            if (championController.isDead == false)
-                            {
-                                //calculate distance
-                                float distance = Vector3.Distance(this.transform.position, aiOpponent.gridChampionsArray[x, z].transform.position);
-                                //if new this champion is closer then best distance
-                                if (distance < 6)
-                                {
-                                    championController.currentHealth -= damage;
-                                    championController.isStuned = true;
-                                    championController.stunTimer = 1;
-                                }
-                            }
-                        }
-                    }
-                }
-                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
-                break;
-            case 61:
-                // 변경 요망
-                break;
-
         }
     }
 
@@ -1061,7 +826,7 @@ public class Skill : MonoBehaviour
         worldCanvasController = GameObject.Find("Scripts").GetComponent<WorldCanvasController>();
         sound = GameObject.Find("Scripts").GetComponent<Sound>();
 
-
+        
     }
 
     // Update is called once per frame
@@ -1245,7 +1010,7 @@ public class Skill : MonoBehaviour
         {
             if (skill26buffOn)
             {
-
+                
                 if (skill26Attacker.lvl == 1)
                 {
                     skill26Attacker.currentDamage *= (100 / 130);
@@ -1264,7 +1029,7 @@ public class Skill : MonoBehaviour
                 skill26buffOn = false;
                 skill26Attacker = null;
                 duration26 = -1;
-
+                
             }
         }
 
@@ -1307,11 +1072,11 @@ public class Skill : MonoBehaviour
             if (skill31buffOn)
             {
                 if (skill31Attacker.lvl == 1)
-                    skill31Attacker.currentDamage *= 100 / 200;
+                    skill31Attacker.currentDamage *= 100/200;
                 else if (skill31Attacker.lvl == 2)
-                    skill31Attacker.currentDamage *= 100 / 300;
+                    skill31Attacker.currentDamage *= 100/300;
                 else if (skill31Attacker.lvl == 3)
-                    skill31Attacker.currentDamage *= 100 / 400;
+                    skill31Attacker.currentDamage *= 100/400;
                 skill31buffOn = false;
                 skill31Attacker = null;
                 duration28 = -1;
@@ -1363,101 +1128,11 @@ public class Skill : MonoBehaviour
                 }
             }
         }
-        // 포병 자기 자신 공속버프
-        if (time >= duration43)
-        {
-            if (skill43buffOn)
-            {
-                skill43Attacker.currentAttackSpeed -= attackspeed;
-                skill43buffOn = false;
-                duration43 = -1;
-            }
-        }
 
-        // 스핏파이어 자기 자신 회피버프
-        if (time >= duration47)
-        {
-            if (skill47buffOn)
-            {
-                skill47Attacker.currentEvasion -= evasion;
-                skill47buffOn = false;
-                duration47 = -1;
-            }
-        }
 
-        if (time >= duration52)
-        {
-            if (skill52buffOn)
-            {
-                skill52Attacker.currentEvasion = evasion;
-                skill52buffOn = false;
-                duration52 = -1;
-            }
-        }
-
-        // 호위함 적군전체 방어력버프
-        if (time >= duration54)
-        {
-            if (skill54buffOn)
-            {
-                for (int i = 0; i < aiOpponent.enemyArray.Count; i++)
-                {
-                    aiOpponent.enemyArray[i].currentDefence -= buff;
-                }
-                skill54buffOn = false;
-                duration54 = -1;
-            }
-        }
-
-        if (time >= duration55)
-        {
-            if (skill55buffOn)
-            {
-                for (int x = 0; x < Map.hexMapSizeX; x++)
-                {
-                    for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
-                    {
-                        if (gamePlayController.gridChampionsArray[x, z] != null)
-                        {
-                            ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
-                            deBuff = championController.currentDamage * 0.3f;
-                            championController.currentDamage += deBuff;
-                        }
-                    }
-                }
-
-                for (int i = 0; i < aiOpponent.enemyArray.Count; i++)
-                {
-                    aiOpponent.enemyArray[i].currentDefence -= buff;
-                }
-                skill55buffOn = false;
-                duration55 = -1;
-            }
-        }
-
-        if (time >= duration58)
-        {
-            if (skill58buffOn)
-            {
-                skill58Attacker.currentEvasion = evasion;
-                skill58buffOn = false;
-                duration58 = -1;
-            }
-        }
-
-        if (time >= duration59)
-        {
-            if (skill59buffOn)
-            {
-                skill59Attacker.currentDamage -= damage;
-                skill59Attacker.currentAttackSpeed -= attackspeed;
-                skill59buffOn = false;
-                duration59 = -1;
-            }
-        }
     }
 }
 
 
 
-
+    
