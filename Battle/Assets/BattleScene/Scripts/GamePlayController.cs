@@ -1182,7 +1182,7 @@ public class GamePlayController : MonoBehaviour
 
         if (draggedChampion != null)
         {
-            currentGold += draggedChampion.GetComponent<Champion>().cost;
+            currentGold += draggedChampion.GetComponent<Champion>().sellCost;
         }
     }
 
