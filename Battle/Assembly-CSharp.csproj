@@ -75,15 +75,12 @@
     <Compile Include="Assets\BattleScene\Scripts\AttackEndBehaviour.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Champion.cs" />
     <Compile Include="Assets\BattleScene\Scripts\ChampionAnimation.cs" />
-    <Compile Include="Assets\BattleScene\Scripts\ChampionBonus.cs" />
     <Compile Include="Assets\BattleScene\Scripts\ChampionController.cs" />
     <Compile Include="Assets\BattleScene\Scripts\ChampionInfo.cs" />
-    <Compile Include="Assets\BattleScene\Scripts\ChampionShop.cs" />
     <Compile Include="Assets\BattleScene\Scripts\ChampionType.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Effect.cs" />
     <Compile Include="Assets\BattleScene\Scripts\FloatingText.cs" />
     <Compile Include="Assets\BattleScene\Scripts\GameData.cs" />
-    <Compile Include="Assets\BattleScene\Scripts\GamePlayController.cs" />
     <Compile Include="Assets\BattleScene\Scripts\HealthBar.cs" />
     <Compile Include="Assets\BattleScene\Scripts\InputController.cs" />
     <Compile Include="Assets\BattleScene\Scripts\ManaBar.cs" />
@@ -94,9 +91,6 @@
     <Compile Include="Assets\BattleScene\Scripts\Stage1.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Stage2.cs" />
     <Compile Include="Assets\BattleScene\Scripts\TriggerInfo.cs" />
-    <Compile Include="Assets\BattleScene\Scripts\UI\SynergyUI.cs" />
-    <Compile Include="Assets\BattleScene\Scripts\UI\UIController.cs" />
-    <Compile Include="Assets\BattleScene\Scripts\Weather.cs" />
     <Compile Include="Assets\BattleScene\Scripts\WorldCanvasController.cs" />
     <Compile Include="Assets\Hovl Studio\AAA Projectiles Vol 2\Demo scene\DemoShooting.cs" />
     <Compile Include="Assets\Hovl Studio\AAA Projectiles Vol 2\Scripts\AutoDestroyPS.cs" />
