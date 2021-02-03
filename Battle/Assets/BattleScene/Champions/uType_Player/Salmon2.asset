@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Salmon2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8527399569591011993, guid: 6a99d0655e35dff4a84378c41d789e53, type: 3}
+  prefab: {fileID: 8527399569591011993, guid: 5919008136d60f6419909d5949f74740, type: 3}
   attackProjectile: {fileID: 0}
   level: 2
   skillID: 11

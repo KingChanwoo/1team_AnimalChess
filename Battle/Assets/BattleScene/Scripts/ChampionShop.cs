@@ -54,9 +54,8 @@ public class ChampionShop : MonoBehaviour
             //get a random champion
             Champion champion = GetRandomChampionInfo();
 
-            if( champion.cost == 1 )
             //store champion in array
-            availableChampionArray[i] = champion;//zz
+            availableChampionArray[i] = champion;
 
             //load champion to ui
             uIController.LoadShopItem(champion, i);
@@ -123,6 +122,35 @@ public class ChampionShop : MonoBehaviour
                 shoplist5.Add(i);
             }
         }
+
+        for(int i = 0; i < gamePlayController.lv3List.Count; i++)
+        {
+            if(gameData.championsArray[gamePlayController.lv3List[i]].cost == 1)
+            {
+                shoplist1.Remove(gamePlayController.lv3List[i]);
+            }
+            else if (gameData.championsArray[gamePlayController.lv3List[i]].cost == 2)
+            {
+                shoplist2.Remove(gamePlayController.lv3List[i]);
+            }
+            else if (gameData.championsArray[gamePlayController.lv3List[i]].cost == 3)
+            {
+                shoplist3.Remove(gamePlayController.lv3List[i]);
+            }
+            else if (gameData.championsArray[gamePlayController.lv3List[i]].cost == 4)
+            {
+                shoplist4.Remove(gamePlayController.lv3List[i]);
+            }
+            else if (gameData.championsArray[gamePlayController.lv3List[i]].cost == 5)
+            {
+                shoplist5.Remove(gamePlayController.lv3List[i]);
+            }
+        }
+
+
+
+
+
 
         if (gamePlayController.currentChampionLimit == 1)
         {

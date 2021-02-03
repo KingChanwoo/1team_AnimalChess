@@ -40,6 +40,7 @@ public class GamePlayController : MonoBehaviour
     [HideInInspector]
     public GameObject[,] gridChampionsArray;
     public List<ChampionController> championArray;
+    public List<int> lv3List;
 
     public Text resultText;
 
@@ -397,6 +398,12 @@ public class GamePlayController : MonoBehaviour
                 if (champion == gameData.championsArray[i])
                 {
                     champion = gameData.championsArray[i + 1];
+
+                    if(champion.level == 3)
+                    {
+                        lv3List.Add(i - 1);  // 3성 유닛의 1성 챔피언 ID 를 리스트에 추가
+                    }
+
 
                     Compose(champion);
                     break;

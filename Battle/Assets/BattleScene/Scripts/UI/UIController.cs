@@ -21,6 +21,7 @@ public class UIController : MonoBehaviour
 
     public Button ready;
 
+
     public Text timerText;
     public Text championCountText;
     public Text goldText;
@@ -230,6 +231,8 @@ public class UIController : MonoBehaviour
                 bonusUI.transform.SetParent(bonusContainer.transform);
                 bonusUI.transform.Find("icon").GetComponent<Image>().sprite = m.Key.icon;
                 bonusUI.transform.Find("name").GetComponent<Text>().text = m.Key.displayName;
+                bonusUI.transform.Find("Text").GetComponent<Text>().text = m.Key.championBonus.explain;
+                bonusUI.transform.Find("Text").gameObject.SetActive(false);
                 if (m.Key.championBonus.championCount2 == 0)
                 {
                     bonusUI.transform.Find("count").GetComponent<Text>().text = m.Value.ToString() + " / " + m.Key.championBonus.championCount1.ToString();
@@ -375,6 +378,7 @@ public class UIController : MonoBehaviour
     {
         goLobbyPannel.SetActive(false);
     }
+    
 
 
 

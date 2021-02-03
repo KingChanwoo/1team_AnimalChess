@@ -19,6 +19,9 @@ public class ChampionBonus
     public BonusTarget bonusTarget;
 
     ///How many champions needed to get the bonus effect
+
+    public string explain;
+
     public float championCount1 = 0;
     public float championCount2 = 0;
     public float championCount3 = 0;
