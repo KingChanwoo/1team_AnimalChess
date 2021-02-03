@@ -957,6 +957,13 @@ MonoBehaviour:
   skill37Active: 0
   shield: 0
   skill39buffOn: 0
+  skill43buffOn: 0
+  skill47buffOn: 0
+  skill52buffOn: 0
+  skill54buffOn: 0
+  skill55buffOn: 0
+  skill58buffOn: 0
+  skill59buffOn: 0
 --- !u!114 &27158432
 MonoBehaviour:
   m_ObjectHideFlags: 0
