@@ -380,8 +380,8 @@ GameObject:
   - component: {fileID: 27158426}
   - component: {fileID: 27158427}
   - component: {fileID: 27158429}
-  - component: {fileID: 27158430}
   - component: {fileID: 27158431}
+  - component: {fileID: 27158430}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -446,7 +446,11 @@ MonoBehaviour:
   gridX: 0
   gridZ: 0
   Rain: {fileID: 747249829}
+  isRain: 0
+  isSnow: 0
   Snow: {fileID: 191901250}
+  weather: 0
+  weathercheck: 0
   map: {fileID: 27158421}
   inputController: {fileID: 27158424}
   gameData: {fileID: 27158428}
@@ -609,7 +613,7 @@ MonoBehaviour:
   uIController: {fileID: 27158425}
   gamePlayController: {fileID: 27158423}
   gameData: {fileID: 27158428}
-  stage1: {fileID: 27158430}
+  stage1: {fileID: 0}
   activeBonusList: []
   enemyList: []
   enemyArray: []
@@ -815,7 +819,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 27158420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d077abb130e5ad43af63afd0d784e14, type: 3}
+  m_Script: {fileID: 11500000, guid: e03cba532afc38b40a5be48a21cfe60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gamePlayController: {fileID: 27158423}

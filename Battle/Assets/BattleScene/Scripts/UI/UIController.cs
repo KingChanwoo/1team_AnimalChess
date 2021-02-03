@@ -150,7 +150,7 @@ public class UIController : MonoBehaviour
         Transform cost = bottom.Find("Cost");
         Transform icon1 = top.Find("icon 1");
         Transform icon2 = top.Find("icon 2");
-
+        Transform image = top.Find("Image");
 
         //assign texts from champion info to unit frames
         name.GetComponent<Text>().text = champion.uiname;
@@ -159,6 +159,12 @@ public class UIController : MonoBehaviour
         type2.GetComponent<Text>().text = champion.type2.displayName;
         icon1.GetComponent<Image>().sprite = champion.type1.icon;
         icon2.GetComponent<Image>().sprite = champion.type2.icon;
+
+        if (champion.cost == 1) image.GetComponent<Outline>().effectColor = Color.gray;
+        else if (champion.cost == 2) image.GetComponent<Outline>().effectColor = Color.green;
+        else if (champion.cost == 3) image.GetComponent<Outline>().effectColor = Color.blue;
+        else if (champion.cost == 4) image.GetComponent<Outline>().effectColor = new Color(255,0,200);
+        else if (champion.cost == 5) image.GetComponent<Outline>().effectColor = Color.yellow;
     }
 
     public void ViewUnitInfo(string name, string hp, string damage)
