@@ -36,6 +36,7 @@ public class StageReward : MonoBehaviour
                 lastHP = PlayerPrefs.GetInt("s1PlayerHP");
             else if (playStage == 2)
                 lastHP = PlayerPrefs.GetInt("s2PlayerHP");
+            PlayerPrefs.DeleteKey("stageNum");
         }
 
        

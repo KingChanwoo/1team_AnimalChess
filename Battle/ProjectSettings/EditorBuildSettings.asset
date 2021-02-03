@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/QuestScene.unity
     guid: f23e0fba080aa814386b35ef4b16540e
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: 
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/StageScene.unity
@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UnitScene.unity
     guid: e80100dcc9b689044a4c34dff3eafb16
+  - enabled: 1
+    path: Assets/Scenes/Stage2.unity
+    guid: ddd45da0215a218479b17594ea5f9b94
+  - enabled: 1
+    path: Assets/Scenes/StageRewardScene.unity
+    guid: 410eca7db7fc00048bb0e40c2ac7bf25
   m_configObjects: {}

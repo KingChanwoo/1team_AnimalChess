@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\Lobby\Option.cs" />
     <Compile Include="Assets\Scripts\Lobby\PlayerInfo.cs" />
     <Compile Include="Assets\Scripts\Lobby\StageReward.cs" />
+    <Compile Include="Assets\Scripts\Lobby\StageSceneManager.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ChangeSizeColor.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\DelayActive.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\LookAtTarget.cs" />

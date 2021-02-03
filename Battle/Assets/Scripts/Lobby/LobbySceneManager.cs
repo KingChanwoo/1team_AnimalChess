@@ -33,9 +33,11 @@ public class LobbySceneManager : MonoBehaviour
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
         level.text = "" + playerInfo.playerLevel;
         dnaValue.text = "" + playerInfo.currentDNA;
-
-        if (nameSet == 0) nameSetting.SetActive(true);
-        playerName.text = PlayerPrefs.GetString("playerName");
+        if(SceneManager.GetActiveScene().name == "LobbyScene")
+        {
+            if (nameSet == 0) nameSetting.SetActive(true);
+            playerName.text = PlayerPrefs.GetString("playerName");
+        }
     }
 
     // Update is called once per frame
