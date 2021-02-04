@@ -1201,6 +1201,7 @@ public class GamePlayController : MonoBehaviour
 
         if (draggedChampion != null)
         {
+            Debug.Log("셀챔피언 여기 드렁옴?");
             currentGold += draggedChampion.GetComponent<Champion>().sellCost;
         }
     }
