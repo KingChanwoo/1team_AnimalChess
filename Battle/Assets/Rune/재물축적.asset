@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f93f25fe78d15540ac029c693bb2054, type: 3}
+  m_Name: "\uC7AC\uBB3C\uCD95\uC801"
+  m_EditorClassIdentifier: 
+  runeID: 3
+  limitLevel: 5
+  runeName: "\uC7AC\uBB3C \uCD95\uC801"
+  runeInfo: "\uD074\uB9AC\uC5B4 \uC2DC, \uC2A4\uD14C\uC774\uC9C0 \uBCF4\uC0C1 DNA
+    20% \uCD94\uAC00 \uD68D\uB4DD"
+  runeImage: {fileID: 21300000, guid: be5129279b1dfca4ab4fa9ddc1c574f0, type: 3}

@@ -14,16 +14,22 @@ public class StageReward : MonoBehaviour
 
     public int dnaValue;
     public int expValue;
+    public int dnaRune = 0;
+    public int expRune = 0;
+
+    int usedRune;
 
     int playStage;
     int clearRound;
     int lastHP;
+    int lastGold;
 
     private void Awake()
     {
         playStage = PlayerPrefs.GetInt("stageNum");
         clearRound = PlayerPrefs.GetInt("round");
-
+        usedRune = PlayerPrefs.GetInt("usedRune");
+        lastGold = PlayerPrefs.GetInt("lastGold");
     }
 
     // Start is called before the first frame update
@@ -67,8 +73,19 @@ public class StageReward : MonoBehaviour
 
             expValue = 100 + (clearRound * 5);
             dnaValue = 35;
-            exp.text = "" + expValue;
-            dna.text = "" + dnaValue;
+
+            if (usedRune == 2)
+                expRune = (int)(expValue * 0.2f);
+            else if (usedRune == 3)
+                dnaRune = (int)(dnaValue * 0.2f);
+            else if (usedRune == 6)
+                expRune = (int)(lastGold * 2);
+            else if (usedRune == 7)
+                dnaRune = (int)(lastGold * 0.5f);
+
+
+            exp.text = "" + expValue + " ( " + expRune + " )";
+            dna.text = "" + dnaValue + " ( " + dnaRune + " )";
         }
         else
         {

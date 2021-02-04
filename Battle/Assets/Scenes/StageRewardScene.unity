@@ -284,7 +284,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: +                    DNA
+  m_Text: +                       DNA
 --- !u!222 &246359208
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: +                    EXP
+  m_Text: +                       EXP
 --- !u!222 &258548666
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -490,6 +490,8 @@ MonoBehaviour:
   exp: {fileID: 939959390}
   dnaValue: 0
   expValue: 0
+  dnaRune: 0
+  expRune: 0
 --- !u!114 &660806332
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2633,7 +2633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa49fef3652f0f344b6266fe90be5507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: {fileID: 0}
+  playerName: {fileID: 1792656316}
   playerInfo: {fileID: 131410435}
   level: {fileID: 305084768}
   dnaValue: {fileID: 1119096248}
@@ -2712,6 +2712,14 @@ MonoBehaviour:
   runesArray:
   - {fileID: 11400000, guid: 2b9f845215abac74fbc00dd64bd843c9, type: 2}
   - {fileID: 11400000, guid: 6009d4274865bec46b580242c2fb53f1, type: 2}
+  - {fileID: 11400000, guid: ddf98855ecd6cb5439e9d397b4d370a3, type: 2}
+  - {fileID: 11400000, guid: eef0ebd8456368543836aeca56986bd2, type: 2}
+  - {fileID: 11400000, guid: 1dd09517f6596fa4d945cdfcecc5da91, type: 2}
+  - {fileID: 11400000, guid: 7005d480d96c7294c96ca769945040a1, type: 2}
+  - {fileID: 11400000, guid: 53095f6d00a7b414aaf260167214809c, type: 2}
+  - {fileID: 11400000, guid: 12aab9a175f02d8409156719068b6260, type: 2}
+  - {fileID: 11400000, guid: a5c0c4133b2ced548b2337f40e469bee, type: 2}
+  - {fileID: 11400000, guid: 14bec8171e329b144880975a73a558e3, type: 2}
 --- !u!114 &1250751800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3292,6 +3300,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08695ccddf687914f8973517a15800bf, type: 3}
+--- !u!114 &1792656316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6461319644283796101, guid: 4646bf0d187e54841905eae839b4af9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1173012319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1838734244
 GameObject:
   m_ObjectHideFlags: 0

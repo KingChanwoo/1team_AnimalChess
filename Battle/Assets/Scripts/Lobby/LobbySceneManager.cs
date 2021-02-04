@@ -36,8 +36,8 @@ public class LobbySceneManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "LobbyScene")
         {
             if (nameSet == 0) nameSetting.SetActive(true);
-            playerName.text = PlayerPrefs.GetString("playerName");
         }
+        playerName.text = PlayerPrefs.GetString("playerName");
     }
 
     // Update is called once per frame

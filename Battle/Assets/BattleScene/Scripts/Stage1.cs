@@ -312,6 +312,7 @@ public class Stage1 : MonoBehaviour
         {
             resultText.text = "승리";
             PlayerPrefs.SetInt("s1PlayerHP", gamePlayController.currentHP);
+            PlayerPrefs.SetInt("lastGold", gamePlayController.currentGold);
             uiController.ResultScreen();
         }
     }

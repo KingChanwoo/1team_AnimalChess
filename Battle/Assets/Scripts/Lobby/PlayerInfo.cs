@@ -27,7 +27,6 @@ public class PlayerInfo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerLevel = 1;
         PlayerPrefs.SetInt("playerLv", playerLevel);
         PlayerPrefs.SetInt("currentEXP", currentEXP);
         PlayerPrefs.SetInt("currentDNA", currentDNA);

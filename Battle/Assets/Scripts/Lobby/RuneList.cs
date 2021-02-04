@@ -23,7 +23,7 @@ public class RuneList : MonoBehaviour
         {
             go.GetComponent<Button>().enabled = false;
         }
-        RunePrint(PlayerPrefs.GetInt("UsedRune"));
+        RunePrint(PlayerPrefs.GetInt("usedRune"));
         SelectMark();
     }
 
