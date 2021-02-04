@@ -423,11 +423,11 @@ public class ChampionBonus
                         else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
 
                         if (num >= championCount3)
-                            finalDamage *= 1 - (bonusValue3/ 100);
+                            finalDamage *= 1.0f - (bonusValue3/ 100.0f);
                         else if (num >= championCount2)
-                            finalDamage *= 1 - (bonusValue2 / 100);
+                            finalDamage *= 1.0f - (bonusValue2 / 100.0f);
                         else if (num >= championCount1)
-                            finalDamage *= 1 - (bonusValue1 / 100);
+                            finalDamage *= 1.0f - (bonusValue1 / 100.0f);
                     }
                     break;
                 
