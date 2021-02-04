@@ -105,6 +105,8 @@ public class ChampionController : MonoBehaviour
 
     public bool isStuned = false;
     public float stunTimer = 0;
+    
+    private bool isEnemy48passive = true;
 
     private bool isEnemy61skillChanneling = false;
     private float enemy61skillChannelingTimer = 0;
@@ -412,6 +414,18 @@ public class ChampionController : MonoBehaviour
                     //set pathfinder target
                     navMeshAgent.destination = target.transform.position;
                     navMeshAgent.isStopped = false;
+                }
+            }
+        }
+        if (skillID == 48)
+        {
+            if (isEnemy48passive)
+            {
+                currentDamage = currentDamage * 2;
+                currentDefence = currentDefence * 2;
+                if(currentShield <= 0)
+                {
+                    isEnemy48passive = false;
                 }
             }
         }

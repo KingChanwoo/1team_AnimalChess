@@ -77,37 +77,50 @@ public class AIopponent : MonoBehaviour
         {
             //totall damage player takes
             int damage = 0;
-
+            Debug.Log(enemyArray.Count);
+            for (int i = 0; i < enemyArray.Count; i++)
+            {
+                if (!enemyArray[i].isDead)
+                {
+                    damage += enemyArray[i].champion.damageToPlayer;
+                }
+            }
+            Debug.Log(damage);
             //iterate champions
             //start champion combat
-            for (int x = 0; x < Map.hexMapSizeX; x++)
+            /*
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
             {
-                for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+                //there is a champion
+                if (gridChampionsArray[x, z] != null)
                 {
-                    //there is a champion
-                    if (gridChampionsArray[x, z] != null)
-                    {
-                        //get character
-                        ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+                    //get character
+                    ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
 
-                        // 플레이어 패배 시, 생존 유닛 별 다른 데미지 적용/부여
-                        for (int i = 0; i < enemyList.Count; i++)
+                    // 플레이어 패배 시, 생존 유닛 별 다른 데미지 적용/부여
+
+
+                    for (int i = 0; i < enemyList.Count; i++)
+                    {
+                        if (gridChampionsArray[x, z].name == enemyList[i].prefab.name + "(Clone)")
                         {
-                            if (gridChampionsArray[x, z].name == enemyList[i].prefab.name + "(Clone)")
+                            //calculate player damage for every champion
+                            if (championController.currentHealth > 0)
                             {
-                                //calculate player damage for every champion
-                                if (championController.currentHealth > 0)
-                                {
-                                    damage += enemyList[i].damageToPlayer;
-                                }
+                                damage += enemyList[i].damageToPlayer;
+                                Debug.Log("데미지" + damage);
                             }
-                            break;  
                         }
+                        break;  
                     }
 
                 }
-            }
 
+            }
+        }
+*/
             //player takes damage
             gamePlayController.TakeDamage(damage);
             
@@ -158,8 +171,58 @@ public class AIopponent : MonoBehaviour
             }    
         }
     }
+    public void EnemySummon(int n, float powerRate)
+    {
+        int flag = 0;
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            if (flag == 1)
+            {
+                break;
+            }
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                if (gridChampionsArray[x, z] == null)
+                {
+                    Champion enemy = gameData.championsArray[n];
+                    enemy.damage = enemy.damage * (powerRate / 100);
+                    enemy.health = enemy.health * (powerRate / 100);
+                    //instantiate champion prefab
+                    GameObject enemyPrefab = Instantiate(enemy.prefab);
 
-    
+                    //add champion to array
+                    gridChampionsArray[x, z] = enemyPrefab;
+
+                    Debug.Log(gridChampionsArray[x, z].name);
+                    //get champion controller
+                    ChampionController championController = enemyPrefab.GetComponent<ChampionController>();
+
+                    //setup chapioncontroller
+                    championController.Init(enemy, ChampionController.TEAMID_AI);
+
+                    //set grid position
+                    championController.SetGridPosition(Map.GRIDTYPE_HEXA_MAP, x, z+4);
+
+                    //set position and rotation
+                    championController.SetWorldPosition();
+                    championController.SetWorldRotation();
+
+                    enemyList.Add(enemy);
+                    enemyArray.Add(championController);
+
+                    championController.OnCombatStart();
+                    flag = 1;
+                    
+                }
+                if (flag == 1)
+                {
+                    break;
+                }
+            }
+
+        }
+    }
+
     /// <summary>
     /// Creates and adds a new random champion to the map
     /// </summary>
@@ -343,9 +406,10 @@ public class AIopponent : MonoBehaviour
 
 
                     championCount++;
-
+                    
                     if (championController.isDead)
                         championDead++;
+
 
                 }
 
