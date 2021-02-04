@@ -289,15 +289,30 @@ public class GamePlayController : MonoBehaviour
         summonlist.Add(championController);
    
     }
-
     public void RemoveSummon()
     {
-        for (int i = 0; i < summonlist.Count; i++)
+        for (int x = 0; x < Map.hexMapSizeX; x++)
         {
-            RemoveChampionFromArray(Map.GRIDTYPE_HEXA_MAP, summonlist[i].gridPositionX, summonlist[i].gridPositionZ);
-            if (summonlist != null)
-                Destroy(summonlist[i].gameObject);
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                //there is a champion
+                if (gridChampionsArray[x, z] != null)
+                {
+                    for (int i = 0; i < summonlist.Count; i++)
+                    {
+                        if (x == summonlist[i].gridPositionX && z == summonlist[i].gridPositionZ)
+                        {
+                            ChampionController championController = gridChampionsArray[x, z].GetComponent<ChampionController>();
+
+                            //set position and rotation
+                            Destroy(championController.gameObject);
+                            gridChampionsArray[x, z] = null;
+                        }
+                    }
+                }
+            }
         }
+        summonlist.Clear();
     }
 
     public bool Compose(Champion champion)
