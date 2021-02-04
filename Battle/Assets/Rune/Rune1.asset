@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeID: 1
   limitLevel: 1
-  runeName: "\uD14C\uC2A4\uD2B8\uB8EC2"
-  runeInfo: "\uD14C\uC2A4\uD2B8\uB97C \uC704\uD574 \uB9CC\uB4E4\uC5B4\uC9C4 \uB8EC"
+  runeName: "\uB2E8\uB2E8\uD568"
+  runeInfo: "\uBAA8\uB4E0 \uC544\uAD70 \uC720\uB2DB\uC758 \uCCB4\uB825 8% \uC99D"
   runeImage: {fileID: 21300000, guid: 5c27fc79dd2011c4ab50f507f7cfb7af, type: 3}

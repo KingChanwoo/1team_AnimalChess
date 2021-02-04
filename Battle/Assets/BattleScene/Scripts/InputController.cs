@@ -99,7 +99,7 @@ public class InputController : MonoBehaviour
                 if(gamePlayController.draggedChampion != null)
                 {
                     Destroy(gamePlayController.draggedChampion);
-                    gamePlayController.currentGold += gamePlayController.draggedChampion.GetComponent<ChampionController>().champion.cost;
+                    gamePlayController.currentGold += gamePlayController.draggedChampion.GetComponent<ChampionController>().champion.sellCost;
                     uiController.goldText.text = gamePlayController.currentGold.ToString();
                 }
             }
