@@ -673,7 +673,7 @@ public class ChampionController : MonoBehaviour
         isInCombat = false;
         target = null;
         isAttacking = false;
-        uIController.isLock = false;
+        
 
         skillScript.skill3buffOn = false;
         skillScript.skill5buffOn = false;

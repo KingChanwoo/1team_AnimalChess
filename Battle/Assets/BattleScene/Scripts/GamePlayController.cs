@@ -898,6 +898,8 @@ public class GamePlayController : MonoBehaviour
 
             uIController.ready.gameObject.SetActive(true);
 
+            
+
             //show timer text
             uIController.SetTimerTextActive(false);
 
@@ -926,9 +928,9 @@ public class GamePlayController : MonoBehaviour
 
             //refresh shop ui
             if (uIController.isLock == false)
-            {
                 championShop.RefreshShop(true);
-            }
+            else 
+                uIController.ShopLock();
 
             //check if we have lost
             if (currentHP <= 0)

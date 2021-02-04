@@ -36,6 +36,7 @@ public class RuneList : MonoBehaviour
 
             runePanels[i].transform.Find("RuneImage").GetComponent<Image>().sprite = rune.runeImage;
             runePanels[i].transform.Find("Text").GetComponent<Text>().text = rune.runeName;
+            runePanels[i].transform.Find("LockImage").transform.Find("LimitLevel").GetComponent<Text>().text = "Lv." + rune.limitLevel;
 
             if (PlayerPrefs.GetInt("playerLv") >= rune.limitLevel)
             {
