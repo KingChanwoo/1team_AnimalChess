@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: "\uC655\uC758 \uC0C1\uC9D5"
   m_EditorClassIdentifier: 
   displayName: "\uC655\uC758\uC0C1\uC9D5"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3afeb0cc63abe8f468ec5def3497d605, type: 3}
   championBonus:
-    gamePlayController: {fileID: 0}
     championBonusType: 0
     bonusTarget: 0
+    explain: "\uD544\uB4DC\uC704\uC758 \uBAB9 \uC911 \uB79C\uB364\uC73C\uB85C \uC655\uC88C
+      \uBC84\uD504\uB97C \uC218\uC5EC\uBC1B\uC2B5\uB2C8\uB2E4.(\uACF5\uACA9\uB825,
+      \uBC29\uC5B4\uB825, \uCD5C\uB300\uCCB4\uB825 \uC99D\uAC00 100%)"
     championCount1: 1
     championCount2: 0
     championCount3: 0

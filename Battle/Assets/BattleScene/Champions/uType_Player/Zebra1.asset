@@ -17,7 +17,6 @@ MonoBehaviour:
   level: 1
   skillID: 7
   uiname: "\uC5BC\uB8E9\uB9D0"
-  grade: 0
   cost: 1
   sellCost: 1
   type1: {fileID: 11400000, guid: e4bdc6418f192174d92812008e2cd841, type: 2}
@@ -37,5 +36,6 @@ MonoBehaviour:
   damageToPlayer: 0
   movementSpeed: 3.5
   skillName: "\uCC29\uC2DC\uD6A8\uACFC"
-  skillExplain: "20\uCD08\uB3D9\uC548 \uBAA8\uB4E0 \uC544\uAD70\uC5D0\uAC8C [20%]\uC744
-    \uBD80\uC5EC\uD569\uB2C8\uB2E4.                              [20% / 30% / 40%]"
+  skillExplain: "20\uCD08\uB3D9\uC548 \uBAA8\uB4E0 \uC544\uAD70\uC5D0\uAC8C \uBC29\uC5B4\uB825\uC744
+    [20%] \uBD80\uC5EC\uD569\uB2C8\uB2E4.                              [20% / 30%
+    / 40%]"

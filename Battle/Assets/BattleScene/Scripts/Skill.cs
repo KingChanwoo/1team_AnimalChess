@@ -275,9 +275,9 @@ public class Skill : MonoBehaviour
                 attacker.SkillEffect(target.gameObject, attacker.transform.forward, 2);
                 break;
             case 9:
-                if (attacker.lvl == 1) attacker.currentShield += 400;
-                else if (attacker.lvl == 2) attacker.currentShield += 800;
-                else if (attacker.lvl == 3) attacker.currentShield += 1500;
+                if (attacker.lvl == 1) attacker.currentShield = 400;
+                else if (attacker.lvl == 2) attacker.currentShield = 800;
+                else if (attacker.lvl == 3) attacker.currentShield = 1500;
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
             case 10:
@@ -848,18 +848,21 @@ public class Skill : MonoBehaviour
                 }
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
                 break;
-            case 44:
-                /*
+            case 44:              
                 Debug.Log("돌격병 소환");
                 target.currentHealth -= attacker.currentDamage * 3f;
                 worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                gamePlayController.EnemySummon(gameData.championsArray[123]);
-                gamePlayController.EnemySummon(gameData.championsArray[123]);
-                */
+
+                aiOpponent.EnemySummon(123, 100);
+                aiOpponent.EnemySummon(123, 100);
+
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2f);
                 break;
             case 45:
-                // 소환 스킬
+                Debug.Log("포병 소환");
+                aiOpponent.EnemySummon(124, 100);
+
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2f);
                 break;
             case 46:
                 attacker.currentShield = 500;
@@ -900,7 +903,16 @@ public class Skill : MonoBehaviour
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
                 break;
             case 51:
-                // 소환 스킬
+                Debug.Log("현대병사 소환");
+                for (int i = 0; i < aiOpponent.enemyArray.Count; i++)
+                {
+                    ChampionController championController = aiOpponent.enemyArray[i].GetComponent<ChampionController>();
+                    championController.currentShield += 300;
+                }
+                aiOpponent.EnemySummon(130, 100);
+                aiOpponent.EnemySummon(130, 100);
+
+                attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2f);
                 break;
             case 52:
                 if (skill52buffOn == false)
