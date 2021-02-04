@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: "\uBB34\uB9AC \uC0DD\uD65C"
   m_EditorClassIdentifier: 
   displayName: "\uBB34\uB9AC\uC0DD\uD65C"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 1b516167713c4bb47a8f80ad2c8990aa, type: 3}
   championBonus:
     championBonusType: 9
     bonusTarget: 0
+    explain: "\uC18C\uD658 \uC720\uB2DB\uC758 \uACF5\uACA9\uB825\uACFC \uCCB4\uB825,
+      \uBC29\uC5B4\uB825\uC774 \uB450\uBC30\uB9CC\uD07C \uC99D\uAC00\uD569\uB2C8\uB2E4."
     championCount1: 3
     championCount2: 0
     championCount3: 0
