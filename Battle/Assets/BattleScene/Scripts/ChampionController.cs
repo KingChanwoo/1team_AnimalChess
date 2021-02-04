@@ -880,7 +880,7 @@ public class ChampionController : MonoBehaviour
                             {
                                 championController.isSalamanderSkill = true;
                                 championController.salamanderskillCount = (int)time;
-                                championController.salamanderPoisonDamage = 2000;
+                                championController.salamanderPoisonDamage = currentDamage;
                                 Debug.Log("대상 : " + championController);
 
                             }
