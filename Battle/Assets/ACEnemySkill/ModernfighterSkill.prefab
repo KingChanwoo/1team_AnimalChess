@@ -4891,7 +4891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2857692189182086177}
   m_Layer: 0
-  m_Name: ModernfighterSkill
+  m_Name: Effect_12_HoloOrbitalstrike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
