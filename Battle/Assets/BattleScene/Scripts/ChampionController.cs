@@ -14,6 +14,7 @@ public class ChampionController : MonoBehaviour
     public static int TEAMID_PLAYER = 0;
     public static int TEAMID_AI = 1;
 
+    
 
     public GameObject levelupEffectPrefab;
     public GameObject projectileStart;
@@ -220,6 +221,7 @@ public class ChampionController : MonoBehaviour
         championAnimation = this.GetComponent<ChampionAnimation>();
         championAnimator = GetComponent<Animator>();
 
+        
         //disable agent
         navMeshAgent.enabled = false;
 
@@ -247,6 +249,8 @@ public class ChampionController : MonoBehaviour
         currentDefence = champion.defence;
 
         currentMoveSpeed = champion.movementSpeed;
+        
+        
 
 
         worldCanvasController.AddHealthBar(this.gameObject);
