@@ -265,7 +265,7 @@ public class ChampionController : MonoBehaviour
     /// Update is called once per frame
     void Update()
     {
-        championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed));
+        championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed) + 0.3f);
         gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
 
 
