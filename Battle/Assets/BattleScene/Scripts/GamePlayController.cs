@@ -1063,7 +1063,7 @@ public class GamePlayController : MonoBehaviour
         if (currentGold < 4)
             return;
 
-        if (currentChampionLimit < 9)
+        if (currentChampionLimit < 10)
         {
 
             currentExp += 40;
