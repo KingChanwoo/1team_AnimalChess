@@ -23,8 +23,8 @@ MonoBehaviour:
     championCount1: 2
     championCount2: 0
     championCount3: 0
-    bonusValue1: 200
-    bonusValue2: 100
+    bonusValue1: 3.5
+    bonusValue2: 2
     bonusValue3: 0
     duration: 0
     effectPrefab: {fileID: 0}
