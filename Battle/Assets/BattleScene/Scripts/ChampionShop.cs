@@ -41,7 +41,7 @@ public class ChampionShop : MonoBehaviour
     public void RefreshShop(bool isFree)
     {
         //return if we dont have enough gold
-        if (gamePlayController.currentGold < 4 && isFree == false)
+        if (gamePlayController.currentGold < 2 && isFree == false)
             return;
 
 
