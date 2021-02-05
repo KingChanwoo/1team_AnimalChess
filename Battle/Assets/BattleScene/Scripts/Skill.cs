@@ -696,7 +696,8 @@ public class Skill : MonoBehaviour
                         duration25 = this.time + 20; // 지속시간 
                     }
                     skill25buffOn = true;
-                    attacker.currentHealth *= 0.5f;
+                    damage = attacker.currentHealth * 0.5f;
+                    attacker.currentHealth -= damage;
                 }
 
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);

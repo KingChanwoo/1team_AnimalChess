@@ -265,6 +265,10 @@ public class ChampionController : MonoBehaviour
     /// Update is called once per frame
     void Update()
     {
+        championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed));
+        gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
+
+
         if (GameObject.FindGameObjectWithTag("propeller") != null)
         {
             for (int i = 0; i < GameObject.FindGameObjectsWithTag("propeller").Length; i++)
@@ -306,7 +310,7 @@ public class ChampionController : MonoBehaviour
         if (synergyIsApply)
         {
             ApplyActiveSynergy();
-            championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed) + 0.3f);
+            championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed));
             gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
 
             synergyIsApply = false;
@@ -940,6 +944,7 @@ public class ChampionController : MonoBehaviour
 
     public void RatSkill(float range)
     {
+        isDead = false;
         float skillrange = range;
         //find enemy
         SkillEffect(this.gameObject, this.transform.forward, 2);
@@ -1055,9 +1060,10 @@ public class ChampionController : MonoBehaviour
             if (OctopusSkillhit[i].collider.gameObject.tag == "Enemy")
             {
                 GameObject gameObject = OctopusSkillhit[i].collider.gameObject;
-                Debug.Log("넌 실명 당했다");
+                Debug.Log("넌 실명 당했다" + OctopusSkillhit[i].collider.gameObject);
                 gameObject.GetComponent<ChampionController>().isOctopusSkill = true;
-                gameObject.GetComponent<ChampionController>().currentDamage = 0;
+                gameObject.GetComponent<ChampionController>().OctopusSkillTimer = time;
+               gameObject.GetComponent<ChampionController>().currentDamage = 0;
             }
         }
     }
