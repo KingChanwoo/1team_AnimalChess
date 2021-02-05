@@ -23,7 +23,7 @@ MonoBehaviour:
     championCount1: 1
     championCount2: 0
     championCount3: 0
-    bonusValue1: 100
+    bonusValue1: 2
     bonusValue2: 0
     bonusValue3: 0
     duration: 0

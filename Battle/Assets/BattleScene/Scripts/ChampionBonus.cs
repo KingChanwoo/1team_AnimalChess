@@ -221,14 +221,14 @@ public class ChampionBonus
                 {
                     if(champion.champType1.displayName == "화려한무늬")
                     {
-                        champion.currentAttackSpeed *= (1 + (bonusValue2 / 100));
+                        champion.currentAttackSpeed *= bonusValue2;
                     }
                 }
                 else if (num >= championCount1)
                 {
                     if (champion.champType1.displayName == "화려한무늬")
                     {
-                        champion.currentAttackSpeed *= (1+(bonusValue1 / 100));
+                        champion.currentAttackSpeed *= bonusValue1;
                     }
                 }
                 break;
@@ -241,25 +241,25 @@ public class ChampionBonus
             case ChampionBonusType.AtkDef:
                 if(num >= championCount3)
                 {
-                    champion.currentDamage *= (1 + (bonusValue3 / 100));
-                    champion.currentDefence *= (1 + (bonusValue3 / 100));
+                    champion.currentDamage *= bonusValue3;
+                    champion.currentDefence *= bonusValue3;
                 }
                 else if (num >= championCount2)
                 {
-                    champion.currentDamage *= (1 + (bonusValue2 / 100));
-                    champion.currentDefence *= (1 + (bonusValue2 / 100));
+                    champion.currentDamage *= bonusValue2;
+                    champion.currentDefence *= bonusValue2;
                 }
                 else if (num >= championCount1)
                 {
-                    champion.currentDamage *= (1 + (bonusValue1 / 100));
-                    champion.currentDefence *= (1 + (bonusValue1 / 100));
+                    champion.currentDamage *= bonusValue1;
+                    champion.currentDefence *= bonusValue1;
                 }
                 break;
             case ChampionBonusType.MoveSpeed:
                 if(champion.champType1.displayName == "단단한부리")
                 {
                     champion.currentMoveSpeed += bonusValue1; // 이속 bonusValue1
-                    champion.currentAttackSpeed *= (1+(bonusValue2/100)); // 공속 bonusValue2
+                    champion.currentAttackSpeed *=bonusValue2; // 공속 bonusValue2
                 }
                 break;
 
@@ -305,10 +305,10 @@ public class ChampionBonus
             case ChampionBonusType.King:
                 if(champion.champType2.displayName == "왕의상징")
                 {
-                    champion.maxHealth *= 1 + (bonusValue1 / 100);
-                    champion.currentHealth *= 1 + (bonusValue1 / 100);
-                    champion.currentDamage *= 1 + (bonusValue1 / 100);
-                    champion.currentDefence *= 1 + (bonusValue1 / 100);
+                    champion.maxHealth *= bonusValue1;
+                    champion.currentHealth *= bonusValue1;
+                    champion.currentDamage *= bonusValue1;
+                    champion.currentDefence *= bonusValue1;
                 }
                 break;
             case ChampionBonusType.Ability:
@@ -352,9 +352,9 @@ public class ChampionBonus
                         {
                             if (ran <= champion.currentCritical)
                             {
-                                finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f + bonusValue2;
+                                finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f + bonusValue2;
                             }
-                            else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) + bonusValue2;
+                            else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) + bonusValue2;
                         }
                     }
                     else if (num >= championCount1)
@@ -363,21 +363,21 @@ public class ChampionBonus
                         {
                             if (ran <= champion.currentCritical)
                             {
-                                finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f + bonusValue1;
+                                finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f + bonusValue1;
                             }
-                            else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) + bonusValue1;
+                            else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) + bonusValue1;
                         }
                     }
                     break;
                 case ChampionBonusType.TenLongevity:
                     if (type2 == "십장생")
                     {
-                        hit.currentAttackSpeed = hit.champion.attackSpeed * (1 - (bonusValue1 / 100));
+                        hit.currentAttackSpeed = hit.champion.attackSpeed * (1.0f - (bonusValue1 / 100.0f));
                         if (ran <= champion.currentCritical)
                         {
-                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                            finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                         }
-                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                        else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                     }
                     break;
                 case ChampionBonusType.Fecyndiry:
@@ -385,13 +385,13 @@ public class ChampionBonus
                     {
                         if (ran <= champion.currentCritical)
                         {
-                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                            finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                         }
-                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                        else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
 
                         if (ran <= bonusValue1)
                         {
-                            finalDamage *= 2;
+                            finalDamage *= 2.0f;
                             champion.currentMana += champion.currentAttackMana;
                         }
                     }
@@ -399,9 +399,9 @@ public class ChampionBonus
                 default:
                     if (ran <= champion.currentCritical)
                     {
-                        finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                        finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                     }
-                    else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                    else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                     break;
 
 
@@ -418,9 +418,9 @@ public class ChampionBonus
                     {
                         if (ran <= champion.currentCritical)
                         {
-                            finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100))) * 1.5f;
+                            finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
                         }
-                        else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                        else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
 
                         if (num >= championCount3)
                             finalDamage *= 1.0f - (bonusValue3/ 100.0f);
@@ -434,9 +434,9 @@ public class ChampionBonus
                 default:
                     if (ran <= champion.currentCritical)
                     {
-                        finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                        finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                     }
-                    else finalDamage = damage * (1 - (hit.currentDefence / (hit.currentDefence + 100)));
+                    else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                     break;
             }
         }
