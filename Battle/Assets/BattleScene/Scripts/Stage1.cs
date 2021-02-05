@@ -53,7 +53,7 @@ public class Stage1 : MonoBehaviour
             aiOpponent.AddEnemy(124, 3, 3, 100);
             aiOpponent.AddEnemy(124, 2, 3, 100);
             aiOpponent.AddEnemy(123, 0, 3, 100);
-            aiOpponent.AddEnemy(123, 0, 3, 100);
+            aiOpponent.AddEnemy(123, 5, 2, 100);
         }
         else if (r == 7)
         {
@@ -61,8 +61,8 @@ public class Stage1 : MonoBehaviour
             aiOpponent.AddEnemy(124, 3, 3, 100);
             aiOpponent.AddEnemy(124, 2, 3, 100);
             aiOpponent.AddEnemy(124, 0, 3, 100);
-            aiOpponent.AddEnemy(123, 0, 3, 100);
-            aiOpponent.AddEnemy(123, 0, 3, 100);
+            aiOpponent.AddEnemy(123, 5, 2, 100);
+            aiOpponent.AddEnemy(123, 3, 2, 100);
         }
         else if (r == 8)
         {
