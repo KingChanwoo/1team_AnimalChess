@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922b77e70f5edd844bfbf722ca138255, type: 3}
   m_Name: Octopus2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1548543214523454, guid: 55d536ab61fddf44aa0a5aa5586e90bd, type: 3}
+  prefab: {fileID: 2152795495088652563, guid: 30a8b191a1bfdee4fa3ea2c7d7103130, type: 3}
   attackProjectile: {fileID: 0}
   level: 2
   skillID: 13
   uiname: "\uBB38\uC5B4"
-  grade: 0
   cost: 0
   sellCost: 4
   type1: {fileID: 11400000, guid: 016a093f392121f40bc70f33bbb4a533, type: 2}
