@@ -141,18 +141,15 @@ public class Skill : MonoBehaviour
             case 2:
                 if (attacker.lvl == 1)
                 {
-                    target.isStuned = true;
-                    target.stunTimer = 1;
+                    target.OnGotStun(1);
                 }
                 else if (attacker.lvl == 2)
                 {
-                    target.isStuned = true;
-                    target.stunTimer = 2;
+                    target.OnGotStun(2);
                 }
                 else if (attacker.lvl == 3)
                 {
-                    target.isStuned = true;
-                    target.stunTimer = 3; ;
+                    target.OnGotStun(3);
                 }
                 attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
@@ -190,8 +187,7 @@ public class Skill : MonoBehaviour
                     }
                     else target.currentShield -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 2;
+                    target.OnGotStun(2);
                 }
                 else if (attacker.lvl == 2)
                 {
@@ -553,8 +549,7 @@ public class Skill : MonoBehaviour
                     }
                     else target.currentShield -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 2;
+                    target.OnGotStun(2);
                 }
                 else if (attacker.lvl == 2)
                 {
@@ -566,8 +561,7 @@ public class Skill : MonoBehaviour
                     }
                     else target.currentShield -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 2;
+                    target.OnGotStun(2);
                 }
                 else if (attacker.lvl == 3)
                 {
@@ -579,8 +573,7 @@ public class Skill : MonoBehaviour
                     }
                     else target.currentShield -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 2;
+                    target.OnGotStun(2);
                 }
                 attacker.SkillEffect(target.gameObject, target.transform.forward, 2);
                 break;
@@ -792,8 +785,7 @@ public class Skill : MonoBehaviour
                     }
                     else target.currentShield -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 5;
+                    target.OnGotStun(5);
                 }
                 else if (attacker.lvl == 2)
                 {
@@ -805,8 +797,7 @@ public class Skill : MonoBehaviour
                     }
                     else target.currentShield -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 5;
+                    target.OnGotStun(5);
                 }
                 else if (attacker.lvl == 3)
                 {
@@ -818,8 +809,7 @@ public class Skill : MonoBehaviour
                     }
                     else target.currentShield -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 5;
+                    target.OnGotStun(5);
                 }
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 2);
                 break;
@@ -874,11 +864,21 @@ public class Skill : MonoBehaviour
                 {
                     attacker.currentCritical = 100;
                     if (attacker.lvl == 1)
-                        attacker.currentAttackSpeed *= 200 / 100;
+                    {
+                        buff = attacker.currentAttackSpeed;
+                        attacker.currentAttackSpeed += buff;
+                    }
+
                     else if (attacker.lvl == 2)
-                        attacker.currentAttackSpeed *= 250 / 100;
+                    {
+                        buff = attacker.currentAttackSpeed * 1.5f;
+                        attacker.currentAttackSpeed += buff;
+                    }
                     else if (attacker.lvl == 3)
-                        attacker.currentAttackSpeed *= 300 / 100;
+                    {
+                        buff = attacker.currentAttackSpeed * 2f;
+                        attacker.currentAttackSpeed += buff;
+                    }
                     skill32buffOn = true;
                 }
                 duration32 = this.time + 10; // 지속시간
@@ -892,7 +892,8 @@ public class Skill : MonoBehaviour
                 skill33Attacker = attacker;
                 if (skill33buffOn == false)
                 {
-                    attacker.currentAttackSpeed *= 400 / 100;
+                    buff = attacker.currentAttackSpeed * 3;
+                    attacker.currentAttackSpeed += buff;
                     skill33buffOn = true;
                 }
                 duration33 = this.time + 3; // 지속시간
@@ -941,8 +942,7 @@ public class Skill : MonoBehaviour
                     }
                     target.currentHealth -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 3;
+                    target.OnGotStun(3);
 
                 }
                 else if (attacker.lvl == 2)
@@ -954,8 +954,7 @@ public class Skill : MonoBehaviour
                     }
                     target.currentHealth -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 3;
+                    target.OnGotStun(3);
                 }
                 else if (attacker.lvl == 3)
                 {
@@ -966,19 +965,19 @@ public class Skill : MonoBehaviour
                     }
                     target.currentHealth -= damage;
                     worldCanvasController.AddDamageText(attacker.transform.position + new Vector3(0, 2.5f, 0), damage, Color.red);
-                    target.isStuned = true;
-                    target.stunTimer = 3;
+                    target.OnGotStun(3);
                 }
                 attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 0.5f);
                 attacker.SkillEffect2(target.gameObject, attacker.transform.forward, 1.5f);
                 break;
             case 39:
-                for (int i = 0; i < playerChampion.Count; i++)
+                if (skill39buffOn == false)
                 {
-                    ChampionController champion = playerChampion[i];
-                    skill39Attacker = attacker;
-                    if (skill39buffOn == false)
+                    for (int i = 0; i < playerChampion.Count; i++)
                     {
+                        ChampionController champion = playerChampion[i];
+                        skill39Attacker = attacker;
+
                         if (attacker.lvl == 1)
                         {
                             damage = champion.currentDamage * 0.2f;
@@ -994,10 +993,9 @@ public class Skill : MonoBehaviour
                             damage = champion.currentDamage * 0.5f;
                             champion.currentDamage += damage;
                         }
-
-                        skill39buffOn = true;
+                        duration39 = this.time + 5; // 지속시간
                     }
-                    duration39 = this.time + 5; // 지속시간
+                    skill39buffOn = true;
                 }
                 break;
             case 40:
@@ -1079,9 +1077,13 @@ public class Skill : MonoBehaviour
                         if (gamePlayController.gridChampionsArray[x, z] != null)
                         {
                             ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
-                            championController.currentHealth -= damage;
-                            championController.isStuned = true;
-                            championController.stunTimer = 1;
+                            if (target.currentShield < damage)
+                            {
+                                target.currentShield = 0;
+                                target.currentHealth -= damage - target.currentShield;
+                            }
+                            else target.currentShield -= damage;
+                            championController.OnGotStun(1);
                         }
                     }
                 }
@@ -1114,9 +1116,13 @@ public class Skill : MonoBehaviour
                         if (gamePlayController.gridChampionsArray[x, z] != null)
                         {
                             ChampionController championController = gamePlayController.gridChampionsArray[x, z].GetComponent<ChampionController>();
-                            championController.currentHealth -= damage;
-                            championController.isStuned = true;
-                            championController.stunTimer = 2;
+                            if (target.currentShield < damage)
+                            {
+                                target.currentShield = 0;
+                                target.currentHealth -= damage - target.currentShield;
+                            }
+                            else target.currentShield -= damage;
+                            championController.OnGotStun(2);
                         }
                     }
                 }
@@ -1137,8 +1143,7 @@ public class Skill : MonoBehaviour
                                 //if new this champion is closer then best distance
                                 if (distance < 9)
                                 {
-                                    championController.isSilence = true;
-                                    championController.silenceTimer = 3;
+                                    championController.OnGotStun(3);
                                 }
                             }
                         }
@@ -1232,8 +1237,8 @@ public class Skill : MonoBehaviour
                                 if (distance < 6)
                                 {
                                     championController.currentHealth -= damage;
-                                    championController.isStuned = true;
-                                    championController.stunTimer = 1;
+                                    championController.OnGotStun(1);
+
                                 }
                             }
                         }
@@ -1520,11 +1525,11 @@ public class Skill : MonoBehaviour
             {
                 skill32Attacker.currentCritical = 25;
                 if (skill32Attacker.lvl == 1)
-                    skill32Attacker.currentAttackSpeed *= 100 / 200;
+                    skill32Attacker.currentAttackSpeed -= buff;
                 else if (skill32Attacker.lvl == 2)
-                    skill32Attacker.currentAttackSpeed *= 100 / 250;
+                    skill32Attacker.currentAttackSpeed -= buff;
                 else if (skill32Attacker.lvl == 3)
-                    skill32Attacker.currentAttackSpeed *= 100 / 300;
+                    skill32Attacker.currentAttackSpeed -= buff;
                 skill32buffOn = false;
                 skill32Attacker = null;
                 duration32 = -1;
@@ -1536,7 +1541,7 @@ public class Skill : MonoBehaviour
         {
             if (skill33buffOn)
             {
-                skill33Attacker.currentAttackSpeed *= 100 / 400;
+                skill33Attacker.currentAttackSpeed -= buff;
                 skill33buffOn = false;
                 skill33Attacker = null;
                 duration33 = -1;
