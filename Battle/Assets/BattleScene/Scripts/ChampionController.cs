@@ -834,7 +834,52 @@ public class ChampionController : MonoBehaviour
     }
 
 
+    public void ElephantSkill(float range)
+    {
+        float skillrange = range;
+        float Elephantcount = 0;
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                if (aIopponent.gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
 
+                    if (championController.isDead == false)
+                    {
+                        //calculate distance
+                        float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+                        //if new this champion is closer then best distance
+                        if (distance < skillrange)
+                        {
+                            Elephantcount++;
+                            float damage = this.currentDamage;
+                            if (championController.currentShield < damage)
+                            {
+                                championController.currentShield = 0;
+                                championController.currentHealth -= damage - championController.currentShield;
+                            }
+                            else championController.currentShield -= damage;
+                        }
+                    }
+
+                }
+            }
+        }
+        if (this.lvl == 1)
+        {
+            currentShield += maxHealth * 0.1f * Elephantcount;
+        }
+        if (this.lvl == 2)
+        {
+            currentShield += maxHealth * 0.2f * Elephantcount;
+        }
+        if (this.lvl == 3)
+        {
+            currentShield += maxHealth * 0.4f * Elephantcount;
+        }
+    }
 
     public void SheepSkill(float damage)
     {
