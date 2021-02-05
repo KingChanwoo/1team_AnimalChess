@@ -17,7 +17,6 @@ MonoBehaviour:
   level: 0
   skillID: 0
   uiname: Buggy
-  grade: 0
   cost: 0
   sellCost: 0
   type1: {fileID: 11400000, guid: e918e0afc01f45d40b7d41fe639c064e, type: 2}
@@ -36,5 +35,7 @@ MonoBehaviour:
   attackRange: 5
   damageToPlayer: 3
   movementSpeed: 3.5
-  skillName: 
-  skillExplain: 
+  skillName: "\uBCF4\uAE09\uD488 \uC9C0\uC6D0"
+  skillExplain: "\uC2A4\uD0AC \uC0AC\uC6A9 \uC2DC  \uD604\uB300\uBCD1\uC0AC 2\uB9C8\uB9AC\uB97C
+    \uC18C\uD658\uD558\uACE0, \uBAA8\uB4E0 \uC544\uAD70\uC5D0\uAC8C \uBCF4\uD638\uB9C9
+    300\uC744 \uCD94\uAC00\uB85C \uBD80\uC5EC\uD55C\uB2E4."

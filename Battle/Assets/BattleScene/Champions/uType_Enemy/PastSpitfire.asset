@@ -17,7 +17,6 @@ MonoBehaviour:
   level: 0
   skillID: 0
   uiname: Spitfire
-  grade: 0
   cost: 0
   sellCost: 0
   type1: {fileID: 11400000, guid: e918e0afc01f45d40b7d41fe639c064e, type: 2}
@@ -36,5 +35,6 @@ MonoBehaviour:
   attackRange: 5
   damageToPlayer: 3
   movementSpeed: 3.5
-  skillName: 
-  skillExplain: 
+  skillName: "\uBE60\uB978\uBE44\uD589"
+  skillExplain: "\uB9C8\uB098\uAC00 \uAC00\uB4DD\uCC28\uBA74 5\uCD08\uB3D9\uC548
+    \uC790\uC2E0\uC758 \uD68C\uD53C\uC728\uC774 40% \uC624\uB985\uB2C8\uB2E4."
