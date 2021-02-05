@@ -13,7 +13,7 @@ public class PlayerInfoPrinter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(PlayerPrefs.GetInt("currentEXP"));
     }
 
     // Update is called once per frame

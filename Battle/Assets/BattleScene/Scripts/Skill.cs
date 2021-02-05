@@ -250,11 +250,11 @@ public class Skill : MonoBehaviour
                     if (skill7buffOn == false)
                     {
                         if (attacker.lvl == 1)
-                            champion.currentDefence += champion.currentDamage * (20 / 100);
+                            champion.currentDefence += champion.currentDamage * 0.2f;
                         else if (attacker.lvl == 2)
-                            champion.currentDefence += champion.currentDamage * (30 / 100);
+                            champion.currentDefence += champion.currentDamage * 0.3f;
                         else if (attacker.lvl == 3)
-                            champion.currentDefence += champion.currentDamage * (40 / 100);
+                            champion.currentDefence += champion.currentDamage * 0.4f;
                         skill7buffOn = true;
                     }
                     duration7 = this.time + 20; // 지속시간   
@@ -1140,11 +1140,11 @@ public class Skill : MonoBehaviour
                 {
                     ChampionController champion = playerChampion[i];
                     if (skill7Attacker.lvl == 1)
-                        champion.currentDefence -= champion.currentDamage * (20 / 100);
+                        champion.currentDefence -= champion.currentDamage * 0.2f;
                     else if (skill7Attacker.lvl == 2)
-                        champion.currentDefence -= champion.currentDamage * (30 / 100);
+                        champion.currentDefence -= champion.currentDamage * 0.3f;
                     else if (skill7Attacker.lvl == 3)
-                        champion.currentDefence -= champion.currentDamage * (40 / 100);
+                        champion.currentDefence -= champion.currentDamage * 0.4f;
                     skill7buffOn = false;
                     skill7Attacker = null;
                     duration7 = -1;

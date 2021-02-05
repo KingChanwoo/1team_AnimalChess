@@ -7,30 +7,32 @@ public class PlayerInfo : MonoBehaviour
     public string playerName = null;
     public int playerLevel = 1;
     public int maxEXP = 300;
-    public int currentEXP = 0;
+    public int currentEXP;
 
-    public int currentDNA = 0;
+    public int currentDNA;
 
 
     private void Awake()
     {
         playerName = PlayerPrefs.GetString("playerName");
         currentDNA = PlayerPrefs.GetInt("currenDNA");
+        currentEXP = PlayerPrefs.GetInt("currenEXP");
 
         if (PlayerPrefs.HasKey("playerLv"))
             playerLevel = PlayerPrefs.GetInt("playerLv");
-        currentEXP = PlayerPrefs.GetInt("currenEXP");
 
-        currentEXP += PlayerPrefs.GetInt("rewardEXP");
-        currentDNA += PlayerPrefs.GetInt("rewardDNA");
+        if (PlayerPrefs.HasKey("rewardEXP"))
+        {
+            currentEXP += PlayerPrefs.GetInt("rewardEXP");
+            currentDNA += PlayerPrefs.GetInt("rewardDNA");
+            PlayerPrefs.SetInt("currentEXP", currentEXP);
+            PlayerPrefs.SetInt("currentDNA", currentDNA);
+        }
+
     }
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("playerLv", playerLevel);
-        PlayerPrefs.SetInt("currentEXP", currentEXP);
-        PlayerPrefs.SetInt("currentDNA", currentDNA);
-
         if(PlayerPrefs.HasKey("rewardEXP"))
         {
             PlayerPrefs.DeleteKey("rewardEXP");
@@ -48,6 +50,8 @@ public class PlayerInfo : MonoBehaviour
             PlayerPrefs.SetInt("playerLv", playerLevel);
             PlayerPrefs.SetInt("currentEXP", currentEXP);
         }
+
+        
     }
 
 

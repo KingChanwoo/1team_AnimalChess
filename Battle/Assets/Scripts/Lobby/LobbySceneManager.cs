@@ -24,7 +24,6 @@ public class LobbySceneManager : MonoBehaviour
     private void Awake()
     {
         nameSet = PlayerPrefs.GetInt("nameSet");
-        nameSet = 0;
 
     }
     // Start is called before the first frame update

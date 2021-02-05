@@ -507,6 +507,8 @@ MonoBehaviour:
   isRatSkillOn: 0
   isSalamanderDead: 0
   isSalamanderSkillOn: 0
+  isSilence: 0
+  silenceTimer: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0
@@ -566,8 +568,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.5, z: 0.9}
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Size: {x: 0.95785093, y: 0.748161, z: 0.9}
+  m_Center: {x: -0.028925022, y: 0.42408055, z: 0}
 --- !u!1 &2739323167071793416
 GameObject:
   m_ObjectHideFlags: 0

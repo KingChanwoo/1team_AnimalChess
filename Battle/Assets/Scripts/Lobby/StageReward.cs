@@ -44,22 +44,20 @@ public class StageReward : MonoBehaviour
                 lastHP = PlayerPrefs.GetInt("s2PlayerHP");
             PlayerPrefs.DeleteKey("stageNum");
         }
-
-       
+        PlayerPrefs.SetInt("rewardEXP", expValue + expRune);
+        PlayerPrefs.SetInt("rewardDNA", dnaValue + dnaRune);
+        Debug.Log("보상스테이지 : " + expValue + expRune);
     }
 
     // Update is called once per frame
     float alpha = 0;
     void Update()
     {
-
+        
     }
 
     public void PassScene()
     {
-        PlayerPrefs.SetInt("rewardEXP", expValue);
-        PlayerPrefs.SetInt("rewardDNA", dnaValue);
-
         PlayerPrefs.DeleteKey("round");
         SceneManager.LoadScene("LobbyScene");
     }
