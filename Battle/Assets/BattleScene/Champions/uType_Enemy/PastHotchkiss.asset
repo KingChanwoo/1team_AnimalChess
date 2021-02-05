@@ -17,7 +17,6 @@ MonoBehaviour:
   level: 0
   skillID: 0
   uiname: Hotchkiss
-  grade: 0
   cost: 0
   sellCost: 0
   type1: {fileID: 11400000, guid: e918e0afc01f45d40b7d41fe639c064e, type: 2}
@@ -36,5 +35,6 @@ MonoBehaviour:
   attackRange: 5
   damageToPlayer: 3
   movementSpeed: 3.5
-  skillName: 
-  skillExplain: 
+  skillName: "\uACBD\uC804\uCC28"
+  skillExplain: "\uAE30\uC808\uC5D0 \uBA74\uC5ED\uC774\uBA70, \uB9C8\uB098\uAC00
+    \uAC00\uB4DD \uCC28\uBA74 \uC790\uC2E0\uC758 \uBCF4\uD638\uB9C9 500\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4."

@@ -17,7 +17,6 @@ MonoBehaviour:
   level: 0
   skillID: 0
   uiname: HPC_soldier
-  grade: 0
   cost: 0
   sellCost: 0
   type1: {fileID: 11400000, guid: e918e0afc01f45d40b7d41fe639c064e, type: 2}
@@ -36,5 +35,6 @@ MonoBehaviour:
   attackRange: 5
   damageToPlayer: 3
   movementSpeed: 3.5
-  skillName: 
-  skillExplain: 
+  skillName: "\uC2A4\uD300\uD329"
+  skillExplain: "HP\uAC00 30% \uAC10\uC18C\uB418\uACE0, \uC790\uC2E0\uC758 10\uCD08\uB3D9\uC548
+    \uACF5\uACA9\uC18D\uB3C4\uC640 \uACF5\uACA9\uB825\uC774 \uB450\uBC30 \uC0C1\uC2B9\uD569\uB2C8\uB2E4."
