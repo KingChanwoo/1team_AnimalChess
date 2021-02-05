@@ -195,10 +195,14 @@ public class ChampionController : MonoBehaviour
     /// Start is called before the first frame update
     void Awake()
     {
+        championAnimator = GetComponent<Animator>();
+
         uIController = GameObject.Find("Scripts").GetComponent<UIController>();
         championAnimator = gameObject.GetComponent<Animator>();
         skillScript = GameObject.Find("Scripts").GetComponent<Skill>();
         atkSpeedAnimator = championAnimator.GetFloat("attackSpeed");
+        
+
     }
 
     /// <summary>
@@ -218,7 +222,6 @@ public class ChampionController : MonoBehaviour
         worldCanvasController = GameObject.Find("Scripts").GetComponent<WorldCanvasController>();
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         championAnimation = this.GetComponent<ChampionAnimation>();
-        championAnimator = GetComponent<Animator>();
 
         //disable agent
         navMeshAgent.enabled = false;
@@ -265,6 +268,9 @@ public class ChampionController : MonoBehaviour
     /// Update is called once per frame
     void Update()
     {
+        championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed));
+        gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
+
         if (GameObject.FindGameObjectWithTag("propeller") != null)
         {
             for (int i = 0; i < GameObject.FindGameObjectsWithTag("propeller").Length; i++)
@@ -306,8 +312,7 @@ public class ChampionController : MonoBehaviour
         if (synergyIsApply)
         {
             ApplyActiveSynergy();
-            championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed) + 0.3f);
-            gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
+            
 
             synergyIsApply = false;
         }
