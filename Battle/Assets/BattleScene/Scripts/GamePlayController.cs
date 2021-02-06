@@ -26,6 +26,10 @@ public class GamePlayController : MonoBehaviour
     public float weather = 0;
     public float weathercheck = 0;
 
+    public bool isRhinoskin = false;
+    public bool isFrogskin = false;
+    public bool isGreenlizardskin = false;
+
     public Map map;
     public InputController inputController;
     public GameData gameData;
@@ -455,7 +459,34 @@ public class GamePlayController : MonoBehaviour
 
             for (int i = 0; i < gameData.championsArray.Length; i++)
             {
-                if (champion == gameData.championsArray[i])
+                if (champion.level == 2 && champion.uiname == "도마뱀" && isGreenlizardskin == true)
+                {
+                    Debug.Log("도마뱀 스킨");
+                    Debug.Log(isGreenlizardskin);
+                    champion = gameData.championsArray[152];
+
+                    Compose(champion);
+                    break;
+                }
+                else if (champion.level == 2 && champion.uiname == "코뿔소" && isRhinoskin == true)
+                {
+                    Debug.Log("코불소 스킨");
+                    Debug.Log(isRhinoskin);
+                    champion = gameData.championsArray[153];
+                     
+
+                    Compose(champion);
+                    break;
+                }
+                else if (champion.level == 2 && champion.uiname == "개구리" && isFrogskin == true)
+                {
+
+                    champion = gameData.championsArray[154];
+
+                    Compose(champion);
+                    break;
+                }
+                else if (champion == gameData.championsArray[i])
                 {
                     champion = gameData.championsArray[i + 1];
 
@@ -463,8 +494,6 @@ public class GamePlayController : MonoBehaviour
                     {
                         lv3List.Add(i - 1);  // 3성 유닛의 1성 챔피언 ID 를 리스트에 추가
                     }
-
-
                     Compose(champion);
                     break;
                 }
