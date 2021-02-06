@@ -91,6 +91,16 @@ public class GamePlayController : MonoBehaviour
     {
         //set starting gamestage
         currentGameStage = GameStage.Preparation;
+        if (PlayerPrefs.GetInt("usedRune") == 4)
+        {
+            currentGold += 2;
+        }
+
+        if (PlayerPrefs.GetInt("usedRune") == 9)
+        {
+            Rune9();
+        }
+        
 
         //init arrays
         ownChampionInventoryArray = new GameObject[Map.inventorySize];
@@ -102,10 +112,21 @@ public class GamePlayController : MonoBehaviour
 
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
     }
-
+    bool runeApply = false;
     /// Update is called once per frame
     void Update()
     {
+        if (runeApply == false)
+        {
+            if (PlayerPrefs.GetInt("usedRune") == 9)
+            {
+                Rune9();
+                runeApply = true;
+            }
+        }
+        
+
+
         //manage game stage
         if (currentGameStage == GameStage.Preparation)
         {
@@ -511,6 +532,12 @@ public class GamePlayController : MonoBehaviour
 
         if (draggedChampion != null)
         {
+            if(enableSell == true)
+            {
+                currentGold += draggedChampion.GetComponent<ChampionController>().sellCost;
+                Destroy(draggedChampion);
+            }
+
             draggedChampion.GetComponent<BoxCollider>().enabled = true;
             //set dragged
             draggedChampion.GetComponent<ChampionController>().IsDragged = false;
@@ -996,8 +1023,24 @@ public class GamePlayController : MonoBehaviour
         income += baseGoldIncome;
         income += bank;
         income += winBonus;
-        if (continuedWin > 4) income += 2;
-        else if (continuedWin > 1) income++;
+        if (continuedWin > 4)
+        {
+            if (PlayerPrefs.GetInt("usedRune") == 8)
+            {
+                income += 3;
+            }
+            else
+                income += 2;
+        }
+        else if (continuedWin > 1)
+        {
+            if (PlayerPrefs.GetInt("usedRune") == 8)
+            {
+                income += 2;
+            }
+            else
+                income++;
+        }
         else if (continuedLose > 4) income += 4;
         else if (continuedLose > 2) income += 3;
         else if (continuedLose > 1) income += 2;
@@ -1294,6 +1337,48 @@ public class GamePlayController : MonoBehaviour
                 }
             }
         }
+    }
+
+    void Rune9()
+    {
+        List<int> champion4Cost = new List<int>();
+
+        for (int i = 0; i < gameData.championsArray.Length; i++)
+        {
+            Champion champion4 = gameData.championsArray[i];
+
+            if (champion4.cost == 4)
+            {
+                champion4Cost.Add(i);
+            }
+        }
+
+        int ran = Random.Range(0, champion4Cost.Count);
+
+        Champion champion = gameData.championsArray[champion4Cost[ran]];
+        //instantiate champion prefab
+        GameObject championPrefab = Instantiate(champion.prefab);
+
+        //get championController
+        ChampionController championController = championPrefab.GetComponent<ChampionController>();
+
+        //setup chapioncontroller
+        championController.Init(champion, ChampionController.TEAMID_PLAYER);
+
+
+        //set grid position
+        championController.SetGridPosition(Map.GRIDTYPE_OWN_INVENTORY, 0, -1);
+
+        //set position and rotation
+        championController.SetWorldPosition();
+        championController.SetWorldRotation();
+
+
+        //store champion in inventory array
+        StoreChampionInArray(Map.GRIDTYPE_OWN_INVENTORY, map.ownTriggerArray[0].gridX, -1, championPrefab);
+
+        //set gold on ui
+        uIController.UpdateUI();
     }
 
 }

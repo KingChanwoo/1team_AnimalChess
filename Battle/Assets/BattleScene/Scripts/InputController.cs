@@ -94,19 +94,7 @@ public class InputController : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            if(gamePlayController.enableSell == true)
-            {
-                if(gamePlayController.draggedChampion != null)
-                {
-                    Destroy(gamePlayController.draggedChampion);
-                    gamePlayController.currentGold += gamePlayController.draggedChampion.GetComponent<ChampionController>().champion.sellCost;
-                    uiController.goldText.text = gamePlayController.currentGold.ToString();
-                }
-            }
-            else
-            {
-                gamePlayController.StopDrag();
-            }
+            gamePlayController.StopDrag();
         }
 
         //store mouse position

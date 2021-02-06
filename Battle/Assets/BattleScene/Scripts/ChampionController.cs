@@ -9,7 +9,7 @@ using UnityEngine.AI;
 /// </summary>
 public class ChampionController : MonoBehaviour
 {
-    public static Animator championAnimator;
+    public Animator championAnimator;
 
     public static int TEAMID_PLAYER = 0;
     public static int TEAMID_AI = 1;
@@ -56,6 +56,7 @@ public class ChampionController : MonoBehaviour
 
     [HideInInspector]
     public float maxMana = 0;
+    public int sellCost;
 
     [HideInInspector]
     public float currentMana = 0;
@@ -196,7 +197,7 @@ public class ChampionController : MonoBehaviour
     void Awake()
     {
         uIController = GameObject.Find("Scripts").GetComponent<UIController>();
-        championAnimator = gameObject.GetComponent<Animator>();
+        championAnimator = this.gameObject.GetComponent<Animator>();
         skillScript = GameObject.Find("Scripts").GetComponent<Skill>();
         atkSpeedAnimator = championAnimator.GetFloat("attackSpeed");
     }
@@ -229,8 +230,16 @@ public class ChampionController : MonoBehaviour
         champType1 = champion.type1;
         champType2 = champion.type2;
         //set stats
-        maxHealth = champion.health;
-        currentHealth = champion.health;
+        if (PlayerPrefs.GetInt("usedRune") == 2 && teamID == TEAMID_PLAYER)
+        {
+            maxHealth = champion.health * 1.1f;
+            currentHealth = champion.health * 1.1f;
+        }
+        else
+        {
+            maxHealth = champion.health;
+            currentHealth = champion.health;
+        }
         currentHealthReg = champion.healthRegeneration;
         currentShield = champion.shield;
 
@@ -239,7 +248,14 @@ public class ChampionController : MonoBehaviour
         currentHitMana = champion.hitMana;
         currentAttackMana = champion.attackMana;
 
-        currentDamage = champion.damage;
+        if(PlayerPrefs.GetInt("usedRune") == 1 && teamID == TEAMID_PLAYER)
+        {
+            currentDamage = champion.damage *1.05f;
+        }
+        else
+        {
+            currentDamage = champion.damage;
+        }
         currentCritical = champion.critical;
         currentEvasion = champion.evasion;
         currentAttackSpeed = champion.attackSpeed;
@@ -248,6 +264,7 @@ public class ChampionController : MonoBehaviour
 
         currentMoveSpeed = champion.movementSpeed;
 
+        sellCost = champion.sellCost;
 
         worldCanvasController.AddHealthBar(this.gameObject);
         worldCanvasController.AddManaBar(this.gameObject);
