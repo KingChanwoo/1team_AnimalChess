@@ -324,7 +324,7 @@ public class ChampionController : MonoBehaviour
             currentAttackSpeed /= 1 + (strengthValue2 / 100);
         }
 
-        if (synergyIsApply)
+        if (synergyIsApply && gamePlayController.currentGameStage == GameStage.Combat)
         {
             ApplyActiveSynergy();
             championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed));
