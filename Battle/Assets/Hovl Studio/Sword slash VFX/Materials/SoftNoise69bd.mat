@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: SoftNoise69bd
   m_Shader: {fileID: 4800000, guid: ca825309dbbb03640874997c5db5cb48, type: 3}
   m_ShaderKeywords: _SOFTEDGES_ON _USEDEPTH_ON _USEFRESNEL_ON
@@ -99,7 +100,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 2
+    - _Opacity: 3
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _Softedges: 1

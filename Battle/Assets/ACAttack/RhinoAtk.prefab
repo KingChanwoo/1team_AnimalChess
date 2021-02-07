@@ -33705,7 +33705,7 @@ GameObject:
   - component: {fileID: 39380637205443252}
   - component: {fileID: 7611662409123397902}
   m_Layer: 0
-  m_Name: Prick (1)
+  m_Name: RhinoAtk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33718,7 +33718,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5550218882782830185}
-  m_LocalRotation: {x: -0.39856446, y: 0.015784686, z: 0.021360442, w: 0.9167556}
+  m_LocalRotation: {x: 0.031776067, y: 0.9160293, z: 0.3978697, w: -0.039753478}
   m_LocalPosition: {x: 0.16794585, y: -0.006023109, z: 0.31297827}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -33735,7 +33735,7 @@ Transform:
   - {fileID: 626480198244030645}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -47.008003, y: 1.001, z: 2.2340002}
+  m_LocalEulerAnglesHint: {x: -47.008003, y: 183.99799, z: 2.2340002}
 --- !u!198 &39380637205443252
 ParticleSystem:
   m_ObjectHideFlags: 0

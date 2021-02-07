@@ -28914,7 +28914,7 @@ GameObject:
   - component: {fileID: 6408420708636140694}
   - component: {fileID: 6383306100735896862}
   m_Layer: 0
-  m_Name: null
+  m_Name: Ibex,BuffaloAtk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28927,7 +28927,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6509405413094815880}
-  m_LocalRotation: {x: 0.8119731, y: 0.23856086, z: 0.1501674, w: 0.51111454}
+  m_LocalRotation: {x: 0.73005176, y: 0.46054092, z: -0.48277855, w: 0.14782248}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -28937,7 +28937,7 @@ Transform:
   - {fileID: 355062242050875673}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 130.679, y: -48.440002, z: -56.083984}
+  m_LocalEulerAnglesHint: {x: 138.661, y: 49.244995, z: -44.87097}
 --- !u!198 &6408420708636140694
 ParticleSystem:
   m_ObjectHideFlags: 0

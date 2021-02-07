@@ -14457,7 +14457,7 @@ GameObject:
   - component: {fileID: 8372590059460441482}
   - component: {fileID: 8374149461266455400}
   m_Layer: 0
-  m_Name: Sword Slash 1
+  m_Name: CatAtk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14470,7 +14470,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8572002214208163464}
-  m_LocalRotation: {x: -0, y: -0, z: -0.86512184, w: 0.5015619}
+  m_LocalRotation: {x: -0.86512065, y: 0.50156397, z: 0, w: -0}
   m_LocalPosition: {x: 2.2371926, y: 2.2970338, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14480,7 +14480,7 @@ Transform:
   - {fileID: 8566669526939222856}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -119.79301}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: -299.793}
 --- !u!198 &8372590059460441482
 ParticleSystem:
   m_ObjectHideFlags: 0
