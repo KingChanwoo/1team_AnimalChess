@@ -916,7 +916,18 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 35:
-   
+                if (attacker.lvl == 1)
+                {
+                    attacker.FrogSkill(1.5f, 1);
+                }
+                else if (attacker.lvl == 2)
+                {
+                    attacker.FrogSkill(3f, 2);
+                }
+                else if (attacker.lvl == 3)
+                {
+                    attacker.FrogSkill(6f, 3);
+                }
                 break;
             case 36:
                 // 패시브로 대체
