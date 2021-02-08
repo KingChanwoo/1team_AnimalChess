@@ -13,6 +13,8 @@ public class StageSceneManager : MonoBehaviour
     public GameObject s1Image;
     public GameObject s2Image;
 
+    public GameObject lockImage;
+
     public GameObject earth;
 
     Vector3 stage1Rotation = new Vector3(18,-107.5f,11.39f);
@@ -86,6 +88,8 @@ public class StageSceneManager : MonoBehaviour
         round.text = "구성 라운드 : 30 라운드";
         s2Image.SetActive(false);
         s1Image.SetActive(true);
+
+        lockImage.SetActive(false);
     }
 
     void Stage2Pirnt()
@@ -95,6 +99,8 @@ public class StageSceneManager : MonoBehaviour
         round.text = "구성 라운드 : 30 라운드";
         s1Image.SetActive(false);
         s2Image.SetActive(true);
+
+        lockImage.SetActive(true);
     }
 
     public void EnterStage()

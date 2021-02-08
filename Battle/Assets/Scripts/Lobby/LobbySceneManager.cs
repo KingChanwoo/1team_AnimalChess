@@ -30,8 +30,7 @@ public class LobbySceneManager : MonoBehaviour
     void Start()
     {
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-        level.text = "" + playerInfo.playerLevel;
-        dnaValue.text = "" + playerInfo.currentDNA;
+        
         if(SceneManager.GetActiveScene().name == "LobbyScene")
         {
             if (nameSet == 0) nameSetting.SetActive(true);
@@ -42,7 +41,8 @@ public class LobbySceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        level.text = "" + playerInfo.playerLevel;
+        dnaValue.text = "" + playerInfo.currentDNA;
     }
 
     public void NameSet()
