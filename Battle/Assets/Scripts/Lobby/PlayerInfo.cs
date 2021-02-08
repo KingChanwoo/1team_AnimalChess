@@ -8,15 +8,14 @@ public class PlayerInfo : MonoBehaviour
     public int playerLevel = 1;
     public int maxEXP = 300;
     public int currentEXP;
-
     public int currentDNA;
 
 
     private void Awake()
     {
         playerName = PlayerPrefs.GetString("playerName");
-        currentDNA = PlayerPrefs.GetInt("currenDNA");
-        currentEXP = PlayerPrefs.GetInt("currenEXP");
+        currentDNA = PlayerPrefs.GetInt("currentDNA");
+        currentEXP = PlayerPrefs.GetInt("currentEXP");
 
         if (PlayerPrefs.HasKey("playerLv"))
             playerLevel = PlayerPrefs.GetInt("playerLv");
@@ -28,8 +27,8 @@ public class PlayerInfo : MonoBehaviour
             PlayerPrefs.SetInt("currentEXP", currentEXP);
             PlayerPrefs.SetInt("currentDNA", currentDNA);
         }
-
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,9 +49,5 @@ public class PlayerInfo : MonoBehaviour
             PlayerPrefs.SetInt("playerLv", playerLevel);
             PlayerPrefs.SetInt("currentEXP", currentEXP);
         }
-
-        
     }
-
-
 }

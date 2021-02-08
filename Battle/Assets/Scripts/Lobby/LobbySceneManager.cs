@@ -59,41 +59,57 @@ public class LobbySceneManager : MonoBehaviour
     //  화면 이동 함수
     public void PlayGame()
     {
+        PlayerPrefs.SetInt("currentEXP", playerInfo.currentEXP);
+        PlayerPrefs.SetInt("currentDNA", playerInfo.currentDNA);
         SceneManager.LoadScene("StageScene");
     }
 
     public void Quest()
     {
+        PlayerPrefs.SetInt("currentEXP", playerInfo.currentEXP);
+        PlayerPrefs.SetInt("currentDNA", playerInfo.currentDNA);
         SceneManager.LoadScene("QuestScene");
     }
 
     public void Store()
     {
+        PlayerPrefs.SetInt("currentEXP", playerInfo.currentEXP);
+        PlayerPrefs.SetInt("currentDNA", playerInfo.currentDNA);
         SceneManager.LoadScene("StoreScene");
     }
 
     public void Unit()
     {
+        PlayerPrefs.SetInt("currentEXP", playerInfo.currentEXP);
+        PlayerPrefs.SetInt("currentDNA", playerInfo.currentDNA);
         SceneManager.LoadScene("UnitScene");
     }
 
     public void PlayerInfo()
     {
+        PlayerPrefs.SetInt("currentEXP", playerInfo.currentEXP);
+        PlayerPrefs.SetInt("currentDNA", playerInfo.currentDNA);
         SceneManager.LoadScene("PlayerInfoScene");
     }
 
     public void Home()
     {
+        PlayerPrefs.SetInt("currentEXP", playerInfo.currentEXP);
+        PlayerPrefs.SetInt("currentDNA", playerInfo.currentDNA);
         SceneManager.LoadScene("LobbyScene");
     }
 
     public void Stage1()
     {
+        PlayerPrefs.SetInt("currentEXP", playerInfo.currentEXP);
+        PlayerPrefs.SetInt("currentDNA", playerInfo.currentDNA);
         SceneManager.LoadScene("Stage1");
     }
 
     public void Stage2()
     {
+        PlayerPrefs.SetInt("currentEXP", playerInfo.currentEXP);
+        PlayerPrefs.SetInt("currentDNA", playerInfo.currentDNA);
         SceneManager.LoadScene("Stage2");
     }
 }

@@ -1522,9 +1522,9 @@ public class ChampionController : MonoBehaviour
             int ranCri = Random.Range(1, 101);
             if (ranCri <= currentCritical)
             {
-                finalDamage = damage * (1 - (currentDefence / (currentDefence + 100))) * 1.5f;
+                finalDamage = damage * (1 - (currentDefence / (currentDefence + 100.0f))) * 1.5f;
             }
-            else finalDamage = damage * (1 - (currentDefence / (currentDefence + 100)));
+            else finalDamage = damage * (1 - (currentDefence / (currentDefence + 100.0f)));
         }
 
 
