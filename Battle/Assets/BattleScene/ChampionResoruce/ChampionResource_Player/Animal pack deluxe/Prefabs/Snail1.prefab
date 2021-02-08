@@ -370,15 +370,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9e2da67ec47d741b024f6f3d143972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  championAnimator: {fileID: 0}
   levelupEffectPrefab: {fileID: 6022893094628638925, guid: 3e052aff88b4eeb4da8c715d215dec1f,
     type: 3}
   projectileStart: {fileID: 0}
   uIController: {fileID: 0}
   AttackEffectPrefab: {fileID: 6793810777503179991, guid: f4652def75bd8814c8b653d5160a59c5,
     type: 3}
-  SkillEffectPrefab: {fileID: 6524268369511497819, guid: 5e12999d3aceba34b8c27141605cd447,
+  SkillEffectPrefab: {fileID: 5386073243355975130, guid: 2d10286915deccc4696b15a34a3cc96a,
     type: 3}
-  SkillEffectPrefab2: {fileID: 0}
+  SkillEffectPrefab2: {fileID: 6524268369511497819, guid: 5e12999d3aceba34b8c27141605cd447,
+    type: 3}
   gridType: 0
   gridPositionX: 0
   gridPositionZ: 0
@@ -389,6 +391,7 @@ MonoBehaviour:
   currentHealthReg: 0
   currentShield: 0
   maxMana: 0
+  sellCost: 0
   currentMana: 0
   currentHitMana: 5
   currentAttackMana: 10
@@ -414,6 +417,8 @@ MonoBehaviour:
   isRatSkillOn: 0
   isSalamanderDead: 0
   isSalamanderSkillOn: 0
+  isSilence: 0
+  silenceTimer: 0
   sin7: 0
   sin7Shield: 0
   admirer: 0

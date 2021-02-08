@@ -1551,11 +1551,11 @@ public class ChampionController : MonoBehaviour
                     if (skillScript.skill37Active == true)
                     {
                         if (this.lvl == 1)
-                            SnailSkill(10, 8);
+                            SnailSkill(0.1f, 6);
                         else if (this.lvl == 2)
-                            SnailSkill(20, 6);
+                            SnailSkill(0.2f, 6);
                         else if (this.lvl == 3)
-                            SnailSkill(100, 6);
+                            SnailSkill(1, 6);
                         skillScript.skill37Active = false;
                     }
                 }
@@ -1613,7 +1613,7 @@ public class ChampionController : MonoBehaviour
 
     public void SnailSkill(float rate, float range)
     {
-        //SkillEffect(this.gameObject, this.transform.forward, 1f);
+        SkillEffect2(this.gameObject, this.transform.forward, 1f);
         for (int x = 0; x < Map.hexMapSizeX; x++)
         {
             for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
@@ -1629,7 +1629,7 @@ public class ChampionController : MonoBehaviour
                         //if new this champion is closer then best distance
                         if (distance < range)
                         {
-                            float damage = skillScript.shield * (rate / 100);
+                            float damage = skillScript.shield * rate;
                             Debug.Log(damage);
                             if (championController.currentShield == 0)
                             {
