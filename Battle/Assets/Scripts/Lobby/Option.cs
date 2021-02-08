@@ -22,14 +22,22 @@ public class Option : MonoBehaviour
         seValue.text = seVol.value.ToString();
         for (int i = 0; i < sound.bgm.Count; i++)
         {
-            sound.bgm[i].volume = bgmVol.value / 100;
+            sound.bgm[i].volume = bgmVol.value / 100.0f;
         }
         for (int i = 0; i < sound.skillSE.Count; i++)
         {
-            sound.skillSE[i].volume = seVol.value / 100;
+            sound.skillSE[i].volume = seVol.value / 100.0f;
         }
+
+        PlayerPrefs.SetFloat("BGMvalue", bgmVol.value);
+        PlayerPrefs.SetFloat("SEvalue", seVol.value);
     }
 
+    void Awake()
+    {
+        bgmVol.value = PlayerPrefs.GetFloat("SEvalue");
+        seVol.value = PlayerPrefs.GetFloat("SEvalue");
+    }
 
     // Start is called before the first frame update
     void Start()
