@@ -468,8 +468,7 @@ public class GamePlayController : MonoBehaviour
             {
                 if (champion.level == 2 && champion.uiname == "거북이" && isGreenlizardskin == true)
                 {
-                    Debug.Log("도마뱀 스킨");
-                    Debug.Log(isGreenlizardskin);
+
                     champion = gameData.championsArray[152];
 
                     Compose(champion);
@@ -477,8 +476,7 @@ public class GamePlayController : MonoBehaviour
                 }
                 else if (champion.level == 2 && champion.uiname == "개" && isRhinoskin == true)
                 {
-                    Debug.Log("코불소 스킨");
-                    Debug.Log(isRhinoskin);
+
                     champion = gameData.championsArray[153];
 
 
@@ -487,9 +485,8 @@ public class GamePlayController : MonoBehaviour
                 }
                 else if (champion.level == 2 && champion.uiname == "도마뱀" && isRhinoskin == true)
                 {
-                    Debug.Log("코불소 스킨");
-                    Debug.Log(isRhinoskin);
-                    champion = gameData.championsArray[153];
+  
+                    champion = gameData.championsArray[154];
 
 
                     Compose(champion);
@@ -497,9 +494,8 @@ public class GamePlayController : MonoBehaviour
                 }
                 else if (champion.level == 2 && champion.uiname == "코뿔소" && isRhinoskin == true)
                 {
-                    Debug.Log("코불소 스킨");
-                    Debug.Log(isRhinoskin);
-                    champion = gameData.championsArray[153];
+ 
+                    champion = gameData.championsArray[155];
                      
 
                     Compose(champion);
@@ -508,7 +504,7 @@ public class GamePlayController : MonoBehaviour
                 else if (champion.level == 2 && champion.uiname == "개구리" && isFrogskin == true)
                 {
 
-                    champion = gameData.championsArray[154];
+                    champion = gameData.championsArray[156];
 
                     Compose(champion);
                     break;
