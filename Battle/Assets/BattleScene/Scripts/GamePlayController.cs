@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public enum GameStage { Preparation, Combat, Loss };
 
@@ -233,7 +234,10 @@ public class GamePlayController : MonoBehaviour
         return true;
     }
 
-   
+    public void SkillSound()
+    {
+        AudioSource.PlayClipAtPoint(sound.skillSE[7].clip, this.gameObject.transform.position);
+    }
 
     public void Summon(Champion champion)
     {
@@ -344,6 +348,7 @@ public class GamePlayController : MonoBehaviour
 
     public bool Compose(Champion champion)
     {
+        AudioSource.PlayClipAtPoint(sound.skillSE[6].clip, this.gameObject.transform.position);
         //get first empty inventory slot
         int emptyIndex = -1;
         for (int i = 0; i < ownChampionInventoryArray.Length; i++)
@@ -461,11 +466,31 @@ public class GamePlayController : MonoBehaviour
 
             for (int i = 0; i < gameData.championsArray.Length; i++)
             {
-                if (champion.level == 2 && champion.uiname == "도마뱀" && isGreenlizardskin == true)
+                if (champion.level == 2 && champion.uiname == "거북이" && isGreenlizardskin == true)
                 {
                     Debug.Log("도마뱀 스킨");
                     Debug.Log(isGreenlizardskin);
                     champion = gameData.championsArray[152];
+
+                    Compose(champion);
+                    break;
+                }
+                else if (champion.level == 2 && champion.uiname == "개" && isRhinoskin == true)
+                {
+                    Debug.Log("코불소 스킨");
+                    Debug.Log(isRhinoskin);
+                    champion = gameData.championsArray[153];
+
+
+                    Compose(champion);
+                    break;
+                }
+                else if (champion.level == 2 && champion.uiname == "도마뱀" && isRhinoskin == true)
+                {
+                    Debug.Log("코불소 스킨");
+                    Debug.Log(isRhinoskin);
+                    champion = gameData.championsArray[153];
+
 
                     Compose(champion);
                     break;
@@ -874,7 +899,8 @@ public class GamePlayController : MonoBehaviour
             //set new game stage
             currentGameStage = GameStage.Combat;
 
-
+            sound.bgm[0].Play();
+            
             if (isSnow)
             {
                 for (int x = 0; x < Map.hexMapSizeX; x++)
@@ -966,7 +992,7 @@ public class GamePlayController : MonoBehaviour
         else if (currentGameStage == GameStage.Combat)
         {
 
-            AudioSource.PlayClipAtPoint(sound.skillSE[1].clip, this.gameObject.transform.position);
+            sound.bgm[0].Stop();
             //소환수 제거
             RemoveSummon();
             //set new game stage

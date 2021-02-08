@@ -11,6 +11,7 @@ public class ChampionController : MonoBehaviour
 {
     public Animator championAnimator;
 
+
     public static int TEAMID_PLAYER = 0;
     public static int TEAMID_AI = 1;
 
@@ -817,6 +818,7 @@ public class ChampionController : MonoBehaviour
     public void SkillEffect(GameObject T, Vector3 dir, float skilltime)
     {
         Debug.Log("스킬발동");
+        gamePlayController.SkillSound();
         GameObject SkillEffect = Instantiate(SkillEffectPrefab);
 
         //set position

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 
 public class Option : MonoBehaviour
@@ -43,11 +44,13 @@ public class Option : MonoBehaviour
 
     public void OptionPannel()
     {
+        sound.skillSE[1].Play();
         optionPannel.SetActive(true);
     }
 
     public void CloseOption()
     {
+        sound.skillSE[1].Play();
         optionPannel.SetActive(false);
     }
 
