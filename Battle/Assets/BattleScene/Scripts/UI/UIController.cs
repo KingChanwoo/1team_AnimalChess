@@ -10,6 +10,7 @@ using UnityEngine.UI;
 /// </summary>
 public class UIController : MonoBehaviour
 {
+ 
     public ChampionShop championShop;
     public GamePlayController gamePlayController;
     public AIopponent aiOpponent;
@@ -95,6 +96,7 @@ public class UIController : MonoBehaviour
     public void Refresh_Click()
     {
         championShop.RefreshShop(false);
+        AudioSource.PlayClipAtPoint(sound.skillSE[0].clip, this.gameObject.transform.position);
     }
 
     /// <summary>
@@ -339,6 +341,7 @@ public class UIController : MonoBehaviour
     public bool isLock = false;
     public void ShopLock()
     {
+        AudioSource.PlayClipAtPoint(sound.skillSE[5].clip, this.gameObject.transform.position);
         if (open.activeSelf == true)
         {
             close.SetActive(true);
@@ -355,16 +358,19 @@ public class UIController : MonoBehaviour
 
     public void OptionPannel()
     {
+        AudioSource.PlayClipAtPoint(sound.skillSE[0].clip, this.gameObject.transform.position);
         optionPannel.SetActive(true);
     }
 
     public void CloseOption()
     {
+        AudioSource.PlayClipAtPoint(sound.skillSE[0].clip, this.gameObject.transform.position);
         optionPannel.SetActive(false);
     }
 
     public void GoLobbyPannel()
     {
+        AudioSource.PlayClipAtPoint(sound.skillSE[0].clip, this.gameObject.transform.position);
         goLobbyPannel.SetActive(true);
     }
 

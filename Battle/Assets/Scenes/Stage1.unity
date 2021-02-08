@@ -553,6 +553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a9c9b3f8c466d4495e73cb5c7b72b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 1581665127}
   skillrangeenemylist: []
   gridT: 0
   gridX: 0
@@ -43631,6 +43632,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4508113657359718543, guid: 04267066981febd4695ba162fa313b09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761463611526143130, guid: 04267066981febd4695ba162fa313b09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632051638008276578, guid: 04267066981febd4695ba162fa313b09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721419160391176403, guid: 04267066981febd4695ba162fa313b09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5721419160753403940, guid: 04267066981febd4695ba162fa313b09,
         type: 3}
       propertyPath: m_Name
@@ -43689,6 +43710,21 @@ PrefabInstance:
     - target: {fileID: 5721419160753403946, guid: 04267066981febd4695ba162fa313b09,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747131223929458321, guid: 04267066981febd4695ba162fa313b09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214139900661532907, guid: 04267066981febd4695ba162fa313b09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271371529331982268, guid: 04267066981febd4695ba162fa313b09,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
