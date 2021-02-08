@@ -587,6 +587,7 @@ public class GamePlayController : MonoBehaviour
             if(enableSell == true)
             {
                 currentGold += draggedChampion.GetComponent<ChampionController>().sellCost;
+                uIController.UpdateUI();
                 Destroy(draggedChampion);
                 AudioSource.PlayClipAtPoint(sound.skillSE[2].clip, this.gameObject.transform.position);
                 return;
