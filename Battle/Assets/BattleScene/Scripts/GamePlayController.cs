@@ -565,6 +565,7 @@ public class GamePlayController : MonoBehaviour
             {
                 currentGold += draggedChampion.GetComponent<ChampionController>().sellCost;
                 Destroy(draggedChampion);
+                return;
             }
 
             draggedChampion.GetComponent<BoxCollider>().enabled = true;

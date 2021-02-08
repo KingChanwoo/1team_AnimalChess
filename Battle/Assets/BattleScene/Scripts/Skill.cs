@@ -130,7 +130,7 @@ public class Skill : MonoBehaviour
         enemyChampion = aiOpponent.enemyArray;
         playerChampion = gamePlayController.championArray;
 
-
+        
 
         switch (ID)
         {
