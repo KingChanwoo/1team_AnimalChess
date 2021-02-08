@@ -1584,7 +1584,7 @@ public class ChampionController : MonoBehaviour
             {
                 isRatDead = true;
                 skillScript.SkillFire(skillID, this, target.GetComponent<ChampionController>());
-
+                isRatDead = false;
             }
             if (teamID == TEAMID_PLAYER)
             {
