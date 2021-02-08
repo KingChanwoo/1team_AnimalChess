@@ -915,6 +915,7 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 35:
+   
                 break;
             case 36:
                 // 패시브로 대체

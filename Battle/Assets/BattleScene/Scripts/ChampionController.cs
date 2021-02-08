@@ -1031,6 +1031,8 @@ public class ChampionController : MonoBehaviour
         }
     }
 
+  
+
 
     public void ScorpionSkill(float damage)
     {
