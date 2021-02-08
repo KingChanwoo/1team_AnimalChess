@@ -13,6 +13,7 @@ public class GamePlayController : MonoBehaviour
 {
     EventSystem eventSystem;
 
+    public Sound sound;
     List<ChampionController> summonlist = new List<ChampionController>();
     public List<ChampionController> skillrangeenemylist = new List<ChampionController>();
     public int gridT;
@@ -173,6 +174,7 @@ public class GamePlayController : MonoBehaviour
     /// </summary>
     public bool BuyChampionFromShop(Champion champion)
     {
+        AudioSource.PlayClipAtPoint(sound.skillSE[2].clip, this.gameObject.transform.position);
         //get first empty inventory slot
         int emptyIndex = -1;
         for (int i = 0; i < ownChampionInventoryArray.Length; i++)
@@ -565,6 +567,7 @@ public class GamePlayController : MonoBehaviour
             {
                 currentGold += draggedChampion.GetComponent<ChampionController>().sellCost;
                 Destroy(draggedChampion);
+                AudioSource.PlayClipAtPoint(sound.skillSE[2].clip, this.gameObject.transform.position);
                 return;
             }
 
@@ -578,6 +581,7 @@ public class GamePlayController : MonoBehaviour
             //if mouse cursor on trigger
             if (triggerinfo != null)
             {
+                AudioSource.PlayClipAtPoint(sound.skillSE[3].clip, this.gameObject.transform.position);
                 //get current champion over mouse cursor
                 GameObject currentTriggerChampion = GetChampionFromTriggerInfo(triggerinfo);
 
@@ -962,6 +966,7 @@ public class GamePlayController : MonoBehaviour
         else if (currentGameStage == GameStage.Combat)
         {
 
+            AudioSource.PlayClipAtPoint(sound.skillSE[1].clip, this.gameObject.transform.position);
             //소환수 제거
             RemoveSummon();
             //set new game stage
@@ -1048,6 +1053,10 @@ public class GamePlayController : MonoBehaviour
 
         //banked gold
         int bank = (int)(currentGold / 10);
+        if(bank > 5)
+        {
+            bank = 5;
+        }
 
 
         income += baseGoldIncome;
@@ -1138,8 +1147,8 @@ public class GamePlayController : MonoBehaviour
 
         if (currentChampionLimit < 10)
         {
-
-            currentExp += 40;
+            AudioSource.PlayClipAtPoint(sound.skillSE[1].clip, this.gameObject.transform.position);
+            currentExp += 4;
             CheckExp();
             CheckExp();
             //decrase gold
@@ -1159,6 +1168,7 @@ public class GamePlayController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHP -= damage;
+        AudioSource.PlayClipAtPoint(sound.skillSE[4].clip, this.gameObject.transform.position);
 
         uIController.UpdateUI();
 
