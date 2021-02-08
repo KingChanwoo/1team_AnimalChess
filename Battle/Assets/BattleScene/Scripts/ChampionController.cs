@@ -1030,9 +1030,44 @@ public class ChampionController : MonoBehaviour
             }
         }
     }
+    
+    public void FrogSkill(float rate, float time)
+    {
+        float skillrange = 5;
+        for (int x = 0; x < Map.hexMapSizeX; x++)
+        {
+            for (int z = 0; z < Map.hexMapSizeZ / 2; z++)
+            {
+                if (aIopponent.gridChampionsArray[x, z] != null)
+                {
+                    ChampionController championController = aIopponent.gridChampionsArray[x, z].GetComponent<ChampionController>();
 
+                    if (championController.isDead == false)
+                    {
+                        //calculate distance
+                        float distance = Vector3.Distance(this.transform.position, aIopponent.gridChampionsArray[x, z].transform.position);
+
+                        //if new this champion is closer then best distance
+                        if (distance < skillrange)
+                        {
+                            float damage = this.currentDamage * rate;
+                            if (championController.currentShield < damage)
+                            {
+                                championController.currentShield = 0;
+                                championController.currentHealth -= damage - championController.currentShield;
+                            }
+                            else championController.currentShield -= damage;
+                            championController.OnGotStun(time);
+                            SkillEffect(championController.gameObject, this.transform.forward, 1);
+                            worldCanvasController.AddDamageText(gameObject.GetComponent<Transform>().position + new Vector3(0, 2.5f, 0), this.currentDamage * damage, Color.red);
+                        }
+                    }
+                }
+            }
+        }
+    }
   
-
+    
 
     public void ScorpionSkill(float damage)
     {

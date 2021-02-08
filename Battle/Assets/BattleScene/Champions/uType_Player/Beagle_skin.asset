@@ -32,7 +32,7 @@ MonoBehaviour:
   defence: 169
   critical: 25
   evasion: 10
-  attackRange: 1
+  attackRange: 5
   damageToPlayer: 0
   movementSpeed: 3.5
   skillName: "\uB3D9\uB8CC\uCD9C\uACA9!"
