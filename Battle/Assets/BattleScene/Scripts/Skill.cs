@@ -86,6 +86,7 @@ public class Skill : MonoBehaviour
 
     public bool skill37Active = false;
     public float shield = 0;
+    ChampionController skill37Attacker;
 
     float duration39 = -1;
     public bool skill39buffOn = false;
@@ -915,21 +916,23 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case 35:
+   
                 break;
             case 36:
                 // 패시브로 대체
                 break;
             case 37:
-                attacker.currentShield = 0;
-                shield = attacker.snailStack * (attacker.maxHealth * 0.05f);
-                Debug.Log(shield);
-                Debug.Log(attacker.snailStack);
-                attacker.currentShield += shield;
-                if (skill37Active == false)
+                if(skill37Active == false)
                 {
-                    Debug.Log("쉴드 떳냐? " + attacker.currentShield);
+                    skill37Attacker = attacker;
+                    attacker.SkillEffect(attacker.gameObject, attacker.transform.forward, 1f);
+                    //attacker.SkillEffect2(attacker.gameObject, attacker.transform.forward, 4f);
+                    attacker.currentShield = 0;
+                    shield = attacker.snailStack * (attacker.maxHealth * 0.05f);
+                    attacker.currentShield += shield;
                     skill37Active = true;
                 }
+
 
                 // 쉴드데미지 영역은 ChampionController 863cs~
                 break;
@@ -1548,6 +1551,7 @@ public class Skill : MonoBehaviour
                 duration33 = -1;
             }
         }
+    
 
         //  스킬39('폭식' 버프 off)
         if (time >= duration39)

@@ -2071,7 +2071,8 @@ MonoBehaviour:
   levelupEffectPrefab: {fileID: 0}
   projectileStart: {fileID: 0}
   uIController: {fileID: 0}
-  AttackEffectPrefab: {fileID: 0}
+  AttackEffectPrefab: {fileID: 5095272746527051236, guid: 6ad37ec26ad964c4e9506c95f2721fa7,
+    type: 3}
   SkillEffectPrefab: {fileID: 0}
   SkillEffectPrefab2: {fileID: 0}
   gridType: 0
@@ -2159,7 +2160,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &-8289014637595547311
 NavMeshAgent:

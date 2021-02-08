@@ -1061,13 +1061,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9e2da67ec47d741b024f6f3d143972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  championAnimator: {fileID: 0}
   levelupEffectPrefab: {fileID: 6022893094628638925, guid: 3e052aff88b4eeb4da8c715d215dec1f,
     type: 3}
   projectileStart: {fileID: 0}
   uIController: {fileID: 0}
   AttackEffectPrefab: {fileID: 3408018356700558250, guid: f96327753fdd8ca40b40b148dd78d0c1,
     type: 3}
-  SkillEffectPrefab: {fileID: 0}
+  SkillEffectPrefab: {fileID: 2902405244950335806, guid: 9320c9890febc5a4e925fed9ca2ef83c,
+    type: 3}
   SkillEffectPrefab2: {fileID: 0}
   gridType: 0
   gridPositionX: 0
@@ -1079,6 +1081,7 @@ MonoBehaviour:
   currentHealthReg: 0
   currentShield: 0
   maxMana: 0
+  sellCost: 0
   currentMana: 0
   currentHitMana: 5
   currentAttackMana: 10

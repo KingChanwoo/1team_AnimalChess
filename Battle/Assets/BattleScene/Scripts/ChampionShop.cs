@@ -43,7 +43,10 @@ public class ChampionShop : MonoBehaviour
         //return if we dont have enough gold
         if (gamePlayController.currentGold < 2 && isFree == false)
             return;
-
+        if (uIController.isLock == true)
+        {
+            return;
+        }
 
         //init array
         availableChampionArray = new Champion[5];
