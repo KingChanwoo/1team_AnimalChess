@@ -13,7 +13,7 @@ public enum GameStage { Preparation, Combat, Loss };
 public class GamePlayController : MonoBehaviour
 {
     EventSystem eventSystem;
-
+    public int[] isPurchased = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     public Sound sound;
     List<ChampionController> summonlist = new List<ChampionController>();
     public List<ChampionController> skillrangeenemylist = new List<ChampionController>();
@@ -27,10 +27,6 @@ public class GamePlayController : MonoBehaviour
     public GameObject Snow;
     public float weather = 0;
     public float weathercheck = 0;
-
-    public bool isRhinoskin = false;
-    public bool isFrogskin = false;
-    public bool isGreenlizardskin = false;
 
     public Map map;
     public InputController inputController;
@@ -92,9 +88,53 @@ public class GamePlayController : MonoBehaviour
     public bool summonSynergy = false;
     public float summonSynergyValue = 0;
 
+    void Awake()
+    {
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (i == 0)
+                isPurchased[i] = PlayerPrefs.GetInt("Product1");
+            else if (i == 1)
+                isPurchased[i] = PlayerPrefs.GetInt("Product2");
+            else if (i == 2)
+                isPurchased[i] = PlayerPrefs.GetInt("Product3");
+            else if (i == 3)
+                isPurchased[i] = PlayerPrefs.GetInt("Product4");
+            else if (i == 4)
+                isPurchased[i] = PlayerPrefs.GetInt("Product5");
+            else if (i == 5)
+                isPurchased[i] = PlayerPrefs.GetInt("Product6");
+            else if (i == 6)
+                isPurchased[i] = PlayerPrefs.GetInt("Product7");
+            else if (i == 7)
+                isPurchased[i] = PlayerPrefs.GetInt("Product8");
+            else if (i == 8)
+                isPurchased[i] = PlayerPrefs.GetInt("Product9");
+            else if (i == 9)
+                isPurchased[i] = PlayerPrefs.GetInt("Product10");
+        }
+    }
     /// Start is called before the first frame update
     void Start()
     {
+
+        PlayerPrefs.SetInt("Product1", isPurchased[0]);
+        PlayerPrefs.SetInt("Product2", isPurchased[1]);
+        PlayerPrefs.SetInt("Product3", isPurchased[2]);
+        PlayerPrefs.SetInt("Product4", isPurchased[3]);
+        PlayerPrefs.SetInt("Product5", isPurchased[4]);
+        PlayerPrefs.SetInt("Product6", isPurchased[5]);
+        PlayerPrefs.SetInt("Product7", isPurchased[6]);
+        PlayerPrefs.SetInt("Product8", isPurchased[7]);
+        PlayerPrefs.SetInt("Product9", isPurchased[8]);
+        PlayerPrefs.SetInt("Product10", isPurchased[9]);
+
+
+ 
+
+
+
         //set starting gamestage
         currentGameStage = GameStage.Preparation;
         if (PlayerPrefs.GetInt("usedRune") == 4)
@@ -466,7 +506,7 @@ public class GamePlayController : MonoBehaviour
 
             for (int i = 0; i < gameData.championsArray.Length; i++)
             {
-                if (champion.level == 2 && champion.uiname == "거북이" && isGreenlizardskin == true)
+                if (champion.level == 2 && champion.uiname == "거북이" && isPurchased[9] == 1)
                 {
 
                     champion = gameData.championsArray[152];
@@ -474,7 +514,7 @@ public class GamePlayController : MonoBehaviour
                     Compose(champion);
                     break;
                 }
-                else if (champion.level == 2 && champion.uiname == "개" && isRhinoskin == true)
+                else if (champion.level == 2 && champion.uiname == "개" && isPurchased[8] == 1)
                 {
 
                     champion = gameData.championsArray[153];
@@ -483,7 +523,7 @@ public class GamePlayController : MonoBehaviour
                     Compose(champion);
                     break;
                 }
-                else if (champion.level == 2 && champion.uiname == "도마뱀" && isRhinoskin == true)
+                else if (champion.level == 2 && champion.uiname == "도마뱀" && isPurchased[7] == 1)
                 {
   
                     champion = gameData.championsArray[154];
@@ -492,7 +532,7 @@ public class GamePlayController : MonoBehaviour
                     Compose(champion);
                     break;
                 }
-                else if (champion.level == 2 && champion.uiname == "코뿔소" && isRhinoskin == true)
+                else if (champion.level == 2 && champion.uiname == "코뿔소" && isPurchased[6] == 1)
                 {
  
                     champion = gameData.championsArray[155];
@@ -501,7 +541,7 @@ public class GamePlayController : MonoBehaviour
                     Compose(champion);
                     break;
                 }
-                else if (champion.level == 2 && champion.uiname == "개구리" && isFrogskin == true)
+                else if (champion.level == 2 && champion.uiname == "개구리" && isPurchased[5] == 1)
                 {
 
                     champion = gameData.championsArray[156];
