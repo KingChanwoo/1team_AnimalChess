@@ -25,8 +25,8 @@ MonoBehaviour:
   healthRegeneration: 0
   shield: 0
   mana: 100
-  hitMana: 5
-  attackMana: 10
+  hitMana: 3
+  attackMana: 7
   damage: 332
   attackSpeed: 1
   defence: 181

@@ -17,7 +17,6 @@ MonoBehaviour:
   level: 2
   skillID: 29
   uiname: "\uCF54\uBFD4\uC18C"
-  grade: 0
   cost: 0
   sellCost: 5
   type1: {fileID: 11400000, guid: 17e7d4adedfa68b46817750ab5c7c628, type: 2}
@@ -26,8 +25,8 @@ MonoBehaviour:
   healthRegeneration: 0
   shield: 0
   mana: 100
-  hitMana: 5
-  attackMana: 10
+  hitMana: 3
+  attackMana: 7
   damage: 137
   attackSpeed: 1
   defence: 174
