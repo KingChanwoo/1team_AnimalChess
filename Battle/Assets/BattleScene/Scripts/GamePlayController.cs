@@ -510,6 +510,10 @@ public class GamePlayController : MonoBehaviour
                 {
 
                     champion = gameData.championsArray[152];
+                    if (champion.level == 3)
+                    {
+                        lv3List.Add(24);  // 3성 유닛의 1성 챔피언 ID 를 리스트에 추가
+                    }
 
                     Compose(champion);
                     break;
@@ -518,7 +522,10 @@ public class GamePlayController : MonoBehaviour
                 {
 
                     champion = gameData.championsArray[153];
-
+                    if (champion.level == 3)
+                    {
+                        lv3List.Add(69);  // 3성 유닛의 1성 챔피언 ID 를 리스트에 추가
+                    }
 
                     Compose(champion);
                     break;
@@ -528,7 +535,10 @@ public class GamePlayController : MonoBehaviour
   
                     champion = gameData.championsArray[154];
 
-
+                    if (champion.level == 3)
+                    {
+                        lv3List.Add(81);  // 3성 유닛의 1성 챔피언 ID 를 리스트에 추가
+                    }
                     Compose(champion);
                     break;
                 }
@@ -536,8 +546,11 @@ public class GamePlayController : MonoBehaviour
                 {
  
                     champion = gameData.championsArray[155];
-                     
 
+                    if (champion.level == 3)
+                    {
+                        lv3List.Add(84);  // 3성 유닛의 1성 챔피언 ID 를 리스트에 추가
+                    }
                     Compose(champion);
                     break;
                 }
@@ -545,7 +558,10 @@ public class GamePlayController : MonoBehaviour
                 {
 
                     champion = gameData.championsArray[156];
-
+                    if (champion.level == 3)
+                    {
+                        lv3List.Add(102);  // 3성 유닛의 1성 챔피언 ID 를 리스트에 추가
+                    }
                     Compose(champion);
                     break;
                 }
