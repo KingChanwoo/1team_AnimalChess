@@ -328,9 +328,6 @@ public class ChampionController : MonoBehaviour
         if (synergyIsApply && gamePlayController.currentGameStage == GameStage.Combat)
         {
             ApplyActiveSynergy();
-            championAnimator.SetFloat("attackSpeed", (atkSpeedAnimator * currentAttackSpeed));
-            gameObject.GetComponent<NavMeshAgent>().speed = currentMoveSpeed;
-
             synergyIsApply = false;
         }
 
@@ -1793,8 +1790,8 @@ public class ChampionController : MonoBehaviour
         currentMoveSpeed = champion.movementSpeed;
         sin7 = false;
         sin7Shield = 0;
-        gamePlayController.wealth = false;
-        gamePlayController.wealthMoney = 0;
+        wealthOn = false;
+        wealthValue = 0;
         admirer = false;
         admirerValue = 0;
         loyality = false;

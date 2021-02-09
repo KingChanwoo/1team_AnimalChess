@@ -584,14 +584,7 @@ public class GamePlayController : MonoBehaviour
 
         if (draggedChampion != null)
         {
-            if(enableSell == true)
-            {
-                currentGold += draggedChampion.GetComponent<ChampionController>().sellCost;
-                uIController.UpdateUI();
-                Destroy(draggedChampion);
-                AudioSource.PlayClipAtPoint(sound.skillSE[2].clip, this.gameObject.transform.position);
-                return;
-            }
+            
 
             draggedChampion.GetComponent<BoxCollider>().enabled = true;
             //set dragged
@@ -651,16 +644,18 @@ public class GamePlayController : MonoBehaviour
                             championsOnField--;
                             draggedChampion.GetComponent<ChampionController>().synergyIsApply = true;
                         }
-
                     }
-
-
-
                 }
-
-
-
-
+            }
+            else
+            {
+                if (enableSell == true)
+                {
+                    currentGold += draggedChampion.GetComponent<ChampionController>().sellCost;
+                    uIController.UpdateUI();
+                    Destroy(draggedChampion);
+                    AudioSource.PlayClipAtPoint(sound.skillSE[2].clip, this.gameObject.transform.position);
+                }
             }
 
 
@@ -677,6 +672,8 @@ public class GamePlayController : MonoBehaviour
 
 
     }
+
+    
     public bool enableSell = false;
     public void SellEnable()
     {
@@ -857,7 +854,6 @@ public class GamePlayController : MonoBehaviour
                 activeBonusNumList.Add(bonusNum);
             }
         }
-
     }
 
     /// <summary>

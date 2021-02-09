@@ -89,6 +89,7 @@
     <Compile Include="Assets\BattleScene\Scripts\ManaBar.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Map.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Projectile.cs" />
+    <Compile Include="Assets\BattleScene\Scripts\Sell.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Skill.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Sound.cs" />
     <Compile Include="Assets\BattleScene\Scripts\Stage1.cs" />
