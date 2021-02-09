@@ -344,6 +344,14 @@ public class ChampionBonus
                         }
                         else finalDamage = damage;
                     }
+                    else
+                    {
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
+                        }
+                        else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                    }
                     break;
                 case ChampionBonusType.Evil:
                     if (num >= championCount2)
@@ -356,6 +364,14 @@ public class ChampionBonus
                             }
                             else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) + bonusValue2;
                         }
+                        else
+                        {
+                            if (ran <= champion.currentCritical)
+                            {
+                                finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
+                            }
+                            else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                        }
                     }
                     else if (num >= championCount1)
                     {
@@ -367,6 +383,14 @@ public class ChampionBonus
                             }
                             else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) + bonusValue1;
                         }
+                        else
+                        {
+                            if (ran <= champion.currentCritical)
+                            {
+                                finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
+                            }
+                            else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                        }
                     }
                     break;
                 case ChampionBonusType.TenLongevity:
@@ -376,6 +400,14 @@ public class ChampionBonus
                         if (ran <= champion.currentCritical)
                         {
                             finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                        }
+                        else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                    }
+                    else
+                    {
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
                         }
                         else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                     }
@@ -395,11 +427,19 @@ public class ChampionBonus
                             champion.currentMana += champion.currentAttackMana;
                         }
                     }
+                    else
+                    {
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
+                        }
+                        else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                    }
                     break;
                 default:
                     if (ran <= champion.currentCritical)
                     {
-                        finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                        finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
                     }
                     else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                     break;
@@ -429,12 +469,20 @@ public class ChampionBonus
                         else if (num >= championCount1)
                             finalDamage *= 1.0f - (bonusValue1 / 100.0f);
                     }
+                    else
+                    {
+                        if (ran <= champion.currentCritical)
+                        {
+                            finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
+                        }
+                        else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                    }
                     break;
                 
                 default:
                     if (ran <= champion.currentCritical)
                     {
-                        finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
+                        finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f))) * 1.5f;
                     }
                     else finalDamage = damage * (1.0f - (hit.currentDefence / (hit.currentDefence + 100.0f)));
                     break;

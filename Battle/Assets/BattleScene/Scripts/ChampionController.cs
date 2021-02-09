@@ -440,8 +440,8 @@ public class ChampionController : MonoBehaviour
         {
             if (isEnemy48passive)
             {
-                currentDamage = currentDamage * 2;
-                currentDefence = currentDefence * 2;
+                currentDamage = currentDamage * 2.0f;
+                currentDefence = currentDefence * 2.0f;
                 if(currentShield <= 0)
                 {
                     isEnemy48passive = false;
@@ -1556,9 +1556,9 @@ public class ChampionController : MonoBehaviour
             int ranCri = Random.Range(1, 101);
             if (ranCri <= currentCritical)
             {
-                finalDamage = damage * (1 - (currentDefence / (currentDefence + 100.0f))) * 1.5f;
+                finalDamage = damage * (1.0f - (currentDefence / (currentDefence + 100.0f))) * 1.5f;
             }
-            else finalDamage = damage * (1 - (currentDefence / (currentDefence + 100.0f)));
+            else finalDamage = damage * (1.0f - (1.0f * currentDefence / (1.0f * currentDefence + 100.0f)));
         }
 
 
