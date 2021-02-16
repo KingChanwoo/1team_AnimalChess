@@ -138,14 +138,10 @@ public class GamePlayController : MonoBehaviour
         //set starting gamestage
         currentGameStage = GameStage.Preparation;
         if (PlayerPrefs.GetInt("usedRune") == 4)
-        {
             currentGold += 2;
-        }
 
         if (PlayerPrefs.GetInt("usedRune") == 9)
-        {
             Rune9();
-        }
         
 
         //init arrays
@@ -1471,28 +1467,21 @@ public class GamePlayController : MonoBehaviour
         int ran = Random.Range(0, champion4Cost.Count);
 
         Champion champion = gameData.championsArray[champion4Cost[ran]];
-        //instantiate champion prefab
         GameObject championPrefab = Instantiate(champion.prefab);
 
-        //get championController
         ChampionController championController = championPrefab.GetComponent<ChampionController>();
 
-        //setup chapioncontroller
         championController.Init(champion, ChampionController.TEAMID_PLAYER);
 
 
-        //set grid position
         championController.SetGridPosition(Map.GRIDTYPE_OWN_INVENTORY, 0, -1);
 
-        //set position and rotation
         championController.SetWorldPosition();
         championController.SetWorldRotation();
 
 
-        //store champion in inventory array
         StoreChampionInArray(Map.GRIDTYPE_OWN_INVENTORY, map.ownTriggerArray[0].gridX, -1, championPrefab);
 
-        //set gold on ui
         uIController.UpdateUI();
     }
 

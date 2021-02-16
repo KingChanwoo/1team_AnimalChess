@@ -36,9 +36,7 @@ public class Stage1 : MonoBehaviour
         else if (r == 4)
         {
             if (PlayerPrefs.GetInt("usedRune") == 5)
-            {
                 gamePlayController.currentExp += 4;
-            }
             //----------------------------------------------
             aiOpponent.AddEnemy(124, 6, 3, 100);
             aiOpponent.AddEnemy(123, 4, 3, 100);

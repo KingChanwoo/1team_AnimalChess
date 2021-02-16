@@ -231,7 +231,7 @@ public class ChampionController : MonoBehaviour
         champType1 = champion.type1;
         champType2 = champion.type2;
         //set stats
-        if (PlayerPrefs.GetInt("usedRune") == 2 && teamID == TEAMID_PLAYER)
+        if (PlayerPrefs.GetInt("usedRune") == 1 && teamID == TEAMID_PLAYER)
         {
             maxHealth = champion.health * 1.1f;
             currentHealth = champion.health * 1.1f;
@@ -249,10 +249,8 @@ public class ChampionController : MonoBehaviour
         currentHitMana = champion.hitMana;
         currentAttackMana = champion.attackMana;
 
-        if(PlayerPrefs.GetInt("usedRune") == 1 && teamID == TEAMID_PLAYER)
-        {
+        if(PlayerPrefs.GetInt("usedRune") == 0 && teamID == TEAMID_PLAYER)
             currentDamage = champion.damage *1.05f;
-        }
         else
         {
             currentDamage = champion.damage;
